@@ -1,0 +1,27 @@
+{
+  "phase": "10",
+  "horizon": 24,
+  "targets": ["load", "wind", "pv"],
+  "feature_sets": {
+    "A_calendar_only": ["hour_sin", "hour_cos", "dow_sin", "dow_cos", "doy_sin", "doy_cos"],
+    "B_lags_only": ["lag_1", "lag_24", "lag_168"],
+    "C_calendar_lags": ["hour_sin", "hour_cos", "dow_sin", "dow_cos", "doy_sin", "doy_cos", "lag_1", "lag_24", "lag_168"],
+    "D_calendar_lags_rolling": ["hour_sin", "hour_cos", "dow_sin", "dow_cos", "doy_sin", "doy_cos", "lag_1", "lag_24", "lag_168", "rolling_mean_24", "rolling_mean_168"],
+    "E_full": ["hour_sin", "hour_cos", "dow_sin", "dow_cos", "doy_sin", "doy_cos", "lag_1", "lag_24", "lag_168", "rolling_mean_24", "rolling_mean_168", "ramp_1h"]
+  },
+  "classical_feature_sets": ["A_calendar_only", "B_lags_only", "C_calendar_lags", "D_calendar_lags_rolling", "E_full"],
+  "mlp_anchor_feature_sets": ["A_calendar_only", "C_calendar_lags", "E_full"],
+  "analysis_folds": ["F01", "F02", "F03", "F04"],
+  "confirmation_folds": ["F05", "F06"],
+  "seeds": [42, 123, 2020, 2025, 31415],
+  "selection_metric": "MAE",
+  "tie_break_relative_mae_percent": 0.5,
+  "common_timestamp_policy": "intersection across all configured feature sets for each target/fold",
+  "final_test_training_access": false,
+  "final_test_hpo_access": false,
+  "final_test_model_selection_access": false,
+  "final_test_feature_selection_access": false,
+  "final_test_performance_evaluation": false,
+  "historical_final_test_integrity_audit_access": true,
+  "historical_integrity_access_reason": "P9-DEV-002"
+}

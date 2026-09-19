@@ -1,0 +1,34 @@
+{
+  "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+  "policy_version": "13.0.0",
+  "mode": "RESEARCH",
+  "required_evidence_statuses": ["VALID"],
+  "required_lineage_status": "COMPLETE",
+  "required_reproducibility_metadata": "COMPLETE",
+  "accepted_protocol_hashes": [
+    "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b",
+    "eea37fc2029f422079e31d0299a561178eafd26e587957c5c9056a4dbcad00d5"
+  ],
+  "fingerprint_requirements": {"model_spec": "EXACT_MATCH", "feature_spec": "EXACT_MATCH"},
+  "benchmark_policy": {"required_for_promotion": true, "minimum_relative_mae_improvement_percent": 0.0, "strict_superiority": true},
+  "statistical_evidence_policy": {"promotion_requirement": "REQUIRED_PASS", "accepted_statuses": ["REQUIRED_PASS", "NOT_REQUIRED"]},
+  "approval_policy": {"production_style_change_requires_human": true, "simulation_mode": "SIMULATION", "simulation_actor": "SIMULATION_POLICY"},
+  "deviation_policy": {"unresolved_critical": "DENY", "resolved_invalid_artifact_remains_invalid": true, "resolved_scientific_integrity_pass": "ALLOW"},
+  "transition_rules": {
+    "EXPERIMENTAL": ["VALIDATED"],
+    "VALIDATED": ["REGISTERED_CHALLENGER"],
+    "REGISTERED_REFERENCE": ["PROMOTION_ELIGIBLE"],
+    "REGISTERED_CHALLENGER": ["CHALLENGER_ELIGIBLE", "PROMOTION_ELIGIBLE"],
+    "CHALLENGER_ELIGIBLE": ["PROMOTION_ELIGIBLE"],
+    "PROMOTION_ELIGIBLE": ["APPROVAL_PENDING"],
+    "APPROVAL_PENDING": ["APPROVED_FOR_CANARY"],
+    "APPROVED_FOR_CANARY": ["CANARY_ACTIVE"],
+    "CANARY_ACTIVE": ["ACTIVE", "ROLLBACK_REQUIRED"],
+    "ACTIVE": ["ROLLBACK_REQUIRED", "ARCHIVED"],
+    "ROLLBACK_REQUIRED": ["ARCHIVED"],
+    "ARCHIVED": [],
+    "INVALIDATED": []
+  },
+  "rollback_requirements": {"previous_active_spec_recoverable": true, "evidence_and_configuration_required": true},
+  "final_test_constraints": {"training_access": false, "hpo_access": false, "model_selection_access": false, "feature_selection_access": false, "performance_evaluation": false, "integrity_audit_activation": false, "phase_13_new_reads": 0}
+}

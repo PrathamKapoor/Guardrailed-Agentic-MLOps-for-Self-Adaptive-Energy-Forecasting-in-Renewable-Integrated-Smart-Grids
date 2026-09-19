@@ -1,0 +1,1 @@
+{"protocol_version":"rts_gmlc_exp_protocol_v1","assignment_field":"target_timestamp","train":{"start":"2020-01-01T00:00:00","end_exclusive":"2020-09-01T00:00:00"},"validation":{"start":"2020-09-01T00:00:00","end_exclusive":"2020-11-01T00:00:00"},"test":{"start":"2020-11-01T00:00:00","end_exclusive":"2021-01-01T00:00:00","status":"LOCKED"}}

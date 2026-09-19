@@ -1,0 +1,65 @@
+{
+  "schema_version": "phase16-champion-challenger-protocol-v1",
+  "phase": "16",
+  "research_objective": "Design and evaluate a deterministic champion-challenger governance framework capable of selecting, approving, rejecting, promoting, and rolling back forecasting models while preventing unsafe autonomous model replacement.",
+  "research_questions": ["RQ-CC-1", "RQ-CC-2", "RQ-CC-3", "RQ-CC-4"],
+  "hypotheses": {
+    "H-CC-1": "Challengers can be evaluated against frozen references with reproducible governance rules.",
+    "H-CC-2": "Unsafe promotions are prevented even when challenger performance appears superior.",
+    "H-CC-3": "Rollback restores a previously validated model state after simulated degradation.",
+    "H-CC-4": "Lifecycle transitions remain deterministic and auditable."
+  },
+  "promotion_policy": {
+    "config_path": "config/governance/phase_16_promotion_policy.yaml",
+    "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+    "policy_version": "16.0.0",
+    "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035"
+  },
+  "architecture": "REGISTERED_REFERENCE -> CHALLENGER EVALUATION -> GOVERNANCE POLICY -> APPROVE/REJECT/DEFER -> CANARY SIMULATION -> ACTIVE MODEL (promoted, SIMULATION) ; rollback path: ACTIVE MODEL -> degradation detected -> ROLLBACK REQUEST -> verified restoration of previous model",
+  "evaluation_protocol": {
+    "primary_metric": "MAE",
+    "secondary_metrics": ["RMSE", "sMAPE", "nMAE", "nRMSE"],
+    "requirements": ["same timestamps", "same target", "same feature representation", "same evaluation protocol"],
+    "minimum_matched_rows": 336,
+    "improved_mae_alone_is_sufficient": false
+  },
+  "promotion_requirements": ["challenger registered", "complete lineage", "valid fingerprint", "no protocol violations", "evaluation completed", "benchmark requirements satisfied", "governance approval"],
+  "decision_values": ["APPROVE", "REJECT", "DEFER"],
+  "canary_protocol": {
+    "simulation_only": true,
+    "deployment_exists": false,
+    "guardrail": "challenger canary-window MAE regression vs reference must not exceed 0.0 percent",
+    "lifecycle_mapping": "simulation states map onto the frozen Phase 13 lifecycle states APPROVED_FOR_CANARY / CANARY_ACTIVE / ACTIVE; Phase 13 registry is never modified"
+  },
+  "rollback_protocol": {
+    "trigger": "post-promotion matched-window MAE regression vs preserved previous model exceeds 0.0 percent",
+    "verification_checks": ["artifact exists", "fingerprint matches", "lineage exists", "model loads successfully", "outputs finite"],
+    "verification_failure_outcome": "ROLLBACK_BLOCKED"
+  },
+  "scenario_suite": {
+    "CC01": {"case": "better challenger valid", "expected_outcome": "PROMOTED"},
+    "CC02": {"case": "better challenger invalid lineage", "expected_outcome": "REJECT"},
+    "CC03": {"case": "better challenger fails benchmark", "expected_outcome": "REJECT"},
+    "CC04": {"case": "worse challenger", "expected_outcome": "REJECT"},
+    "CC05": {"case": "promotion followed by degradation", "expected_outcome": "ROLLBACK_COMPLETED"},
+    "CC06": {"case": "rollback integrity failure", "expected_outcome": "ROLLBACK_BLOCKED"}
+  },
+  "real_challenger_batch": {
+    "source": "artifacts/model_registry/phase_15_challengers.yaml (18 registered challengers)",
+    "expected_outcome": "REJECT for all 18",
+    "rationale": "14 of 18 have better synthetic-scenario MAE than their reference, but synthetic adaptation-scenario superiority is not external development benchmark evidence (Phase 15 MD-045); the 4 negative-gain challengers fail the performance gate first. No promotion from synthetic evidence."
+  },
+  "unsafe_attempt_definition": "a promotion request whose challenger MAE is strictly better than the reference while the governed decision is not APPROVE",
+  "metrics": ["promotion attempts", "approved", "rejected", "deferred", "unsafe promotion attempts", "blocked unsafe promotions", "rollback attempts", "successful rollback", "failed rollback", "governance accuracy"],
+  "mlflow": {"experiment_name": "phase16/champion_challenger", "research_phase": "16", "experiment_type": "CHAMPION_CHALLENGER"},
+  "audit_events": ["CHALLENGER_EVALUATED", "PROMOTION_REQUESTED", "PROMOTION_APPROVED", "PROMOTION_REJECTED", "PROMOTION_DEFERRED", "CANARY_STARTED", "CANARY_FAILED", "MODEL_PROMOTED", "ROLLBACK_REQUESTED", "ROLLBACK_COMPLETED", "ROLLBACK_BLOCKED"],
+  "safety_requirements": {"automatic_promotions_expected": 0, "promotion_requires_policy_evaluation": true, "phase13_lifecycle_registry_modified": false, "phase15_policy_modified": false},
+  "final_test_isolation": {
+    "training_access": "NO", "hpo_access": "NO", "model_selection_access": "NO",
+    "feature_selection_access": "NO", "performance_evaluation": "NO",
+    "historical_integrity_audit_access": "YES - historical P9-DEV-002 only",
+    "phase_16_new_final_test_reads": 0
+  },
+  "no_agents": "Phase 16 is fully deterministic; no LLMs or agent frameworks are used",
+  "model_results_observed_when_frozen": false
+}

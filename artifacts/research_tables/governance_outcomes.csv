@@ -1,0 +1,7 @@
+Case_ID,Description,Decision,Failed_Gates,Reason_Codes,Explanation
+CASE_01_GENUINE_ALLOW,Fully compliant challenger with valid simulation approval,ALLOW,NONE,SIMULATION_APPROVAL_ACCEPTED,ALLOW: Explicit simulation-only approval was accepted and was not represented as human approval.
+CASE_02_REQUIRE_APPROVAL,"Challenger passes development gates, needs explicit human/sim approval",REQUIRE_APPROVAL,APPROVAL_GATE,APPROVAL_REQUIRED,REQUIRE_APPROVAL: Explicit approval is required; promotion eligibility does not authorize activation.
+CASE_03_DENY_BENCHMARK_FAIL,Challenger with superior internal metric that loses to external baseline,DENY,BENCHMARK_GATE,BENCHMARK_GATE_FAILED,DENY: Candidate is a valid research record but fails the predefined development benchmark gate and is not promotion eligible.
+CASE_04_DENY_LINEAGE_INCOMPLETE,Challenger with missing training data provenance / lineage,DENY,LINEAGE_COMPLETENESS_GATE,LINEAGE_INCOMPLETE,DENY: Required dataset-to-registry lineage is incomplete.
+CASE_05_DENY_FINGERPRINT_MISMATCH,Challenger whose trained weights differ from frozen specification,DENY,MODEL_SPEC_FINGERPRINT_GATE,MODEL_SPEC_FINGERPRINT_MISMATCH,DENY: The candidate model specification does not match its frozen fingerprint.
+CASE_06_DENY_FINAL_TEST_VIOLATION,Challenger attempting unauthorized access to locked test partition,DENY,FINAL_TEST_POLICY_GATE,FINAL_TEST_POLICY_VIOLATION,DENY: Phase 13 forbids final-test access and integrity-audit activation.

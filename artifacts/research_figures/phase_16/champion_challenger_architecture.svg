@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="640" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#b3261e"/></marker></defs>
+<style>.box{fill:#e8f4f8;stroke:#2a6f97;stroke-width:2}.bad{fill:#fdecea;stroke:#b3261e;stroke-width:2}.lbl{font-size:15px;fill:#123;font-weight:600;text-anchor:middle}.sub{font-size:12px;fill:#456;text-anchor:middle}.edge{stroke:#333;stroke-width:2;fill:none;marker-end:url(#a)}.rb{stroke:#b3261e;stroke-width:3;stroke-dasharray:6 4;fill:none}</style>
+<text x="490" y="30" class="lbl" style="font-size:19px">Champion-Challenger Governance (Phase 16, deterministic, simulation only)</text>
+<rect x="330" y="50" width="320" height="50" rx="8" class="box"/><text x="490" y="80" class="lbl">REGISTERED_REFERENCE</text>
+<line x1="490" y1="100" x2="490" y2="128" class="edge"/>
+<rect x="310" y="128" width="360" height="50" rx="8" class="box"/><text x="490" y="150" class="lbl">CHALLENGER EVALUATION</text><text x="490" y="168" class="sub">same timestamps, target, features, protocol; MAE primary</text>
+<line x1="490" y1="178" x2="490" y2="206" class="edge"/>
+<rect x="250" y="206" width="480" height="64" rx="8" class="box"/><text x="490" y="228" class="lbl">GOVERNANCE POLICY 16.0.0 (13 gates)</text><text x="490" y="247" class="sub">registration, lineage, fingerprints, protocol, metadata, evaluation, performance,</text><text x="490" y="261" class="sub">benchmark, statistics, approval — improved MAE alone is NOT sufficient</text>
+<line x1="360" y1="270" x2="230" y2="312" class="edge"/><line x1="490" y1="270" x2="490" y2="312" class="edge"/><line x1="620" y1="270" x2="750" y2="312" class="edge"/>
+<rect x="120" y="312" width="200" height="44" rx="8" class="bad"/><text x="220" y="338" class="lbl" style="fill:#b3261e">REJECT</text>
+<rect x="390" y="312" width="200" height="44" rx="8" class="box"/><text x="490" y="338" class="lbl">DEFER</text>
+<rect x="660" y="312" width="200" height="44" rx="8" class="box"/><text x="760" y="338" class="lbl">APPROVE</text>
+<line x1="760" y1="356" x2="760" y2="386" class="edge"/>
+<rect x="600" y="386" width="320" height="50" rx="8" class="box"/><text x="760" y="408" class="lbl">CANARY SIMULATION</text><text x="760" y="426" class="sub">guardrail: no MAE regression; failure rolls back before activation</text>
+<line x1="760" y1="436" x2="760" y2="464" class="edge"/>
+<rect x="600" y="464" width="320" height="50" rx="8" class="box"/><text x="760" y="486" class="lbl">ACTIVE MODEL (PROMOTED, SIMULATION)</text><text x="760" y="504" class="sub">previous reference preserved (artifact + fingerprint + lineage)</text>
+<path d="M700 514 C 560 560, 400 560, 300 520" class="rb" marker-end="url(#b)"/>
+<rect x="140" y="520" width="320" height="76" rx="8" class="bad"/><text x="300" y="546" class="lbl" style="fill:#b3261e">ROLLBACK (verified restoration)</text><text x="300" y="566" class="sub" style="fill:#b3261e">degradation detected -&gt; artifact, fingerprint, lineage, load checks</text><text x="300" y="582" class="sub" style="fill:#b3261e">verification failure -&gt; ROLLBACK_BLOCKED; previous model restored</text>
+<text x="490" y="628" class="sub">Phase 13 lifecycle registry unchanged; promotion states are simulation-scoped; AUTOMATIC PROMOTION = FORBIDDEN</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "configuration_version": "neural_untuned_v1",
+  "tabular_feature_set": "combined_v1",
+  "sequence_length": 168,
+  "sequence_features": ["target", "hour_sin", "hour_cos", "dow_sin", "dow_cos", "doy_sin", "doy_cos"],
+  "known_future_calendar": ["hour_sin", "hour_cos", "dow_sin", "dow_cos", "doy_sin", "doy_cos"],
+  "target_scaling": "StandardScaler fitted on outer training only",
+  "models": {
+    "mlp": {"hidden_dimensions": [64, 32], "dropout": 0.1, "activation": "ReLU"},
+    "lstm": {"hidden_size": 32, "num_layers": 1, "dropout": 0.0, "bidirectional": false},
+    "gru": {"hidden_size": 32, "num_layers": 1, "dropout": 0.0, "bidirectional": false}
+  },
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "loss": "MSELoss",
+  "batch_size": 64,
+  "maximum_epochs": 12,
+  "inner_validation_fraction": 0.1,
+  "early_stopping_patience": 4,
+  "gradient_clip_norm": 1.0,
+  "no_hyperparameter_optimization": true
+}

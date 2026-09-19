@@ -1,0 +1,240 @@
+{
+  "dataset_version": "rts_gmlc_processed_v1",
+  "source_checksums_before": {
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\Load\\DAY_AHEAD_regional_Load.csv": "7a9470d32d49068a91334cb36db54cceb2feb5cb1f702b0fa0847af8bac6cf21",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\Load\\REAL_TIME_regional_Load.csv": "462888ae357239ec63bd22b96863900259a9849743df0ca6711ceb5a6d53da57",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\WIND\\DAY_AHEAD_wind.csv": "6a1a8dc7d10a518523b3b319902ecc1ca1c400223832b26c6edb3a6e69d01dbc",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\WIND\\REAL_TIME_wind.csv": "fc88ecb030cec9e60a796dae9c6139855640c0fca1aa7cc76e821de24d38efb4",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\PV\\DAY_AHEAD_pv.csv": "bfede6e558df5ea0f244b6326940a4ee0b95138643aa8a062897c67134c9c185",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\PV\\REAL_TIME_pv.csv": "ae45e0114d88302520acae1c7bb278e3fdfd2691a932c13667f60a27145e0836"
+  },
+  "source_checksums_after": {
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\Load\\DAY_AHEAD_regional_Load.csv": "7a9470d32d49068a91334cb36db54cceb2feb5cb1f702b0fa0847af8bac6cf21",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\Load\\REAL_TIME_regional_Load.csv": "462888ae357239ec63bd22b96863900259a9849743df0ca6711ceb5a6d53da57",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\WIND\\DAY_AHEAD_wind.csv": "6a1a8dc7d10a518523b3b319902ecc1ca1c400223832b26c6edb3a6e69d01dbc",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\WIND\\REAL_TIME_wind.csv": "fc88ecb030cec9e60a796dae9c6139855640c0fca1aa7cc76e821de24d38efb4",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\PV\\DAY_AHEAD_pv.csv": "bfede6e558df5ea0f244b6326940a4ee0b95138643aa8a062897c67134c9c185",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\external\\RTS-GMLC\\RTS_Data\\timeseries_data_files\\PV\\REAL_TIME_pv.csv": "ae45e0114d88302520acae1c7bb278e3fdfd2691a932c13667f60a27145e0836"
+  },
+  "source_unchanged": true,
+  "library_versions": {
+    "pyarrow": "25.0.1"
+  },
+  "outputs": {
+    "load_hourly": "c65db401d769fa5c7253fe1bc2ec02a37795a917626d35d301daf3be46e342a9",
+    "load_native": "cc96b7659f46bbf973480ca4a435aa2c70b6c311f121da57d468cf678ef0df7e",
+    "wind_hourly": "8863a026211a8399e85c71947fecff7c756114f13f2ab2f6af6838c0693d3994",
+    "wind_native": "af4fd55d7526cd7c3e3804416172f88da4d80efb5273d2572cbcbff5f7f42a2f",
+    "pv_hourly": "b36a77396cd2f554e44a398605fa64dabafec889df8d5d2c6c08d71ff6ae054c",
+    "pv_native": "a6c102c70ae3b1833f336971b03a60bc5c0d54bef2c38e419854d0d843ce8dcd",
+    "research_index": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00"
+  },
+  "alignment": {
+    "load": {
+      "matched_timestamps": 8784,
+      "unmatched_left": 0,
+      "unmatched_right": 0,
+      "duplicate_left": 0,
+      "duplicate_right": 0
+    },
+    "wind": {
+      "matched_timestamps": 8784,
+      "unmatched_left": 0,
+      "unmatched_right": 0,
+      "duplicate_left": 0,
+      "duplicate_right": 0
+    },
+    "pv": {
+      "matched_timestamps": 8784,
+      "unmatched_left": 0,
+      "unmatched_right": 0,
+      "duplicate_left": 0,
+      "duplicate_right": 0
+    }
+  },
+  "characteristics": [
+    {
+      "Target": "System Load",
+      "Resolution": "hourly",
+      "Observations": 8784,
+      "Missing Values": 0,
+      "mean": 4164.547220525064,
+      "std_dev": 1014.0928186946052,
+      "min": 2645.898486975,
+      "max": 7960.809648,
+      "median": 3898.462613270833,
+      "zero_percentage": 0.0
+    },
+    {
+      "Target": "Aggregate Wind",
+      "Resolution": "hourly",
+      "Observations": 8784,
+      "Missing Values": 0,
+      "mean": 779.092920840923,
+      "std_dev": 779.7708319191553,
+      "min": 15.274999999999999,
+      "max": 2470.291666666667,
+      "median": 465.9708333333333,
+      "zero_percentage": 0.0
+    },
+    {
+      "Target": "Aggregate Utility-scale PV",
+      "Resolution": "hourly",
+      "Observations": 8784,
+      "Missing Values": 0,
+      "mean": 405.2225599574985,
+      "std_dev": 472.92228574944625,
+      "min": 0.0,
+      "max": 1359.6083333333333,
+      "median": 19.40416666666667,
+      "zero_percentage": 46.43670309653916
+    }
+  ],
+  "correlations_descriptive": {
+    "load_wind": -0.28850713572050174,
+    "load_pv": 0.33398682073422015,
+    "wind_pv": -0.15563104462996158
+  },
+  "temporal_summaries": {
+    "load": {
+      "hour": {
+        "0": 3426.251291527049,
+        "1": 3314.9666499122272,
+        "2": 3255.278464093625,
+        "3": 3257.8664769089482,
+        "4": 3341.696558886954,
+        "5": 3511.013614981148,
+        "6": 3720.737340249453,
+        "7": 3918.694065519968,
+        "8": 4128.006263735291,
+        "9": 4319.493779495538,
+        "10": 4478.081145136316,
+        "11": 4604.631387112888,
+        "12": 4703.61883340756,
+        "13": 4784.773747096971,
+        "14": 4830.185161522245,
+        "15": 4828.590726860087,
+        "16": 4810.063566862818,
+        "17": 4837.404060862318,
+        "18": 4845.828396277163,
+        "19": 4775.545887705784,
+        "20": 4553.738280463297,
+        "21": 4223.060980039822,
+        "22": 3874.796311026275,
+        "23": 3604.8103029178046
+      },
+      "month": {
+        "1": 3709.0483880120296,
+        "2": 3572.465773335093,
+        "3": 3525.9552609026546,
+        "4": 3617.597723494734,
+        "5": 4155.678486162254,
+        "6": 4743.572627549155,
+        "7": 5435.292783159599,
+        "8": 5289.558612035954,
+        "9": 4662.163482207396,
+        "10": 3866.871276421192,
+        "11": 3585.224212531262,
+        "12": 3771.3382227250113
+      },
+      "day_of_week": {
+        "0": 4240.565252897736,
+        "1": 4265.933503980022,
+        "2": 4275.39810771438,
+        "3": 4259.402564874961,
+        "4": 4225.495897017388,
+        "5": 3980.486912671134,
+        "6": 3900.5924154517693
+      }
+    },
+    "wind": {
+      "hour": {
+        "0": 905.0565573770492,
+        "1": 900.0298724954463,
+        "2": 891.4386384335155,
+        "3": 876.8558970856103,
+        "4": 864.5390710382513,
+        "5": 847.8152550091075,
+        "6": 821.5085154826958,
+        "7": 776.9484972677596,
+        "8": 732.114344262295,
+        "9": 688.9251821493625,
+        "10": 654.7416438979964,
+        "11": 637.0297586520948,
+        "12": 624.7244535519126,
+        "13": 623.1927823315118,
+        "14": 640.0068306010929,
+        "15": 659.2407786885246,
+        "16": 682.2007969034609,
+        "17": 717.3298952641165,
+        "18": 767.6938296903461,
+        "19": 823.3056238615665,
+        "20": 875.1369535519126,
+        "21": 893.4187613843352,
+        "22": 894.4142759562842,
+        "23": 900.5618852459017
+      },
+      "month": {
+        "1": 1619.2241711469535,
+        "2": 856.3929956896552,
+        "3": 888.2296146953405,
+        "4": 571.0219097222223,
+        "5": 609.883288530466,
+        "6": 507.23118055555557,
+        "7": 314.78249327956985,
+        "8": 416.5234094982079,
+        "9": 561.2302546296296,
+        "10": 704.7582997311829,
+        "11": 1441.7239699074073,
+        "12": 861.9662298387096
+      }
+    },
+    "pv": {
+      "hour": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.29121129326047357,
+        "5": 72.39699453551913,
+        "6": 315.17679872495444,
+        "7": 673.3300091074681,
+        "8": 924.3073315118397,
+        "9": 1028.354713114754,
+        "10": 1074.0443078324226,
+        "11": 1084.361475409836,
+        "12": 1074.3808515482697,
+        "13": 1040.4138205828779,
+        "14": 973.5497950819672,
+        "15": 804.2918032786885,
+        "16": 472.1168488160291,
+        "17": 173.70721766848817,
+        "18": 14.618260473588343,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0
+      },
+      "month": {
+        "1": 353.0974238351254,
+        "2": 374.06077586206897,
+        "3": 375.27936827956984,
+        "4": 437.81943287037035,
+        "5": 478.67745295698927,
+        "6": 467.3050231481481,
+        "7": 425.5811939964158,
+        "8": 455.0162858422939,
+        "9": 442.43305555555554,
+        "10": 385.5013440860215,
+        "11": 349.65578703703704,
+        "12": 318.69517249103944
+      }
+    }
+  },
+  "processing_configuration": {
+    "timestamp_convention": "one-based start-of-interval",
+    "real_time_hourly_aggregation": "arithmetic mean of 12 five-minute MW values",
+    "rtpv": "excluded from utility-scale PV canonical dataset"
+  }
+}

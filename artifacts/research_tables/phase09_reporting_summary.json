@@ -1,0 +1,68 @@
+{
+  "official_trial_records": 30,
+  "rejected_trial_records": 15,
+  "post_hpo_runs": 30,
+  "post_hpo_target_mae": {
+    "load": 320.233604,
+    "wind": 522.112211,
+    "pv": 55.610535
+  },
+  "matched_untuned_pytorch_mae": {
+    "load": 294.86367190835256,
+    "wind": 518.7314254875391,
+    "pv": 49.25542155354401
+  },
+  "physical_validity": [
+    {
+      "target": "load",
+      "predictions": 7320,
+      "negative_prediction_count": 0,
+      "negative_prediction_percentage": 0.0,
+      "NaN_count": 0,
+      "Inf_count": 0
+    },
+    {
+      "target": "wind",
+      "predictions": 7320,
+      "negative_prediction_count": 1,
+      "negative_prediction_percentage": 0.01366120218579235,
+      "NaN_count": 0,
+      "Inf_count": 0
+    },
+    {
+      "target": "pv",
+      "predictions": 7320,
+      "negative_prediction_count": 1101,
+      "negative_prediction_percentage": 15.040983606557377,
+      "NaN_count": 0,
+      "Inf_count": 0
+    }
+  ],
+  "invalid_official_evidence": 0,
+  "costs": [
+    {
+      "Evidence": "VALID classical HPO search",
+      "Runs": 15,
+      "Runtime seconds": "49.235",
+      "Official": "YES"
+    },
+    {
+      "Evidence": "VALID PyTorch HPO search",
+      "Runs": 15,
+      "Runtime seconds": "13.922",
+      "Official": "YES"
+    },
+    {
+      "Evidence": "PyTorch post-HPO evaluation",
+      "Runs": 30,
+      "Runtime seconds": "50.789",
+      "Official": "YES"
+    },
+    {
+      "Evidence": "INVALIDATED / AUDIT-ONLY COMPUTE",
+      "Runs": 15,
+      "Runtime seconds": "80.152",
+      "Official": "NO"
+    }
+  ]
+}

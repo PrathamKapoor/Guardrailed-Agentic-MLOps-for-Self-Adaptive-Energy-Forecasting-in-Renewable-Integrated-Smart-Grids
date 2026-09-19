@@ -1,0 +1,17 @@
+{
+  "phase": "07",
+  "research_questions": ["RQ-ML-1", "RQ-ML-2", "RQ-ML-3"],
+  "targets": ["load", "wind", "pv"],
+  "horizons": [1, 24],
+  "feature_set_version": "combined_v1",
+  "model_families": ["linear_regression", "ridge", "random_forest", "extra_trees", "hist_gradient_boosting"],
+  "fixed_configuration": "config/models/classical_untuned_v1.yaml",
+  "stochastic_seeds": [42, 123, 2020, 2025, 31415],
+  "rolling_origin_folds": 6,
+  "metrics": ["MAE", "RMSE", "sMAPE", "nMAE", "nRMSE"],
+  "baseline_reference_policy": "best Phase 6 naive historical MAE for every target/horizon; RTS DAY_AHEAD separately for H24",
+  "final_test_status": "LOCKED",
+  "protocol_checksum_dependency": "666eb745de5ae01ba2033e825a4c6b0ba0cea1f9574c32426de8a5996581c0f9",
+  "model_results_observed_when_frozen": false,
+  "no_hyperparameter_optimization": true
+}

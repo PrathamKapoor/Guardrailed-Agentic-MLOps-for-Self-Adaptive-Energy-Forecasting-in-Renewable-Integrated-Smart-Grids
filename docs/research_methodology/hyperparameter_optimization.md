@@ -1,0 +1,7 @@
+# Hyperparameter optimization
+
+Phase 9 is a bounded H24 development study. Selected Phase 7/8 candidates were searched with Optuna TPE (seed 42), mean MAE across F01--F04, five trials per study, and no pruning. The neural search uses the frozen Phase 8 tabular PyTorch implementation (`PYTORCH_MLP_V1`) with neural search seed 42. F05--F06 are reserved for post-HPO validation: the selected frozen PyTorch configurations are evaluated with seeds 42, 123, 2020, 2025, and 31415. The target-level POST-HPO MAE is the mean of the F05 and F06 fold mean MAEs; within-fold seed standard deviation is reported separately from F05-versus-F06 temporal variation.
+
+Candidate selection is based on F01--F04 SEARCH MAE only. The selected configuration files and the selected-config freeze are checksum controlled before F05/F06 evaluation. SEARCH MAE, POST-HPO MAE, and any retrospective six-fold result are labelled separately and are never collapsed into an ambiguous tuned metric.
+
+P9-DEV-001 identified an earlier sklearn `MLPRegressor` implementation mismatch. That evidence is retained as `INVALIDATED` audit history only. Official aggregation is status based (`evidence_status == VALID`), and official neural evidence also requires `framework == pytorch` and `implementation_id == PYTORCH_MLP_V1`. F05/F06 and the November–December final test remain isolated from modeling; P9-DEV-002 later authorized an integrity-only feature reconstruction read with no modeling, selection, HPO, prediction, or performance evaluation.

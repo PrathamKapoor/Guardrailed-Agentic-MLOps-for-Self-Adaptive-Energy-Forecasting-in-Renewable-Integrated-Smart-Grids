@@ -1,0 +1,27 @@
+{
+  "monitoring_policy_fingerprint": "monitoring-policy-v1:sha256:796e29988776011d068f0ab8b1e539b1653bb49ecd50afadab020c818dacc538",
+  "schema_version": "phase14-threshold-v1",
+  "thresholds": {
+    "load": {
+      "feature_wasserstein": 0.06554028337568847,
+      "percentile": 99.0,
+      "reference_period": "F01-F03",
+      "stride_hours": 24,
+      "window_hours": 168
+    },
+    "pv": {
+      "feature_wasserstein": 0.05538731918350614,
+      "percentile": 99.0,
+      "reference_period": "F01-F03",
+      "stride_hours": 24,
+      "window_hours": 168
+    },
+    "wind": {
+      "feature_wasserstein": 0.06661298192415495,
+      "percentile": 99.0,
+      "reference_period": "F01-F03",
+      "stride_hours": 24,
+      "window_hours": 168
+    }
+  }
+}

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 540" font-family="Segoe UI, Arial, sans-serif">
+<style>
+  .stage{stroke:#30363d;stroke-width:1.5;fill:#161b22}
+  .row-text{font-size:13px;fill:#e6edf3;text-anchor:middle}
+  .label{font-size:14px;fill:#e6edf3;font-weight:600;text-anchor:middle}
+  .muted{font-size:11px;fill:#9aa6b2;text-anchor:middle}
+  .accent{stroke:#2a9d8f;stroke-width:2.5;fill:none}
+  .firewall{stroke:#e9c46a;stroke-width:2.5;fill:#1f2630}
+  .frozen{stroke:#5fa8d3;stroke-width:2.5;fill:#1f2630}
+  .danger{fill:#e76f51}
+  .ok{fill:#2a9d8f}
+  .arrow{stroke:#9aa6b2;stroke-width:1.4;fill:none;marker-end:url(#a)}
+  .arrowAccent{stroke:#2a9d8f;stroke-width:2;fill:none;marker-end:url(#aAccent)}
+  .arrowBlocked{stroke:#e76f51;stroke-width:1.6;fill:none;marker-end:url(#aDanger);stroke-dasharray:4 3}
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L0,10 L10,5 z" fill="#9aa6b2"/></marker>
+  <marker id="aAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L0,10 L10,5 z" fill="#2a9d8f"/></marker>
+  <marker id="aDanger" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L0,10 L10,5 z" fill="#e76f51"/></marker>
+</defs>
+
+<text x="590" y="30" class="label" font-size="18">20-phase governance-first MLOps architecture</text>
+<text x="590" y="48" class="muted">Bounded agentic layer; frozen final evaluation; audit everywhere.</text>
+
+<!-- Row 1: data flow -->
+<rect x="40"  y="80" width="120" height="48" rx="8" class="stage"/><text x="100" y="100" class="label">Data</text><text x="100" y="116" class="muted">RTS-GMLC 2020</text>
+<rect x="190" y="80" width="120" height="48" rx="8" class="stage"/><text x="250" y="100" class="label">Preprocessing</text><text x="250" y="116" class="muted">8,784 hourly rows</text>
+<rect x="340" y="80" width="120" height="48" rx="8" class="stage"/><text x="400" y="100" class="label">Features</text><text x="400" y="116" class="muted">B_lags_only / E_full</text>
+<rect x="490" y="80" width="130" height="48" rx="8" class="stage"/><text x="555" y="100" class="label">Tracking</text><text x="555" y="116" class="muted">MLflow lineage</text>
+<rect x="650" y="80" width="150" height="48" rx="8" class="stage"/><text x="725" y="100" class="label">Governance</text><text x="725" y="116" class="muted">13 policy gates</text>
+<rect x="830" y="80" width="160" height="48" rx="8" class="stage"/><text x="910" y="100" class="label">Drift monitoring</text><text x="910" y="116" class="muted">PSI / KS / perf</text>
+<rect x="1020" y="80" width="120" height="48" rx="8" class="stage"/><text x="1080" y="100" class="label">Finalist</text><text x="1080" y="116" class="muted">3 frozen</text>
+
+<line x1="160" y1="104" x2="190" y2="104" class="arrow"/>
+<line x1="310" y1="104" x2="340" y2="104" class="arrow"/>
+<line x1="460" y1="104" x2="490" y2="104" class="arrow"/>
+<line x1="620" y1="104" x2="650" y2="104" class="arrow"/>
+<line x1="800" y1="104" x2="830" y2="104" class="arrow"/>
+<line x1="990" y1="104" x2="1020" y2="104" class="arrow"/>
+
+<!-- Row 2: governance layer -->
+<rect x="40"  y="160" width="200" height="56" rx="10" class="stage" stroke-width="2"/>
+<text x="140" y="184" class="label">Governed retraining</text>
+<text x="140" y="202" class="muted">17 eligibility gates, 18 challengers</text>
+
+<rect x="280" y="160" width="220" height="56" rx="10" class="stage" stroke-width="2"/>
+<text x="390" y="184" class="label">Champion-challenger + rollback</text>
+<text x="390" y="202" class="muted">13 governance gates, canary, verified</text>
+
+<rect x="540" y="160" width="200" height="56" rx="10" class="stage" stroke-width="2"/>
+<text x="640" y="184" class="label">Evidence ledger</text>
+<text x="640" y="202" class="muted">Hash-chained, append-only</text>
+
+<rect x="780" y="160" width="200" height="56" rx="10" class="stage" stroke-width="2"/>
+<text x="880" y="184" class="label">Agent layer (bounded)</text>
+<text x="880" y="202" class="muted">5 specialist agents + firewall</text>
+
+<rect x="1010" y="160" width="130" height="56" rx="10" class="frozen"/>
+<text x="1075" y="184" class="label">Final evaluation</text>
+<text x="1075" y="202" class="muted">FROZEN</text>
+
+<!-- Row 3: firewall + outputs -->
+<rect x="780" y="246" width="200" height="44" rx="8" class="firewall"/>
+<text x="880" y="266" class="label">Governance firewall</text>
+<text x="880" y="282" class="muted">ALLOW advisory · BLOCK lifecycle</text>
+
+<rect x="1020" y="246" width="120" height="44" rx="8" class="stage"/>
+<text x="1080" y="266" class="label">Dashboard</text>
+<text x="1080" y="282" class="muted">Read-only</text>
+
+<!-- What agents can do (allowed) -->
+<rect x="780" y="310" width="100" height="24" rx="6" fill="#0e1e1b" stroke="#2a9d8f"/><text x="830" y="326" class="muted" fill="#2a9d8f">INVESTIGATE</text>
+<rect x="884" y="310" width="86"  height="24" rx="6" fill="#0e1e1b" stroke="#2a9d8f"/><text x="927" y="326" class="muted" fill="#2a9d8f">SUMMARIZE</text>
+<rect x="974" y="310" width="80"  height="24" rx="6" fill="#0e1e1b" stroke="#2a9d8f"/><text x="1014" y="326" class="muted" fill="#2a9d8f">EXPLAIN</text>
+<rect x="1058" y="310" width="92" height="24" rx="6" fill="#0e1e1b" stroke="#2a9d8f"/><text x="1104" y="326" class="muted" fill="#2a9d8f">REPORT</text>
+
+<!-- What agents cannot do (blocked) -->
+<rect x="780" y="346" width="100" height="24" rx="6" fill="#2a1410" stroke="#e76f51"/><text x="830" y="362" class="muted" fill="#e76f51">PROMOTE</text>
+<rect x="884" y="346" width="86"  height="24" rx="6" fill="#2a1410" stroke="#e76f51"/><text x="927" y="362" class="muted" fill="#e76f51">ROLLBACK</text>
+<rect x="974" y="346" width="80"  height="24" rx="6" fill="#2a1410" stroke="#e76f51"/><text x="1014" y="362" class="muted" fill="#e76f51">RETRAIN</text>
+<rect x="1058" y="346" width="92" height="24" rx="6" fill="#2a1410" stroke="#e76f51"/><text x="1104" y="362" class="muted" fill="#e76f51">POLICY ✕</text>
+
+<!-- Row 4: final results card -->
+<rect x="40" y="395" width="1100" height="115" rx="10" class="stage" stroke-width="2"/>
+<text x="50" y="418" class="label" text-anchor="start">Final evaluation (locked test partition 2020-11-01 → 2020-12-31, 1464 rows per target)</text>
+
+<rect x="60"  y="430" width="340" height="68" rx="8" fill="#0e1e1b" stroke="#2a9d8f"/>
+<text x="230" y="450" class="label">PV</text>
+<text x="60" y="468" class="muted" text-anchor="start">frozen random_forest MAE 36.12</text>
+<text x="60" y="484" class="muted" text-anchor="start">H24 daily persistence MAE 39.09</text>
+<text x="400" y="468" class="muted" text-anchor="end">−7.61%</text>
+<text x="400" y="484" class="muted" text-anchor="end" fill="#2a9d8f">better</text>
+
+<rect x="420" y="430" width="340" height="68" rx="8" fill="#2a1410" stroke="#e76f51"/>
+<text x="590" y="450" class="label">LOAD</text>
+<text x="420" y="468" class="muted" text-anchor="start">frozen random_forest MAE 174.26</text>
+<text x="420" y="484" class="muted" text-anchor="start">RTS_DAY_AHEAD MAE 101.14</text>
+<text x="760" y="468" class="muted" text-anchor="end" fill="#e76f51">+72.29%</text>
+<text x="760" y="484" class="muted" text-anchor="end" fill="#e76f51">worse</text>
+
+<rect x="780" y="430" width="340" height="68" rx="8" fill="#2a1410" stroke="#e76f51"/>
+<text x="950" y="450" class="label">WIND</text>
+<text x="780" y="468" class="muted" text-anchor="start">frozen hist_gb MAE 778.84</text>
+<text x="780" y="484" class="muted" text-anchor="start">RTS_DAY_AHEAD MAE 331.30</text>
+<text x="1120" y="468" class="muted" text-anchor="end" fill="#e76f51">+135.08%</text>
+<text x="1120" y="484" class="muted" text-anchor="end" fill="#e76f51">worse</text>
+
+<text x="590" y="540" class="muted">Diagram reflects the actual 20-phase implementation; no conceptual boxes that do not exist in code.</text>
+</svg>

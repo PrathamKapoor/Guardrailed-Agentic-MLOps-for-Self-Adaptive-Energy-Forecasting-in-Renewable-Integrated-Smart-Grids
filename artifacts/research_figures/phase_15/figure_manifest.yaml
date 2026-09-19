@@ -1,0 +1,59 @@
+{
+  "figures": [
+    {
+      "evidence_status": "VALID",
+      "figure_id": "FIG-P15-01",
+      "final_test_status": "NOT_ACCESSED",
+      "generation_script": "scripts/finalize_phase15_artifacts.py",
+      "paper_relevance": "governed retraining architecture and promotion boundary",
+      "path": "artifacts/research_figures/phase_15/governed_retraining_architecture.svg",
+      "scenario_role": "architecture",
+      "source_artifacts": [
+        "config/retraining/phase_15_policy.yaml",
+        "artifacts/experimental_design/phase_15_retraining_protocol_freeze.yaml"
+      ],
+      "target": "all"
+    },
+    {
+      "evidence_status": "VALID",
+      "figure_id": "FIG-P15-02",
+      "final_test_status": "NOT_ACCESSED",
+      "generation_script": "scripts/finalize_phase15_artifacts.py",
+      "paper_relevance": "adaptation gain including negative values",
+      "path": "artifacts/research_figures/phase_15/adaptation_gain_by_target.png",
+      "scenario_role": "adaptation performance",
+      "source_artifacts": [
+        "artifacts/retraining/phase_15/evaluations/"
+      ],
+      "target": "load,wind,pv"
+    },
+    {
+      "evidence_status": "VALID",
+      "figure_id": "FIG-P15-03",
+      "final_test_status": "NOT_ACCESSED",
+      "generation_script": "scripts/finalize_phase15_artifacts.py",
+      "paper_relevance": "matched post-drift comparison",
+      "path": "artifacts/research_figures/phase_15/reference_vs_challenger_post_drift.png",
+      "scenario_role": "reference vs challenger",
+      "source_artifacts": [
+        "artifacts/retraining/phase_15/evaluations/"
+      ],
+      "target": "load,wind,pv"
+    },
+    {
+      "evidence_status": "VALID",
+      "figure_id": "FIG-P15-04",
+      "final_test_status": "NOT_ACCESSED",
+      "generation_script": "scripts/finalize_phase15_artifacts.py",
+      "paper_relevance": "policy decision counts and blocking reasons",
+      "path": "artifacts/research_figures/phase_15/retraining_policy_outcomes.svg",
+      "scenario_role": "request-policy outcomes",
+      "source_artifacts": [
+        "artifacts/retraining/phase_15/scenario_results/request_policy.json"
+      ],
+      "target": "all"
+    }
+  ],
+  "final_test_status": "NOT_ACCESSED",
+  "phase": "15"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "phase15-retraining-protocol-v1",
+  "phase": "15",
+  "research_objective": "Design and evaluate a deterministic, governance-controlled retraining workflow that converts eligible drift evidence into bounded retraining jobs and reproducible challenger models without permitting drift events, retraining requests, or newly trained challengers to bypass lifecycle governance.",
+  "secondary_objective": "Measure whether retraining on newly available post-drift development data improves future post-drift forecasting performance relative to the unchanged reference model under controlled adaptation scenarios.",
+  "research_questions": ["RQ-RET-1", "RQ-RET-2", "RQ-RET-3", "RQ-RET-4", "RQ-RET-5"],
+  "hypotheses": {
+    "H-RET-1": "Not every drift alert will satisfy the deterministic retraining eligibility policy.",
+    "H-RET-2": "Critical data-quality failures will block or defer retraining rather than produce a challenger from corrupted data.",
+    "H-RET-3": "For controlled persistent post-drift distribution changes, bounded refitting on newly observed post-drift data will improve future post-drift MAE in at least some target/scenario combinations.",
+    "H-RET-4": "Every successful retraining job will produce a lineage-complete challenger whose lifecycle state remains distinct from promotion eligibility."
+  },
+  "retraining_policy": {
+    "config_path": "config/retraining/phase_15_policy.yaml",
+    "policy_id": "SMARTGRID_DETERMINISTIC_RETRAINING",
+    "policy_version": "15.0.0",
+    "policy_checksum": "28a05242ab56efb90e82a004e657610b04f9ad35d3756e304bab2429798bc03e"
+  },
+  "request_policy_rules": {
+    "request_schema_fields": ["request_id", "target", "reference_registry_id", "reference_model_fingerprint", "triggering_drift_event_ids", "trigger_severity", "trigger_detectors", "request_timestamp", "data_cutoff_timestamp", "label_availability_cutoff", "proposed_training_window", "policy_version", "monitoring_policy_fingerprint", "governance_policy_fingerprint", "evidence_refs", "request_origin", "simulation_scenario_id", "retraining_request_fingerprint"],
+    "allowed_origins": ["MONITORING_POLICY", "MANUAL_SIMULATION", "SYSTEM_TEST"],
+    "agent_origin_allowed": false,
+    "decision_values": ["ALLOW", "DENY", "DEFER"],
+    "severity_policy": {"NONE": "DENY", "WATCH": "DENY", "WARNING": "eligible only with persistence and performance criteria", "CRITICAL": "eligible unless blocked by data-quality or other safety gates"},
+    "performance_signal_conditions": ["A persistent PERFORMANCE_DRIFT", "B persistent ERROR_DISTRIBUTION_DRIFT with WARNING/CRITICAL severity", "C compound feature/prediction drift plus performance deterioration", "D explicit controlled adaptation scenario eligible under simulation policy"],
+    "feature_or_prediction_drift_alone_authorizes": false,
+    "gates": ["POLICY_VERSION_GATE", "REQUEST_ORIGIN_GATE", "DRIFT_EVIDENCE_GATE", "DRIFT_SEVERITY_GATE", "DRIFT_PERSISTENCE_GATE", "PERFORMANCE_SIGNAL_GATE", "DATA_QUALITY_GATE", "LABEL_AVAILABILITY_GATE", "MINIMUM_NEW_DATA_GATE", "COOLDOWN_GATE", "REFERENCE_STATE_GATE", "LINEAGE_GATE", "MODEL_FINGERPRINT_GATE", "FEATURE_FINGERPRINT_GATE", "PROTOCOL_GATE", "FINAL_TEST_POLICY_GATE", "JOB_CONCURRENCY_GATE"],
+    "defer_reason_codes": ["DRIFT_NOT_PERSISTENT", "LABELS_NOT_AVAILABLE", "INSUFFICIENT_NEW_DATA", "RETRAINING_COOLDOWN_ACTIVE", "RETRAINING_ALREADY_RUNNING"],
+    "duplicate_request_policy": "RETURN_EXISTING_DECISION with DUPLICATE_REQUEST marker"
+  },
+  "data_cutoffs_and_label_availability": {
+    "horizon_contract": "H24 label observed at target timestamp; rows with target_timestamp after label_availability_cutoff cannot enter retraining",
+    "drift_onset": "2020-08-01T00:00:00",
+    "request_timestamp": "2020-08-15T00:00:00",
+    "data_cutoff": "2020-08-15T00:00:00",
+    "label_availability_cutoff": "2020-08-15T00:00:00",
+    "minimum_new_labeled_samples": 336,
+    "cooldown_hours": 168,
+    "cooldown_scope": "target within one simulation stream; independent adaptation scenarios are independent simulation universes"
+  },
+  "training_window_construction": {
+    "strategy": "EXPANDING_WINDOW_REFIT",
+    "definition": "all eligible development observations with target_timestamp <= frozen retraining cutoff (historical + newly observed post-drift), subject to leakage rules",
+    "rationale": "Expanding-window refitting preserves historical information while incorporating newly available post-drift data and avoids introducing an additional retraining-window hyperparameter search.",
+    "reference_instance_training_window": "target_timestamp < 2020-08-01 (pre-onset; identical to F05 training boundary); reconstruction is REFERENCE_INFERENCE only, never refit on post-drift data"
+  },
+  "adaptation_scenarios": {"freeze": "artifacts/experimental_design/phase_15_adaptation_scenarios.yaml", "families": ["A15-01", "A15-02"], "severities": ["LOW", "MEDIUM", "HIGH"], "targets": ["load", "wind", "pv"], "primary_cases": 18},
+  "evaluation_windows": {
+    "post_retraining_horizon_hours": 336,
+    "evaluation_window": "target_timestamp in (2020-08-15T00:00:00, 2020-08-29T00:00:00]",
+    "matched_timestamps": true,
+    "clean_counterfactual": "same challenger evaluated on the unperturbed development copy for identical future timestamps",
+    "insufficient_horizon_marker": "INSUFFICIENT_EVALUATION_HORIZON"
+  },
+  "metrics": {"primary": "MAE", "secondary": ["RMSE", "sMAPE", "nMAE", "nRMSE"], "adaptation_gain_percent": "(Reference_PostDrift_MAE - Challenger_PostDrift_MAE)/Reference_PostDrift_MAE*100", "clean_stability_change_percent": "(Clean_Reference_MAE - Clean_Challenger_MAE)/Clean_Reference_MAE*100", "no_arbitrary_success_threshold": true},
+  "seed_rules": {"policy": "single deterministic seed 42 embedded in frozen reference hyperparameters (Phase 10/11 classical policy)", "multi_seed_averaging": false},
+  "challenger_registration_rules": {"terminal_state": "REGISTERED_CHALLENGER", "promotion_eligible_default": false, "automatic_promotion_forbidden": true, "champion_status_forbidden": true, "registry_file": "artifacts/model_registry/phase_15_challengers.yaml", "previous_freezes_unchanged": true},
+  "request_policy_scenario_suite": {
+    "R01": {"case": "clean/no drift", "expected_decision": "DENY"},
+    "R02": {"case": "WATCH feature drift only", "expected_decision": "DENY"},
+    "R03": {"case": "WARNING performance drift, insufficient persistence", "expected_decision": "DEFER"},
+    "R04": {"case": "persistent WARNING performance drift", "expected_decision": "ALLOW"},
+    "R05": {"case": "CRITICAL compound drift", "expected_decision": "ALLOW"},
+    "R06": {"case": "CRITICAL schema/data-quality failure", "expected_decision": "DENY"},
+    "R07": {"case": "labels unavailable", "expected_decision": "DEFER"},
+    "R08": {"case": "insufficient new labeled data", "expected_decision": "DEFER"},
+    "R09": {"case": "cooldown active", "expected_decision": "DEFER"},
+    "R10": {"case": "invalid lineage", "expected_decision": "DENY"},
+    "R11": {"case": "model fingerprint mismatch", "expected_decision": "DENY"},
+    "R12": {"case": "final-test request", "expected_decision": "DENY"},
+    "R13": {"case": "duplicate request", "expected_outcome": "deterministic duplicate handling returning the existing decision"},
+    "R14": {"case": "invalid monitoring evidence", "expected_decision": "DENY"},
+    "R15": {"case": "allowed valid request", "expected_decision": "ALLOW"}
+  },
+  "unsafe_retraining_prevention_rate": "unsafe retraining attempts correctly blocked / unsafe retraining attempts * 100 (frozen definition)",
+  "final_test_isolation": {
+    "training_access": "NO", "hpo_access": "NO", "model_selection_access": "NO",
+    "feature_selection_access": "NO", "performance_evaluation": "NO",
+    "historical_integrity_audit_access": "YES - historical P9-DEV-002 only",
+    "phase_15_new_final_test_reads": 0
+  },
+  "no_agents": "Phase 15 is fully deterministic; no LLMs or agent frameworks are used",
+  "mlflow_tracking": {"tracking_origin": "NATIVE_MLFLOW", "research_phase": "15", "experiment_type": "GOVERNED_RETRAINING", "experiment_name": "phase15/governed_retraining"},
+  "model_results_observed_when_frozen": false
+}

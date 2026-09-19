@@ -1,0 +1,1 @@
+{"primary":"MAE","secondary":["RMSE","sMAPE","nMAE","nRMSE"],"descriptive":["R2"],"nmae_denominator":"mean_absolute_observed_target","nrmse_denominator":"mean_absolute_observed_target","smape_convention":"mean(200*abs(y-yhat)/(abs(y)+abs(yhat))); zero/zero contributes zero","mape":{"primary_for_pv":false,"status":"secondary_with_zero safeguards only"}}

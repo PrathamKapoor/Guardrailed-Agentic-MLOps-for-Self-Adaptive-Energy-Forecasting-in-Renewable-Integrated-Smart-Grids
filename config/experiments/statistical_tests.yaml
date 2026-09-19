@@ -1,0 +1,1 @@
+{"significance_level":0.05,"primary_paired_test":"Diebold-Mariano with autocorrelation-aware variance appropriate to forecast horizon","candidate_losses":["absolute_error","squared_error"],"secondary_test":"Wilcoxon signed-rank where assumptions are appropriate","multiple_comparisons":"Holm-Bonferroni","confidence_intervals":"95%; block bootstrap where statistically meaningful"}

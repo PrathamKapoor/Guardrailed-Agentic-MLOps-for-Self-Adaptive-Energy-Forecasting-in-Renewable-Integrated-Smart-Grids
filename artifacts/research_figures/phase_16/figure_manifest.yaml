@@ -1,0 +1,32 @@
+{
+  "figures": [
+    {
+      "evidence_status": "VALID",
+      "figure_id": "FIG-P16-01",
+      "final_test_status": "NOT_ACCESSED",
+      "generation_script": "scripts/finalize_phase16_artifacts.py",
+      "paper_relevance": "governed promotion and rollback paths",
+      "path": "artifacts/research_figures/phase_16/champion_challenger_architecture.svg",
+      "scenario_role": "architecture",
+      "source_artifacts": [
+        "config/governance/phase_16_promotion_policy.yaml"
+      ],
+      "target": "all"
+    },
+    {
+      "evidence_status": "VALID",
+      "figure_id": "FIG-P16-02",
+      "final_test_status": "NOT_ACCESSED",
+      "generation_script": "scripts/finalize_phase16_artifacts.py",
+      "paper_relevance": "promotion decision counts and safety metrics",
+      "path": "artifacts/research_figures/phase_16/promotion_outcomes.svg",
+      "scenario_role": "outcomes",
+      "source_artifacts": [
+        "artifacts/champion_challenger/phase_16/manifests/simulation_summary.json"
+      ],
+      "target": "all"
+    }
+  ],
+  "final_test_status": "NOT_ACCESSED",
+  "phase": "16"
+}

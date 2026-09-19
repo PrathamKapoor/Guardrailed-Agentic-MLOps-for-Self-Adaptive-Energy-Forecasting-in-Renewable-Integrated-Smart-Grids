@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" font-family="Segoe UI, Arial, sans-serif">
+<style>
+  .stage{stroke:#30363d;stroke-width:1.5;fill:#161b22}
+  .label{font-size:14px;fill:#e6edf3;font-weight:600;text-anchor:middle}
+  .muted{font-size:11px;fill:#9aa6b2;text-anchor:middle}
+  .frozen{stroke:#5fa8d3;stroke-width:2.5;fill:#1f2630}
+  .accent{stroke:#2a9d8f;stroke-width:2.5;fill:none}
+  .arrow{stroke:#9aa6b2;stroke-width:1.6;fill:none;marker-end:url(#a)}
+  .arrowAccent{stroke:#2a9d8f;stroke-width:2.4;fill:none;marker-end:url(#aAccent)}
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L0,10 L10,5 z" fill="#9aa6b2"/></marker>
+  <marker id="aAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L0,10 L10,5 z" fill="#2a9d8f"/></marker>
+</defs>
+
+<text x="590" y="28" class="label" font-size="18">Research progression across the 20 phases</text>
+<text x="590" y="46" class="muted">Each phase froze its artefacts before the next phase was allowed to read them. Final evaluation is the last read.</text>
+
+<rect x="30"  y="80"  width="170" height="80" rx="10" class="stage"/>
+<text x="115" y="100" class="label">Baseline</text>
+<text x="115" y="120" class="muted">Phases 0–5</text>
+<text x="115" y="136" class="muted">RTS-GMLC + features</text>
+<text x="115" y="152" class="muted">+ splits + protocol</text>
+
+<rect x="230" y="80" width="170" height="80" rx="10" class="stage"/>
+<text x="315" y="100" class="label">Topology-aware</text>
+<text x="315" y="120" class="muted">Phases 6–11</text>
+<text x="315" y="136" class="muted">classical / neural / HPO</text>
+<text x="315" y="152" class="muted">+ feature ablation</text>
+
+<rect x="430" y="80" width="170" height="80" rx="10" class="stage"/>
+<text x="515" y="100" class="label">MLOps foundation</text>
+<text x="515" y="120" class="muted">Phases 12–13</text>
+<text x="515" y="136" class="muted">MLflow + governance</text>
+<text x="515" y="152" class="muted">+ champion-challenger</text>
+
+<rect x="630" y="80" width="170" height="80" rx="10" class="stage"/>
+<text x="715" y="100" class="label">Drift + retraining</text>
+<text x="715" y="120" class="muted">Phases 14–15</text>
+<text x="715" y="136" class="muted">PSI / KS / 17-gate</text>
+<text x="715" y="152" class="muted">+ rollback</text>
+
+<rect x="830" y="80" width="160" height="80" rx="10" class="stage"/>
+<text x="910" y="100" class="label">Agentic layer</text>
+<text x="910" y="120" class="muted">Phases 17–18</text>
+<text x="910" y="136" class="muted">firewall + ablation</text>
+<text x="910" y="152" class="muted">~72% effort reduction</text>
+
+<rect x="1020" y="80" width="140" height="80" rx="10" class="frozen"/>
+<text x="1090" y="100" class="label">Final evaluation</text>
+<text x="1090" y="120" class="muted">Phase 19</text>
+<text x="1090" y="136" class="muted">2020-11-01 →</text>
+<text x="1090" y="152" class="muted">2020-12-31</text>
+
+<rect x="430" y="200" width="730" height="56" rx="10" class="stage" stroke-width="2"/>
+<text x="795" y="222" class="label">Evidence dashboard (Phase 20)</text>
+<text x="795" y="240" class="muted">Read-only · audit-everywhere · deterministic · cannot mutate research artefacts</text>
+
+<rect x="30"  y="200" width="370" height="56" rx="10" class="stage" stroke-width="2"/>
+<text x="215" y="222" class="label">Finalist registry (Phase 11)</text>
+<text x="215" y="240" class="muted">3 frozen references · 18 challengers · all blocked from promotion</text>
+
+<line x1="200" y1="120" x2="230" y2="120" class="arrow"/>
+<line x1="400" y1="120" x2="430" y2="120" class="arrow"/>
+<line x1="600" y1="120" x2="630" y2="120" class="arrow"/>
+<line x1="800" y1="120" x2="830" y2="120" class="arrow"/>
+<line x1="990" y1="120" x2="1020" y2="120" class="arrowAccent"/>
+<line x1="115" y1="160" x2="215" y2="200" class="arrow"/>
+<line x1="1090" y1="160" x2="795" y2="200" class="arrowAccent"/>
+
+<text x="590" y="320" class="muted">Built incrementally. Each phase is reproducible from the previous one's frozen artefacts.</text>
+<text x="590" y="338" class="muted">Final evaluation is read-only with respect to every prior phase.</text>
+</svg>

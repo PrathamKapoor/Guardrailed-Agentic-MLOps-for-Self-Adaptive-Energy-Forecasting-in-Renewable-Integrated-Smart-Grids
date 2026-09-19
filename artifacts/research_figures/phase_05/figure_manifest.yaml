@@ -1,0 +1,15 @@
+[
+  {
+    "figure_id": "FIG-EXP-001",
+    "title": "Temporal holdout and expanding-window evaluation design",
+    "source_dataset": "rts_gmlc_processed_v1 feature matrices",
+    "variables": [
+      "target_timestamp",
+      "partition",
+      "fold"
+    ],
+    "date_range": "2020-01-01 through 2020-12-31",
+    "generation_script": "scripts/build_experimental_splits.py",
+    "purpose": "Research methodology visualization; no model results"
+  }
+]

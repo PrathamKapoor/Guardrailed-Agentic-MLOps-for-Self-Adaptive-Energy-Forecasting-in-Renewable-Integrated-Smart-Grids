@@ -1,0 +1,33 @@
+{
+  "phase": "13",
+  "final_test_status": "NOT_EXECUTED",
+  "figures": [
+    {
+      "figure_id": "FIG-P13-01",
+      "path": "artifacts/research_figures/phase_13/governance_architecture.svg",
+      "source_artifacts": [
+        "config/governance/phase_13_policy.yaml"
+      ],
+      "research_purpose": "Show deterministic authority and future recommendation boundary",
+      "generation_script": "scripts/finalize_phase13_research_artifacts.py"
+    },
+    {
+      "figure_id": "FIG-P13-02",
+      "path": "artifacts/research_figures/phase_13/model_lifecycle_state_machine.svg",
+      "source_artifacts": [
+        "artifacts/experimental_design/phase_13_governance_protocol_freeze.yaml"
+      ],
+      "research_purpose": "Show lifecycle states and blocked invalid transitions",
+      "generation_script": "scripts/finalize_phase13_research_artifacts.py"
+    },
+    {
+      "figure_id": "FIG-P13-03",
+      "path": "artifacts/research_figures/phase_13/current_reference_governance.svg",
+      "source_artifacts": [
+        "artifacts/governance/phase_13/decisions.jsonl"
+      ],
+      "research_purpose": "Show current benchmark-failure promotion blocks",
+      "generation_script": "scripts/finalize_phase13_research_artifacts.py"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-19T17:20:00+05:30",
+  "dataset": {
+    "name": "RTS-GMLC",
+    "year": 2020,
+    "granularity": "hourly",
+    "rows_per_target": 8784,
+    "targets": ["load", "wind", "pv"]
+  },
+  "phases": {
+    "phase_00_to_20": "20 phases complete",
+    "stages_07_to_14": "Post-v1 research and evaluation stages complete in artifacts/v2/"
+  },
+  "final_test_partition": {
+    "window": "2020-11-01 to 2020-12-31",
+    "rows": 1464,
+    "results": {
+      "pv": {
+        "model": "random_forest",
+        "features": "B_lags_only",
+        "mae": 36.12,
+        "benchmark": "H24_DAILY_PERSISTENCE",
+        "benchmark_mae": 39.09,
+        "relative_diff_pct": -7.61,
+        "status": "BETTER"
+      },
+      "load": {
+        "model": "random_forest",
+        "features": "B_lags_only",
+        "mae": 174.26,
+        "benchmark": "RTS_DAY_AHEAD",
+        "benchmark_mae": 101.14,
+        "relative_diff_pct": 72.29,
+        "status": "WORSE"
+      },
+      "wind": {
+        "model": "hist_gradient_boosting",
+        "features": "B_lags_only",
+        "mae": 778.84,
+        "benchmark": "RTS_DAY_AHEAD",
+        "benchmark_mae": 331.30,
+        "relative_diff_pct": 135.08,
+        "status": "WORSE"
+      }
+    }
+  },
+  "residual_experiment_stage_10": {
+    "load_best_candidate_mae": 1.54,
+    "governance_decision_stage_12": "DENY",
+    "governance_decision_stage_14": "DENY"
+  }
+}

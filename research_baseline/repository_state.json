@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-09-19T17:20:00+05:30",
+  "git": {
+    "branch": "master",
+    "has_commits": false,
+    "untracked_root_entries": [
+      ".env.example",
+      ".github/",
+      ".gitignore",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      "artifacts/",
+      "config/",
+      "dashboard/",
+      "data/",
+      "docker/",
+      "docs/",
+      "hackathon/",
+      "handoff.md",
+      "models/",
+      "notebooks/",
+      "product/",
+      "pyproject.toml",
+      "reports/",
+      "requirements.txt",
+      "run_final_evaluation.py",
+      "scripts/",
+      "src/",
+      "tests/"
+    ]
+  },
+  "package_version": "0.20.0",
+  "architecture_summary": "Offline, 20-phase MLOps pipeline on RTS-GMLC 2020 hourly dataset with deterministic governance firewall and local rule-based agents."
+}

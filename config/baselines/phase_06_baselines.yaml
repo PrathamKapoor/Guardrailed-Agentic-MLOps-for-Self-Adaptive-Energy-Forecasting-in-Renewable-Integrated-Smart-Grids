@@ -1,0 +1,16 @@
+{
+  "phase": "06",
+  "execution_mode": "validation_only",
+  "final_test_access": false,
+  "targets": ["load", "wind", "pv"],
+  "horizons": {"primary": 24, "secondary": 1},
+  "metrics": ["MAE", "RMSE", "sMAPE", "nMAE", "nRMSE"],
+  "baselines": [
+    {"id": "H1_PERSISTENCE", "horizons": [1], "source_lag_hours": 1, "external": false},
+    {"id": "H1_DAILY_SEASONAL_PERSISTENCE", "horizons": [1], "source_lag_hours": 24, "external": false},
+    {"id": "H1_WEEKLY_SEASONAL_PERSISTENCE", "horizons": [1], "source_lag_hours": 168, "external": false},
+    {"id": "H24_DAILY_PERSISTENCE", "horizons": [24], "source_lag_hours": 24, "external": false, "equivalence": "origin persistence equals target-minus-24h seasonal persistence"},
+    {"id": "H24_WEEKLY_SEASONAL_PERSISTENCE", "horizons": [24], "source_lag_hours": 168, "external": false},
+    {"id": "RTS_DAY_AHEAD", "horizons": [24], "source": "canonical aligned DAY_AHEAD", "external": true}
+  ]
+}

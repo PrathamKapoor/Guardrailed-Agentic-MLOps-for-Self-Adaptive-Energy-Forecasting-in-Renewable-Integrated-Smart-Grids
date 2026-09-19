@@ -1,0 +1,225 @@
+{
+  "schema_version": "phase13-lifecycle-registry-v1",
+  "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+  "policy_version": "13.0.0",
+  "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+  "phase_12_registry_unchanged": true,
+  "entries": [
+    {
+      "registry_id": "MLOPS-REF-LOAD-H24-V1",
+      "research_role": "REFERENCE",
+      "registry_state": "REGISTERED_REFERENCE",
+      "lifecycle_state": "REGISTERED_REFERENCE",
+      "benchmark_gate": "BENCHMARK_GATE_FAIL",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": "42ebee8d-e233-4a49-8dae-21b63eeff408",
+      "policy_version": "13.0.0",
+      "audit_refs": [
+        "artifacts/governance/phase_13/decisions.jsonl"
+      ],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-CHAL-LOAD-H24-MLP-V1",
+      "research_role": "CHALLENGER",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "lifecycle_state": "REGISTERED_CHALLENGER",
+      "benchmark_gate": "BENCHMARK_GATE_FAIL",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-REF-WIND-H24-V1",
+      "research_role": "REFERENCE",
+      "registry_state": "REGISTERED_REFERENCE",
+      "lifecycle_state": "REGISTERED_REFERENCE",
+      "benchmark_gate": "BENCHMARK_GATE_FAIL",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": "8b6b2e02-201e-417f-9e7c-eebbb42a980e",
+      "policy_version": "13.0.0",
+      "audit_refs": [
+        "artifacts/governance/phase_13/decisions.jsonl"
+      ],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-CHAL-WIND-H24-MLP-V1",
+      "research_role": "CHALLENGER",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "lifecycle_state": "REGISTERED_CHALLENGER",
+      "benchmark_gate": "BENCHMARK_GATE_FAIL",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-REF-PV-H24-V1",
+      "research_role": "REFERENCE",
+      "registry_state": "REGISTERED_REFERENCE",
+      "lifecycle_state": "REGISTERED_REFERENCE",
+      "benchmark_gate": "BENCHMARK_GATE_FAIL",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": "74ef25ab-51a7-4d8d-93d2-b6ce4d77bfa9",
+      "policy_version": "13.0.0",
+      "audit_refs": [
+        "artifacts/governance/phase_13/decisions.jsonl"
+      ],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-CHAL-PV-H24-MLP-V1",
+      "research_role": "CHALLENGER",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "lifecycle_state": "REGISTERED_CHALLENGER",
+      "benchmark_gate": "BENCHMARK_GATE_FAIL",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-LOAD-RTS_DAY_AHEAD",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-LOAD-H24_DAILY_PERSISTENCE",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-LOAD-H24_WEEKLY_PERSISTENCE",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-WIND-RTS_DAY_AHEAD",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-WIND-H24_DAILY_PERSISTENCE",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-WIND-H24_WEEKLY_PERSISTENCE",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-PV-RTS_DAY_AHEAD",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-PV-H24_DAILY_PERSISTENCE",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "MLOPS-BASE-PV-H24_WEEKLY_PERSISTENCE",
+      "research_role": "BASELINE_COMPARATOR",
+      "registry_state": "SPEC_FROZEN",
+      "lifecycle_state": "NOT_APPLICABLE_BASELINE",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": null,
+      "policy_version": "13.0.0",
+      "audit_refs": [],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    },
+    {
+      "registry_id": "AUDIT-P9-DEV-001-SKLEARN-MLP",
+      "research_role": "AUDIT_ONLY",
+      "registry_state": "INVALIDATED",
+      "lifecycle_state": "INVALIDATED",
+      "benchmark_gate": "NOT_APPLICABLE",
+      "promotion_eligible": false,
+      "approval_state": "NOT_REQUIRED",
+      "last_policy_decision": "765a3562-f02e-4bc6-9790-8542cc1492ce",
+      "policy_version": "13.0.0",
+      "audit_refs": [
+        "artifacts/governance/phase_13/decisions.jsonl"
+      ],
+      "phase_12_registry_ref": "artifacts/model_registry/mlops_research_registry.yaml"
+    }
+  ]
+}

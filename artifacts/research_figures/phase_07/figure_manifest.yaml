@@ -1,0 +1,104 @@
+[
+  {
+    "figure_id": "FIG-ML-001",
+    "title": "classical_h24_mae_comparison",
+    "models": [
+      "linear_regression",
+      "ridge",
+      "random_forest",
+      "extra_trees",
+      "hist_gradient_boosting"
+    ],
+    "target": "multiple",
+    "horizon": 24,
+    "evaluation_partition": "validation only; final test excluded",
+    "source_artifact": "artifacts/experiments/classical/phase_07/metrics",
+    "generation_script": "scripts/run_classical_experiments.py",
+    "paper_relevance": "Untuned classical validation comparison"
+  },
+  {
+    "figure_id": "FIG-ML-002",
+    "title": "classical_h24_rmse_comparison",
+    "models": [
+      "linear_regression",
+      "ridge",
+      "random_forest",
+      "extra_trees",
+      "hist_gradient_boosting"
+    ],
+    "target": "multiple",
+    "horizon": 24,
+    "evaluation_partition": "validation only; final test excluded",
+    "source_artifact": "artifacts/experiments/classical/phase_07/metrics",
+    "generation_script": "scripts/run_classical_experiments.py",
+    "paper_relevance": "Untuned classical validation comparison"
+  },
+  {
+    "figure_id": "FIG-ML-003",
+    "title": "fold_stability_classical",
+    "models": [
+      "linear_regression",
+      "ridge",
+      "random_forest",
+      "extra_trees",
+      "hist_gradient_boosting"
+    ],
+    "target": "multiple",
+    "horizon": "multiple",
+    "evaluation_partition": "validation only; final test excluded",
+    "source_artifact": "artifacts/experiments/classical/phase_07/metrics",
+    "generation_script": "scripts/run_classical_experiments.py",
+    "paper_relevance": "Untuned classical validation comparison"
+  },
+  {
+    "figure_id": "FIG-ML-004",
+    "title": "load_model_comparison",
+    "models": [
+      "linear_regression",
+      "ridge",
+      "random_forest",
+      "extra_trees",
+      "hist_gradient_boosting"
+    ],
+    "target": "load",
+    "horizon": 24,
+    "evaluation_partition": "validation only; final test excluded",
+    "source_artifact": "artifacts/experiments/classical/phase_07/metrics",
+    "generation_script": "scripts/run_classical_experiments.py",
+    "paper_relevance": "Untuned classical validation comparison"
+  },
+  {
+    "figure_id": "FIG-ML-005",
+    "title": "wind_model_comparison",
+    "models": [
+      "linear_regression",
+      "ridge",
+      "random_forest",
+      "extra_trees",
+      "hist_gradient_boosting"
+    ],
+    "target": "wind",
+    "horizon": 24,
+    "evaluation_partition": "validation only; final test excluded",
+    "source_artifact": "artifacts/experiments/classical/phase_07/metrics",
+    "generation_script": "scripts/run_classical_experiments.py",
+    "paper_relevance": "Untuned classical validation comparison"
+  },
+  {
+    "figure_id": "FIG-ML-006",
+    "title": "pv_model_comparison",
+    "models": [
+      "linear_regression",
+      "ridge",
+      "random_forest",
+      "extra_trees",
+      "hist_gradient_boosting"
+    ],
+    "target": "pv",
+    "horizon": 24,
+    "evaluation_partition": "validation only; final test excluded",
+    "source_artifact": "artifacts/experiments/classical/phase_07/metrics",
+    "generation_script": "scripts/run_classical_experiments.py",
+    "paper_relevance": "Untuned classical validation comparison"
+  }
+]

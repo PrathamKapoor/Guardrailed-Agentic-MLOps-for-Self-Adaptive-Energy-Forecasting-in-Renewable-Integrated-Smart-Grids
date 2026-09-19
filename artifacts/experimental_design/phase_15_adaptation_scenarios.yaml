@@ -1,0 +1,37 @@
+{
+  "schema_version": "phase15-adaptation-scenarios-v1",
+  "phase": "15",
+  "label": "CONTROLLED ADAPTATION / CONCEPT-DRIFT PROXY (development-only synthetic copies; source data never mutated)",
+  "rationale": "Phase 14 scenarios perturbed monitoring statistics on synthetic streams without a coherent retrainable data-generating process. Phase 15 therefore defines its own controlled adaptation scenarios that shift the target relationship after a known onset and rebuild features from the perturbed series so the synthetic world is coherently retrainable.",
+  "targets": ["load", "wind", "pv"],
+  "families": {
+    "A15-01": "ABRUPT TARGET-RELATIONSHIP SHIFT: y'(t) = max(0, y(t) + m * sigma_pre) for t >= onset, constant shift",
+    "A15-02": "GRADUAL TARGET-RELATIONSHIP SHIFT: y'(t) = max(0, y(t) + m * sigma_pre * min(1, hours_since_onset/336)) for t >= onset, linear ramp over 336 hours"
+  },
+  "severity_levels": ["LOW", "MEDIUM", "HIGH"],
+  "transform_scale_multipliers": {"LOW": 0.5, "MEDIUM": 1.0, "HIGH": 2.0},
+  "scale_basis": "sigma_pre = standard deviation of the target over pre-onset development observations (2020-01-01 through 2020-07-31)",
+  "target_domain_constraint": "perturbed values clipped at zero (non-negative load/wind/pv quantities)",
+  "feature_reconstruction": "B_lags_only features (lag_1, lag_24, lag_168) recomputed from the perturbed series at each frozen forecast origin; calendar features unused by the frozen B_lags_only specification",
+  "feature_sets_allowed": ["B_lags_only"],
+  "new_features_allowed": false,
+  "drift_onset": "2020-08-01T00:00:00",
+  "onset_selection_rationale": "early enough within development-only data for detection, persistence, 336h label accumulation, retraining, and 336h future evaluation without entering final-test dates",
+  "monitoring": {"window_hours": 168, "stride_hours": 24, "reference_period": "3*168 hours immediately before onset", "thresholds": "frozen Phase 14 per-target feature_wasserstein thresholds", "threshold_freeze": "artifacts/experimental_design/phase_14_drift_threshold_freeze.yaml"},
+  "retraining_eligibility_labels": "all 18 primary cases are expected ALLOW under condition D (controlled adaptation scenario) provided monitoring evidence, persistence, label availability, minimum new data, reference state, lineage, fingerprints, protocol, final-test, and concurrency gates pass",
+  "expected_request_decisions": {"primary_adaptation_cases": "ALLOW", "rationale": "each case satisfies frozen conditions A/B/C/D independently of severity; severity changes magnitude only, never the decision rule"},
+  "training_cutoff_policy": {"cutoff": "2020-08-15T00:00:00", "strategy": "EXPANDING_WINDOW_REFIT", "minimum_new_labeled_samples": 336},
+  "evaluation_window_policy": {"start_exclusive": "2020-08-15T00:00:00", "end_inclusive": "2020-08-29T00:00:00", "hours": 336, "matched_timestamps": true, "clean_counterfactual": true},
+  "expected_case_count": {"families": 2, "severities": 3, "targets": 3, "primary_cases": 18},
+  "scenario_ids": [
+    "A15-01-LOW-load", "A15-01-MEDIUM-load", "A15-01-HIGH-load",
+    "A15-01-LOW-wind", "A15-01-MEDIUM-wind", "A15-01-HIGH-wind",
+    "A15-01-LOW-pv", "A15-01-MEDIUM-pv", "A15-01-HIGH-pv",
+    "A15-02-LOW-load", "A15-02-MEDIUM-load", "A15-02-HIGH-load",
+    "A15-02-LOW-wind", "A15-02-MEDIUM-wind", "A15-02-HIGH-wind",
+    "A15-02-LOW-pv", "A15-02-MEDIUM-pv", "A15-02-HIGH-pv"
+  ],
+  "control_cases": "request-policy suite R01-R15 in the Phase 15 protocol freeze covers cases where retraining must NOT occur (clean, WATCH-only, prediction-only without performance deterioration, data-quality failure, insufficient labels, insufficient new data, cooldown, final-test access); these test the request policy and require no model training",
+  "final_test_policy": {"development_only": true, "phase_15_new_final_test_reads": 0},
+  "model_results_observed_when_frozen": false
+}

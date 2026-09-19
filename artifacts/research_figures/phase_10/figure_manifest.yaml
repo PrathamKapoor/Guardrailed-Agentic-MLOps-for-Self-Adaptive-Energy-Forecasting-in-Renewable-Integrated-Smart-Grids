@@ -1,0 +1,62 @@
+[
+  {
+    "figure_id": "feature_ablation_load",
+    "target": "load",
+    "model": "classical and MLP",
+    "feature_sets": "configured Phase 10 subsets",
+    "evaluation_folds": "F01-F04",
+    "source_artifact": "artifacts/research_tables/feature_ablation_classical_h24.csv",
+    "generation_script": "scripts/report_phase10_ablation.py",
+    "paper_relevance": "feature ablation"
+  },
+  {
+    "figure_id": "feature_ablation_wind",
+    "target": "wind",
+    "model": "classical and MLP",
+    "feature_sets": "configured Phase 10 subsets",
+    "evaluation_folds": "F01-F04",
+    "source_artifact": "artifacts/research_tables/feature_ablation_classical_h24.csv",
+    "generation_script": "scripts/report_phase10_ablation.py",
+    "paper_relevance": "feature ablation"
+  },
+  {
+    "figure_id": "feature_ablation_pv",
+    "target": "pv",
+    "model": "classical and MLP",
+    "feature_sets": "configured Phase 10 subsets",
+    "evaluation_folds": "F01-F04",
+    "source_artifact": "artifacts/research_tables/feature_ablation_classical_h24.csv",
+    "generation_script": "scripts/report_phase10_ablation.py",
+    "paper_relevance": "feature ablation"
+  },
+  {
+    "figure_id": "incremental_feature_effects",
+    "target": "multiple",
+    "model": "multiple",
+    "feature_sets": "configured",
+    "evaluation_folds": "F01-F04",
+    "source_artifact": "Phase 10 tables",
+    "generation_script": "scripts/report_phase10_ablation.py",
+    "paper_relevance": "feature ablation"
+  },
+  {
+    "figure_id": "feature_count_vs_mae",
+    "target": "multiple",
+    "model": "multiple",
+    "feature_sets": "configured",
+    "evaluation_folds": "F01-F04",
+    "source_artifact": "Phase 10 tables",
+    "generation_script": "scripts/report_phase10_ablation.py",
+    "paper_relevance": "feature ablation"
+  },
+  {
+    "figure_id": "classical_vs_mlp_ablation",
+    "target": "multiple",
+    "model": "multiple",
+    "feature_sets": "configured",
+    "evaluation_folds": "F01-F04",
+    "source_artifact": "Phase 10 tables",
+    "generation_script": "scripts/report_phase10_ablation.py",
+    "paper_relevance": "feature ablation"
+  }
+]

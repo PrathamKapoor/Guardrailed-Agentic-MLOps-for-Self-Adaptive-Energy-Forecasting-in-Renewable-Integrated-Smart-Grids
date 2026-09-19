@@ -1,0 +1,20 @@
+{
+  "target": "pv",
+  "horizon": 1,
+  "feature_set": "combined_v1",
+  "train_start": "2020-01-01T00:00:00",
+  "train_end": "2020-08-31T23:00:00",
+  "validation_start": "2020-09-01T00:00:00",
+  "validation_end": "2020-10-31T23:00:00",
+  "test_start": "2020-11-01T00:00:00",
+  "test_end": "2020-12-31T23:00:00",
+  "final_test_status": "LOCKED",
+  "train_samples": 5687,
+  "validation_samples": 1464,
+  "test_samples": 1464,
+  "first_forecast_origin": "2020-01-08T00:00:00",
+  "last_forecast_origin": "2020-12-31T22:00:00",
+  "first_target_timestamp": "2020-01-08T01:00:00",
+  "last_target_timestamp": "2020-12-31T23:00:00",
+  "split_checksum": "1389551fbe022fba743c622e4e9c3f5a83cf070ee0e519d34cba8ef42d3e1ea7"
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "08", "models": ["mlp", "lstm", "gru"], "tracks": {"mlp": "tabular combined_v1", "lstm_gru": "168-hour historical target plus calendar sequence and target-time known calendar"},
+  "sequence_length": 168, "architecture_config": "config/models/neural_untuned_v1.yaml", "optimizer": "Adam", "learning_rate": 0.001, "loss": "MSELoss", "batch_size": 64, "maximum_epochs": 40,
+  "early_stopping": "chronological last 10% of each outer training fold; patience 4; restore best inner checkpoint", "gradient_clip_norm": 1.0,
+  "seeds": {"H24": [42,123,2020,2025,31415], "H1_secondary": [42]}, "targets": ["load","wind","pv"], "horizons": [1,24], "rolling_origin_folds": 6,
+  "metrics": ["MAE","RMSE","sMAPE","nMAE","nRMSE"], "baseline_references": "Phase 6 naive and RTS DAY_AHEAD H24; Phase 7 best classical", "final_test_status": "LOCKED",
+  "phase_05_protocol_checksum": "666eb745de5ae01ba2033e825a4c6b0ba0cea1f9574c32426de8a5996581c0f9", "phase_07_protocol_checksum": "7bcce9f646d8c3758a5341a0ada91ac6c9bfe699aba8906788055b4050c330b7",
+  "model_results_observed_when_frozen": false, "amendment": "Pre-official-run amendment after failed smoke artifact writing; no usable neural model result was inspected or retained. H24 retains all preregistered seeds; H1 is formally reduced secondary replication.", "no_hyperparameter_optimization": true
+}

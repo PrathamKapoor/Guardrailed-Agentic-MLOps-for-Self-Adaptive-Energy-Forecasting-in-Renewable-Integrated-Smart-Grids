@@ -1,0 +1,13 @@
+{
+  "phase": "10", "horizon": 24, "targets": ["load", "wind", "pv"],
+  "feature_set_config": "config/ablation/phase_10.yaml", "feature_sets": ["A_calendar_only", "B_lags_only", "C_calendar_lags", "D_calendar_lags_rolling", "E_full"],
+  "classical_models": {
+    "load": {"model": "random_forest", "implementation_id": "SKLEARN_RANDOM_FOREST_REGRESSOR", "selected_trial_id": 2, "hyperparameters": {"bootstrap": true, "max_depth": null, "max_features": 1.0, "min_samples_leaf": 4, "min_samples_split": 2, "n_estimators": 191, "random_state": 42, "n_jobs": -1}},
+    "wind": {"model": "hist_gradient_boosting", "implementation_id": "SKLEARN_HIST_GRADIENT_BOOSTING_REGRESSOR", "selected_trial_id": 1, "hyperparameters": {"l2_regularization": 0.023585940584142682, "learning_rate": 0.015957084694148364, "max_iter": 111, "max_leaf_nodes": 57, "min_samples_leaf": 28, "random_state": 42}},
+    "pv": {"model": "random_forest", "implementation_id": "SKLEARN_RANDOM_FOREST_REGRESSOR", "selected_trial_id": 4, "hyperparameters": {"bootstrap": false, "max_depth": 8, "max_features": "sqrt", "min_samples_leaf": 4, "min_samples_split": 11, "n_estimators": 209, "random_state": 42, "n_jobs": -1}}
+  },
+  "secondary_neural_model": {"framework": "pytorch", "implementation_id": "PYTORCH_MLP_V1", "config_checksums": {"load": "40a5dbd1dfd820b8eeed02d4175a2515a02bebc01c49f2959d5bc4f961c6903a", "wind": "0c0e394091484f255a62277772fcf7cce8f5c9c415443e0e4f1cf413944b54f5", "pv": "f8df33fd757a7c016317bc82f840054e9865556ac942ebd6faa4a3cbc89e2eb5"}},
+  "analysis_folds": ["F01", "F02", "F03", "F04"], "confirmation_folds": ["F05", "F06"], "metrics": ["MAE", "RMSE", "sMAPE", "nMAE", "nRMSE"], "seeds": [42,123,2020,2025,31415],
+  "selection_policy": "F01-F04 mean MAE only", "tie_break_policy": "within 0.5 percent of lowest MAE, prefer fewer features then lexicographic ID", "common_timestamp_policy": "intersection across configured feature sets", "model_results_observed_when_frozen": false,
+  "final_test_training_access": false, "final_test_hpo_access": false, "final_test_model_selection_access": false, "final_test_feature_selection_access": false, "final_test_performance_evaluation": false, "historical_final_test_integrity_audit_access": true, "historical_integrity_access_reason": "P9-DEV-002"
+}

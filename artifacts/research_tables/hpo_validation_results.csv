@@ -1,0 +1,7 @@
+Target,Model,Framework,Implementation ID,Untuned MAE,Search MAE F01-F04,Post-HPO MAE F05-F06,Relative tuning improvement %,Best naive baseline MAE,RTS DAY_AHEAD MAE,Trials,Runtime seconds
+load,Tuned classical,sklearn,RANDOM_FOREST,179.458,389.306,N/A,-116.934,211.392,126.613,5,12.032
+load,Tuned PyTorch MLP,pytorch,PYTORCH_MLP_V1,294.864,773.668,320.234,-8.604,211.392,126.613,5,6.534
+wind,Tuned classical,sklearn,HIST_GRADIENT_BOOSTING,513.907,570.656,N/A,-11.043,586.542,269.006,5,26.761
+wind,Tuned PyTorch MLP,pytorch,PYTORCH_MLP_V1,518.731,502.301,522.112,-0.652,586.542,269.006,5,3.655
+pv,Tuned classical,sklearn,RANDOM_FOREST,36.588,49.003,N/A,-33.932,33.765,48.795,5,10.442
+pv,Tuned PyTorch MLP,pytorch,PYTORCH_MLP_V1,49.255,224.264,55.611,-12.902,33.765,48.795,5,3.732

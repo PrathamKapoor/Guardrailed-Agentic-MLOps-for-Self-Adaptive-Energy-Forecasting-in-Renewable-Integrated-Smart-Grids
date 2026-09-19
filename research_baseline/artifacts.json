@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-19T17:20:00+05:30",
+  "sealed_artifacts": [
+    "artifacts/research_tables/final_forecasting_results.csv",
+    "artifacts/research_tables/final_model_comparison.csv",
+    "artifacts/research_tables/final_predictions.csv",
+    "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml",
+    "config/governance/phase_13_policy.yaml"
+  ],
+  "checksums_verified": true,
+  "evidence_registry_entries": 154,
+  "mlflow_experiments_path": "artifacts/mlflow/",
+  "model_registry_path": "artifacts/model_registry/"
+}

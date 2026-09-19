@@ -1,0 +1,81 @@
+# Threats to validity
+
+- **Construct validity:** time-derived/autoregressive features do not represent underlying meteorological causes.
+- **Internal validity:** an incorrect origin/target/lag alignment could create leakage; invariant tests and target-timestamp splits mitigate this.
+- **Temporal coverage:** RTS-GMLC supplies only one year, limiting interannual evidence.
+- **Seasonal representativeness:** the November–December final test cannot represent every grid condition.
+- **Validation overfitting:** repeated architectural decisions on the same validation months can overfit development data. Mitigations are rolling origins, predefined families/spaces, a frozen test, and later external validation.
+- **Multiple comparisons:** testing many models raises false-positive risk; related tests use Holm–Bonferroni.
+- **External validity:** RTS-GMLC is a research/test system and may differ from operating grids.
+- **Feature completeness:** the initial track has no native weather covariates, limiting physical explanatory scope.
+- **External benchmark semantics:** RTS-GMLC DAY_AHEAD issuance semantics are not established as an exact fixed 24-hour lead.
+- **Baseline seasonality:** deterministic baseline error varies across folds because grid conditions and months vary.
+- **Development-only evidence:** Phase 6 validation metrics are not final-test results.
+- **Untuned configurations:** fixed untuned parameters may disadvantage some model families.
+- **Feature-family interaction:** one predefined feature set may favor some algorithms over others.
+- **Selection bias:** repeated use of validation folds can contribute to model-selection bias.
+- **Ranking stability:** classical rankings may change after a separately preregistered optimization phase.
+- **Generalization:** the single-year research/test-system dataset remains insufficient for real-grid external validation.
+- **Neural sample size and tuning:** one year is limited for neural networks and architectures remain intentionally untuned.
+- **Representation confounding:** sequence-model inputs differ from tabular classical inputs.
+- **Reproducibility and runtime:** seed variation and PyTorch backend/device differences may prevent bitwise replication; measured runtime is device-dependent.
+- **Sequence choice:** a single 168-hour lookback and absent meteorological covariates may disadvantage recurrent wind/PV models.
+- **HPO search-fold overfitting:** bounded selection on F01--F04 can favour configurations specific to those folds; F05/F06 post-HPO validation is reported separately.
+- **Prior descriptive exposure:** F05/F06 were descriptively visible in earlier phases, so this validation is not a substitute for the locked final test.
+- **Finite search:** finite search spaces and five-trial budgets can miss useful regions; a single neural search seed further limits search stability.
+- **Neural stochasticity:** five post-HPO seeds quantify within-fold stochastic variation but do not remove architecture or dataset uncertainty.
+- **Implementation equivalence and evidence contamination:** P9-DEV-001 showed that nominally similar MLP labels can conceal different semantics. Identity checks, immutable selected configurations, valid-only aggregation, and exclusion regression tests mitigate this risk.
+- **Single-year limitation:** RTS-GMLC covers one year, limiting seasonal and interannual external validity.
+- **Integrity-only locked-row access:** P9-DEV-002 authorized a controlled read of canonical final-test rows to reconstruct and semantically verify one feature artifact. The utility was separated from modeling and emitted no values or forecasting metrics; nevertheless, the final-test labels were technically read and this provenance exception is disclosed.
+- **Ablation configuration transfer:** Phase 9 full-set hyperparameters may not be optimal for reduced feature sets; fixed configurations were retained to isolate feature-set effect.
+- **Feature-group association:** groups contain correlated predictors, so ablation differences are associative rather than causal. Only representative tree and tabular-neural families were studied; weather variables remain absent.
+- **Historical tracking backfill:** MLflow was introduced after Phases 6–11, so those runs are reconstructed from existing machine-readable evidence rather than having been natively tracked.
+- **Missing historical metadata:** some original fold, seed, framework, runtime, hardware, or commit metadata was never recorded and remains `UNKNOWN`; Phase 12 does not infer it.
+- **Registry correctness:** deterministic registration depends on the integrity of source manifests, freezes, evidence filters, and declared model specifications.
+- **Local tracking backend:** Phase 12 establishes portable local research tracking, not distributed production availability, concurrency, or scalability.
+- **Benchmark eligibility:** development benchmark gates are independent safeguards but do not substitute for locked final-test evaluation or external validation.
+- **Scenario coverage:** deterministic scenario testing cannot reproduce every real deployment, infrastructure, or organizational failure mode.
+- **Synthetic governance candidates:** controlled positive and negative fixtures isolate policy behavior but do not establish forecasting performance or operational readiness.
+- **Development benchmark basis:** Phase 13 benchmark gates use existing development evidence rather than locked final-test or external validation evidence.
+- **Governance metadata dependence:** correct decisions depend on accurate registry, lineage, fingerprint, evidence, deviation, and policy configuration metadata.
+- **Approval simulation:** Phase 13 labels synthetic approval as `SIMULATION_POLICY`; it does not integrate real organizational identity, authorization, or segregation-of-duties controls.
+- **Absent deployment validation:** no canary, active deployment, rollback execution, service availability, or runtime champion–challenger infrastructure is evaluated.
+- **Synthetic drift:** controlled perturbations do not reproduce every real grid-distribution change.
+- **Threshold dependence:** perturbation magnitude, overlapping windows, and calibration-period dependence affect measured sensitivity.
+- **Unlabeled natural monitoring:** F05-F06 alerts have no ground-truth drift labels.
+- **Feature scope:** drift monitoring is limited to engineered predictors and lacks meteorological covariates.
+- **Operational delay:** residual monitoring requires observed labels and may be delayed in deployment.
+- **Synthetic adaptation scenarios:** Phase 15 controlled target-relationship shifts are concept-drift proxies and may not reproduce real grid concept drift.
+- **Single adaptation strategy:** expanding-window refit is the only retraining strategy evaluated; sliding, ensemble, or incremental strategies are not compared.
+- **Untuned post-drift hyperparameters:** reference hyperparameters are frozen and not retuned after drift, possibly understating achievable adaptation.
+- **Severity design influence:** synthetic shift magnitudes (0.5/1.0/2.0 pre-onset standard deviations) directly shape observed adaptation gain.
+- **Post-drift evaluation scope:** adaptation evaluation remains development/simulation evidence on synthetic copies, not final-test or operational performance.
+- **Benchmark semantics under synthetic targets:** external RTS DAY_AHEAD values are not coherent forecasts under the artificially modified target process, so external benchmarks are not used as adaptation-scenario gates.
+- **Single-year data:** the dataset spans one year, so a single onset window (2020-08-01) and 336-hour evaluation horizon cannot represent seasonal or interannual drift variety.
+- **No operational stream:** no external operational grid stream is evaluated; retraining timelines are simulated within development data.
+- **No deployment cost:** no real retraining compute cost, downtime, or rollout risk is measured.
+- **Phase 12 LOAD fingerprint metadata defect:** the Phase 12 registry stored LOAD's model-spec fingerprint computed from PV hyperparameters (P15-DEV-001). Phase 15 retrains from the correct frozen per-target specification and documents the defect without modifying prior frozen evidence; downstream systems trusting that single metadata field without recomputation could mis-identify the LOAD specification.
+- **Metadata-only promotion fixtures:** the promoted challengers in scenarios CC01/CC05/CC06 are controlled metadata fixtures with declared valid benchmark and approval evidence; no real challenger was promoted.
+- **No real challenger promotable:** all 18 Phase 15 challengers are rejected because synthetic-scenario superiority is not external benchmark evidence, so the APPROVE path is exercised only by fixtures.
+- **Simulated canary:** the canary stage replays a frozen guardrail on evaluation-window metrics; no live traffic, shadow deployment, or serving latency is evaluated.
+- **Simulated degradation:** rollback triggers use fixture post-promotion regression values; real operational degradation signals may differ.
+- **Simulation approval:** promotion approvals use the labelled `SIMULATION_POLICY` actor; organizational IAM and segregation of duties are not integrated.
+- **Additive registries:** Phase 16 promotion states live in a separate simulation-scoped registry; the authoritative lifecycle registry is unchanged, so no repository state claims production deployment.
+- **Rule-based agent explanations:** Phase 17 explanations are deterministic template mappings over recorded evidence; they cannot discover causes outside recorded detector semantics.
+- **Synthetic adversarial advisories:** unsafe-recommendation scenarios inject fabricated advisories rather than real LLM outputs; no actual LLM behavior was evaluated.
+- **Efficiency proxy:** report/retrieval times measure local rule-based generation on one device; H-AI-1 effort reduction is argued from artifact structure, not user studies.
+- **Heuristic confidence:** agent confidence values are advisory constants without calibrated probabilistic meaning.
+- **Simulated operational tasks (Phase 18):** ablation tasks are deterministic constructions over recorded evidence, not real operator tickets.
+- **Approximated human workload:** deterministic times come from a frozen inspection cost model; no real operator timing was collected.
+- **No production operators evaluated:** results do not establish real-world time savings or usability.
+- **Evidence-dependent agent quality:** agent explanations depend on the availability and consistency of recorded evidence.
+- **No LLM backend required:** results reflect the deterministic rule-based backend; LLM-assisted quality is not evaluated.
+- **Bounded assistance, not autonomy:** Phase 18 demonstrates operational support with identical lifecycle outcomes, not autonomous MLOps control.
+
+- **Single dataset (RTS-GMLC, 2020 only):** Phase 19 evaluates the frozen finalists on a single 2-month window from a single year of a single dataset; generalization beyond November-December 2020 is unobserved.
+- **One-year temporal coverage:** a 2020 leap year provides 8784 hourly rows; the 2-month final test is 25% of the available data, but seasonality across multiple years is not characterized.
+- **Synthetic drift and simulated operational workflows:** adaptation, monitoring, and recovery evidence from Phases 14-16 is simulation-based; the final evaluation does not assert that production behavior matches simulated behavior.
+- **No production deployment:** Phase 19 is offline evaluation against the locked partition; no live serving, A/B testing, or operational cost is measured.
+- **No real operator study:** agentic explanation effort reduction (Phase 18) is approximated by a frozen cost model, not by a user study.
+- **External benchmark limitations:** the frozen RTS day-ahead forecast is a published operating artefact that is hard to beat on short horizons; the comparison is informative, not aspirational.
+- **Final-test is a single 2-month window:** Phase 19 cannot speak to generalization across non-stationary regimes beyond the observed November-December 2020 frame.

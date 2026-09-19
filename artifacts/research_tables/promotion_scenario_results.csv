@@ -1,0 +1,7 @@
+Scenario,Case,Decision,Outcome,Expected,Correct,Reason Codes
+CC01,"better challenger, valid governance -> APPROVE, canary pass, PROMOTED (simulation)",APPROVE,PROMOTED,PROMOTED,YES,PROMOTION_APPROVED
+CC02,"better challenger, invalid lineage -> REJECT",REJECT,REJECT,REJECT,YES,LINEAGE_INCOMPLETE
+CC03,"better challenger, benchmark gate fails -> REJECT",REJECT,REJECT,REJECT,YES,BENCHMARK_REQUIREMENT_NOT_SATISFIED
+CC04,worse challenger -> REJECT,REJECT,REJECT,REJECT,YES,CHALLENGER_NOT_BETTER
+CC05,valid promotion followed by post-promotion degradation -> ROLLBACK_COMPLETED,APPROVE,ROLLBACK_COMPLETED,ROLLBACK_COMPLETED,YES,PROMOTION_APPROVED
+CC06,rollback integrity failure (preserved artifact fingerprint mismatch) -> ROLLBACK_BLOCKED,APPROVE,ROLLBACK_BLOCKED,ROLLBACK_BLOCKED,YES,PROMOTION_APPROVED

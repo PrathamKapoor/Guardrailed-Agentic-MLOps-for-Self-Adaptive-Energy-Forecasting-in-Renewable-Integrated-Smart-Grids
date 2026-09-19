@@ -1,0 +1,4 @@
+Configuration,Total_Hours,Net_Load_MAE,Net_Load_RMSE,Total_Renewable_MAE,Total_Renewable_RMSE,Matching_Ratio_MAE,Surplus_Hours_Actual,Surplus_Hours_Predicted,Surplus_Classification_Accuracy,Surplus_Precision,Surplus_Recall,Surplus_F1,Surplus_Magnitude_MAE
+FROZEN_ML_MODELS,1464,809.6073,969.5316,774.0565,919.9813,0.2177,16,0,0.9891,1.0,0.0,0.0,2.0112
+EXTERNAL_BASELINES,1464,348.2426,496.1899,346.8031,498.1781,0.0937,16,5,0.9925,1.0,0.3125,0.4762,1.5401
+NEURAL_MLP_MODELS,1464,942.7752,1143.6043,839.7752,981.7314,0.2403,16,0,0.9891,1.0,0.0,0.0,2.0112

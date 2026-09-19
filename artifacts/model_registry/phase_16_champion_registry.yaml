@@ -1,0 +1,119 @@
+{
+  "mode": "SIMULATION",
+  "policy_version": "16.0.0",
+  "preserved_models": [
+    {
+      "artifact_path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid\\guardrailed-agentic-mlops-smart-grid\\artifacts\\champion_challenger\\phase_16\\models\\reference_load_pre_onset.joblib",
+      "lineage_node": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "model_id": "MLOPS-REF-LOAD-H24-V1",
+      "model_spec_fingerprint": "model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "preserved_at": "2026-08-21T20:02:58.672189+00:00",
+      "role": "REFERENCE"
+    },
+    {
+      "artifact_path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid\\guardrailed-agentic-mlops-smart-grid\\artifacts\\champion_challenger\\phase_16\\models\\reference_wind_pre_onset.joblib",
+      "lineage_node": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "model_id": "MLOPS-REF-WIND-H24-V1",
+      "model_spec_fingerprint": "model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "preserved_at": "2026-08-21T20:03:00.196383+00:00",
+      "role": "REFERENCE"
+    },
+    {
+      "artifact_path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid\\guardrailed-agentic-mlops-smart-grid\\artifacts\\champion_challenger\\phase_16\\models\\reference_pv_pre_onset.joblib",
+      "lineage_node": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "model_id": "MLOPS-REF-PV-H24-V1",
+      "model_spec_fingerprint": "model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "preserved_at": "2026-08-21T20:03:00.805561+00:00",
+      "role": "REFERENCE"
+    }
+  ],
+  "promotions": [
+    {
+      "canary": {
+        "canary_regression_percent": -5.0,
+        "challenger_id": "SIM-CHAL-CC01",
+        "max_allowed_regression_percent": 0.0,
+        "passed": true,
+        "reason_code": "CANARY_PASSED",
+        "timestamp": "2026-08-21T20:04:04.992984+00:00"
+      },
+      "challenger_id": "SIM-CHAL-CC01",
+      "policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "scenario": "CC01",
+      "simulation": true,
+      "state": "ACTIVE (SIMULATION)"
+    },
+    {
+      "canary": {
+        "canary_regression_percent": -5.0,
+        "challenger_id": "SIM-CHAL-CC05",
+        "max_allowed_regression_percent": 0.0,
+        "passed": true,
+        "reason_code": "CANARY_PASSED",
+        "timestamp": "2026-08-21T20:04:05.905762+00:00"
+      },
+      "challenger_id": "SIM-CHAL-CC05",
+      "policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "scenario": "CC05",
+      "simulation": true,
+      "state": "ACTIVE (SIMULATION)"
+    },
+    {
+      "canary": {
+        "canary_regression_percent": -5.0,
+        "challenger_id": "SIM-CHAL-CC06",
+        "max_allowed_regression_percent": 0.0,
+        "passed": true,
+        "reason_code": "CANARY_PASSED",
+        "timestamp": "2026-08-21T20:04:06.290477+00:00"
+      },
+      "challenger_id": "SIM-CHAL-CC06",
+      "policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "scenario": "CC06",
+      "simulation": true,
+      "state": "ACTIVE (SIMULATION)"
+    }
+  ],
+  "rollbacks": [
+    {
+      "outcome": "ROLLBACK_COMPLETED",
+      "previous_model_id": "MLOPS-REF-LOAD-H24-V1",
+      "promoted_model_id": "SIM-CHAL-CC05",
+      "scenario": "CC05",
+      "simulation": true,
+      "verification": {
+        "checks": {
+          "artifact_exists": true,
+          "fingerprint_matches": true,
+          "lineage_exists": true,
+          "model_loads": true,
+          "outputs_finite": true
+        },
+        "failed": []
+      }
+    },
+    {
+      "outcome": "ROLLBACK_BLOCKED",
+      "previous_model_id": "MLOPS-REF-LOAD-H24-V1",
+      "promoted_model_id": "SIM-CHAL-CC06",
+      "scenario": "CC06",
+      "simulation": true,
+      "verification": {
+        "checks": {
+          "artifact_exists": true,
+          "fingerprint_matches": false,
+          "lineage_exists": true,
+          "model_loads": true,
+          "outputs_finite": true
+        },
+        "failed": [
+          "fingerprint_matches"
+        ]
+      }
+    }
+  ],
+  "schema_version": "phase16-champion-registry-v1"
+}

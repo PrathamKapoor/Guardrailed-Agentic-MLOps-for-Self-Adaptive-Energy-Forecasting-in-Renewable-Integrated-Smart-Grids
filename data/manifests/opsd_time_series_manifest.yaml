@@ -1,0 +1,83 @@
+dataset: opsd_time_series
+version: 2020-10-06
+retrieval_date: 2026-08-26
+retrieval_timestamp: 2026-08-26T21:24:00Z
+source: https://data.open-power-system-data.org/time_series/2020-10-06/time_series_60min_singleindex.csv
+source_name: Open Power System Data — Time series (hourly, 60min singleindex)
+homepage: https://data.open-power-system-data.org/time_series/2020-10-06
+doi: https://doi.org/10.25832/time_series/2020-10-06
+documentation: https://github.com/Open-Power-System-Data/time_series
+license: CC BY 4.0 (https://open-power-system-data.org/ — Data published under Creative Commons Attribution 4.0 International)
+approval: approved
+approval_date: 2026-08-26
+archive_checksum: 6a7f2bc571314cbf9c321cc03437691cd4be95c3a6f075e60ff99e8035c704c8
+schema:
+  utc_timestamp: datetime UTC start-of-interval hourly
+  DE_load_actual_entsoe_transparency: float MW total load DE
+  DE_wind_generation_actual: float MW wind generation DE
+  DE_solar_generation_actual: float MW solar generation DE
+  derived_canonical:
+    timestamp: datetime UTC
+    actual_system_load: float MW
+    actual_wind: float MW
+    actual_pv: float MW
+datapackage_checksum: 2f4b7ae48e1352deb1991728e013fe42e742af5e81a5140d87185e470cd0ac36
+files:
+  - path: data/external/opsd_time_series/time_series_60min_singleindex.csv
+    bytes: 130862382
+    sha256: 6a7f2bc571314cbf9c321cc03437691cd4be95c3a6f075e60ff99e8035c704c8
+  - path: data/external/opsd_time_series/datapackage.json
+    bytes: 296300
+    sha256: 2f4b7ae48e1352deb1991728e013fe42e742af5e81a5140d87185e470cd0ac36
+temporal_coverage:
+  start: 2014-12-31T23:00:00Z
+  end: 2020-09-30T23:00:00Z
+  frequency: hourly
+  timezone: UTC (utc_timestamp column; cet_cest_timestamp is CET/CEST)
+  total_rows: 50402
+  description: 60min singleindex, hourly, primary provenance ENTSO-E Transparency via OPSD 2020-10-06
+target_mapping:
+  load:
+    external_column: DE_load_actual_entsoe_transparency
+    research_target: actual_system_load
+    unit: MW
+    semantic: Total load DE in MW as published on ENTSO-E Transparency Platform (country-aggregated demand)
+  wind:
+    external_column: DE_wind_generation_actual
+    research_target: actual_wind
+    unit: MW
+    semantic: Actual wind generation DE in MW (aggregated onshore + offshore where available)
+  pv:
+    external_column: DE_solar_generation_actual
+    research_target: actual_pv
+    unit: MW
+    semantic: Actual solar generation DE in MW
+feature_mapping:
+  calendar: [hour_sin, hour_cos, dow_sin, dow_cos, doy_sin, doy_cos]  # derivable from utc_timestamp
+  lags: [lag_1, lag_24, lag_168]  # B_lags_only
+  rolling: [rolling_mean_24, rolling_mean_168]  # part of E_full
+  ramp: [ramp_1h]
+  derivation: leakage-safe, forecast_origin = target_timestamp - 24h, features use only data <= forecast_origin
+preprocessing: none yet — raw immutable under data/external/opsd_time_series/
+exclusions: none yet — full raw retained; missing values remain empty strings in CSV
+derived_artifacts:
+  canonical_hourly:
+    load_hourly: 9eccac1a2ac9926e7b8aa65e1da667f738a3fca216bf2af0efc54a3e50b222c8
+    wind_hourly: ac1b57ccb03cf4b92151a325dc6990a2259575d023b1778fa3dbdb7dbbd044ea
+    pv_hourly: e1151d8262bcbcd9b5a94225e3e2daf06de83d9af7405c60022b67725b0abb4d
+    research_hourly_index: afa95a7c5ad482c851002e635bc3c41ab7d5356acb2e271b3cf73ba530f32d4e
+  features_h24_combined_v1:
+    load: 20961145d62041539abebc61b7ed3927340ec4659e4252c33af5c3876c66b98d
+    wind: 0ed41576a6613c9448613a26f0f25b21bc904f00ffe2667edc885770119a4590
+    pv: 0341c40ecc74c73853b4011db423b174c42a66cf39289c6e2880024353c33972
+  feature_version: external_v1
+  total_observations: 50295
+  usable_observations_h24: 50103
+  rows_lost_h24: 192
+checksums:
+  raw: 6a7f2bc571314cbf9c321cc03437691cd4be95c3a6f075e60ff99e8035c704c8
+provenance:
+  publisher: Open Power System Data (Neon Neue Energieökonomik, OPSD team)
+  contributors: Jonathan Muehlenpfordt (muehlenpfordt@neon-energie.de)
+  sources: ENTSO-E Transparency Platform (primary), processed via Python/pandas notebooks https://github.com/Open-Power-System-Data/time_series
+  citation: Open Power System Data. 2020. Data Package Time series. Version 2020-10-06. https://doi.org/10.25832/time_series/2020-10-06. (Primary data from various sources, for a complete list see URL.)

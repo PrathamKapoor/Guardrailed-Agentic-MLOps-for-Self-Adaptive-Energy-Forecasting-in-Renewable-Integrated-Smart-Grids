@@ -1,0 +1,235 @@
+scenario,gate,passed,reason_code,explanation
+G01,POLICY_VERSION_GATE,True,,Policy identity matches.
+G01,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G01,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G01,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G01,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G01,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G01,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G01,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G01,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G01,BENCHMARK_GATE,False,BENCHMARK_GATE_FAILED,Candidate does not strictly outperform the predefined strongest development benchmark.
+G01,STATISTICAL_EVIDENCE_GATE,False,STATISTICAL_EVIDENCE_FAILED,Statistical evidence fails or is insufficient for the requested elevation.
+G01,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G01,APPROVAL_GATE,True,,Approval is not required for this transition.
+G02,POLICY_VERSION_GATE,True,,Policy identity matches.
+G02,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G02,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G02,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G02,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G02,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G02,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G02,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G02,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G02,BENCHMARK_GATE,False,BENCHMARK_GATE_FAILED,Candidate does not strictly outperform the predefined strongest development benchmark.
+G02,STATISTICAL_EVIDENCE_GATE,False,STATISTICAL_EVIDENCE_FAILED,Statistical evidence fails or is insufficient for the requested elevation.
+G02,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G02,APPROVAL_GATE,True,,Approval is not required for this transition.
+G03,POLICY_VERSION_GATE,True,,Policy identity matches.
+G03,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G03,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G03,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G03,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G03,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G03,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G03,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G03,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G03,BENCHMARK_GATE,False,BENCHMARK_GATE_FAILED,Candidate does not strictly outperform the predefined strongest development benchmark.
+G03,STATISTICAL_EVIDENCE_GATE,False,STATISTICAL_EVIDENCE_FAILED,Statistical evidence fails or is insufficient for the requested elevation.
+G03,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G03,APPROVAL_GATE,True,,Approval is not required for this transition.
+G04,POLICY_VERSION_GATE,True,,Policy identity matches.
+G04,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G04,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G04,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G04,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G04,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G04,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G04,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G04,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G04,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G04,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G04,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G04,APPROVAL_GATE,True,,Approval is not required for this transition.
+G05,POLICY_VERSION_GATE,True,,Policy identity matches.
+G05,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G05,EVIDENCE_VALIDITY_GATE,False,EVIDENCE_INVALID,"Evidence is invalidated, audit-only, or not an official candidate."
+G05,LINEAGE_COMPLETENESS_GATE,False,LINEAGE_INCOMPLETE,Required dataset-to-registry lineage is incomplete.
+G05,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G05,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G05,PROTOCOL_COMPATIBILITY_GATE,False,PROTOCOL_MISMATCH,Protocol hash is not accepted by the frozen policy.
+G05,REPRODUCIBILITY_METADATA_GATE,False,REPRODUCIBILITY_INCOMPLETE,Required reproducibility metadata is incomplete.
+G05,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G05,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G05,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G05,STATE_TRANSITION_GATE,False,INVALID_STATE_TRANSITION,Requested lifecycle transition is not allowed.
+G05,APPROVAL_GATE,True,,Approval is not required for this transition.
+G06,POLICY_VERSION_GATE,True,,Policy identity matches.
+G06,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G06,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G06,LINEAGE_COMPLETENESS_GATE,False,LINEAGE_INCOMPLETE,Required dataset-to-registry lineage is incomplete.
+G06,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G06,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G06,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G06,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G06,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G06,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G06,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G06,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G06,APPROVAL_GATE,True,,Approval is not required for this transition.
+G07,POLICY_VERSION_GATE,True,,Policy identity matches.
+G07,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G07,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G07,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G07,MODEL_SPEC_FINGERPRINT_GATE,False,MODEL_SPEC_FINGERPRINT_MISMATCH,Actual model fingerprint differs from the frozen specification.
+G07,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G07,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G07,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G07,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G07,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G07,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G07,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G07,APPROVAL_GATE,True,,Approval is not required for this transition.
+G08,POLICY_VERSION_GATE,True,,Policy identity matches.
+G08,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G08,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G08,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G08,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G08,FEATURE_SPEC_FINGERPRINT_GATE,False,FEATURE_SPEC_FINGERPRINT_MISMATCH,Actual feature fingerprint differs from the frozen specification.
+G08,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G08,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G08,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G08,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G08,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G08,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G08,APPROVAL_GATE,True,,Approval is not required for this transition.
+G09,POLICY_VERSION_GATE,True,,Policy identity matches.
+G09,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G09,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G09,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G09,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G09,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G09,PROTOCOL_COMPATIBILITY_GATE,False,PROTOCOL_MISMATCH,Protocol hash is not accepted by the frozen policy.
+G09,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G09,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G09,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G09,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G09,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G09,APPROVAL_GATE,True,,Approval is not required for this transition.
+G10,POLICY_VERSION_GATE,True,,Policy identity matches.
+G10,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G10,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G10,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G10,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G10,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G10,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G10,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G10,DEVIATION_STATUS_GATE,False,UNRESOLVED_DEVIATION,An unresolved critical deviation blocks lifecycle elevation.
+G10,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G10,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G10,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G10,APPROVAL_GATE,True,,Approval is not required for this transition.
+G11,POLICY_VERSION_GATE,True,,Policy identity matches.
+G11,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G11,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G11,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G11,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G11,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G11,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G11,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G11,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G11,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G11,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G11,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G11,APPROVAL_GATE,False,APPROVAL_REQUIRED,Explicit approval is required before canary eligibility.
+G12,POLICY_VERSION_GATE,True,,Policy identity matches.
+G12,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G12,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G12,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G12,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G12,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G12,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G12,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G12,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G12,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G12,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G12,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G12,APPROVAL_GATE,False,APPROVAL_REJECTED,Recorded approval was rejected.
+G13,POLICY_VERSION_GATE,True,,Policy identity matches.
+G13,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G13,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G13,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G13,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G13,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G13,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G13,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G13,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G13,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G13,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G13,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G13,APPROVAL_GATE,True,,Simulation approval is explicitly recorded and labelled.
+G14,POLICY_VERSION_GATE,True,,Policy identity matches.
+G14,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G14,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G14,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G14,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G14,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G14,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G14,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G14,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G14,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G14,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G14,STATE_TRANSITION_GATE,False,INVALID_STATE_TRANSITION,Requested lifecycle transition is not allowed.
+G14,APPROVAL_GATE,True,,Approval is not required for this transition.
+G15,POLICY_VERSION_GATE,True,,Policy identity matches.
+G15,FINAL_TEST_POLICY_GATE,False,FINAL_TEST_POLICY_VIOLATION,Phase 13 forbids final-test access and activation of the historical integrity exception.
+G15,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G15,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G15,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G15,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G15,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G15,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G15,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G15,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G15,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G15,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G15,APPROVAL_GATE,True,,Approval is not required for this transition.
+G16,POLICY_VERSION_GATE,True,,Policy identity matches.
+G16,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G16,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G16,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G16,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G16,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G16,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G16,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G16,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G16,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G16,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G16,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G16,APPROVAL_GATE,True,,Approval is not required for this transition.
+G17,POLICY_VERSION_GATE,False,POLICY_VERSION_MISMATCH,Claimed policy identity does not match the frozen policy.
+G17,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G17,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G17,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G17,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G17,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G17,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G17,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G17,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G17,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G17,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G17,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G17,APPROVAL_GATE,True,,Approval is not required for this transition.
+G18,POLICY_VERSION_GATE,True,,Policy identity matches.
+G18,FINAL_TEST_POLICY_GATE,True,,No final-test or integrity-audit access requested.
+G18,EVIDENCE_VALIDITY_GATE,True,,Official evidence is VALID.
+G18,LINEAGE_COMPLETENESS_GATE,True,,Required lineage is complete.
+G18,MODEL_SPEC_FINGERPRINT_GATE,True,,Model fingerprint matches the freeze.
+G18,FEATURE_SPEC_FINGERPRINT_GATE,True,,Feature fingerprint matches the freeze.
+G18,PROTOCOL_COMPATIBILITY_GATE,True,,Protocol hash is recognized.
+G18,REPRODUCIBILITY_METADATA_GATE,True,,Reproducibility metadata is complete.
+G18,DEVIATION_STATUS_GATE,True,,No unresolved critical deviation affects eligibility.
+G18,BENCHMARK_GATE,True,,Development benchmark requirement is satisfied or not applicable.
+G18,STATISTICAL_EVIDENCE_GATE,True,,Statistical evidence policy is satisfied.
+G18,STATE_TRANSITION_GATE,True,,Requested transition is defined by policy.
+G18,APPROVAL_GATE,True,,Approval is not required for this transition.

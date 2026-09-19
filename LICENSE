@@ -1,0 +1,18 @@
+Proprietary Research License
+
+Copyright (c) 2026 the smartgrid-mlops research authors. All rights reserved.
+
+This software and its accompanying artifacts, documentation, and datasets
+derivatives are provided for internal research and educational evaluation
+only. Redistribution, commercial use, or public deployment in operational
+grid infrastructure is not permitted without the copyright holders' written
+consent.
+
+Third-party components remain under their own licenses (BSD/MIT/Apache-2.0;
+see requirements.txt). The RTS-GMLC dataset is provided by the U.S. National
+Renewable Energy Laboratory under its own license (BSD-3-style) and is used
+here for research purposes only.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY ARISING FROM ITS USE.

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guardrailed Agentic MLOps for Smart-Grid Forecasting — Hackathon Submission</title>
+<meta name="description" content="A 20-phase, governance-first MLOps research system for electricity forecasting. A bounded agentic decision-support layer is firewalled away from lifecycle control. Final evaluation on a locked 2020-11-01 to 2020-12-31 test partition: PV beats its benchmark by 7.61%; LOAD and WIND are dominated by the published RTS_DAY_AHEAD forecast." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="kicker">Hackathon submission · 20-phase research artifact</p>
+      <h1>Guardrailed Agentic MLOps for Smart-Grid Forecasting</h1>
+      <p class="lede">A complete MLOps lifecycle for electricity forecasting with a bounded, firewalled agentic decision-support layer — and a frozen, fully audited final evaluation on a held-out 2-month test window.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#demo">Explore the Demo</a>
+        <a class="btn" href="../dashboard/index.html">View the Research</a>
+        <a class="btn ghost" href="#architecture">View Architecture</a>
+      </div>
+      <ul class="hero-bullets">
+        <li><strong>What we built:</strong> a governance-first MLOps system with a bounded agentic layer and a frozen final evaluation.</li>
+        <li><strong>Why it matters:</strong> most "AI for MLOps" claims give agents too much authority; we built the inverse — agents are useful but cannot promote models.</li>
+        <li><strong>What we found:</strong> the frozen PV model beats the H24 daily persistence benchmark; LOAD and WIND do not. We report the negative result transparently.</li>
+      </ul>
+    </div>
+    <div class="hero-card" aria-label="Result card: PV beats benchmark; LOAD and WIND do not">
+      <h2 class="card-title">Final result on locked test partition (2020-11-01 → 2020-12-31, 1464 hourly rows per target)</h2>
+      <table class="result-table">
+        <thead><tr><th>Target</th><th>Frozen model MAE</th><th>External benchmark MAE</th><th>Δ relative</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr class="row-better"><td>PV (random_forest)</td><td>36.12</td><td>39.09 (H24 daily persistence)</td><td>-7.61%</td><td><span class="indicator better"></span>Better</td></tr>
+          <tr class="row-worse"><td>LOAD (random_forest)</td><td>174.26</td><td>101.14 (RTS_DAY_AHEAD)</td><td>+72.29%</td><td><span class="indicator worse"></span>Worse</td></tr>
+          <tr class="row-worse"><td>WIND (hist_gradient_boosting)</td><td>778.84</td><td>331.30 (RTS_DAY_AHEAD)</td><td>+135.08%</td><td><span class="indicator worse"></span>Worse</td></tr>
+        </tbody>
+      </table>
+      <p class="caption">Source: <code>artifacts/research_tables/final_model_comparison.csv</code>. Lower MAE is better. <span class="badge">FROZEN</span> <span class="badge">VERIFIED</span> <span class="badge">ACCESS MODE: FINAL_EVALUATION</span></p>
+    </div>
+  </div>
+</header>
+
+<nav class="primary-nav" aria-label="Primary">
+  <div class="container">
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#results">Results</a>
+    <a href="#why-negative">Why the negative result matters</a>
+    <a href="#uniqueness">What makes this different</a>
+    <a href="#demo">Demo</a>
+    <a href="#quickstart">Quick start</a>
+    <a href="#evidence">Research evidence</a>
+    <a href="#reproducibility">Reproducibility</a>
+  </div>
+</nav>
+
+<main id="main" class="container">
+
+<section id="problem" aria-labelledby="problemHeading">
+  <h2 id="problemHeading">The problem</h2>
+  <p>Operating an MLOps forecasting system for energy is hard because <strong>the system that monitors the model, the system that retrains it, and the system that promotes it all want to make the same kinds of decisions</strong>: change the model, change the policy, change the data, change the threshold. When an autonomous agent is added to that mix, it tends to drift toward the highest-leverage action: change the policy, promote the model, retrain. That is also the most dangerous action in a safety-critical setting.</p>
+  <p>Most "agentic MLOps" projects solve this by making the agent the operator: it makes the calls, the dashboard reports. We asked the opposite question: <em>can a bounded, firewalled agent reduce explanation burden without controlling the lifecycle?</em></p>
+  <p>The dataset is RTS-GMLC 2020 (8,784 hourly rows of electricity load, wind, and PV for the Texas system). We locked the final test partition (2020-11-01 → 2020-12-31, 1464 rows) before doing any model work, then built the deterministic MLOps lifecycle first and the agent layer second, then evaluated the final models on the locked partition exactly once.</p>
+</section>
+
+<section id="solution" aria-labelledby="solutionHeading">
+  <h2 id="solutionHeading">The solution</h2>
+  <p>A 20-phase pipeline that ends in a frozen, fully audited evaluation on the locked test partition. Five specialised agents sit beside the lifecycle and can only explain, retrieve, and report — they cannot promote, retrain, or change features.</p>
+  <ol class="flow-list">
+    <li><strong>Tracking &amp; governance</strong> — every model, run, and decision is captured with cryptographic identity.</li>
+    <li><strong>Drift monitoring</strong> — PSI / KS feature drift, prediction drift, and rolling performance drift over 168-hour windows.</li>
+    <li><strong>Governed retraining</strong> — retraining requests pass a 17-gate policy; final results are 18 REGISTERED_CHALLENGER entries, all blocked from promotion by the benchmark gate.</li>
+    <li><strong>Champion–challenger + rollback</strong> — promotion requires 13 governance gates plus a passing canary; rollback is verified, not just attempted.</li>
+    <li><strong>Bounded agentic decision support</strong> — a firewall allows only <code>INVESTIGATE / SUMMARIZE / EXPLAIN / REQUEST_HUMAN_REVIEW / CREATE_REPORT</code>; lifecycle actions are blocked and audited.</li>
+    <li><strong>Frozen final evaluation</strong> — the 18 registered challengers are evaluated on the locked test partition with the frozen reference and a published external benchmark.</li>
+  </ol>
+</section>
+
+<section id="architecture" aria-labelledby="archHeading">
+  <h2 id="archHeading">Architecture</h2>
+  <figure>
+    <img src="architecture.svg" alt="Architecture diagram: data -> preprocessing -> features -> governance (training/HPO/finalist registry) -> tracking (MLflow) -> drift monitoring -> governed retraining -> champion-challenger + rollback -> bounded agentic layer (firewalled) -> final frozen evaluation -> evidence dashboard" />
+    <figcaption class="caption">20-phase system architecture. The agentic layer is bounded by a firewall and cannot perform any lifecycle action. Final evaluation runs exactly once on the locked test partition under AccessMode.FINAL_EVALUATION with configuration_frozen=True.</figcaption>
+  </figure>
+  <figure>
+    <img src="progression.svg" alt="Research progression diagram across the 20 phases: baseline -> topology-aware model -> classical, neural, and HPO -> MLOps foundation -> drift and retraining -> agentic layer -> final evaluation -> evidence dashboard" />
+    <figcaption class="caption">The system was not assembled at random. Each phase froze its artefacts before the next phase was allowed to read them. Final evaluation runs last and reads only frozen artefacts.</figcaption>
+  </figure>
+</section>
+
+<section id="results" aria-labelledby="resultsHeading">
+  <h2 id="resultsHeading">Results</h2>
+  <p>On the locked final test partition (2020-11-01 to 2020-12-31, 1464 hourly rows per target):</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Target</th><th>Configuration</th><th>MAE</th><th>RMSE</th><th>sMAPE</th><th>nMAE</th><th>nRMSE</th></tr></thead>
+      <tbody>
+        <tr class="row-better"><td>pv</td><td>reference (random_forest, B_lags_only)</td><td>36.122</td><td>82.079</td><td>117.735</td><td>0.1082</td><td>0.2458</td></tr>
+        <tr><td>pv</td><td>H24_DAILY_PERSISTENCE</td><td>39.095</td><td>110.825</td><td>7.863</td><td>0.1171</td><td>0.3320</td></tr>
+        <tr class="row-worse"><td>load</td><td>reference (random_forest, B_lags_only)</td><td>174.257</td><td>231.271</td><td>4.717</td><td>0.0474</td><td>0.0628</td></tr>
+        <tr><td>load</td><td>RTS_DAY_AHEAD</td><td>101.142</td><td>101.845</td><td>2.717</td><td>0.0275</td><td>0.0277</td></tr>
+        <tr class="row-worse"><td>wind</td><td>reference (hist_gradient_boosting, B_lags_only)</td><td>778.841</td><td>923.373</td><td>92.397</td><td>0.6790</td><td>0.8050</td></tr>
+        <tr><td>wind</td><td>RTS_DAY_AHEAD</td><td>331.302</td><td>491.208</td><td>50.916</td><td>0.2888</td><td>0.4282</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Lower MAE is better. PV's frozen random forest beats H24 daily persistence by 7.61%. LOAD and WIND are dominated by the published RTS day-ahead forecast on this 2-month window. The system does not claim universal superiority; we present these results as recorded.</p>
+</section>
+
+<section id="why-negative" aria-labelledby="whyNegativeHeading">
+  <h2 id="whyNegativeHeading">Why the negative result matters</h2>
+  <p>The system does not claim universal superiority. We ran the frozen evaluation honestly, the same way we would for a paper, and we present the results as recorded. The PV result is the only benchmark comparison the frozen models win; LOAD and WIND do not. This is scientific integrity, not failure. A system that quietly selects only its best target is more dangerous than one that publishes its mixed outcome. The Phase 19 protocol freeze, the agent firewall, and the read-only evidence dashboard exist precisely to make this kind of honest reporting the default, not the exception.</p>
+</section>
+
+<section id="uniqueness" aria-labelledby="uniqueHeading">
+  <h2 id="uniqueHeading">What makes this different</h2>
+  <p>Most MLOps projects treat "AI for MLOps" as autonomous promotion/retraining. We built the inverse: a bounded, firewalled decision-support layer that reduces explanation burden but cannot control the lifecycle. The other differentiators are concrete artefacts, not slogans:</p>
+  <ul class="diff-list">
+    <li><strong>Governance firewall for agents.</strong> Allowed recommendation types: <code>INVESTIGATE / SUMMARIZE / EXPLAIN / REQUEST_HUMAN_REVIEW / CREATE_REPORT</code>. Blocked action types: <code>PROMOTE_MODEL / ROLLBACK_MODEL / CHANGE_POLICY / START_RETRAINING / CHANGE_FEATURES</code> plus anything unknown (deny-by-default). The forbidden audit events <code>AGENT_MODEL_PROMOTED</code> and <code>AGENT_RETRAINING_STARTED</code> cannot be emitted by construction. Evidence: <code>src/smartgrid_mlops/agents/firewall.py</code> + tests in <code>tests/test_phase17_agents.py</code>.</li>
+    <li><strong>Honest mixed-outcome final evaluation.</strong> The frozen final evaluation reports PV winning and LOAD/WIND losing against the frozen references. Evidence: <code>artifacts/research_tables/final_model_comparison.csv</code>, dashboard section "Results".</li>
+    <li><strong>Frozen protocol cascade.</strong> 20 protocol freezes + sidecar SHA-256s; every prior phase is verifiable before the next phase is allowed to read it. The final test partition is excluded from phases 0–18 and read only once under <code>AccessMode.FINAL_EVALUATION</code>.</li>
+    <li><strong>Deterministic evidence pipeline.</strong> 8 specialist agents + a supervisor produce structured findings (<code>Observation</code> / <code>Finding</code> / <code>DecisionReport</code>); every agent action is append-only audited; the MLflow lineage is the source of truth for the final evaluation runs.</li>
+    <li><strong>Operational benefit measured by ablation, not by user study.</strong> Phase 18 measured explanation effort against a deterministic cost model: ~72% time reduction with zero lifecycle outcome difference (0 promotions, 0 challengers, 0 bypasses, 8/8 agent quality probes passing). See <code>reports/phase_18_completion.md</code>.</li>
+    <li><strong>Read-only evidence interface.</strong> A static dashboard consumes the final evaluation; the builder is the only file that touches Phase 19 artefacts and is itself verified to leave them byte-identical (<code>tests/test_phase20_dashboard.py</code>).</li>
+  </ul>
+</section>
+
+<section id="demo" aria-labelledby="demoHeading">
+  <h2 id="demoHeading">Interactive demo</h2>
+  <p>The demo is the existing Phase 20 dashboard. It is fully read-only, deterministic, and accessible. It loads from <code>dashboard/data/*.json</code> snapshots built by <code>scripts/build_dashboard.py</code> from the Phase 19 artefacts. No model is re-run, no prediction is recomputed, and the dashboard cannot mutate any research artefact.</p>
+  <div class="demo-grid">
+    <div class="demo-card">
+      <h3>Primary demo</h3>
+      <p>Executive overview, per-target performance cards, benchmark comparison, error analysis, model &amp; feature details, evaluation protocol, lineage, governance, audit, artifacts.</p>
+      <a class="btn primary" href="../dashboard/index.html">Open the dashboard</a>
+    </div>
+    <div class="demo-card">
+      <h3>Interactive actual vs predicted</h3>
+      <p>Canvas-based time-series with date-range filter (November or December). Three series: actual, frozen model, external benchmark. Read-only.</p>
+      <a class="btn" href="../dashboard/charts.html">Open the chart</a>
+    </div>
+  </div>
+</section>
+
+<section id="quickstart" aria-labelledby="quickstartHeading">
+  <h2 id="quickstartHeading">Quick start</h2>
+  <p>The full 20-phase project is large; a judge who only wants the demo can stop after step 4.</p>
+  <ol class="flow-list">
+    <li><strong>Clone the repository.</strong> <code>git clone &lt;url&gt; &amp;&amp; cd &lt;repo&gt;</code></li>
+    <li><strong>Create the venv.</strong> Windows: <code>python -m venv .venv &amp;&amp; .venv\Scripts\python.exe -m pip install -e ".[dev]"</code> · Unix: <code>python3 -m venv .venv &amp;&amp; .venv/bin/pip install -e ".[dev]"</code></li>
+    <li><strong>Open the dashboard.</strong> <code>start dashboard/index.html</code> (Windows) or <code>xdg-open dashboard/index.html</code> (Linux) or <code>open dashboard/index.html</code> (macOS). The dashboard is a static page; it needs no running server.</li>
+    <li><strong>(Optional) Rebuild the dashboard data.</strong> <code>.venv\Scripts\python.exe scripts/build_dashboard.py</code> — re-emits <code>dashboard/data/*.json</code> from the Phase 19 artefacts (read-only with respect to them).</li>
+    <li><strong>(Optional) Run the full test suite.</strong> <code>.venv\Scripts\python.exe -m pytest</code> — 231 backend tests + 18 dashboard tests.</li>
+  </ol>
+  <p>Every command in this list has been verified in a clean environment on Windows 10 / Python 3.13. The full RTS-GMLC 2020 dataset (8,784 hourly rows) ships with the repository under <code>data/processed/</code>; no external download is required for the demo or for the test suite. The full pipeline (Phases 0–5) is also self-contained; if you want the full raw RTS-GMLC CSV (used by the audit scripts), see <code>scripts/bootstrap_rts_gmlc.py</code>.</p>
+</section>
+
+<section id="evidence" aria-labelledby="evidenceHeading">
+  <h2 id="evidenceHeading">Research evidence</h2>
+  <p>Every claim in this submission is traceable to a recorded artefact. The evidence dashboard above shows the full audit; here is the summary chain:</p>
+  <ol class="flow-list">
+    <li><strong>Model identity</strong> — <code>artifacts/model_registry/forecasting_reference_registry.yaml</code> + <code>lifecycle_registry.yaml</code></li>
+    <li><strong>Frozen protocol</strong> — <code>artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml</code> (SHA-256 <code>79053d6f...</code>)</li>
+    <li><strong>Final evaluation</strong> — <code>artifacts/experiments/final_evaluation/phase_19/official/</code> (predictions, metrics, summary, Holm–Bonferroni, run manifest, MLflow)</li>
+    <li><strong>Read-only dashboard</strong> — <code>dashboard/index.html</code> + <code>dashboard/charts.html</code> (this is the primary demo)</li>
+    <li><strong>Full research documentation</strong> — <code>docs/research_methodology/</code> (20 documents), <code>docs/paper_drafts/</code> (12 documents), <code>reports/phase_00..20_completion.md</code></li>
+  </ol>
+</section>
+
+<section id="reproducibility" aria-labelledby="reproHeading">
+  <h2 id="reproHeading">Reproducibility</h2>
+  <ul>
+    <li><strong>Test suite:</strong> 231 tests, deterministic, zero failures expected. Run <code>pytest</code>.</li>
+    <li><strong>Freeze checksums:</strong> 20 protocol freezes with sidecar SHA-256s, all verified.</li>
+    <li><strong>Phase 19 integrity baseline:</strong> <code>artifacts/ui_build/phase19_integrity_baseline.json</code> records the SHA-256 of 20 critical Phase 19 artefacts. The dashboard builder is verified to leave them byte-identical (regression test in <code>tests/test_phase20_dashboard.py</code>).</li>
+    <li><strong>Final evaluation:</strong> exactly one execution; access was <code>AccessMode.FINAL_EVALUATION</code> with <code>configuration_frozen=True</code>; every test-partition timestamp was checked by <code>authorize_final_evaluation</code>.</li>
+    <li><strong>Data:</strong> 8,784 hourly rows of RTS-GMLC 2020, shipped under <code>data/processed/</code>. Final test partition (Nov–Dec 2020) excluded from all phases 0–18.</li>
+  </ul>
+</section>
+
+<section id="limitations" aria-labelledby="limitsHeading">
+  <h2 id="limitsHeading">Honest limitations</h2>
+  <ul>
+    <li>One year of one dataset (RTS-GMLC 2020); a single 2-month final test window.</li>
+    <li>Classical ML only (random forest, hist gradient boosting, MLP). No deep learning, no quantum / graph / GNN.</li>
+    <li>External benchmark (RTS_DAY_AHEAD) is a published operating artefact that is hard to beat on short horizons; the comparison is informative, not aspirational.</li>
+    <li>Agent operational benefit is approximated by a frozen cost model (Phase 18), not by a user study.</li>
+    <li>Agent layer is local rule-based, not LLM-backed. The LLM_BACKEND_INTERFACE is documented as a contract only; no LLM is invoked during execution.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>This is a research artefact, not a deployed forecasting product. No model was retrained, no benchmark was optimised, and no result was changed to look better. Every number above is reproducible from <code>artifacts/research_tables/final_model_comparison.csv</code> and the Phase 19 completion report.</p>
+    <p class="caption">Hackathon layer: <code>hackathon/</code> · Research evidence: <code>dashboard/</code> · Project root: <code>README.md</code> · Phase 20 completion: <code>reports/phase_20_completion.md</code> · Hackathon checklist: <code>docs/HACKATHON_READY.md</code></p>
+  </div>
+</footer>
+
+</body>
+</html>

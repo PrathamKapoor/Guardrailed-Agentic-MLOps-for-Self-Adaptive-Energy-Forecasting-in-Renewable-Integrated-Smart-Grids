@@ -1,0 +1,7 @@
+Dataset,Target,Horizon,Model,MAE,RMSE,sMAPE,Comparator,Comparator_MAE,DM_statistic,p_value,Holm_decision,N,Challenger_MAE,Challenger_DM
+RTS-GMLC 2020 TEST (Phase19),load,24,P10-load-random_forest-B_lags_only,174.26,231.27,4.72,RTS_DAY_AHEAD,101.14,6.10,1.07e-09,reject,1464,281.00,
+RTS-GMLC 2020 TEST (Phase19),wind,24,P10-wind-hist_gradient_boosting-B_lags_only,778.84,923.37,92.40,RTS_DAY_AHEAD,331.30,7.98,1.47e-15,reject,1464,838.40,
+RTS-GMLC 2020 TEST (Phase19),pv,24,P10-pv-random_forest-B_lags_only,36.12,82.08,117.73,H24_DAILY_PERSISTENCE,39.09,-0.78,0.438,retain,1464,221.64,
+OPSD DE 2015-2020 (External),load,24,P10-load-random_forest-B_lags_only,48228.33,49258.64,152.42,H24_DAILY_PERSISTENCE,4459.73,182.07,0,reject,49983,30282.93,312.66
+OPSD DE 2015-2020 (External),wind,24,P10-wind-hist_gradient_boosting-B_lags_only,10140.74,13570.17,130.98,H24_DAILY_PERSISTENCE,5944.00,20.31,1.11e-91,reject,49983,9153.64,30.22
+OPSD DE 2015-2020 (External),pv,24,P10-pv-random_forest-B_lags_only,4038.89,7666.81,154.07,H24_DAILY_PERSISTENCE,1060.89,40.56,0,reject,49983,3792.91,20740375.27

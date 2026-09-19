@@ -1,0 +1,19 @@
+{
+  "phase": "12",
+  "figures": [
+    {
+      "figure_id": "FIG-P12-01",
+      "source_artifact": "artifacts/mlops/lineage/lineage_index.yaml",
+      "path": "artifacts/research_figures/phase_12/mlops_lineage_architecture.svg",
+      "research_purpose": "Tracking and lineage architecture",
+      "final_test_status": "LOCKED_NOT_EXECUTED"
+    },
+    {
+      "figure_id": "FIG-P12-02",
+      "source_artifact": "artifacts/model_registry/mlops_research_registry.yaml",
+      "path": "artifacts/research_figures/phase_12/reference_registry_status.svg",
+      "research_purpose": "Separate reference role from benchmark eligibility",
+      "final_test_status": "NOT_EVALUATED"
+    }
+  ]
+}

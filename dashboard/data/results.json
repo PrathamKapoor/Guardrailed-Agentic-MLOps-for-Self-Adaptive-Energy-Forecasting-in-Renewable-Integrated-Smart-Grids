@@ -1,0 +1,141 @@
+{
+  "targets": {
+    "load": {
+      "configurations": {
+        "random_forest": [
+          {
+            "configuration": "random_forest",
+            "MAE": 174.25681766080925,
+            "RMSE": 231.2707672558446,
+            "sMAPE": 4.716616398112372,
+            "nMAE": 0.04735488297730689,
+            "nRMSE": 0.06284861772691251
+          }
+        ],
+        "mlp": [
+          {
+            "configuration": "mlp",
+            "MAE": 281.00082079372083,
+            "RMSE": 343.3594528816875,
+            "sMAPE": 7.777090329737031,
+            "nMAE": 0.07636292894499791,
+            "nRMSE": 0.09330909934332678
+          }
+        ],
+        "RTS_DAY_AHEAD": [
+          {
+            "configuration": "RTS_DAY_AHEAD",
+            "MAE": 101.14234287341759,
+            "RMSE": 101.84536371689018,
+            "sMAPE": 2.716774332355368,
+            "nMAE": 0.027485775736730486,
+            "nRMSE": 0.02767682404244472
+          }
+        ]
+      },
+      "comparison": {
+        "frozen_model": "random_forest",
+        "frozen_model_mae": 174.256818,
+        "external_benchmark": "RTS_DAY_AHEAD",
+        "benchmark_mae": 101.142343,
+        "absolute_difference": 73.114475,
+        "relative_difference_percent": 72.2887
+      }
+    },
+    "wind": {
+      "configurations": {
+        "hist_gradient_boosting": [
+          {
+            "configuration": "hist_gradient_boosting",
+            "MAE": 778.8412887248792,
+            "RMSE": 923.3732472043888,
+            "sMAPE": 92.39736347788356,
+            "nMAE": 0.6789696191869805,
+            "nRMSE": 0.804968086692272
+          }
+        ],
+        "mlp": [
+          {
+            "configuration": "mlp",
+            "MAE": 838.400689744515,
+            "RMSE": 957.930055019927,
+            "sMAPE": 96.13051127521403,
+            "nMAE": 0.7308916531298826,
+            "nRMSE": 0.8350936372794108
+          }
+        ],
+        "RTS_DAY_AHEAD": [
+          {
+            "configuration": "RTS_DAY_AHEAD",
+            "MAE": 331.30216302367944,
+            "RMSE": 491.208264741478,
+            "sMAPE": 50.91575566377123,
+            "nMAE": 0.28881892462620923,
+            "nRMSE": 0.4282200921821327
+          }
+        ]
+      },
+      "comparison": {
+        "frozen_model": "hist_gradient_boosting",
+        "frozen_model_mae": 778.841289,
+        "external_benchmark": "RTS_DAY_AHEAD",
+        "benchmark_mae": 331.302163,
+        "absolute_difference": 447.539126,
+        "relative_difference_percent": 135.0849
+      }
+    },
+    "pv": {
+      "configurations": {
+        "random_forest": [
+          {
+            "configuration": "random_forest",
+            "MAE": 36.1217634355897,
+            "RMSE": 82.07888348246736,
+            "sMAPE": 117.73465533954827,
+            "nMAE": 0.10817435038655554,
+            "nRMSE": 0.24580278083604423
+          }
+        ],
+        "mlp": [
+          {
+            "configuration": "mlp",
+            "MAE": 221.6398504361429,
+            "RMSE": 249.2717139933507,
+            "sMAPE": 135.46796741480225,
+            "nMAE": 0.6637479613489882,
+            "nRMSE": 0.746497489776658
+          }
+        ],
+        "H24_DAILY_PERSISTENCE": [
+          {
+            "configuration": "H24_DAILY_PERSISTENCE",
+            "MAE": 39.0949852003643,
+            "RMSE": 100.6924076197019,
+            "sMAPE": 7.862540615997038,
+            "nMAE": 0.11707829920769121,
+            "nRMSE": 0.30154496201554803
+          }
+        ]
+      },
+      "comparison": {
+        "frozen_model": "random_forest",
+        "frozen_model_mae": 36.121763,
+        "external_benchmark": "H24_DAILY_PERSISTENCE",
+        "benchmark_mae": 39.094985,
+        "absolute_difference": -2.973222,
+        "relative_difference_percent": -7.6051
+      }
+    }
+  },
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "n_hours": 1464,
+    "start": "2020-11-01T00:00:00"
+  },
+  "governance_invariants": {
+    "challengers_created": 0,
+    "governance_state_changes": 0,
+    "model_promoted": 0,
+    "rollback_events": 0
+  }
+}

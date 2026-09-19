@@ -1,0 +1,36 @@
+{
+  "selection_metric": "MAE",
+  "selection_folds": [
+    "F01",
+    "F02",
+    "F03",
+    "F04"
+  ],
+  "post_hpo_folds": [
+    "F05",
+    "F06"
+  ],
+  "post_hpo_seeds": [
+    42,
+    123,
+    2020,
+    2025,
+    31415
+  ],
+  "final_test_status": "LOCKED",
+  "load": {
+    "selected_trial": 0,
+    "config_path": "artifacts\\experiments\\hpo\\phase_09\\best_configs\\load_pytorch_mlp.yaml",
+    "checksum": "40a5dbd1dfd820b8eeed02d4175a2515a02bebc01c49f2959d5bc4f961c6903a"
+  },
+  "wind": {
+    "selected_trial": 0,
+    "config_path": "artifacts\\experiments\\hpo\\phase_09\\best_configs\\wind_pytorch_mlp.yaml",
+    "checksum": "0c0e394091484f255a62277772fcf7cce8f5c9c415443e0e4f1cf413944b54f5"
+  },
+  "pv": {
+    "selected_trial": 0,
+    "config_path": "artifacts\\experiments\\hpo\\phase_09\\best_configs\\pv_pytorch_mlp.yaml",
+    "checksum": "f8df33fd757a7c016317bc82f840054e9865556ac942ebd6faa4a3cbc89e2eb5"
+  }
+}

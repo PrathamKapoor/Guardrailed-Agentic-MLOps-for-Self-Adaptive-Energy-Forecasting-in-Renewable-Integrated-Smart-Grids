@@ -1,0 +1,3 @@
+# Neural results notes
+
+Validation-only evidence. For H24, the MLP was the lowest-MAE neural model for load (285.611 MW), wind (516.763 MW), and PV (45.257 MW), using September--October matched timestamps. These models did not outperform the strongest Phase 7 classical references. LSTM/GRU sequence-track results were higher; their input representation differs from the Phase 7 tabular comparison. No neural H24 model beat RTS DAY_AHEAD for load/wind; MLP PV beat RTS DAY_AHEAD but not daily persistence. Raw PV recurrent/MLP predictions and seed/fold artifacts are retained for later diagnostics; no final-test or significance claim is made.

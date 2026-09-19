@@ -1,0 +1,20 @@
+{
+  "target": "wind",
+  "horizon": 24,
+  "feature_set": "combined_v1",
+  "train_start": "2020-01-01T00:00:00",
+  "train_end": "2020-08-31T23:00:00",
+  "validation_start": "2020-09-01T00:00:00",
+  "validation_end": "2020-10-31T23:00:00",
+  "test_start": "2020-11-01T00:00:00",
+  "test_end": "2020-12-31T23:00:00",
+  "final_test_status": "LOCKED",
+  "train_samples": 5664,
+  "validation_samples": 1464,
+  "test_samples": 1464,
+  "first_forecast_origin": "2020-01-08T00:00:00",
+  "last_forecast_origin": "2020-12-30T23:00:00",
+  "first_target_timestamp": "2020-01-09T00:00:00",
+  "last_target_timestamp": "2020-12-31T23:00:00",
+  "split_checksum": "ea9d04b82f376fbd0251a363b7d3d7bc5df3fe96acd4c3aa1124baf891cc751b"
+}

@@ -1,0 +1,9 @@
+# Phase 9 HPO results notes
+
+These notes use valid Phase 9 evidence only. SEARCH MAE denotes F01--F04, while POST-HPO MAE denotes the mean of frozen-configuration F05/F06 fold means. The post-HPO validation results indicate that the tuned PyTorch configurations achieved higher MAE than their matched untuned PyTorch counterparts: load 320.234 versus 294.864 (−8.604%), wind 522.112 versus 518.731 (−0.652%), and PV 55.611 versus 49.255 (−12.902%). Negative values are retained rather than suppressed.
+
+The valid classical searches provide SEARCH MAE only; they have no Phase 9 F05/F06 retraining/evaluation artifact and are therefore not represented as post-HPO generalization results. Their selected search MAEs were 389.306 (load random forest), 570.656 (wind hist-gradient boosting), and 49.003 (PV random forest). The search-fold and post-HPO quantities should not be read as directly interchangeable.
+
+Relative to the best naive H24 benchmark, the tuned PyTorch POST-HPO MAEs were higher for load and PV and lower for wind; each remained higher than RTS DAY_AHEAD in this validation-only comparison. Within-fold seed variability and fold-to-fold temporal variation are separately retained in `hpo_post_hpo_seed_stability.csv`. Valid compute totals are reported separately from quarantined audit-only sklearn compute.
+
+All corrected selected PyTorch configurations used the same sampled parameter values; hidden width is interior, dropout is interior (near but not at the 0.4 upper bound), and learning-rate and weight-decay values are interior log-space selections. These are HPO search sensitivities, not causal importance claims. The improvement observed on the search folds did not persist as a lower F05/F06 MAE for the PyTorch MLPs. These validation results do not provide final conclusions.

@@ -1,0 +1,72 @@
+{
+  "policy_id": "SMARTGRID_DETERMINISTIC_RETRAINING",
+  "policy_version": "15.0.0",
+  "mode": "RESEARCH",
+  "request_origins_allowed": ["MONITORING_POLICY", "MANUAL_SIMULATION", "SYSTEM_TEST"],
+  "severity_policy": {
+    "NONE": "DENY",
+    "WATCH": "DENY",
+    "WARNING": "ELIGIBLE_WITH_PERSISTENCE_AND_PERFORMANCE",
+    "CRITICAL": "ELIGIBLE_UNLESS_BLOCKED"
+  },
+  "performance_signal_rule": {
+    "feature_drift_alone_authorizes": false,
+    "prediction_drift_alone_authorizes": false,
+    "conditions": {
+      "A": {"label": "persistent PERFORMANCE_DRIFT", "requires": ["PERFORMANCE_DRIFT"], "min_persistence_windows": 2},
+      "B": {"label": "persistent ERROR_DISTRIBUTION_DRIFT with WARNING/CRITICAL severity", "requires": ["ERROR_DISTRIBUTION_DRIFT"], "min_persistence_windows": 2, "min_severity": "WARNING"},
+      "C": {"label": "compound feature/prediction drift plus performance deterioration", "requires_any": ["FEATURE_DRIFT", "PREDICTION_DRIFT"], "requires": ["PERFORMANCE_DRIFT"], "min_persistence_windows": 2, "mae_degradation_required": true},
+      "D": {"label": "explicit controlled adaptation scenario eligible under simulation policy", "simulation_scenario": true}
+    }
+  },
+  "min_persistence_windows": 2,
+  "data_quality_policy": {"critical_blocks_retraining": true, "decision": "DENY", "reason_code": "DATA_QUALITY_BLOCK"},
+  "label_availability_policy": {"required": true, "horizon_contract": "H24 target label observed only at or before label_availability_cutoff"},
+  "minimum_new_labeled_samples": 336,
+  "cooldown_hours": 168,
+  "cooldown_scope": "target within one simulation stream; independent adaptation scenarios are independent simulation universes",
+  "allowed_reference_states": ["REGISTERED_REFERENCE"],
+  "allowed_model_families": {"load": "random_forest", "wind": "hist_gradient_boosting", "pv": "random_forest"},
+  "allowed_feature_sets": {
+    "load": ["lag_1", "lag_24", "lag_168"],
+    "wind": ["lag_1", "lag_24", "lag_168"],
+    "pv": ["lag_1", "lag_24", "lag_168"]
+  },
+  "allowed_feature_set_id": "B_lags_only",
+  "hyperparameter_policy": "FROZEN_REFERENCE_EXACT_NO_HPO",
+  "feature_selection_policy": "FROZEN_REFERENCE_EXACT_NO_SELECTION",
+  "seed_policy": {"seed": 42, "policy": "single deterministic seed embedded in frozen reference hyperparameters"},
+  "training_window_policy": {
+    "strategy": "EXPANDING_WINDOW_REFIT",
+    "leakage_rule": "only rows with target_timestamp <= retraining_cutoff whose labels are observed <= label_availability_cutoff",
+    "no_evaluation_rows_in_training": true
+  },
+  "evaluation_policy": {
+    "horizon_hours": 336,
+    "primary_metric": "MAE",
+    "secondary_metrics": ["RMSE", "sMAPE", "nMAE", "nRMSE"],
+    "comparison": "challenger vs frozen reference on matched synthetic post-drift timestamps",
+    "clean_counterfactual_evaluation": true,
+    "no_arbitrary_success_threshold": true
+  },
+  "challenger_registration_policy": {
+    "terminal_state": "REGISTERED_CHALLENGER",
+    "promotion_eligible_default": false,
+    "required_checks": ["training_completed", "evidence_valid", "lineage_complete", "feature_fingerprint_valid", "model_specification_valid", "training_dataset_fingerprint_present", "evaluation_complete", "outputs_finite", "no_unresolved_deviation", "final_test_policy_respected"]
+  },
+  "duplicate_request_policy": "RETURN_EXISTING_DECISION",
+  "job_policy": {"max_concurrent_per_target_per_stream": 1, "retry_policy": "NONE", "bounded_retry": false},
+  "accepted_protocol_hashes": [
+    "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b",
+    "eea37fc2029f422079e31d0299a561178eafd26e587957c5c9056a4dbcad00d5"
+  ],
+  "final_test_constraints": {
+    "training_access": false,
+    "hpo_access": false,
+    "model_selection_access": false,
+    "feature_selection_access": false,
+    "performance_evaluation": false,
+    "integrity_audit_activation": false,
+    "phase_15_new_reads": 0
+  }
+}

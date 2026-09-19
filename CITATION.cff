@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or research framework, please cite it as below."
+title: "MLOps-Driven Energy Forecasting for Smart Grids with Renewable Energy Integration"
+version: 0.20.0
+date-released: 2026-09-19
+authors:
+  - name: "Research Team"
+repository-code: "https://github.com/guardrailed-mlops/guardrailed-agentic-mlops-smart-grid"
+keywords:
+  - smart-grid
+  - energy-forecasting
+  - renewable-energy
+  - mlops
+  - model-governance
+  - drift-detection
+  - reproducible-research
+license: "Proprietary"

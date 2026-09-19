@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Actual vs Predicted — Interactive</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .chart-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+  canvas { max-width: 100%; height: auto; display: block; }
+  .range-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 12px 0; }
+  .range-row label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--text-muted); }
+  .range-row input { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 8px; font-family: inherit; }
+  .range-row button { background: var(--accent); color: white; border: 0; border-radius: var(--radius); padding: 8px 14px; cursor: pointer; font-weight: 600; }
+  .range-row button.secondary { background: var(--surface-3); color: var(--text); border: 1px solid var(--border); }
+  .legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+  .legend .item { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+  .legend .swatch { display: inline-block; width: 14px; height: 4px; border-radius: 2px; }
+  .note { color: var(--text-muted); font-size: 13px; margin: 8px 0; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header"><div class="container">
+  <div class="brand">
+    <h1>Actual vs Predicted — Interactive</h1>
+    <p class="subtitle">Read-only time-series exploration. No predictions are modified.</p>
+  </div>
+  <a href="index.html" class="status-pill" style="background:var(--surface-2);border-color:var(--border);color:var(--text);">← Back to dashboard</a>
+</div></header>
+
+<main id="main" class="container">
+  <section>
+    <h2>Choose a target</h2>
+    <div class="target-selector" role="tablist">
+      <button class="target-btn" role="tab" aria-selected="true" data-target="load">LOAD</button>
+      <button class="target-btn" role="tab" aria-selected="false" data-target="wind">WIND</button>
+      <button class="target-btn" role="tab" aria-selected="false" data-target="pv">PV</button>
+    </div>
+    <p class="note">Chart renders 1464 hourly points for the selected target. Use the date inputs to focus on a narrower window; the underlying data is never modified.</p>
+    <div class="range-row">
+      <label>From <input type="date" id="fromDate" /></label>
+      <label>To <input type="date" id="toDate" /></label>
+      <button id="applyRange" type="button">Apply</button>
+      <button id="resetRange" type="button" class="secondary">Reset to full window</button>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="chartCanvas" width="1100" height="380" role="img" aria-label="Time-series chart: actual vs frozen model prediction vs external benchmark across the final test partition"></canvas>
+      <div class="legend">
+        <span class="item"><span class="swatch" style="background:#9aa6b2"></span>Actual</span>
+        <span class="item" id="legendModel"><span class="swatch" style="background:#2a9d8f"></span>Frozen model</span>
+        <span class="item" id="legendBenchmark"><span class="swatch" style="background:#5fa8d3"></span>External benchmark</span>
+        <span class="item" id="legendError"><span class="swatch" style="background:#e76f51"></span>|error|</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="data/figures.js"></script>
+<script>
+(function () {
+  "use strict";
+  const $ = (s) => document.querySelector(s);
+  const fmt = (n, d) => Number.isFinite(n) ? n.toLocaleString(undefined, {minimumFractionDigits:d, maximumFractionDigits:d}) : "—";
+
+  const state = { active: "load", data: null, model: null, benchmark: null, view: { from: null, to: null } };
+
+  Promise.all([
+    fetch("data/predictions.json").then((r) => r.json()),
+    fetch("data/results.json").then((r) => r.json()),
+  ]).then(([predictions, results]) => {
+    state.data = predictions;
+    state.results = results;
+    state.model = { load: "random_forest", wind: "hist_gradient_boosting", pv: "random_forest" };
+    state.benchmark = { load: "RTS_DAY_AHEAD", wind: "RTS_DAY_AHEAD", pv: "H24_DAILY_PERSISTENCE" };
+    $("#fromDate").min = "2020-11-01"; $("#fromDate").max = "2020-12-31";
+    $("#toDate").min = "2020-11-01"; $("#toDate").max = "2020-12-31";
+    $("#fromDate").value = "2020-11-01"; $("#toDate").value = "2020-12-31";
+    bind();
+    draw();
+  });
+
+  function bind() {
+    document.querySelectorAll(".target-btn").forEach((b) => {
+      b.addEventListener("click", () => {
+        document.querySelectorAll(".target-btn").forEach((x) => x.setAttribute("aria-selected", String(x === b)));
+        state.active = b.getAttribute("data-target");
+        draw();
+      });
+    });
+    $("#applyRange").addEventListener("click", () => {
+      const from = $("#fromDate").value || null, to = $("#toDate").value || null;
+      if (from && to && from > to) { alert("From must be before To."); return; }
+      state.view.from = from; state.view.to = to; draw();
+    });
+    $("#resetRange").addEventListener("click", () => {
+      state.view = { from: null, to: null };
+      $("#fromDate").value = "2020-11-01"; $("#toDate").value = "2020-12-31";
+      draw();
+    });
+  }
+
+  function draw() {
+    const canvas = $("#chartCanvas");
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = "#0e1116"; ctx.fillRect(0, 0, W, H);
+    const all = state.data.targets[state.active];
+    const modelName = state.model[state.active], benchName = state.benchmark[state.active];
+    const actual = all.filter((r) => r.model === modelName).map((r) => ({t: r.timestamp, v: r.actual}));
+    const pred = all.filter((r) => r.model === modelName).map((r) => ({t: r.timestamp, v: r.prediction}));
+    const bench = all.filter((r) => r.model === benchName).map((r) => ({t: r.timestamp, v: r.prediction}));
+    const error = all.filter((r) => r.model === modelName).map((r) => ({t: r.timestamp, v: Math.abs(r.signed_error)}));
+    const withinRange = (t) => (!state.view.from || t >= state.view.from) && (!state.view.to || t <= state.view.to + "T23:59:59");
+    const a = actual.filter((p) => withinRange(p.t));
+    const p = pred.filter((x) => withinRange(x.t));
+    const b = bench.filter((x) => withinRange(x.t));
+    const e = error.filter((x) => withinRange(x.t));
+    if (!a.length) { ctx.fillStyle = "#9aa6b2"; ctx.font = "14px sans-serif"; ctx.fillText("No rows in selected range.", 20, 30); return; }
+    const allV = a.map((r) => r.v).concat(p.map((r) => r.v)).concat(b.map((r) => r.v));
+    const minV = Math.min(...allV), maxV = Math.max(...allV);
+    const padL = 60, padR = 20, padT = 20, padB = 50;
+    const plotW = W - padL - padR, plotH = H - padT - padB;
+    const tMin = a[0].t, tMax = a[a.length - 1].t;
+    const xAt = (t) => padL + plotW * (new Date(t).getTime() - new Date(tMin).getTime()) / (new Date(tMax).getTime() - new Date(tMin).getTime() || 1);
+    const yAt = (v) => padT + plotH * (1 - (v - minV) / (maxV - minV || 1));
+    // Grid + axis labels
+    ctx.strokeStyle = "#30363d"; ctx.lineWidth = 1; ctx.beginPath();
+    for (let i = 0; i <= 4; i++) {
+      const y = padT + (plotH * i) / 4; ctx.moveTo(padL, y); ctx.lineTo(W - padR, y);
+      const v = maxV - ((maxV - minV) * i) / 4;
+      ctx.fillStyle = "#9aa6b2"; ctx.font = "11px sans-serif";
+      ctx.fillText(fmt(v, 0), 6, y + 3);
+    }
+    ctx.stroke();
+    // Lines
+    function drawLine(series, color) {
+      ctx.strokeStyle = color; ctx.lineWidth = 1.4; ctx.beginPath();
+      for (let i = 0; i < series.length; i++) {
+        const x = xAt(series[i].t), y = yAt(series[i].v);
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    drawLine(a, "#9aa6b2");
+    drawLine(p, "#2a9d8f");
+    drawLine(b, "#5fa8d3");
+    // Error bars (right axis implied): use second pass with light stroke
+    const errMax = Math.max(...e.map((r) => r.v));
+    const yErr = (v) => padT + plotH * (1 - v / (errMax || 1));
+    ctx.strokeStyle = "rgba(231,111,81,0.5)"; ctx.lineWidth = 0.6; ctx.beginPath();
+    for (let i = 0; i < e.length; i++) {
+      const x = xAt(e[i].t), y = yErr(e[i].v);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // Title
+    ctx.fillStyle = "#e6edf3"; ctx.font = "bold 14px sans-serif";
+    ctx.fillText(state.active.toUpperCase() + " — Actual vs Predicted (" + a.length + " hourly points)", padL, 14);
+    // X labels: first and last timestamp + midpoint
+    ctx.fillStyle = "#9aa6b2"; ctx.font = "10px sans-serif";
+    ctx.fillText(a[0].t, padL, H - 20);
+    ctx.fillText(a[a.length - 1].t, W - padR - 110, H - 20);
+    const midT = a[Math.floor(a.length / 2)].t; ctx.fillText(midT, padL + plotW / 2 - 40, H - 20);
+  }
+})();
+</script>
+</body>
+</html>

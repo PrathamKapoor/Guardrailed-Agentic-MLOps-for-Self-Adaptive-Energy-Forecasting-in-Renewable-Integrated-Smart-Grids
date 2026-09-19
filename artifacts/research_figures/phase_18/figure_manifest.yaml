@@ -1,0 +1,58 @@
+{
+  "phase": "18",
+  "final_test_status": "NOT_ACCESSED",
+  "figures": [
+    {
+      "figure_id": "FIG-P18-01",
+      "path": "artifacts/research_figures/phase_18/agentic_efficiency_comparison.png",
+      "source_artifacts": [
+        "artifacts/agentic_evaluation/phase_18/comparison_results.json"
+      ],
+      "scenario_role": "efficiency",
+      "target": "all",
+      "evidence_status": "VALID",
+      "generation_script": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+      "final_test_status": "NOT_ACCESSED",
+      "paper_relevance": "operational burden comparison"
+    },
+    {
+      "figure_id": "FIG-P18-02",
+      "path": "artifacts/research_figures/phase_18/agentic_quality_comparison.png",
+      "source_artifacts": [
+        "artifacts/agentic_evaluation/phase_18/comparison_results.json"
+      ],
+      "scenario_role": "quality",
+      "target": "all",
+      "evidence_status": "VALID",
+      "generation_script": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+      "final_test_status": "NOT_ACCESSED",
+      "paper_relevance": "explanation quality comparison"
+    },
+    {
+      "figure_id": "FIG-P18-03",
+      "path": "artifacts/research_figures/phase_18/agentic_safety_comparison.png",
+      "source_artifacts": [
+        "artifacts/agentic_evaluation/phase_18/comparison_results.json"
+      ],
+      "scenario_role": "safety",
+      "target": "all",
+      "evidence_status": "VALID",
+      "generation_script": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+      "final_test_status": "NOT_ACCESSED",
+      "paper_relevance": "safety equivalence"
+    },
+    {
+      "figure_id": "FIG-P18-04",
+      "path": "artifacts/research_figures/phase_18/agentic_workflow_architecture.svg",
+      "source_artifacts": [
+        "artifacts/experimental_design/phase_18_agentic_comparison_protocol_freeze.yaml"
+      ],
+      "scenario_role": "architecture",
+      "target": "all",
+      "evidence_status": "VALID",
+      "generation_script": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+      "final_test_status": "NOT_ACCESSED",
+      "paper_relevance": "ablation design"
+    }
+  ]
+}

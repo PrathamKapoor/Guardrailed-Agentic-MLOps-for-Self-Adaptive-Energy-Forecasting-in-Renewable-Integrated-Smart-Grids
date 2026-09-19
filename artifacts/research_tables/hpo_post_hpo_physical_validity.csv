@@ -1,0 +1,4 @@
+target,predictions,negative_prediction_count,negative_prediction_percentage,NaN_count,Inf_count
+load,7320,0,0.0,0,0
+wind,7320,1,0.01366120218579235,0,0
+pv,7320,1101,15.040983606557377,0,0

@@ -1,0 +1,1 @@
+{"horizon":24,"search_folds":["F01","F02","F03","F04"],"post_hpo_folds":["F05","F06"],"objective":"mean MAE across search folds","sampler":"TPESampler","sampler_seed":42,"trials_per_study":5,"model_seed":42,"neural_search_seed":42,"pruner":"none","final_test_access":false}

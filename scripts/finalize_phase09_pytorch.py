@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,hashlib,sys,optuna
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
+from run_pytorch_mlp_hpo import run
+def main():
+ out=ROOT/'artifacts/experiments/hpo/phase_09'; sel=out/'selected_trials';best=out/'best_configs';sel.mkdir(exist_ok=True);best.mkdir(exist_ok=True);freeze={"selection_metric":"MAE","selection_folds":["F01","F02","F03","F04"],"post_hpo_folds":["F05","F06"],"post_hpo_seeds":[42,123,2020,2025,31415],"final_test_status":"LOCKED"}
+ for t in ('load','wind','pv'):
+  db=out/'studies'/f'{t}_pytorch_mlp_v1_recovery.db';s=optuna.load_study(study_name=f'phase09-{t}-pytorch-mlp-v1-recovery',storage=f'sqlite:///{db.as_posix()}');b=s.best_trial;d={"target":t,"horizon":24,"model_family":"MLP","framework":"pytorch","implementation_id":"PYTORCH_MLP_V1","study_id":s.study_name,"selected_trial_id":b.number,"search_MAE":b.value,"per_fold_F01_F04_MAE":b.user_attrs['fold_mae'],"hyperparameters":b.params,"feature_set":"combined_v1","input_representation":"Phase 8 tabular","feature_scaling_policy":"training-fold StandardScaler","target_scaling_policy":"training-fold StandardScaler","training_loss":"MSELoss","optimizer_family":"Adam","inner_early_stopping_policy":"chronological inner tail; restore best","phase_9_protocol_checksum":"db08e2b24047a3592939723664bc437655dda006e49c0227e3f6a4828241938d","final_test_accessed":False};p=best/f'{t}_pytorch_mlp.yaml';p.write_text(json.dumps(d,indent=2));(sel/f'{t}_pytorch_mlp_selection.yaml').write_text(json.dumps(d,indent=2));freeze[t]={"selected_trial":b.number,"config_path":str(p.relative_to(ROOT)),"checksum":hashlib.sha256(p.read_bytes()).hexdigest()}
+ (best/'checksums.sha256').write_text(''.join(f"{v['checksum']}  {v['config_path']}\n" for k,v in freeze.items() if k in ('load','wind','pv')));fp=ROOT/'artifacts/experimental_design/phase_09_selected_config_freeze.yaml';fp.write_text(json.dumps(freeze,indent=2));(ROOT/'artifacts/experimental_design/phase_09_selected_config_freeze.sha256').write_text(hashlib.sha256(fp.read_bytes()).hexdigest())
+if __name__=='__main__':main()

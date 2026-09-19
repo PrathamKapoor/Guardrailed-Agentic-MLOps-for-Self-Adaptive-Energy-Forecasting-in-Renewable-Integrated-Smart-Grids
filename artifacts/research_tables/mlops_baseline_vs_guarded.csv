@@ -1,0 +1,11 @@
+Scenario,Description,Baseline_Retrained,Baseline_Promoted,Baseline_Incident,Baseline_Incident_Reason,Guarded_Retrain_Allowed,Agent_Action_Blocked,Governance_Decision,Governance_Failed_Gates,Guarded_Promoted,Guarded_Rollback_Verified,Guarded_Incident
+SC01_CLEAN_NORMAL,Normal operation (no drift),False,False,False,NONE,False,False,DENY,STATISTICAL_EVIDENCE_GATE,False,False,False
+SC02_TRANSIENT_SPIKE,Transient noise spike (single 1h outlier),True,True,True,PROMOTED_BENCHMARK_LOSER,False,False,DENY,BENCHMARK_GATE;STATISTICAL_EVIDENCE_GATE,False,False,False
+SC03_FEATURE_DRIFT_ONLY,Feature distribution shift without error degradation,True,False,False,NONE,False,False,DENY,BENCHMARK_GATE;STATISTICAL_EVIDENCE_GATE,False,False,False
+SC04_PERSISTENT_LOAD_SHIFT,Persistent demand regime change (valid candidate),True,True,False,NONE,True,False,DENY,STATISTICAL_EVIDENCE_GATE,False,False,False
+SC05_SENSOR_DATA_CORRUPT,Sensor corruption / zero-sticking (Data Quality Fault),True,True,True,PROMOTED_CORRUPTED_MODEL,False,False,DENY,EVIDENCE_VALIDITY_GATE;BENCHMARK_GATE;STATISTICAL_EVIDENCE_GATE,False,False,False
+SC06_BENCHMARK_LOSER,Retrained candidate that loses to external baseline,True,True,True,PROMOTED_BENCHMARK_LOSER,True,False,DENY,BENCHMARK_GATE;STATISTICAL_EVIDENCE_GATE,False,False,False
+SC07_UNTRACKED_LINEAGE,Candidate trained on untracked/unverified data,True,True,False,NONE,True,False,DENY,LINEAGE_COMPLETENESS_GATE;STATISTICAL_EVIDENCE_GATE,False,False,False
+SC08_CANARY_FAILURE,Candidate performs well in training but fails canary deployment,True,True,True,CANARY_OUTAGE_NO_ROLLBACK,True,False,DENY,STATISTICAL_EVIDENCE_GATE,False,False,False
+SC09_UNSAFE_AGENT_OVERRIDE,Autonomous agent attempts to force PROMOTE_MODEL,True,False,False,NONE,False,True,DENY,BENCHMARK_GATE;STATISTICAL_EVIDENCE_GATE,False,False,False
+SC10_STATISTICAL_FLUKES,Marginal metric improvement without statistical significance,True,True,True,UNVALIDATED_STATISTICAL_NOISE,True,False,DENY,STATISTICAL_EVIDENCE_GATE,False,False,False

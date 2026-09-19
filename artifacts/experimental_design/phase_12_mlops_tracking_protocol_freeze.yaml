@@ -1,0 +1,83 @@
+{
+  "phase": "12",
+  "status": "FROZEN",
+  "research_objective": "To establish a reproducible MLOps experiment-tracking and artifact-lineage framework capable of tracing every valid forecasting result from dataset provenance through feature construction, experimental protocol, model specification, evaluation evidence, and registry state.",
+  "secondary_objective": "Determine whether invalidated, protocol-inconsistent, or benchmark-ineligible artifacts can be programmatically prevented from entering approved research registry states.",
+  "mlflow": {
+    "version": "3.15.1",
+    "tracking_backend": "repository-local SQLite: artifacts/mlflow/phase12_tracking.db",
+    "artifact_backend": "repository-local: artifacts/mlflow/phase12_artifacts"
+  },
+  "historical_import_policy": {
+    "origin": "HISTORICAL_ARTIFACT_IMPORT",
+    "native_origin": "NATIVE_MLFLOW",
+    "missing_metadata": "UNKNOWN or omitted",
+    "regeneration_for_import": false
+  },
+  "evidence_status_policy": "Only VALID evidence enters official experiments; P9-DEV-001 is audit-only INVALIDATED",
+  "lineage_schema": {
+    "node_types": [
+      "dataset",
+      "processed_dataset",
+      "feature_dataset",
+      "protocol",
+      "model_spec",
+      "experiment_run",
+      "evaluation",
+      "evidence",
+      "registry_entry",
+      "deviation"
+    ],
+    "edge_types": [
+      "DERIVED_FROM",
+      "USES",
+      "EVALUATED_BY",
+      "GOVERNED_BY",
+      "PRODUCED",
+      "INVALIDATED_BY",
+      "REGISTERED_AS",
+      "COMPARED_WITH"
+    ]
+  },
+  "fingerprint_rules": {
+    "algorithm": "canonical JSON SHA-256",
+    "volatile_timestamps_excluded": true,
+    "model_spec_mismatch": "registration rejected",
+    "feature_spec_required": true
+  },
+  "registry_states": [
+    "SPEC_FROZEN",
+    "REGISTERED_REFERENCE",
+    "REGISTERED_CHALLENGER",
+    "INELIGIBLE",
+    "ARCHIVED",
+    "INVALIDATED"
+  ],
+  "forbidden_states": [
+    "CHAMPION",
+    "PRODUCTION",
+    "DEPLOYED"
+  ],
+  "benchmark_gate_semantics": "DEVELOPMENT_BENCHMARK_GATE is independent from research role; REFERENCE with FAIL is allowed and promotion_eligible is false",
+  "audit_event_schema": [
+    "event_id",
+    "timestamp",
+    "event_type",
+    "subject_id",
+    "actor_type",
+    "phase",
+    "details",
+    "evidence_refs"
+  ],
+  "portability": "canonical research paths are repository-relative",
+  "final_test_policy": {
+    "training_access": false,
+    "hpo_access": false,
+    "model_selection_access": false,
+    "feature_selection_access": false,
+    "performance_evaluation": false,
+    "historical_integrity_audit_access": true,
+    "historical_reason": "P9-DEV-002",
+    "phase_12_new_final_test_reads": 0
+  }
+}

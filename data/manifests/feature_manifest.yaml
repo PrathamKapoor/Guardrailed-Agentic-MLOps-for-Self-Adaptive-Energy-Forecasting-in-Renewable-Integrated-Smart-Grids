@@ -1,0 +1,153 @@
+{
+  "feature_version": "v1",
+  "day_ahead_input": "forbidden",
+  "global_scaling": "not_applied",
+  "entries": [
+    {
+      "target": "load",
+      "horizon": 1,
+      "features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "lag_1",
+        "lag_24",
+        "lag_168",
+        "rolling_mean_24",
+        "rolling_mean_168",
+        "ramp_1h"
+      ],
+      "total_observations": 8784,
+      "usable_observations": 8615,
+      "rows_lost": 169,
+      "checksum": "f77a9a13f5e2e71fdb049cad666bcdefeac02e775822848397dbe05301cf4a35",
+      "path": "data/processed/features/load/h1/combined_v1.parquet"
+    },
+    {
+      "target": "load",
+      "horizon": 24,
+      "features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "lag_1",
+        "lag_24",
+        "lag_168",
+        "rolling_mean_24",
+        "rolling_mean_168",
+        "ramp_1h"
+      ],
+      "total_observations": 8784,
+      "usable_observations": 8592,
+      "rows_lost": 192,
+      "checksum": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+      "binary_sha256_current": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+      "binary_sha256_original": "1e4ca9fcb391587136b2def464da0685c6f6a9644b43cf9ff9b062e095ee61a1",
+      "logical_content_sha256": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb",
+      "serialization_environment": {"pyarrow": "25.0.1", "created_by": "parquet-cpp-arrow version 25.0.1", "compression": "ZSTD", "row_groups": 1},
+      "manifest_revision": 2,
+      "revision_reason": "P9-DEV-002: reproducible binary serialization superseded historical manifest checksum; exact logical equivalence verified",
+      "deviation_id": "P9-DEV-002",
+      "logical_equivalence_verified": true,
+      "path": "data/processed/features/load/h24/combined_v1.parquet"
+    },
+    {
+      "target": "wind",
+      "horizon": 1,
+      "features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "lag_1",
+        "lag_24",
+        "lag_168",
+        "rolling_mean_24",
+        "rolling_mean_168",
+        "ramp_1h"
+      ],
+      "total_observations": 8784,
+      "usable_observations": 8615,
+      "rows_lost": 169,
+      "checksum": "a3be61c2dac879deef9a9a0569add4bb00547939cd4e2a4a15ed289286f8ff78",
+      "path": "data/processed/features/wind/h1/combined_v1.parquet"
+    },
+    {
+      "target": "wind",
+      "horizon": 24,
+      "features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "lag_1",
+        "lag_24",
+        "lag_168",
+        "rolling_mean_24",
+        "rolling_mean_168",
+        "ramp_1h"
+      ],
+      "total_observations": 8784,
+      "usable_observations": 8592,
+      "rows_lost": 192,
+      "checksum": "adf4a51a0df4284717a31ce2f00e57de8cc1b97c012d02701decea00843465d0",
+      "path": "data/processed/features/wind/h24/combined_v1.parquet"
+    },
+    {
+      "target": "pv",
+      "horizon": 1,
+      "features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "lag_1",
+        "lag_24",
+        "lag_168",
+        "rolling_mean_24",
+        "rolling_mean_168",
+        "ramp_1h"
+      ],
+      "total_observations": 8784,
+      "usable_observations": 8615,
+      "rows_lost": 169,
+      "checksum": "00ac1a0efe0865c67244f6f86721cd89c4410cb37c74b2186249ed8ae99bb499",
+      "path": "data/processed/features/pv/h1/combined_v1.parquet"
+    },
+    {
+      "target": "pv",
+      "horizon": 24,
+      "features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "lag_1",
+        "lag_24",
+        "lag_168",
+        "rolling_mean_24",
+        "rolling_mean_168",
+        "ramp_1h"
+      ],
+      "total_observations": 8784,
+      "usable_observations": 8592,
+      "rows_lost": 192,
+      "checksum": "f1739e031530e2ac0fd9812dd02faac35932ba088a629803446d09782f114240",
+      "path": "data/processed/features/pv/h24/combined_v1.parquet"
+    }
+  ]
+}

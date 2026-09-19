@@ -1,0 +1,101 @@
+{
+  "status": "FROZEN_NOT_EXECUTED",
+  "horizon": 24,
+  "primary_metric": "MAE",
+  "test": "Diebold-Mariano absolute error; Holm-Bonferroni",
+  "hypotheses": [
+    "FT-H1-LOAD",
+    "FT-H1-WIND",
+    "FT-H1-PV"
+  ],
+  "matrix": {
+    "load": {
+      "reference_model": {
+        "candidate_id": "P10-load-random_forest-B_lags_only",
+        "target": "load",
+        "model": "random_forest",
+        "feature_set": "B_lags_only",
+        "mae": 285.1046521054128,
+        "feature_count": 3,
+        "complexity": 3,
+        "runtime": 0.0,
+        "framework": "sklearn",
+        "implementation_id": "RANDOM_FOREST"
+      },
+      "challengers": [
+        {
+          "candidate_id": "P10-load-mlp-E_full",
+          "target": "load",
+          "model": "mlp",
+          "feature_set": "E_full",
+          "mae": 468.48531685204347,
+          "feature_count": 12,
+          "complexity": 12,
+          "runtime": 0.0,
+          "framework": "pytorch",
+          "implementation_id": "PYTORCH_MLP_V1"
+        }
+      ],
+      "baseline_comparator": "RTS_DAY_AHEAD"
+    },
+    "wind": {
+      "reference_model": {
+        "candidate_id": "P10-wind-hist_gradient_boosting-B_lags_only",
+        "target": "wind",
+        "model": "hist_gradient_boosting",
+        "feature_set": "B_lags_only",
+        "mae": 528.4055877683035,
+        "feature_count": 3,
+        "complexity": 3,
+        "runtime": 0.0,
+        "framework": "sklearn",
+        "implementation_id": "HIST_GRADIENT_BOOSTING"
+      },
+      "challengers": [
+        {
+          "candidate_id": "P10-wind-mlp-E_full",
+          "target": "wind",
+          "model": "mlp",
+          "feature_set": "E_full",
+          "mae": 529.6001796826639,
+          "feature_count": 12,
+          "complexity": 12,
+          "runtime": 0.0,
+          "framework": "pytorch",
+          "implementation_id": "PYTORCH_MLP_V1"
+        }
+      ],
+      "baseline_comparator": "RTS_DAY_AHEAD"
+    },
+    "pv": {
+      "reference_model": {
+        "candidate_id": "P10-pv-random_forest-B_lags_only",
+        "target": "pv",
+        "model": "random_forest",
+        "feature_set": "B_lags_only",
+        "mae": 44.17532550549145,
+        "feature_count": 3,
+        "complexity": 3,
+        "runtime": 0.0,
+        "framework": "sklearn",
+        "implementation_id": "RANDOM_FOREST"
+      },
+      "challengers": [
+        {
+          "candidate_id": "P10-pv-mlp-E_full",
+          "target": "pv",
+          "model": "mlp",
+          "feature_set": "E_full",
+          "mae": 242.3810921569991,
+          "feature_count": 12,
+          "complexity": 12,
+          "runtime": 0.0,
+          "framework": "pytorch",
+          "implementation_id": "PYTORCH_MLP_V1"
+        }
+      ],
+      "baseline_comparator": "H24_DAILY_PERSISTENCE"
+    }
+  },
+  "final_test_authorization_required": true
+}

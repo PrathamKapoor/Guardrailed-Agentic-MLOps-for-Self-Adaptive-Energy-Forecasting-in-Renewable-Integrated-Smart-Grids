@@ -1,0 +1,11 @@
+{
+  "phase": "10", "selection_folds": ["F01", "F02", "F03", "F04"], "confirmation_folds": ["F05", "F06"], "selection_metric": "MAE", "tie_break": "within 0.5 percent prefer fewer features then ID", "final_test_feature_selection_access": false,
+  "selections": [
+    {"target":"load","model":"random_forest","selected_feature_set":"B_lags_only","F01_F04_MAE":360.5924745152216,"selection_rationale":"lowest development MAE","feature_count":3},
+    {"target":"wind","model":"hist_gradient_boosting","selected_feature_set":"B_lags_only","F01_F04_MAE":527.0328743740721,"selection_rationale":"within 0.5% of minimum; simplicity tie-break","feature_count":3},
+    {"target":"pv","model":"random_forest","selected_feature_set":"B_lags_only","F01_F04_MAE":48.00459348688518,"selection_rationale":"lowest development MAE","feature_count":3},
+    {"target":"load","model":"mlp","selected_feature_set":"E_full","F01_F04_MAE":768.375439,"selection_rationale":"lowest development MAE","feature_count":12,"implementation_id":"PYTORCH_MLP_V1"},
+    {"target":"wind","model":"mlp","selected_feature_set":"E_full","F01_F04_MAE":508.6194245,"selection_rationale":"lowest development MAE","feature_count":12,"implementation_id":"PYTORCH_MLP_V1"},
+    {"target":"pv","model":"mlp","selected_feature_set":"E_full","F01_F04_MAE":240.7296785,"selection_rationale":"lowest development MAE","feature_count":12,"implementation_id":"PYTORCH_MLP_V1"}
+  ]
+}

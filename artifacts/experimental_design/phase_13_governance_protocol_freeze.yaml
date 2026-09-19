@@ -1,0 +1,117 @@
+{
+  "phase": "13",
+  "status": "FROZEN_BEFORE_OFFICIAL_SIMULATION",
+  "research_objective": "To design and validate a deterministic model-lifecycle governance engine that constrains state transitions using reproducibility, evidence validity, lineage, benchmark, statistical, approval, and safety policies before autonomous decision-making is introduced.",
+  "secondary_objective": "To quantify whether deterministic governance prevents invalid or unsafe lifecycle actions under controlled simulated scenarios.",
+  "state_definitions": [
+    "ACTIVE",
+    "APPROVAL_PENDING",
+    "APPROVED_FOR_CANARY",
+    "ARCHIVED",
+    "CANARY_ACTIVE",
+    "CHALLENGER_ELIGIBLE",
+    "EXPERIMENTAL",
+    "INVALIDATED",
+    "PROMOTION_ELIGIBLE",
+    "REGISTERED_CHALLENGER",
+    "REGISTERED_REFERENCE",
+    "ROLLBACK_REQUIRED",
+    "VALIDATED"
+  ],
+  "transition_definitions": {
+    "EXPERIMENTAL": [
+      "VALIDATED"
+    ],
+    "VALIDATED": [
+      "REGISTERED_CHALLENGER"
+    ],
+    "REGISTERED_REFERENCE": [
+      "PROMOTION_ELIGIBLE"
+    ],
+    "REGISTERED_CHALLENGER": [
+      "CHALLENGER_ELIGIBLE",
+      "PROMOTION_ELIGIBLE"
+    ],
+    "CHALLENGER_ELIGIBLE": [
+      "PROMOTION_ELIGIBLE"
+    ],
+    "PROMOTION_ELIGIBLE": [
+      "APPROVAL_PENDING"
+    ],
+    "APPROVAL_PENDING": [
+      "APPROVED_FOR_CANARY"
+    ],
+    "APPROVED_FOR_CANARY": [
+      "CANARY_ACTIVE"
+    ],
+    "CANARY_ACTIVE": [
+      "ACTIVE",
+      "ROLLBACK_REQUIRED"
+    ],
+    "ACTIVE": [
+      "ROLLBACK_REQUIRED",
+      "ARCHIVED"
+    ],
+    "ROLLBACK_REQUIRED": [
+      "ARCHIVED"
+    ],
+    "ARCHIVED": [],
+    "INVALIDATED": []
+  },
+  "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+  "policy_version": "13.0.0",
+  "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+  "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+  "scenario_set": "artifacts/experimental_design/phase_13_governance_scenarios.yaml",
+  "scenario_checksum": "9b6c08fda490e87d4f3006bdf36d3dd68456e51c65df06ddecca747c74edd93a",
+  "decision_semantics": [
+    "ALLOW",
+    "DENY",
+    "REQUIRE_APPROVAL",
+    "NO_OP"
+  ],
+  "approval_semantics": {
+    "production_style_change_requires_human": true,
+    "simulation_mode": "SIMULATION",
+    "simulation_actor": "SIMULATION_POLICY"
+  },
+  "benchmark_rules": {
+    "required_for_promotion": true,
+    "minimum_relative_mae_improvement_percent": 0.0,
+    "strict_superiority": true
+  },
+  "evidence_rules": {
+    "official_status": "VALID",
+    "audit_only": "DENY",
+    "invalidated": "DENY"
+  },
+  "lineage_rules": {
+    "required_status": "COMPLETE",
+    "required_chain": "dataset -> processed_dataset -> feature_dataset -> protocol -> model_spec -> evaluation/evidence -> registry_entry"
+  },
+  "fingerprint_rules": {
+    "model_spec": "EXACT_MATCH",
+    "feature_spec": "EXACT_MATCH"
+  },
+  "deviation_rules": {
+    "unresolved_critical": "DENY",
+    "resolved_invalid_artifact_remains_invalid": true,
+    "resolved_scientific_integrity_pass": "ALLOW"
+  },
+  "metrics": {
+    "decision_correctness": "actual matches / total scenarios * 100",
+    "unsafe_transition_prevention_rate": "unsafe transitions correctly blocked / unsafe transition attempts * 100",
+    "false_allow": "ALLOW when expected DENY",
+    "false_deny": "DENY when expected ALLOW"
+  },
+  "final_test_non_access_policy": {
+    "training_access": false,
+    "hpo_access": false,
+    "model_selection_access": false,
+    "feature_selection_access": false,
+    "performance_evaluation": false,
+    "integrity_audit_activation": false,
+    "historical_integrity_access": "P9-DEV-002 historical only",
+    "phase_13_new_final_test_reads": 0
+  }
+}

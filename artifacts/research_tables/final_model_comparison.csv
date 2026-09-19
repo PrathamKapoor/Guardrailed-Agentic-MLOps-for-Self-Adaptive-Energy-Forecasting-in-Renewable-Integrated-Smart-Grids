@@ -1,0 +1,4 @@
+Target,Frozen model,Frozen model MAE,External benchmark,Benchmark MAE,Absolute difference,Relative difference (pct)
+load,random_forest,174.256818,RTS_DAY_AHEAD,101.142343,73.114475,72.2887
+wind,hist_gradient_boosting,778.841289,RTS_DAY_AHEAD,331.302163,447.539126,135.0849
+pv,random_forest,36.121763,H24_DAILY_PERSISTENCE,39.094985,-2.973222,-7.6051

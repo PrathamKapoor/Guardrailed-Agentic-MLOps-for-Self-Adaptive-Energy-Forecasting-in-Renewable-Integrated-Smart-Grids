@@ -1,0 +1,52 @@
+[
+  {
+    "figure_id": "FIG-BL-001",
+    "title": "baseline_mae_comparison_h24",
+    "target": "multiple",
+    "horizon": 24,
+    "evaluation_period": "development rolling-origin validation; final test excluded",
+    "data_artifact": "artifacts/experiments/baselines/phase_06/metrics",
+    "generation_script": "scripts/run_baseline_experiments.py",
+    "paper_relevance": "Baseline validation comparison or fold stability"
+  },
+  {
+    "figure_id": "FIG-BL-002",
+    "title": "baseline_rmse_comparison_h24",
+    "target": "multiple",
+    "horizon": 24,
+    "evaluation_period": "development rolling-origin validation; final test excluded",
+    "data_artifact": "artifacts/experiments/baselines/phase_06/metrics",
+    "generation_script": "scripts/run_baseline_experiments.py",
+    "paper_relevance": "Baseline validation comparison or fold stability"
+  },
+  {
+    "figure_id": "FIG-BL-003",
+    "title": "baseline_fold_mae_load",
+    "target": "load",
+    "horizon": "multiple",
+    "evaluation_period": "development rolling-origin validation; final test excluded",
+    "data_artifact": "artifacts/experiments/baselines/phase_06/metrics",
+    "generation_script": "scripts/run_baseline_experiments.py",
+    "paper_relevance": "Baseline validation comparison or fold stability"
+  },
+  {
+    "figure_id": "FIG-BL-004",
+    "title": "baseline_fold_mae_wind",
+    "target": "wind",
+    "horizon": "multiple",
+    "evaluation_period": "development rolling-origin validation; final test excluded",
+    "data_artifact": "artifacts/experiments/baselines/phase_06/metrics",
+    "generation_script": "scripts/run_baseline_experiments.py",
+    "paper_relevance": "Baseline validation comparison or fold stability"
+  },
+  {
+    "figure_id": "FIG-BL-005",
+    "title": "baseline_fold_mae_pv",
+    "target": "pv",
+    "horizon": "multiple",
+    "evaluation_period": "development rolling-origin validation; final test excluded",
+    "data_artifact": "artifacts/experiments/baselines/phase_06/metrics",
+    "generation_script": "scripts/run_baseline_experiments.py",
+    "paper_relevance": "Baseline validation comparison or fold stability"
+  }
+]

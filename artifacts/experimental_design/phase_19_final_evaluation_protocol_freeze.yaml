@@ -1,0 +1,124 @@
+{
+  "schema_version": "phase19-final-evaluation-protocol-v1",
+  "phase": "19",
+  "research_question": "Evaluate the final frozen forecasting and MLOps system on unseen data according to the pre-registered experimental protocol.",
+  "execution_mode": "LOCKED",
+  "scope": {
+    "training_allowed": false,
+    "hpo_allowed": false,
+    "feature_selection_allowed": false,
+    "model_selection_allowed": false,
+    "retraining_allowed": false,
+    "governance_tuning_allowed": false,
+    "final_test_inference": true,
+    "final_test_metric_computation": true
+  },
+  "frozen_final_models": {
+    "load": {
+      "candidate_id": "P10-load-random_forest-B_lags_only",
+      "model": "random_forest",
+      "feature_set": "B_lags_only",
+      "features": ["lag_1", "lag_24", "lag_168"],
+      "framework": "sklearn",
+      "implementation_id": "RANDOM_FOREST",
+      "hyperparameters_fingerprint": "see phase11 finalist freeze",
+      "training_period": "F05 frozen (2020-01-01 to 2020-08-31)"
+    },
+    "wind": {
+      "candidate_id": "P10-wind-hist_gradient_boosting-B_lags_only",
+      "model": "hist_gradient_boosting",
+      "feature_set": "B_lags_only",
+      "features": ["lag_1", "lag_24", "lag_168"],
+      "framework": "sklearn",
+      "implementation_id": "HIST_GRADIENT_BOOSTING",
+      "training_period": "F05 frozen (2020-01-01 to 2020-08-31)"
+    },
+    "pv": {
+      "candidate_id": "P10-pv-random_forest-B_lags_only",
+      "model": "random_forest",
+      "feature_set": "B_lags_only",
+      "features": ["lag_1", "lag_24", "lag_168"],
+      "framework": "sklearn",
+      "implementation_id": "RANDOM_FOREST",
+      "training_period": "F05 frozen (2020-01-01 to 2020-08-31)"
+    }
+  },
+  "frozen_final_baselines": {
+    "load": {"baseline": "RTS_DAY_AHEAD", "source": "day_ahead_system_load"},
+    "wind": {"baseline": "RTS_DAY_AHEAD", "source": "day_ahead_wind"},
+    "pv": {"baseline": "H24_DAILY_PERSISTENCE", "rule": "prediction(t) = actual(t - 24h)"}
+  },
+  "frozen_features": {
+    "feature_set": "B_lags_only",
+    "exact_columns": ["lag_1", "lag_24", "lag_168"],
+    "feature_specification_fingerprint_source": "phase 10 selected feature freeze",
+    "lag_shift_hours": {"lag_1": 1, "lag_24": 24, "lag_168": 168}
+  },
+  "frozen_preprocessing": {
+    "scaling": "none (tree estimators only)",
+    "missing_value_policy": "no imputation; rows with NaN are excluded at inference time",
+    "feature_engineering": "lag windows computed at forecast_origin = target_timestamp - 24h"
+  },
+  "frozen_final_test_window": {
+    "horizon": 24,
+    "start": "2020-11-01T00:00:00",
+    "end": "2020-12-31T23:00:00",
+    "n_hours": 1464,
+    "exclusion_from_phase11_to_18": true
+  },
+  "frozen_metrics": {
+    "primary": ["MAE"],
+    "secondary": ["RMSE", "sMAPE", "nMAE", "nRMSE"],
+    "per_target": ["load", "wind", "pv"],
+    "per_model": ["frozen_final_model", "external_benchmark"],
+    "per_comparison": ["absolute_difference", "relative_difference_percent"]
+  },
+  "statistical_analysis": {
+    "scope": "registered only",
+    "permitted": [
+      "error distributions (per target, per model)",
+      "per-target primary metric (MAE) on final-test window",
+      "per-target benchmark comparison (frozen model vs frozen baseline)"
+    ],
+    "forbidden": [
+      "new statistical tests not pre-registered",
+      "hypothesis tests on final-test beyond the registered comparison",
+      "post-hoc p-value adjustment"
+    ]
+  },
+  "outputs": {
+    "predictions_csv": "artifacts/research_tables/final_predictions.csv",
+    "predictions_columns": ["timestamp", "target", "model", "prediction", "actual", "absolute_error"],
+    "forecasting_results_csv": "artifacts/research_tables/final_forecasting_results.csv",
+    "forecasting_results_columns": ["Target", "Model", "Features", "MAE", "RMSE", "sMAPE", "nMAE", "nRMSE"],
+    "model_comparison_csv": "artifacts/research_tables/final_model_comparison.csv",
+    "model_comparison_columns": ["Target", "Frozen model MAE", "External benchmark", "Benchmark MAE",
+                                  "Absolute difference", "Relative difference (pct)"],
+    "audit_json": "artifacts/audit/phase_19_final_execution_audit.json",
+    "lineage_report_md": "artifacts/mlops/lineage/final_evaluation_lineage_report.md",
+    "figures": [
+      "artifacts/research_figures/phase_19/final_model_performance_comparison.png",
+      "artifacts/research_figures/phase_19/final_error_distribution.png",
+      "artifacts/research_figures/phase_19/forecast_vs_actual_plots.png",
+      "artifacts/research_figures/phase_19/system_architecture_final.svg"
+    ]
+  },
+  "governance_invariants": {
+    "model_promoted": 0,
+    "challengers_created": 0,
+    "governance_state_changes": 0,
+    "rollback_events": 0
+  },
+  "agentic_validation": {
+    "agents_modified": false,
+    "permitted_for_evaluation": ["REPORT_GENERATION_AGENT", "EVIDENCE_RETRIEVAL_AGENT"],
+    "forbidden": ["agent-driven model changes"]
+  },
+  "previous_freeze_invariants": {
+    "phase_11_to_18_checksums_unchanged": true,
+    "phase_13_policy_checksum_unchanged": true,
+    "phase_15_retraining_policy_checksum_unchanged": true,
+    "phase_16_promotion_policy_checksum_unchanged": true
+  },
+  "model_results_observed_when_frozen": false
+}

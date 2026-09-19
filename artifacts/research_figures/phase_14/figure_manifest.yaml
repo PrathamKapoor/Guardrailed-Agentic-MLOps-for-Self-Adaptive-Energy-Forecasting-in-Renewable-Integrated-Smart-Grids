@@ -1,0 +1,5 @@
+figures:
+  - id: drift_monitoring_architecture
+    source_artifact: artifacts/monitoring/phase_14
+    phase: 14
+    final_test_status: NOT_EXECUTED

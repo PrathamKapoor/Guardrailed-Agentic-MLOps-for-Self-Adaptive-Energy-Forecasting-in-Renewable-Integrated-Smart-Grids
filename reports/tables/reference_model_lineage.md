@@ -1,0 +1,7 @@
+# Reference model lineage
+
+| Target | Reference ID | Model | Feature Set | Dataset Version | Protocol | Config Checksum | Model Fingerprint | Development Evidence | Registry Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LOAD | MLOPS-REF-LOAD-H24-V1 | random_forest | B_lags_only | rts_gmlc_processed_v1 | phase_11_finalist_selection | 92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257 | model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122 | development_paired_comparisons.csv | REGISTERED_REFERENCE |
+| WIND | MLOPS-REF-WIND-H24-V1 | hist_gradient_boosting | B_lags_only | rts_gmlc_processed_v1 | phase_11_finalist_selection | 92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257 | model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca | development_paired_comparisons.csv | REGISTERED_REFERENCE |
+| PV | MLOPS-REF-PV-H24-V1 | random_forest | B_lags_only | rts_gmlc_processed_v1 | phase_11_finalist_selection | 92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257 | model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a | development_paired_comparisons.csv | REGISTERED_REFERENCE |

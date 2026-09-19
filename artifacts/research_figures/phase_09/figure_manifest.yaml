@@ -1,0 +1,69 @@
+{
+  "phase": "09",
+  "policy": "VALID only; neural additionally requires pytorch/PYTORCH_MLP_V1",
+  "figures": [
+    {
+      "figure_id": "hpo_improvement_by_target",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "all",
+      "evaluation_role": "POST-HPO/summary",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    },
+    {
+      "figure_id": "hpo_runtime_vs_improvement",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "all",
+      "evaluation_role": "POST-HPO/summary",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    },
+    {
+      "figure_id": "model_evolution_h24",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "all",
+      "evaluation_role": "POST-HPO/summary",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    },
+    {
+      "figure_id": "pytorch_hpo_history_load",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "load",
+      "evaluation_role": "SEARCH F01-F04",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    },
+    {
+      "figure_id": "pytorch_hpo_history_pv",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "pv",
+      "evaluation_role": "SEARCH F01-F04",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    },
+    {
+      "figure_id": "pytorch_hpo_history_wind",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "wind",
+      "evaluation_role": "SEARCH F01-F04",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    },
+    {
+      "figure_id": "untuned_vs_tuned_h24",
+      "source_evidence": "VALID Phase 9 trial or validation evidence",
+      "evidence_status": "VALID",
+      "target": "all",
+      "evaluation_role": "POST-HPO/summary",
+      "generation_script": "scripts/regenerate_phase09_reports.py",
+      "paper_relevance": "HPO reporting"
+    }
+  ]
+}

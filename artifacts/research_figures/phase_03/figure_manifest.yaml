@@ -1,0 +1,83 @@
+[
+  {
+    "figure_id": "average_load_hourly_profile",
+    "title": "average load hourly profile",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "average_pv_hourly_profile",
+    "title": "average pv hourly profile",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "average_wind_hourly_profile",
+    "title": "average wind hourly profile",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "day_ahead_vs_actual_load_sample",
+    "title": "day ahead vs actual load sample",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "day_ahead_vs_actual_pv_sample",
+    "title": "day ahead vs actual pv sample",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "day_ahead_vs_actual_wind_sample",
+    "title": "day ahead vs actual wind sample",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "pv_generation_timeseries",
+    "title": "pv generation timeseries",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "system_load_timeseries",
+    "title": "system load timeseries",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  },
+  {
+    "figure_id": "wind_generation_timeseries",
+    "title": "wind generation timeseries",
+    "source_dataset": "rts_gmlc_processed_v1",
+    "variables": "see canonical dataset",
+    "date_range": "2020-01-01 through 2020-01-07 sample or full-year profile",
+    "generation_script": "scripts/build_canonical_dataset.py",
+    "purpose": "descriptive research figure; not benchmark evidence"
+  }
+]

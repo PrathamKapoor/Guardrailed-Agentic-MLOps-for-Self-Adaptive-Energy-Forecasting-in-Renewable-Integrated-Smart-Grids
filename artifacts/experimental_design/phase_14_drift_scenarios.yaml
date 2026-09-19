@@ -1,0 +1,19 @@
+schema_version: phase14-drift-scenarios-v1
+targets: [load, wind, pv]
+families:
+  D00: CLEAN_SYNTHETIC_NULL
+  D01: ABRUPT_FEATURE_LOCATION_SHIFT
+  D02: GRADUAL_FEATURE_DRIFT
+  D03: FEATURE_SCALE_VARIANCE_SHIFT
+  D04: DATA_QUALITY_MISSINGNESS
+  D05: SYNTHETIC_PREDICTION_STREAM_SHIFT
+  D06: CONTROLLED_PERFORMANCE_DRIFT_SIMULATION
+  D07: ERROR_VARIANCE_INCREASE
+  D08: COMPOUND_DRIFT
+  D09: SCHEMA_FAILURE
+severity_levels: [LOW, MEDIUM, HIGH]
+onset_rule: midpoint_of_development_copy
+transform_scale_multipliers: {LOW: 0.5, MEDIUM: 1.0, HIGH: 2.0}
+missingness_rates: {LOW: 0.01, MEDIUM: 0.05, HIGH: 0.20}
+seeds: [42, 123, 2020, 2025, 31415]
+control_alert_definition: alerting_windows_without_injected_shift

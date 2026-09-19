@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Final Evaluation Evidence — Guardrailed Agentic MLOps for Smart-Grid Forecasting</title>
+<meta name="description" content="Read-only evidence interface for the locked Phase 19 final evaluation of three frozen forecasting finalists on the 2020-11-01 to 2020-12-31 test partition." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="brand">
+      <h1>Guardrailed Agentic MLOps for Smart-Grid Forecasting</h1>
+      <p class="subtitle">Phase 19 Final Frozen Evaluation — Read-Only Evidence Interface</p>
+    </div>
+    <div class="status-pill" id="statusPill" aria-live="polite">Loading…</div>
+  </div>
+</header>
+
+<nav class="primary-nav" aria-label="Primary">
+  <div class="container">
+    <a href="#executive">Executive overview</a>
+    <a href="#performance">Performance</a>
+    <a href="#benchmark">Benchmark comparison</a>
+    <a href="#chart">Actual vs Predicted</a>
+    <a href="#errors">Error analysis</a>
+    <a href="#model">Model details</a>
+    <a href="#features">Feature details</a>
+    <a href="#protocol">Evaluation protocol</a>
+    <a href="#lineage">Lineage</a>
+    <a href="#governance">Governance</a>
+    <a href="#audit">Audit</a>
+    <a href="#artifacts">Artifacts</a>
+    <a href="#limitations">Limitations</a>
+  </div>
+</nav>
+
+<main id="main" class="container">
+
+  <section id="executive" class="hero" aria-labelledby="executiveHeading">
+    <h2 id="executiveHeading">Executive overview</h2>
+    <p class="lead">Final evaluation completed. Three frozen finalist models were evaluated against an external benchmark on the locked test partition <strong>2020-11-01 → 2020-12-31</strong> (1464 hourly rows per target). No training, HPO, feature selection, model selection, or retraining was performed on test data.</p>
+
+    <div class="status-grid" id="statusGrid" role="list">
+      <div class="status-card" role="listitem">
+        <div class="status-label">Evaluation</div>
+        <div class="status-value">COMPLETE</div>
+      </div>
+      <div class="status-card" role="listitem">
+        <div class="status-label">Test window</div>
+        <div class="status-value" id="statusWindow">—</div>
+      </div>
+      <div class="status-card" role="listitem">
+        <div class="status-label">Rows / target</div>
+        <div class="status-value" id="statusRows">—</div>
+      </div>
+      <div class="status-card" role="listitem">
+        <div class="status-label">Folds</div>
+        <div class="status-value">F11, F12</div>
+      </div>
+      <div class="status-card" role="listitem">
+        <div class="status-label">Final-test access</div>
+        <div class="status-value">Inference only</div>
+      </div>
+      <div class="status-card" role="listitem">
+        <div class="status-label">Configuration frozen</div>
+        <div class="status-value">PASS</div>
+      </div>
+    </div>
+
+    <h3>Headline findings</h3>
+    <div class="findings" id="headlineFindings">
+      <div class="finding" data-target="load">
+        <div class="finding-target">LOAD</div>
+        <div class="finding-result" id="findingResultLoad">—</div>
+      </div>
+      <div class="finding" data-target="wind">
+        <div class="finding-target">WIND</div>
+        <div class="finding-result" id="findingResultWind">—</div>
+      </div>
+      <div class="finding" data-target="pv">
+        <div class="finding-target">PV</div>
+        <div class="finding-result" id="findingResultPv">—</div>
+      </div>
+    </div>
+
+    <div class="headline-summary" id="headlineSummary">
+      <p>Lower MAE is better. The frozen PV model outperforms the H24 daily persistence benchmark on MAE. The frozen LOAD and WIND development models are dominated by the published RTS day-ahead forecast on the 2-month test window.</p>
+    </div>
+  </section>
+
+  <section id="targetCards" aria-labelledby="targetCardsHeading">
+    <h2 id="targetCardsHeading">Per-target performance cards</h2>
+    <p>Select a target to update the model details, charts, benchmark and provenance sections below.</p>
+    <div class="target-selector" role="tablist" aria-label="Target selector">
+      <button class="target-btn" role="tab" aria-selected="true" data-target="load">LOAD</button>
+      <button class="target-btn" role="tab" aria-selected="false" data-target="wind">WIND</button>
+      <button class="target-btn" role="tab" aria-selected="false" data-target="pv">PV</button>
+    </div>
+    <div class="card-grid" id="cardGrid">
+      <!-- filled by app.js -->
+    </div>
+  </section>
+
+  <section id="performance" aria-labelledby="performanceHeading">
+    <h2 id="performanceHeading">Performance table</h2>
+    <p>Source: <code>artifacts/research_tables/final_forecasting_results.csv</code>. All values are point estimates on the 1464-row final test partition for each target.</p>
+    <div class="table-wrap">
+      <table class="data-table" id="performanceTable">
+        <thead>
+          <tr>
+            <th scope="col">Target</th>
+            <th scope="col">Configuration</th>
+            <th scope="col">MAE</th>
+            <th scope="col">RMSE</th>
+            <th scope="col">sMAPE</th>
+            <th scope="col">nMAE</th>
+            <th scope="col">nRMSE</th>
+          </tr>
+        </thead>
+        <tbody id="performanceBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="benchmark" aria-labelledby="benchmarkHeading">
+    <h2 id="benchmarkHeading">Frozen model vs external benchmark</h2>
+    <p>Source: <code>artifacts/research_tables/final_model_comparison.csv</code>. Lower MAE is better. A negative relative difference means the frozen model beats the benchmark.</p>
+    <div class="table-wrap">
+      <table class="data-table" id="benchmarkTable">
+        <thead>
+          <tr>
+            <th scope="col">Target</th>
+            <th scope="col">Frozen model</th>
+            <th scope="col">Frozen model MAE</th>
+            <th scope="col">External benchmark</th>
+            <th scope="col">Benchmark MAE</th>
+            <th scope="col">Absolute Δ</th>
+            <th scope="col">Relative Δ</th>
+            <th scope="col">Result</th>
+          </tr>
+        </thead>
+        <tbody id="benchmarkBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="chart" aria-labelledby="chartHeading">
+    <h2 id="chartHeading">Actual vs predicted — interactive</h2>
+    <p>For the selected target, this chart shows the actual observed value and the frozen-model prediction across the locked test partition (2020-11-01 to 2020-12-31, 1464 hourly points). Open <a href="charts.html">charts.html</a> for the full interactive chart with zoom, pan and date-range selection.</p>
+    <figure>
+      <figcaption class="caption">Source: <code>artifacts/research_figures/phase_19/forecast_vs_actual_plots.png</code> (existing Phase 19 figure, preserved unchanged).</figcaption>
+      <img id="forecastFigure" alt="Forecast vs actual scatter for the currently selected target" />
+    </figure>
+    <div class="table-wrap">
+      <table class="data-table" id="scatterTable">
+        <caption class="caption">Tabular substitute for screen readers — same data as the scatter plot above.</caption>
+        <thead><tr><th>Statistic</th><th>Frozen model</th><th>External benchmark</th></tr></thead>
+        <tbody id="scatterBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="errors" aria-labelledby="errorHeading">
+    <h2 id="errorHeading">Error analysis (derived from final predictions)</h2>
+    <p>The error distribution below is derived deterministically from <code>final_predictions.csv</code>; it is not a new model evaluation. Use this view to inspect per-target signed/absolute error statistics for the frozen model and the external benchmark.</p>
+    <div class="table-wrap">
+      <table class="data-table" id="errorTable">
+        <thead><tr><th>Target</th><th>Configuration</th><th>Mean abs error</th><th>Median abs error</th><th>P95 abs error</th><th>Mean signed error</th></tr></thead>
+        <tbody id="errorBody"></tbody>
+      </table>
+    </div>
+    <figure>
+      <figcaption class="caption">Source: <code>artifacts/research_figures/phase_19/final_error_distribution.png</code> (existing Phase 19 figure, preserved unchanged).</figcaption>
+      <img id="errorFigure" alt="Error distribution histograms for the frozen model and external benchmark" />
+    </figure>
+  </section>
+
+  <section id="model" aria-labelledby="modelHeading">
+    <h2 id="modelHeading">Model details</h2>
+    <div id="modelDetails"></div>
+  </section>
+
+  <section id="features" aria-labelledby="featuresHeading">
+    <h2 id="featuresHeading">Feature details</h2>
+    <p>All three targets use the same frozen feature set <strong>B_lags_only</strong> with three lag features. The frozen feature definition comes from <code>config/ablation/phase_10.yaml</code> and <code>phase_10_ablation_protocol_freeze.yaml</code>.</p>
+    <div class="table-wrap">
+      <table class="data-table" id="featureTable">
+        <thead><tr><th>Feature</th><th>Meaning (per research documentation)</th></tr></thead>
+        <tbody id="featureBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="protocol" aria-labelledby="protocolHeading">
+    <h2 id="protocolHeading">Evaluation protocol</h2>
+    <div class="proto-grid" id="protoGrid">
+      <div><span class="proto-label">Evaluation window</span><span class="proto-value" id="protoWindow">—</span></div>
+      <div><span class="proto-label">Rows per target</span><span class="proto-value">1464 hourly rows</span></div>
+      <div><span class="proto-label">Walk-forward folds</span><span class="proto-value">F11 (November) and F12 (December)</span></div>
+      <div><span class="proto-label">Final-test access</span><span class="proto-value">AUTHORIZED FOR INFERENCE ONLY</span></div>
+      <div><span class="proto-label">Training on test data</span><span class="proto-value">NO</span></div>
+      <div><span class="proto-label">HPO on test data</span><span class="proto-value">NO</span></div>
+      <div><span class="proto-label">Feature selection on test data</span><span class="proto-value">NO</span></div>
+      <div><span class="proto-label">Model selection on test data</span><span class="proto-value">NO</span></div>
+      <div><span class="proto-label">Retraining on test data</span><span class="proto-value">NO</span></div>
+    </div>
+  </section>
+
+  <section id="lineage" aria-labelledby="lineageHeading">
+    <h2 id="lineageHeading">Lineage</h2>
+    <p>Phase 20 is downstream of the final evaluation. It does not generate new model evidence and does not influence the frozen models.</p>
+    <ol class="lineage-chain">
+      <li>Phase 10 feature freeze (<code>config/ablation/phase_10.yaml</code>)</li>
+      <li>Phase 11 model freeze (<code>artifacts/model_registry/forecasting_reference_registry.yaml</code>)</li>
+      <li>Phase 13 / 15 / 16 governance policies</li>
+      <li>Phase 17 agent controls (advisory only; firewall blocks lifecycle actions)</li>
+      <li>Phase 19 final evaluation (locked)</li>
+      <li><strong>Phase 20 presentation</strong> (read-only)</li>
+    </ol>
+    <details>
+      <summary>Model / feature / dataset fingerprints</summary>
+      <pre id="fingerprintsPre"></pre>
+    </details>
+    <details>
+      <summary>Final evaluation lineage report (raw markdown)</summary>
+      <pre id="lineageReportPre"></pre>
+    </details>
+  </section>
+
+  <section id="governance" aria-labelledby="governanceHeading">
+    <h2 id="governanceHeading">Governance status</h2>
+    <p>These values represent governance state, not model performance.</p>
+    <div class="gov-grid" id="govGrid"></div>
+  </section>
+
+  <section id="audit" aria-labelledby="auditHeading">
+    <h2 id="auditHeading">Audit</h2>
+    <p>This dashboard is downstream of all recorded evidence. The audit view is a summary; the underlying machine-readable artefacts are listed in <a href="#artifacts">Artifacts</a>.</p>
+    <div class="audit-summary" id="auditSummary"></div>
+    <details>
+      <summary>Phase 19 final execution audit (raw JSON, read-only)</summary>
+      <pre id="auditPre"></pre>
+    </details>
+    <details>
+      <summary>Phase 19 completion report (raw markdown, read-only)</summary>
+      <pre id="completionPre"></pre>
+    </details>
+  </section>
+
+  <section id="artifacts" aria-labelledby="artifactsHeading">
+    <h2 id="artifactsHeading">Artifacts</h2>
+    <p>All artefacts are read-only. The dashboard never writes to them.</p>
+    <div class="artifact-list" id="artifactList"></div>
+  </section>
+
+  <section id="limitations" aria-labelledby="limitationsHeading">
+    <h2 id="limitationsHeading">Limitations</h2>
+    <ul>
+      <li>Final evaluation covers the locked final-test period (2020-11-01 to 2020-12-31).</li>
+      <li>Benchmark comparisons are target-specific.</li>
+      <li>Performance varies by target: PV beats its benchmark, LOAD and WIND do not.</li>
+      <li>Final models are frozen; Phase 20 does not perform further optimization.</li>
+      <li>UI visualizations are evidence presentation; charts in this dashboard are read-only.</li>
+      <li>Final conclusions should not be generalized beyond the evaluated protocol without further testing.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Phase 20 — Final Evaluation UI/UX. Read-only evidence interface. No model files, predictions, governance state, or protocol hashes are modified by this dashboard.</p>
+  </div>
+</footer>
+
+<script src="data/figures.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

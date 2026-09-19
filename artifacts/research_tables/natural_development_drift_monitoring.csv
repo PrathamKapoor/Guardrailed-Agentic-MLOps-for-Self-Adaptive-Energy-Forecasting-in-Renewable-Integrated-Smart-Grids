@@ -1,0 +1,4 @@
+Target,Monitoring windows,Feature drift alerts,Prediction drift alerts,Performance drift alerts,Data-quality alerts,Highest severity,Label
+LOAD,2,0,0,0,0,NONE,DEVELOPMENT MONITORING — NO GROUND-TRUTH DRIFT LABEL
+WIND,2,0,0,0,0,NONE,DEVELOPMENT MONITORING — NO GROUND-TRUTH DRIFT LABEL
+PV,2,0,0,0,0,NONE,DEVELOPMENT MONITORING — NO GROUND-TRUTH DRIFT LABEL

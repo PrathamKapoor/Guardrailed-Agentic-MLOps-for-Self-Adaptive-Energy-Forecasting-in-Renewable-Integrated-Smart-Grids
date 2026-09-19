@@ -1,0 +1,24 @@
+# Pinned runtime requirements for the API + research pipeline.
+# Generated from the working virtual environment; pyproject.toml carries the
+# abstract lower bounds. Regenerate with: pip freeze | grep -iE "^(numpy|pyarrow|...)"
+annotated-types==0.8.0
+anyio==4.14.2
+certifi==2026.7.22
+click==8.4.2
+fastapi==0.141.1
+h11==0.16.0
+httpx==0.28.1
+idna==3.18
+mlflow==3.15.1
+numpy==2.5.2
+optuna==4.9.0
+pyarrow==25.0.1
+pydantic==2.13.4
+pydantic_core==2.46.4
+python-multipart==0.0.32
+PyYAML==6.0.3
+scikit-learn==1.9.0
+starlette==1.6.0
+torch==2.13.0
+tzdata==2026.3
+uvicorn==0.52.3

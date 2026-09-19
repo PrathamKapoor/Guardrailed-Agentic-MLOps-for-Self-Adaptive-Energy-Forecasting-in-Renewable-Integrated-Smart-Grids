@@ -1,0 +1,67 @@
+{
+  "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+  "policy_version": "16.0.0",
+  "mode": "SIMULATION",
+  "decision_values": ["APPROVE", "REJECT", "DEFER"],
+  "gate_order": [
+    "POLICY_VERSION_GATE", "FINAL_TEST_GATE", "REGISTRATION_GATE", "LINEAGE_GATE",
+    "MODEL_FINGERPRINT_GATE", "FEATURE_FINGERPRINT_GATE", "PROTOCOL_GATE", "METADATA_GATE",
+    "EVALUATION_GATE", "PERFORMANCE_GATE", "BENCHMARK_GATE", "STATISTICAL_GATE", "APPROVAL_GATE"
+  ],
+  "performance_policy": {
+    "primary_metric": "MAE",
+    "minimum_relative_mae_improvement_percent": 0.0,
+    "strict_superiority": true,
+    "minimum_matched_rows": 336,
+    "improved_mae_alone_is_sufficient": false,
+    "secondary_metrics": ["RMSE", "sMAPE", "nMAE", "nRMSE"]
+  },
+  "benchmark_policy": {
+    "accepted_statuses": ["BENCHMARK_GATE_PASS"],
+    "rationale": "synthetic-scenario superiority over the reference is not external benchmark evidence (Phase 15 MD-045)"
+  },
+  "statistical_evidence_policy": {
+    "accepted_statuses": ["REQUIRED_PASS", "NOT_REQUIRED"]
+  },
+  "approval_policy": {
+    "production_style_change_requires_human": true,
+    "simulation_mode": "SIMULATION",
+    "simulation_actor": "SIMULATION_POLICY",
+    "missing_approval": "DEFER",
+    "rejected_approval": "REJECT"
+  },
+  "canary_policy": {
+    "simulation_only": true,
+    "deployment_exists": false,
+    "max_mae_regression_percent": 0.0,
+    "lifecycle": "REGISTERED_CHALLENGER -> APPROVED_FOR_CANARY -> CANARY_ACTIVE -> ACTIVE (promoted) or canary failure -> rolled back before activation"
+  },
+  "post_promotion_policy": {
+    "monitoring": "post-promotion matched-window evaluation vs preserved previous model",
+    "rollback_mae_regression_percent": 0.0
+  },
+  "rollback_policy": {
+    "previous_model_preservation_required": true,
+    "verification_checks": ["artifact_exists", "fingerprint_matches", "lineage_exists", "model_loads", "outputs_finite"],
+    "verification_failure": "BLOCK"
+  },
+  "accepted_protocol_hashes": [
+    "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b",
+    "eea37fc2029f422079e31d0299a561178eafd26e587957c5c9056a4dbcad00d5"
+  ],
+  "unsafe_attempt_definition": "a promotion request whose challenger MAE is strictly better than the reference while the governed decision is not APPROVE",
+  "registry_integration": {
+    "phase13_lifecycle_registry_modified": false,
+    "additive_registry": "artifacts/model_registry/phase_16_champion_registry.yaml",
+    "promotion_states_are_simulation_scoped": true
+  },
+  "final_test_constraints": {
+    "training_access": false,
+    "hpo_access": false,
+    "model_selection_access": false,
+    "feature_selection_access": false,
+    "performance_evaluation": false,
+    "integrity_audit_activation": false,
+    "phase_16_new_reads": 0
+  }
+}

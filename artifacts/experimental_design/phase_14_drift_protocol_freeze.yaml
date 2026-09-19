@@ -1,0 +1,13 @@
+schema_version: phase14-drift-protocol-v1
+research_questions: [RQ-DRIFT-1, RQ-DRIFT-2, RQ-DRIFT-3, RQ-DRIFT-4, RQ-DRIFT-5]
+calibration: F01-F03
+control: F04
+natural_monitoring: F05-F06
+window_hours: 168
+stride_hours: 24
+detectors: [PSI, NORMALIZED_WASSERSTEIN, PREDICTION_WASSERSTEIN, ROLLING_MAE, ERROR_WASSERSTEIN, DATA_QUALITY]
+threshold_method: calibration_only_99th_percentile
+severity_states: [NONE, WATCH, WARNING, CRITICAL]
+scenario_families: [D00, D01, D02, D03, D04, D05, D06, D07, D08, D09]
+evaluation_metrics: [detection_rate, detection_delay_hours, pre_onset_alert_rate, control_alert_rate]
+final_test_policy: {training: NO, hpo: NO, model_selection: NO, feature_selection: NO, performance_evaluation: NO, new_reads: 0}

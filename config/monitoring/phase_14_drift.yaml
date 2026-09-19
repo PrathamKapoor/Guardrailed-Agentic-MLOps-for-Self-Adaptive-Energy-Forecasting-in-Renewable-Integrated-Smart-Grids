@@ -1,0 +1,22 @@
+schema_version: phase14-monitoring-v1
+policy_version: 14.0.0
+window_hours: 168
+stride_hours: 24
+minimum_valid_samples: 168
+calibration_folds: [F01, F02, F03]
+control_fold: F04
+natural_monitoring_folds: [F05, F06]
+detectors: [feature_psi, feature_wasserstein, prediction_wasserstein, rolling_mae, error_wasserstein, data_quality]
+psi_bins: 10
+psi_epsilon: 0.000001
+threshold_percentile: 99.0
+severity: {none: 0, watch: 1, warning: 2, critical: 3}
+scenario_families: [D00, D01, D02, D03, D04, D05, D06, D07, D08, D09]
+severity_levels: [LOW, MEDIUM, HIGH]
+seeds: [42, 123, 2020, 2025, 31415]
+final_test_training_access: NO
+final_test_hpo_access: NO
+final_test_model_selection_access: NO
+final_test_feature_selection_access: NO
+final_test_performance_evaluation: NO
+phase_14_new_final_test_reads: 0

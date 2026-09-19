@@ -1,0 +1,4 @@
+candidate_id,target,model,feature_set,mae,feature_count,complexity,runtime,framework,implementation_id
+P10-load-random_forest-B_lags_only,load,random_forest,B_lags_only,285.1046521054128,3,3,0.0,sklearn,RANDOM_FOREST
+P10-wind-hist_gradient_boosting-B_lags_only,wind,hist_gradient_boosting,B_lags_only,528.4055877683035,3,3,0.0,sklearn,HIST_GRADIENT_BOOSTING
+P10-pv-random_forest-B_lags_only,pv,random_forest,B_lags_only,44.17532550549145,3,3,0.0,sklearn,RANDOM_FOREST

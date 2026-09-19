@@ -1,0 +1,116 @@
+{
+  "evidence_status": "NON_EVIDENCE_SMOKE",
+  "decision": {
+    "subject_id": "SYNTHETIC-ILLEGAL-JUMP",
+    "requested_transition": "EXPERIMENTAL -> ACTIVE",
+    "decision": "DENY",
+    "current_state": "EXPERIMENTAL",
+    "proposed_state": "ACTIVE",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "gate_results": [
+      {
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Policy identity matches."
+      },
+      {
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "No final-test or integrity-audit access requested."
+      },
+      {
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Official evidence is VALID."
+      },
+      {
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Required lineage is complete."
+      },
+      {
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Model fingerprint matches the freeze."
+      },
+      {
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Feature fingerprint matches the freeze."
+      },
+      {
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Protocol hash is recognized."
+      },
+      {
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Reproducibility metadata is complete."
+      },
+      {
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "No unresolved critical deviation affects eligibility."
+      },
+      {
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Development benchmark requirement is satisfied or not applicable."
+      },
+      {
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Statistical evidence policy is satisfied."
+      },
+      {
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": false,
+        "reason_code": "INVALID_STATE_TRANSITION",
+        "explanation": "Requested lifecycle transition is not allowed."
+      },
+      {
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null,
+        "explanation": "Approval is not required for this transition."
+      }
+    ],
+    "failed_gates": [
+      "STATE_TRANSITION_GATE"
+    ],
+    "reason_codes": [
+      "INVALID_STATE_TRANSITION"
+    ],
+    "explanation": "DENY: The requested lifecycle transition is not defined by the frozen state machine.",
+    "evidence_refs": [
+      "artifacts/experimental_design/phase_13_governance_scenarios.yaml"
+    ],
+    "actor_type": "SYSTEM",
+    "simulation": false,
+    "decision_content_fingerprint": "governance-decision-v1:sha256:38c2b353388ec421511b3225c66ce94031cdfdafa11369036ac6cd85efdc5046",
+    "decision_id": "25d1f75b-6321-48f1-8195-e0a109be0589",
+    "timestamp": "2026-08-14T08:56:17.821679+00:00"
+  },
+  "policy_loading": "PASS",
+  "state_validation": "PASS",
+  "decision_generation": "PASS",
+  "audit_event": "PASS",
+  "artifact_writing": "PASS",
+  "excluded_from_official_evidence": true,
+  "final_test_data_access": false
+}
