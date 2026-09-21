@@ -50,3 +50,5 @@ dist/
 *.sqlite3
 mlruns/
 .env.local
+outputs/
+
