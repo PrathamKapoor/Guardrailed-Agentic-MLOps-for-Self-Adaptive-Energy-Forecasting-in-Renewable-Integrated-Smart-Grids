@@ -35,10 +35,10 @@
     "python": "3.13.2"
   },
   "artifact_checksums": {
-    "artifacts\\experiments\\baselines\\phase_06\\predictions\\baseline_predictions.parquet": "6b17e7ee77013584da2f8d45f5da245f27cd72892c8d5c179d2d5a9e80562278",
-    "artifacts\\experiments\\baselines\\phase_06\\metrics\\baseline_validation_metrics.csv": "1f5152d52eb4adf36ac89615d0c3f7b1bce751e616ba3f254457c06313e48061",
-    "artifacts\\experiments\\baselines\\phase_06\\metrics\\baseline_fold_metrics.csv": "e50ea8e083364924e375a39292b3f4802635be946c8f445e56ad95d1613816d5",
-    "artifacts\\experiments\\baselines\\phase_06\\metrics\\baseline_fold_stability.csv": "9fb0092f1b5c187ab484c7b19595e7918a4cfc21750f897e792987c8799c7c36",
-    "artifacts\\research_figures\\phase_06\\figure_manifest.yaml": "ef85b305ae018bcced941f1f50fe2828d3ecf0f9435ae454498a79ca157c130d"
+    "artifacts/experiments/baselines/phase_06/predictions/baseline_predictions.parquet": "6b17e7ee77013584da2f8d45f5da245f27cd72892c8d5c179d2d5a9e80562278",
+    "artifacts/experiments/baselines/phase_06/metrics/baseline_validation_metrics.csv": "1f5152d52eb4adf36ac89615d0c3f7b1bce751e616ba3f254457c06313e48061",
+    "artifacts/experiments/baselines/phase_06/metrics/baseline_fold_metrics.csv": "e50ea8e083364924e375a39292b3f4802635be946c8f445e56ad95d1613816d5",
+    "artifacts/experiments/baselines/phase_06/metrics/baseline_fold_stability.csv": "9fb0092f1b5c187ab484c7b19595e7918a4cfc21750f897e792987c8799c7c36",
+    "artifacts/research_figures/phase_06/figure_manifest.yaml": "ef85b305ae018bcced941f1f50fe2828d3ecf0f9435ae454498a79ca157c130d"
   }
 }

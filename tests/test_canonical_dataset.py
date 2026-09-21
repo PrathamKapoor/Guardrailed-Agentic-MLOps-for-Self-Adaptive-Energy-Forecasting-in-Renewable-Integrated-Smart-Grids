@@ -40,6 +40,10 @@ def test_canonical_schema_and_aggregates_exist() -> None:
 
 
 def test_deterministic_rebuild_checksums() -> None:
+    source_dir = ROOT / "data/external/RTS-GMLC/RTS_Data/timeseries_data_files"
+    if not source_dir.exists():
+        import pytest
+        pytest.skip("data/external/RTS-GMLC source files not present in this environment")
     from smartgrid_mlops.data.pipeline import build_canonical_datasets
     first = build_canonical_datasets()
     second = build_canonical_datasets()

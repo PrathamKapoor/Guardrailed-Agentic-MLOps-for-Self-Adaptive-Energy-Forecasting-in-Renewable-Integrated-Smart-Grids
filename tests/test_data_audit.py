@@ -51,6 +51,10 @@ def test_outlier_and_constant_column_signals_are_deterministic() -> None:
 
 
 def test_forecasting_task_schema_and_source_immutability() -> None:
+    source_dir = ROOT / "data/external/RTS-GMLC/RTS_Data/timeseries_data_files"
+    if not source_dir.exists():
+        import pytest
+        pytest.skip("data/external/RTS-GMLC source files not present in this environment")
     from smartgrid_mlops.data_audit.reporting import run_audit
     audit = run_audit(summary=True)
     required = {"task", "priority", "actual_file", "baseline_file", "frequency", "unit", "mapping_confidence", "notes"}

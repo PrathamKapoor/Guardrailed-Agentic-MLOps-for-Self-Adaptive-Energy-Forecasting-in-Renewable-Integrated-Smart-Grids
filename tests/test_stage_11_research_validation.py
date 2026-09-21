@@ -172,34 +172,30 @@ class TestOutputIsolation:
             )
 
     def test_running_does_not_write_outside_v2(self):
+        before_files = {p for p in ROOT.rglob("*") if p.is_file()}
         # Run all the pipelines and check the directory tree.
         run_per_fold_evaluation()
         run_seed_stability()
         run_ablations()
         run_distribution_analysis()
         run_leakage_audit(Path("artifacts/v2/research_validation/leakage_audit"))
+        after_files = {p for p in ROOT.rglob("*") if p.is_file()}
+        new_files = after_files - before_files
         # No new file was written anywhere under the repository
         # root except under artifacts/v2/ and the reports/
         # directory (where the completion report goes).
-        for p in ROOT.rglob("*"):
-            if not p.is_file():
+        for p in new_files:
+            rel = p.relative_to(ROOT).as_posix()
+            if rel.startswith("artifacts/v2/"):
                 continue
-            if "artifacts/v2/" in str(p):
+            if rel.startswith("reports/productization/stage_11"):
                 continue
-            if "reports/productization/stage_11" in str(p):
+            if p.name in (".gitkeep", "manifest.json"):
                 continue
-            if p.name in (".gitkeep", "manifest.json",):
+            if "test_" in p.name and p.suffix == ".py":
                 continue
-            if "test_" in p.name and ".py" in p.suffix:
-                continue
-            # Skip pre-existing artefacts that the run should NOT have
-            # touched. This is a coarse check: a real failure would
-            # be a new file written under the v1 tree. For the test
-            # we only check that no .py or .json file was created
-            # under product/, src/smartgrid_mlops/, data/, config/.
-            rel = str(p.relative_to(ROOT))
             if rel.startswith(("product/", "src/smartgrid_mlops/",
-                                "data/", "config/")):
+                               "data/", "config/")):
                 pytest.fail(f"Stage 11 wrote to v1 location: {rel}")
 
 

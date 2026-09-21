@@ -61,4 +61,4 @@ def test_predictions_deterministic_schema_and_manifest_checksums():
     assert {"experiment_id", "baseline_id", "target", "horizon", "fold_id", "forecast_origin", "target_timestamp", "actual", "prediction", "absolute_error", "squared_error", "external_baseline"} <= fields
     manifest_path = ROOT / "artifacts/experiments/baselines/phase_06/baseline_experiment_manifest.yaml"; manifest = json.loads(manifest_path.read_text())
     assert manifest["final_test_accessed"] is False
-    for relative, checksum in manifest["artifact_checksums"].items(): assert hashlib.sha256((ROOT / relative).read_bytes()).hexdigest() == checksum
+    for relative, checksum in manifest["artifact_checksums"].items(): assert hashlib.sha256((ROOT / relative.replace("\\", "/")).read_bytes()).hexdigest() == checksum
