@@ -1,8 +1,12 @@
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -117,11 +121,8 @@ def test_check_dataset_available_blocker(tmp_path: Path):
 def test_evaluate_external_blocker_when_no_dataset(tmp_path: Path):
     # create minimal protocol artifacts to pass frozen plan check? We'll use real root for that part,
     # but with tmp_path no dataset should still blocker
-    from pathlib import Path as P
-
-    real_root = P("C:/Projects/guardrailed-agentic-mlops-smart-grid_trial")
     with pytest.raises(DatasetNotAvailableError):
-        evaluate_external(real_root, "nonexistent_dataset_xyz", targets=("load",), smoke=True)
+        evaluate_external(ROOT, "nonexistent_dataset_xyz", targets=("load",), smoke=True)
 
 
 def test_evaluate_external_smoke_synthetic(tmp_path: Path):
@@ -132,7 +133,7 @@ def test_evaluate_external_smoke_synthetic(tmp_path: Path):
     # Need to replicate frozen plan and configs from real repo into tmp for evaluate_external to succeed
     import shutil
 
-    real = Path("C:/Projects/guardrailed-agentic-mlops-smart-grid_trial")
+    real = ROOT
     for src in [
         real / "artifacts/experimental_design/final_test_comparison_plan.yaml",
         real / "artifacts/experimental_design/final_test_comparison_plan.sha256",

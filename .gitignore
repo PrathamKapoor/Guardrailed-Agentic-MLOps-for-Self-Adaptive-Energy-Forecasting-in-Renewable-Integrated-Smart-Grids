@@ -22,7 +22,8 @@ models/*
 # Processed canonical hourly parquets and features are tracked for reproducibility and CI testing
 
 # Ephemeral test directories and local tracking databases are ignored
-artifacts/test_tmp/
+artifacts/test_tmp/*
+!artifacts/test_tmp/.gitkeep
 artifacts/mlflow/*.db
 artifacts/mlflow/*.sqlite
 artifacts/mlflow/*.sqlite3

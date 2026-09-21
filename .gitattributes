@@ -1,0 +1,43 @@
+# Set default behavior to automatic text detection
+* text=auto
+
+# Binary files
+*.png binary
+*.parquet binary
+*.ico binary
+
+# Protocol freezes and config files that must maintain LF line endings
+artifacts/experimental_design/phase_07_model_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_08_neural_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_09_hpo_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_10_selected_feature_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_11_finalist_selection_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_13_governance_scenarios.yaml text eol=lf
+artifacts/experimental_design/phase_15_adaptation_scenarios.yaml text eol=lf
+artifacts/experimental_design/phase_15_retraining_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_16_champion_challenger_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_17_agent_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_18_agentic_comparison_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/protocol_freeze.yaml text eol=lf
+config/governance/phase_13_policy.yaml text eol=lf
+config/retraining/phase_15_policy.yaml text eol=lf
+config/governance/phase_16_promotion_policy.yaml text eol=lf
+src/smartgrid_mlops/agents/schemas.py text eol=lf
+src/smartgrid_mlops/agents/firewall.py text eol=lf
+
+# Research artifacts and evidence with frozen SHA-256 digests requiring CRLF line endings
+artifacts/research_tables/* text eol=crlf
+artifacts/audit/* text eol=crlf
+artifacts/mlops/** text eol=crlf
+artifacts/research_figures/phase_19/system_architecture_final.svg text eol=crlf
+artifacts/experimental_design/final_test_comparison_plan.yaml text eol=crlf
+artifacts/experimental_design/phase_09_selected_config_freeze.yaml text eol=crlf
+artifacts/experimental_design/phase_11_forecasting_finalist_freeze.yaml text eol=crlf
+artifacts/experimental_design/phase_12_mlops_tracking_protocol_freeze.yaml text eol=crlf
+artifacts/experimental_design/phase_13_governance_protocol_freeze.yaml text eol=crlf
+artifacts/model_registry/* text eol=crlf
+reports/phase_19_completion.md text eol=crlf
+artifacts/experiments/baselines/phase_06/metrics/* text eol=crlf
+artifacts/research_figures/phase_06/figure_manifest.yaml text eol=crlf
