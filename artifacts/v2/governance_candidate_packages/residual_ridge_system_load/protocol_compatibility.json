@@ -1,0 +1,11 @@
+{
+  "candidate_id": "residual_ridge_system_load",
+  "candidate_protocol": "residual_correction_v1",
+  "classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+  "honest_note": "The residual-correction pipeline is a NEW research protocol: it uses a training split (Jan-Aug 2020) and an evaluation split (the locked Phase 19 test window) that is AUTHORIZED by the Phase 19 protocol freeze. The candidate's protocol_hash is the SHA-256 of the residual-correction V1 procedure, which is NOT in the policy's accepted_protocol_hashes. The protocol is COMPATIBLE in the sense that it uses the same locked test window, but it is not EXACT-MATCH compatible. The Stage 13 evaluation reports this honestly rather than manufacturing compatibility.",
+  "phase_19_protocol_freeze_sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+  "policy_accepted_protocol_hashes": [
+    "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b",
+    "eea37fc2029f422079e31d0299a561178eafd26e587957c5c9056a4dbcad00d5"
+  ]
+}

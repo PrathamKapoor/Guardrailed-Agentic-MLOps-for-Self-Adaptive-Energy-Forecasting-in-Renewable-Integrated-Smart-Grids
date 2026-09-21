@@ -1,0 +1,76 @@
+{
+  "adaptation_gain_percent": 7.105928926040669,
+  "admission_checks": {
+    "checks": {
+      "evaluation_complete": true,
+      "evidence_valid": true,
+      "feature_fingerprint_valid": true,
+      "final_test_policy_respected": true,
+      "lineage_complete": true,
+      "model_specification_valid": true,
+      "no_unresolved_deviation": true,
+      "outputs_finite": true,
+      "training_completed": true,
+      "training_dataset_fingerprint_present": true
+    },
+    "decision": "REGISTERED_CHALLENGER",
+    "failed": []
+  },
+  "clean_counterfactual": {
+    "challenger": {
+      "MAE": 310.99533039246523,
+      "RMSE": 402.2512264307857,
+      "nMAE": 0.05889120845808194,
+      "nRMSE": 0.07617175730053488,
+      "rows": 336,
+      "sMAPE": 5.6428225435874975
+    },
+    "evaluation_rows": 336,
+    "reference": {
+      "MAE": 289.61694679858783,
+      "RMSE": 384.8027143263237,
+      "nMAE": 0.05484291987723714,
+      "nRMSE": 0.07286764349814921,
+      "rows": 336,
+      "sMAPE": 5.318962232571788
+    },
+    "window_end": "2020-08-29T00:00:00",
+    "window_start": "2020-08-15T01:00:00"
+  },
+  "clean_stability_change_percent": -7.381606577306008,
+  "family": "A15-01",
+  "perturbation": {
+    "family": "A15-01",
+    "onset": "2020-08-01T00:00:00",
+    "ramp_hours": 0,
+    "severity": "MEDIUM",
+    "shift_magnitude": 1005.3625548967186,
+    "sigma_pre_onset": 1005.3625548967186,
+    "target_domain_constraint": "clipped at zero"
+  },
+  "post_drift": {
+    "challenger": {
+      "MAE": 307.06757747438775,
+      "RMSE": 385.90049478015845,
+      "nMAE": 0.048847828496846074,
+      "nRMSE": 0.06138844530872531,
+      "rows": 336,
+      "sMAPE": 4.756436237091408
+    },
+    "evaluation_rows": 336,
+    "reference": {
+      "MAE": 330.55670176184896,
+      "RMSE": 452.8050908714837,
+      "nMAE": 0.052584441538744676,
+      "nRMSE": 0.07203152349496725,
+      "rows": 336,
+      "sMAPE": 5.118749964049518
+    },
+    "window_end": "2020-08-29T00:00:00",
+    "window_start": "2020-08-15T01:00:00"
+  },
+  "reference_inference_only": true,
+  "scenario_id": "A15-01-MEDIUM-load",
+  "severity": "MEDIUM",
+  "target": "load"
+}

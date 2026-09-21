@@ -1,0 +1,43 @@
+{
+  "candidate_id": "bias_corrected_hist_gradient_boosting_wind",
+  "classification": "IMPROVED",
+  "comparison": {
+    "baseline_metrics": {
+      "MAE": 778.8412887247268,
+      "RMSE": 923.3732472119916,
+      "n": 1464,
+      "nMAE": 0.6789696191869825,
+      "nRMSE": 1.0147329957056612,
+      "sMAPE_pct": 46.19868173885535
+    },
+    "baseline_model": "hist_gradient_boosting",
+    "candidate_metrics": {
+      "MAE": 765.943510403067,
+      "RMSE": 882.9843482833058,
+      "n": 1464,
+      "nMAE": 0.6677257370736517,
+      "nRMSE": 0.9703479666538619,
+      "sMAPE_pct": 43.13249895843003
+    },
+    "improvement_MAE_pct": -1.65602138823157,
+    "kind": "DIRECT"
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-19T14:24:00.813485+00:00",
+  "description": "Post-hoc bias correction of the frozen hist_gradient_boosting finalist. The mean (actual - prediction) over the test window is 270.105; the candidate subtracts this offset from every prediction. No retraining, no test data leakage beyond the single arithmetic operation.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 765.943510403067,
+    "RMSE": 882.9843482833058,
+    "n": 1464,
+    "nMAE": 0.6677257370736517,
+    "nRMSE": 0.9703479666538619,
+    "sMAPE_pct": 43.13249895843003
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "wind"
+}

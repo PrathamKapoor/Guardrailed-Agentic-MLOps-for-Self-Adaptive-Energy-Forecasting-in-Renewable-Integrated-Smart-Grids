@@ -1,0 +1,69 @@
+{
+  "dataset": "opsd_time_series",
+  "generated_at": "2026-08-26T21:28:46.673491",
+  "holm_bonferroni_primary_family": {},
+  "manifest": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\manifests\\opsd_time_series_manifest.yaml",
+  "status": "NON_EVIDENCE_SMOKE",
+  "targets": {
+    "load": {
+      "coverage": {
+        "conclusive": true,
+        "min_samples": 720,
+        "missing_fraction": 0.0019521523475627975,
+        "missing_hours": 98,
+        "samples": 50103,
+        "span_hours": 50201
+      },
+      "metrics": {
+        "random_forest": {
+          "MAE": 54575.79053551734,
+          "RMSE": 55348.10842175787,
+          "nMAE": 0.9280507990646903,
+          "nRMSE": 0.9411839158628982,
+          "sMAPE": 172.52768142350254
+        }
+      },
+      "samples": 20
+    },
+    "pv": {
+      "coverage": {
+        "conclusive": true,
+        "min_samples": 720,
+        "missing_fraction": 0.0019521523475627975,
+        "missing_hours": 98,
+        "samples": 50103,
+        "span_hours": 50201
+      },
+      "metrics": {
+        "random_forest": {
+          "MAE": 1296.0855845160563,
+          "RMSE": 3174.102266251228,
+          "nMAE": 0.867904767479865,
+          "nRMSE": 2.1254911884362193,
+          "sMAPE": 178.57115306695945
+        }
+      },
+      "samples": 20
+    },
+    "wind": {
+      "coverage": {
+        "conclusive": true,
+        "min_samples": 720,
+        "missing_fraction": 0.0019521523475627975,
+        "missing_hours": 98,
+        "samples": 50103,
+        "span_hours": 50201
+      },
+      "metrics": {
+        "hist_gradient_boosting": {
+          "MAE": 17140.15086334559,
+          "RMSE": 17339.791588321368,
+          "nMAE": 0.9117683502854219,
+          "nRMSE": 0.9223882156478801,
+          "sMAPE": 167.10259353603456
+        }
+      },
+      "samples": 20
+    }
+  }
+}

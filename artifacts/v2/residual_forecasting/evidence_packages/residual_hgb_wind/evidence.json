@@ -1,0 +1,110 @@
+{
+  "baseline_metrics_test": {
+    "MAE": 331.30216302367944,
+    "RMSE": 491.208264741478,
+    "n": 1464,
+    "nMAE": 0.28881892462620923,
+    "nRMSE": 0.539809048510457,
+    "sMAPE_pct": 25.45787783188562
+  },
+  "candidate_id": "residual_hgb_wind",
+  "candidate_metrics_test": {
+    "MAE": 179.99666231712013,
+    "RMSE": 239.49928428210964,
+    "n": 1464,
+    "nMAE": 0.15691549361548202,
+    "nRMSE": 0.2631956545668117,
+    "sMAPE_pct": 20.685107850604318
+  },
+  "classification": "MEANINGFUL_IMPROVEMENT",
+  "description": "HistGradientBoostingRegressor on the training residual. Same hyperparameters as the frozen Phase 19 model family (learning_rate=0.08, max_iter=200, max_leaf_nodes=31, l2_regularization=0.1, random_state=42). Feature set: 6 calendar + day_ahead + 3 lagged residuals.",
+  "evidence_package": {
+    "absolute_diff_MAE": -151.30550070655931,
+    "candidate_id": "residual_hgb_wind",
+    "comparison_status": "RESEARCH_CLASSIFICATION_NOT_GOVERNANCE_DECISION",
+    "comparison_validity": "DIRECT",
+    "created_at": "2026-09-05T10:58:10.024627+00:00",
+    "evaluation_window": {
+      "end": "2020-12-31T23:00:00",
+      "start": "2020-11-01T00:00:00"
+    },
+    "relative_diff_MAE_pct": -45.66994049348991,
+    "research_classification": "MEANINGFUL_IMPROVEMENT",
+    "schema": "stage_10_residual_evidence_v1",
+    "source": {
+      "path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\processed\\research_hourly_index.parquet",
+      "sha256": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00"
+    },
+    "split_counts": {
+      "n_test": 1464,
+      "n_train": 5856,
+      "n_validation": 1464
+    },
+    "target": "wind",
+    "training_window": {
+      "end": "2020-08-31T23:00:00",
+      "start": "2020-01-01T00:00:00"
+    },
+    "validation_window": {
+      "end": "2020-10-31T23:00:00",
+      "start": "2020-09-01T00:00:00"
+    }
+  },
+  "feature_set": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "day_ahead",
+    "lag_1_residual",
+    "lag_24_residual",
+    "lag_168_residual"
+  ],
+  "n_test": 1464,
+  "n_train": 5688,
+  "n_validation": 1464,
+  "notes": "Non-linear residual model. Same feature firewall as the Ridge candidate.",
+  "target": "wind",
+  "test": {
+    "corrected_metrics": {
+      "MAE": 179.99666231712013,
+      "RMSE": 239.49928428210964,
+      "n": 1464,
+      "nMAE": 0.15691549361548202,
+      "nRMSE": 0.2631956545668117,
+      "sMAPE_pct": 20.685107850604318
+    },
+    "n": 1464,
+    "rts_day_ahead_metrics": {
+      "MAE": 331.30216302367944,
+      "RMSE": 491.208264741478,
+      "n": 1464,
+      "nMAE": 0.28881892462620923,
+      "nRMSE": 0.539809048510457,
+      "sMAPE_pct": 25.45787783188562
+    }
+  },
+  "training_residual_mean": -58.44668288934427,
+  "training_residual_std": 464.7424681200785,
+  "validation": {
+    "corrected_metrics": {
+      "MAE": 114.49655503708743,
+      "RMSE": 178.55098855662175,
+      "n": 1464,
+      "nMAE": 0.18054531443218677,
+      "nRMSE": 0.27215456129970467,
+      "sMAPE_pct": 17.932683040852172
+    },
+    "n": 1464,
+    "rts_day_ahead_metrics": {
+      "MAE": 269.0056523224044,
+      "RMSE": 413.279469784192,
+      "n": 1464,
+      "nMAE": 0.4241849029156562,
+      "nRMSE": 0.6299371048154302,
+      "sMAPE_pct": 35.66315936160406
+    }
+  }
+}

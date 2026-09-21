@@ -1,0 +1,34 @@
+{
+  "candidate_id": "baseline_H24_PERSISTENCE_pv",
+  "classification": "REGRESSED",
+  "comparison": {
+    "frozen_metrics": {
+      "MAE": 36.1217634355897,
+      "RMSE": 82.07888348246736,
+      "nMAE": 0.10817435038655554,
+      "nRMSE": 0.24580278083604423,
+      "sMAPE_pct": 117.73465533954827
+    },
+    "frozen_model": "frozen_finalist",
+    "kind": "DIRECT",
+    "notes": "Re-derivation of the existing frozen baseline metrics compared against the frozen final-test finalist for the same target."
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-05T07:33:21.026110+00:00",
+  "description": "Re-evaluation of the existing frozen external baseline 'H24_DAILY_PERSISTENCE' on the Phase 19 test window (2020-11-01..2020-12-31). The baseline is itself a frozen artefact; this candidate simply re-derives the same metrics on the same window using the same data.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 39.09498520491803,
+    "RMSE": 100.69240763850823,
+    "n": 1464,
+    "nMAE": 0.11707829922108884,
+    "nRMSE": 0.22572554554652974,
+    "sMAPE_pct": 3.931270560407196
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "pv"
+}

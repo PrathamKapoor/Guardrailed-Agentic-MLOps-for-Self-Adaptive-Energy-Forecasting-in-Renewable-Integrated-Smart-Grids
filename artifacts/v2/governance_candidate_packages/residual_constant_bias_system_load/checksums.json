@@ -1,0 +1,16 @@
+{
+  "aggregate_package_sha256": "11ac0ede78121fad53f6b020f34c3255264112cac870cb5c4b8cc1cd379253d7",
+  "candidate_id": "residual_constant_bias_system_load",
+  "file_hashes_sha256": {
+    "benchmark_evaluation.json": "4aec5c1a9ccebe3cbd46a4d40eba6b15e5b92d8a9b8062c67ff6f816229f7d9c",
+    "candidate_manifest.json": "482428f6c1326758c3af915519dd2f5b12010c9e632f5d5aaf76c5ceedef8aca",
+    "data_split_manifest.json": "9a42a0417718d442a3e9867bd4dff7b65e0d3374a9fffa8428300abe278da993",
+    "feature_spec.json": "a05fcbdce91fb13d1049660b6de9505adb74d0b263673b0c789e0685051566ea",
+    "model_spec.json": "9480f85d317e454e9b8886c2a7c6cf33d761316c9406d40b72733da20e7e5ece",
+    "protocol_compatibility.json": "4293defbc7a24ce219b983eb0fbc831fbaeb93c367f206b95a5909000608e4f8",
+    "reproducibility_manifest.json": "55bde268e31fdbf2194a5fe3dd6a4b4c347d0c9b89b53112e7d351f6e3f725ba"
+  },
+  "generated_at": "2026-09-19T14:32:57.325325+00:00",
+  "package_root": "artifacts\\v2\\governance_candidate_packages\\residual_constant_bias_system_load",
+  "schema": "stage_13_checksums_v1"
+}

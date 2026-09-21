@@ -1,0 +1,114 @@
+{
+  "access_mode": "INTEGRITY_AUDIT",
+  "integrity_access_reason": "P9-DEV-002",
+  "current_vs_rebuilt_1": {
+    "schema_equal": true,
+    "column_names_equal": true,
+    "column_order_equal": true,
+    "dtypes_equal": true,
+    "row_count_equal": true,
+    "column_count_equal": true,
+    "row_order_equal": true,
+    "forecast_origin_equal": true,
+    "target_timestamp_equal": true,
+    "target_equal": true,
+    "feature_values_equal": true,
+    "null_masks_equal": true,
+    "unequal_cell_count": 0,
+    "max_absolute_difference": 0.0,
+    "values_exactly_equal": true
+  },
+  "rebuilt_1_vs_rebuilt_2": {
+    "schema_equal": true,
+    "column_names_equal": true,
+    "column_order_equal": true,
+    "dtypes_equal": true,
+    "row_count_equal": true,
+    "column_count_equal": true,
+    "row_order_equal": true,
+    "forecast_origin_equal": true,
+    "target_timestamp_equal": true,
+    "target_equal": true,
+    "feature_values_equal": true,
+    "null_masks_equal": true,
+    "unequal_cell_count": 0,
+    "max_absolute_difference": 0.0,
+    "values_exactly_equal": true
+  },
+  "hashes": {
+    "current": {
+      "binary_sha256": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+      "logical_content_sha256": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb",
+      "metadata": {
+        "created_by": "parquet-cpp-arrow version 25.0.1",
+        "format_version": "2.6",
+        "row_group_count": 1,
+        "compression_codecs": [
+          "ZSTD"
+        ],
+        "key_value_metadata_keys": [
+          "b'ARROW:schema'"
+        ]
+      }
+    },
+    "rebuilt_1": {
+      "binary_sha256": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+      "logical_content_sha256": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb",
+      "metadata": {
+        "created_by": "parquet-cpp-arrow version 25.0.1",
+        "format_version": "2.6",
+        "row_group_count": 1,
+        "compression_codecs": [
+          "ZSTD"
+        ],
+        "key_value_metadata_keys": [
+          "b'ARROW:schema'"
+        ]
+      }
+    },
+    "rebuilt_2": {
+      "binary_sha256": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+      "logical_content_sha256": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb",
+      "metadata": {
+        "created_by": "parquet-cpp-arrow version 25.0.1",
+        "format_version": "2.6",
+        "row_group_count": 1,
+        "compression_codecs": [
+          "ZSTD"
+        ],
+        "key_value_metadata_keys": [
+          "b'ARROW:schema'"
+        ]
+      }
+    }
+  },
+  "spot_checks": [
+    {
+      "feature_check_name": "first_usable",
+      "pass": true,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature_check_name": "middle_year",
+      "pass": true,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature_check_name": "leap_day",
+      "pass": true,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature_check_name": "month_boundary",
+      "pass": true,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature_check_name": "last_usable",
+      "pass": true,
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "no_models_loaded": true,
+  "no_forecasting_metrics_computed": true
+}

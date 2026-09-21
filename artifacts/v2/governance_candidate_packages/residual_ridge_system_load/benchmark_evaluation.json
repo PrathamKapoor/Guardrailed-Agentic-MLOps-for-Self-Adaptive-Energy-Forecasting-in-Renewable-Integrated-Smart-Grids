@@ -1,0 +1,12 @@
+{
+  "benchmark_gate_value_for_governance": "BENCHMARK_GATE_PASS",
+  "candidate_MAE_research": 2.9924096172572194,
+  "candidate_id": "residual_ridge_system_load",
+  "canonical_benchmark_MAE": 126.61306197357128,
+  "canonical_benchmark_name": "RTS_DAY_AHEAD",
+  "classification": "BENCHMARK_PASS",
+  "comparison_window_alignment": "The Stage 10 candidate MAE is on the locked Phase 19 test window (2020-11-01..2020-12-31). The canonical benchmark MAE is from the Phase 11 finalist registry, computed on the same locked window. The two windows ARE the same.",
+  "explanation": "Candidate MAE 2.9924 is < 0.99 \u00d7 canonical benchmark MAE 126.6131 (RTS_DAY_AHEAD); strict-superiority gate passes on the research window.",
+  "research_window": 1464,
+  "target": "system_load"
+}

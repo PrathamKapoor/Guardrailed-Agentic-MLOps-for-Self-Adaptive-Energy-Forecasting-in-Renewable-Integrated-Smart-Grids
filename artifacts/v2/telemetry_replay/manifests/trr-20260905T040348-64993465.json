@@ -1,0 +1,18 @@
+{
+  "artifacts_written": [
+    "artifacts\\v2\\telemetry_replay\\events\\trr-20260905T040348-64993465.jsonl"
+  ],
+  "completed_at": "2026-09-05T04:03:48.210077+00:00",
+  "created_at": "2026-09-05T04:03:48.019760+00:00",
+  "event_count": 3,
+  "first_source_timestamp": "2020-11-01 00:00:00",
+  "interval_seconds": 1.0,
+  "last_source_timestamp": "2020-11-01 00:00:00",
+  "limit": 3,
+  "mode": "fast",
+  "notes": "Historical telemetry replay. Simulated event stream. Not live.",
+  "run_id": "trr-20260905T040348-64993465",
+  "source_path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\research_tables\\final_predictions.csv",
+  "source_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "load"
+}

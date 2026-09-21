@@ -1,0 +1,8 @@
+{
+  "feature_names": [],
+  "feature_set_id": "n/a",
+  "feature_spec_fingerprint": "feature-spec-v1:sha256:c56f4793eb75ed462369aa48c95a57a8658374e6beb341052a944320e4a7e882",
+  "forecast_horizon_availability_contract": "n/a",
+  "logical_feature_identity": "n/a",
+  "transformations": "n/a"
+}

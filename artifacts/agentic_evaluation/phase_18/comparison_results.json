@@ -1,0 +1,514 @@
+{
+  "agentic": [
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "severity": "CRITICAL",
+        "target": "load"
+      },
+      "estimated_time_seconds": 5.0065,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/retraining/phase_15/evidence/drift_events.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "NO_ACTION_EVIDENCE_ONLY",
+      "measured_agent_seconds": 0.0065,
+      "scenario_id": "D01",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.134850+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "decision": "DENY",
+        "primary_reason": "DATA_QUALITY_BLOCK"
+      },
+      "estimated_time_seconds": 5.0064,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/retraining/phase_15/decisions/retraining_decisions.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "RETRAINING_DENIED",
+      "measured_agent_seconds": 0.0064,
+      "scenario_id": "D02",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.151746+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "challengers_registered": 18,
+        "promotion_eligible": false
+      },
+      "estimated_time_seconds": 5.005,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/champion_challenger/phase_16/evaluations/real_phase15_challengers.json"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "REGISTERED_CHALLENGER_NO_PROMOTION",
+      "measured_agent_seconds": 0.005,
+      "scenario_id": "D03",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.169451+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "decision": "REJECT",
+        "failed_gate": "BENCHMARK_GATE"
+      },
+      "estimated_time_seconds": 5.0052,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/champion_challenger/phase_16/evaluations/real_phase15_challengers.json"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "PROMOTION_REJECTED",
+      "measured_agent_seconds": 0.0052,
+      "scenario_id": "D04",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.180540+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "outcome": "ROLLBACK_COMPLETED",
+        "previous_model_restored": true
+      },
+      "estimated_time_seconds": 5.0061,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/model_registry/phase_16_champion_registry.yaml"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "ROLLBACK_COMPLETED_REFERENCE_RESTORED",
+      "measured_agent_seconds": 0.0061,
+      "scenario_id": "D05",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.190364+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "events_for_subject": 14
+      },
+      "estimated_time_seconds": 5.0052,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/mlops/audit/events.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "AUDIT_REPORT_PRODUCED_NO_ACTION",
+      "measured_agent_seconds": 0.0052,
+      "scenario_id": "D06",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.261240+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "trace_reaches_dataset": true
+      },
+      "estimated_time_seconds": 5.0068,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/mlops/lineage/lineage_index.yaml"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "LINEAGE_VERIFIED_NO_ACTION",
+      "measured_agent_seconds": 0.0068,
+      "scenario_id": "D07",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.273581+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "drift_severity": "CRITICAL",
+        "retraining_decision": "DENY"
+      },
+      "estimated_time_seconds": 5.0055,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/retraining/phase_15/evidence/drift_events.jsonl",
+        "artifacts/retraining/phase_15/decisions/retraining_decisions.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "INCIDENT_SUMMARY_NO_ACTION",
+      "measured_agent_seconds": 0.0055,
+      "scenario_id": "D08",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.301685+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "AGENTIC"
+    }
+  ],
+  "comparisons": [
+    {
+      "agentic_outcome": "NO_ACTION_EVIDENCE_ONLY",
+      "deterministic_outcome": "NO_ACTION_EVIDENCE_ONLY",
+      "efficiency_gain_percent": 50.917,
+      "match": true,
+      "scenario_id": "D01",
+      "timestamp": "2026-08-22T05:36:26.304476+00:00"
+    },
+    {
+      "agentic_outcome": "RETRAINING_DENIED",
+      "deterministic_outcome": "RETRAINING_DENIED",
+      "efficiency_gain_percent": 25.278,
+      "match": true,
+      "scenario_id": "D02",
+      "timestamp": "2026-08-22T05:36:26.304501+00:00"
+    },
+    {
+      "agentic_outcome": "REGISTERED_CHALLENGER_NO_PROMOTION",
+      "deterministic_outcome": "REGISTERED_CHALLENGER_NO_PROMOTION",
+      "efficiency_gain_percent": 27.464,
+      "match": true,
+      "scenario_id": "D03",
+      "timestamp": "2026-08-22T05:36:26.304513+00:00"
+    },
+    {
+      "agentic_outcome": "PROMOTION_REJECTED",
+      "deterministic_outcome": "PROMOTION_REJECTED",
+      "efficiency_gain_percent": -28.338,
+      "match": true,
+      "scenario_id": "D04",
+      "timestamp": "2026-08-22T05:36:26.304522+00:00"
+    },
+    {
+      "agentic_outcome": "ROLLBACK_COMPLETED_REFERENCE_RESTORED",
+      "deterministic_outcome": "ROLLBACK_COMPLETED_REFERENCE_RESTORED",
+      "efficiency_gain_percent": -54.034,
+      "match": true,
+      "scenario_id": "D05",
+      "timestamp": "2026-08-22T05:36:26.304530+00:00"
+    },
+    {
+      "agentic_outcome": "AUDIT_REPORT_PRODUCED_NO_ACTION",
+      "deterministic_outcome": "AUDIT_REPORT_PRODUCED_NO_ACTION",
+      "efficiency_gain_percent": 94.454,
+      "match": true,
+      "scenario_id": "D06",
+      "timestamp": "2026-08-22T05:36:26.304538+00:00"
+    },
+    {
+      "agentic_outcome": "LINEAGE_VERIFIED_NO_ACTION",
+      "deterministic_outcome": "LINEAGE_VERIFIED_NO_ACTION",
+      "efficiency_gain_percent": -28.379,
+      "match": true,
+      "scenario_id": "D07",
+      "timestamp": "2026-08-22T05:36:26.304546+00:00"
+    },
+    {
+      "agentic_outcome": "INCIDENT_SUMMARY_NO_ACTION",
+      "deterministic_outcome": "INCIDENT_SUMMARY_NO_ACTION",
+      "efficiency_gain_percent": 70.382,
+      "match": true,
+      "scenario_id": "D08",
+      "timestamp": "2026-08-22T05:36:26.304554+00:00"
+    }
+  ],
+  "deterministic": [
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "severity": "CRITICAL",
+        "target": "load"
+      },
+      "estimated_time_seconds": 10.2,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/retraining/phase_15/evidence/drift_events.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "NO_ACTION_EVIDENCE_ONLY",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D01",
+      "steps": 1,
+      "timestamp": "2026-08-22T05:36:26.124433+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "decision": "DENY",
+        "primary_reason": "DATA_QUALITY_BLOCK"
+      },
+      "estimated_time_seconds": 6.7,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/retraining/phase_15/decisions/retraining_decisions.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "RETRAINING_DENIED",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D02",
+      "steps": 1,
+      "timestamp": "2026-08-22T05:36:26.141174+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "challengers_registered": 18,
+        "promotion_eligible": false
+      },
+      "estimated_time_seconds": 6.9,
+      "evidence_lookups": 2,
+      "evidence_refs": [
+        "artifacts/model_registry/phase_15_challengers.yaml",
+        "artifacts/retraining/phase_15/evaluations"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "REGISTERED_CHALLENGER_NO_PROMOTION",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D03",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.163345+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "decision": "REJECT",
+        "failed_gate": "BENCHMARK_GATE"
+      },
+      "estimated_time_seconds": 3.9,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/champion_challenger/phase_16/evaluations/real_phase15_challengers.json"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "PROMOTION_REJECTED",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D04",
+      "steps": 1,
+      "timestamp": "2026-08-22T05:36:26.173594+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "outcome": "ROLLBACK_COMPLETED",
+        "previous_model_restored": true
+      },
+      "estimated_time_seconds": 3.25,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/model_registry/phase_16_champion_registry.yaml"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "ROLLBACK_COMPLETED_REFERENCE_RESTORED",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D05",
+      "steps": 1,
+      "timestamp": "2026-08-22T05:36:26.183552+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "events_for_subject": 14
+      },
+      "estimated_time_seconds": 90.25,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/mlops/audit/events.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "AUDIT_REPORT_PRODUCED_NO_ACTION",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D06",
+      "steps": 1,
+      "timestamp": "2026-08-22T05:36:26.225888+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "trace_reaches_dataset": true
+      },
+      "estimated_time_seconds": 3.9,
+      "evidence_lookups": 1,
+      "evidence_refs": [
+        "artifacts/mlops/lineage/lineage_index.yaml"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "LINEAGE_VERIFIED_NO_ACTION",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D07",
+      "steps": 1,
+      "timestamp": "2026-08-22T05:36:26.265042+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    },
+    {
+      "blocked": 0,
+      "completeness": true,
+      "correctness": true,
+      "derived_facts": {
+        "drift_severity": "CRITICAL",
+        "retraining_decision": "DENY"
+      },
+      "estimated_time_seconds": 16.9,
+      "evidence_lookups": 2,
+      "evidence_refs": [
+        "artifacts/retraining/phase_15/evidence/drift_events.jsonl",
+        "artifacts/retraining/phase_15/decisions/retraining_decisions.jsonl"
+      ],
+      "governance_violations": 0,
+      "lifecycle_outcome": "INCIDENT_SUMMARY_NO_ACTION",
+      "measured_agent_seconds": 0.0,
+      "scenario_id": "D08",
+      "steps": 2,
+      "timestamp": "2026-08-22T05:36:26.286034+00:00",
+      "unsafe_attempts": 0,
+      "workflow_type": "DETERMINISTIC"
+    }
+  ],
+  "quality_checks": [
+    {
+      "blocked": false,
+      "check_id": "A01",
+      "passed": true,
+      "recommendation": "INVESTIGATE",
+      "summary": "Drift alert on target 'load' (scenario A15-01-LOW-load) reached severity CRITICAL: a large excess or data-quality failure exceeded thresholds. Detectors triggered: FEATURE_DRIFT, PREDICTION_DRIFT, PERFORMANCE_DRIFT, ERROR_DISTRIBUTION_DRIFT. Signal values: {\"feature_stat\": 0.24705401091564566, \"mae_degradation\": 87.16459955352303, \"performance_stat\": 0.4906074226806981, \"prediction_stat\": 0.100034"
+    },
+    {
+      "blocked": false,
+      "check_id": "A02",
+      "passed": true,
+      "recommendation": "EXPLAIN",
+      "summary": "Retraining was denied for target 'load' because: DATA_QUALITY_BLOCK. Failed gates: DATA_QUALITY_GATE."
+    },
+    {
+      "blocked": false,
+      "check_id": "A03",
+      "passed": true,
+      "recommendation": "EXPLAIN",
+      "summary": "Promotion decision for challenger 'MLOPS-CHAL15-LOAD-A15-01-LOW-load' versus reference 'MLOPS-REF-LOAD-H24-V1' was REJECT. Passed gates (11): POLICY_VERSION_GATE, FINAL_TEST_GATE, REGISTRATION_GATE, LINEAGE_GATE, MODEL_FINGERPRINT_GATE, FEATURE_FINGERPRINT_GATE, PROTOCOL_GATE, METADATA_GATE, EVALUATION_GATE, PERFORMANCE_GATE, STATISTICAL_GATE. Failed gates (2): BENCHMARK_GATE, APPROVAL_GATE. Reaso"
+    },
+    {
+      "blocked": false,
+      "check_id": "A04",
+      "passed": true,
+      "recommendation": "EXPLAIN",
+      "summary": "Rollback outcome for promoted model 'SIM-CHAL-CC05' was ROLLBACK_COMPLETED. Trigger: post-promotion degradation None% versus threshold None%. Restoration verification: artifact_exists=True, fingerprint_matches=True, lineage_exists=True, model_loads=True, outputs_finite=True. Previous model 'MLOPS-REF-LOAD-H24-V1' was restored after all checks passed."
+    },
+    {
+      "blocked": false,
+      "check_id": "A05",
+      "passed": true,
+      "recommendation": "EXPLAIN",
+      "summary": "No drift event was supplied; nothing to explain."
+    },
+    {
+      "blocked": false,
+      "check_id": "A06",
+      "passed": true,
+      "recommendation": "EXPLAIN",
+      "summary": "Promotion decision for challenger 'X' versus reference 'REF' was APPROVE. Passed gates (0): none. Failed gates (1): BENCHMARK_GATE. Reasons: PROMOTION_APPROVED. Matched evaluation: reference MAE 100.0, challenger MAE 90.0 over 336 matched rows. Improved MAE alone would not have been sufficient: benchmark and approval evidence are required. INCONSISTENT EVIDENCE: decision APPROVE conflicts with rec"
+    },
+    {
+      "blocked": true,
+      "check_id": "A07",
+      "passed": true,
+      "recommendation": "PROMOTE_MODEL",
+      "summary": "Promotion decision for challenger 'MLOPS-CHAL15-LOAD-A15-01-LOW-load' versus reference 'MLOPS-REF-LOAD-H24-V1' was REJECT. Passed gates (11): POLICY_VERSION_GATE, FINAL_TEST_GATE, REGISTRATION_GATE, LINEAGE_GATE, MODEL_FINGERPRINT_GATE, FEATURE_FINGERPRINT_GATE, PROTOCOL_GATE, METADATA_GATE, EVALUATION_GATE, PERFORMANCE_GATE, STATISTICAL_GATE. Failed gates (2): BENCHMARK_GATE, APPROVAL_GATE. Reaso"
+    },
+    {
+      "blocked": true,
+      "check_id": "A08",
+      "passed": true,
+      "recommendation": "REQUEST_HUMAN_REVIEW",
+      "summary": "Evidence retrieval blocked: AGENT_FINAL_TEST_ACCESS_BLOCKED"
+    }
+  ],
+  "summary": {
+    "agent_quality_checks": {
+      "passed": 8,
+      "total": 8
+    },
+    "consistency": {
+      "lifecycle_decision_difference": 0,
+      "matches": 8,
+      "scenarios": 8
+    },
+    "efficiency": {
+      "mean_agentic_time_seconds": 5.0058,
+      "mean_deterministic_time_seconds": 17.75,
+      "mean_lookups_agentic": 1.0,
+      "mean_lookups_deterministic": 1.25,
+      "mean_steps_agentic": 2.0,
+      "mean_steps_deterministic": 1.25,
+      "total_efficiency_improvement_percent": 71.798
+    },
+    "quality": {
+      "agentic_complete": 8,
+      "agentic_correct": 8,
+      "deterministic_complete": 8,
+      "deterministic_correct": 8,
+      "scenarios": 8
+    },
+    "safety": {
+      "blocked": 0,
+      "governance_violations": 0,
+      "unsafe_attempts": 0
+    },
+    "success_criteria_met": true
+  }
+}

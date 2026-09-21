@@ -1,0 +1,31 @@
+{
+  "target": "pv",
+  "horizon": 24,
+  "model_family": "MLP",
+  "framework": "pytorch",
+  "implementation_id": "PYTORCH_MLP_V1",
+  "study_id": "phase09-pv-pytorch-mlp-v1-recovery",
+  "selected_trial_id": 0,
+  "search_MAE": 224.26440048217773,
+  "per_fold_F01_F04_MAE": [
+    231.04086303710938,
+    209.2642364501953,
+    218.77232360839844,
+    237.9801788330078
+  ],
+  "hyperparameters": {
+    "hidden_width": 68,
+    "dropout": 0.3802857225639665,
+    "learning_rate": 0.0017524101118128151,
+    "weight_decay": 3.90796715682288e-05
+  },
+  "feature_set": "combined_v1",
+  "input_representation": "Phase 8 tabular",
+  "feature_scaling_policy": "training-fold StandardScaler",
+  "target_scaling_policy": "training-fold StandardScaler",
+  "training_loss": "MSELoss",
+  "optimizer_family": "Adam",
+  "inner_early_stopping_policy": "chronological inner tail; restore best",
+  "phase_9_protocol_checksum": "db08e2b24047a3592939723664bc437655dda006e49c0227e3f6a4828241938d",
+  "final_test_accessed": false
+}

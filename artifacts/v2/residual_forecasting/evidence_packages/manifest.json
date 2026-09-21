@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-05T10:58:10.031430+00:00",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "evidence_paths": [
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_constant_bias_system_load\\evidence.json",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_ridge_system_load\\evidence.json",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_hgb_system_load\\evidence.json",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_constant_bias_wind\\evidence.json",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_ridge_wind\\evidence.json",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_hgb_wind\\evidence.json",
+    "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\v2\\residual_forecasting\\evidence_packages\\residual_no_research_pv\\evidence.json"
+  ],
+  "n_evidence_packages": 7,
+  "notes": "Research classifications only. No field in any evidence package represents a lifecycle decision. The Stage 10 report (reports/productization/stage_10_completion.md) is the human-readable summary; the evidence packages are the machine-readable record.",
+  "stage": "10",
+  "training_window": {
+    "end": "2020-08-31T23:00:00",
+    "start": "2020-01-01T00:00:00"
+  },
+  "validation_window": {
+    "end": "2020-10-31T23:00:00",
+    "start": "2020-09-01T00:00:00"
+  }
+}

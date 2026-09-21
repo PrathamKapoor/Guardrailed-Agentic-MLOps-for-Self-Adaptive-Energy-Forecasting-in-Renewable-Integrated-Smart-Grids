@@ -1,0 +1,184 @@
+{
+  "scenarios": [
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-LOW-load",
+      "target": "load"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-LOW-wind",
+      "target": "wind"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-LOW-pv",
+      "target": "pv"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-MEDIUM-load",
+      "target": "load"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-MEDIUM-wind",
+      "target": "wind"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-MEDIUM-pv",
+      "target": "pv"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-HIGH-load",
+      "target": "load"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-HIGH-wind",
+      "target": "wind"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-01-HIGH-pv",
+      "target": "pv"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-LOW-load",
+      "target": "load"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-LOW-wind",
+      "target": "wind"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-LOW-pv",
+      "target": "pv"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-MEDIUM-load",
+      "target": "load"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-MEDIUM-wind",
+      "target": "wind"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-MEDIUM-pv",
+      "target": "pv"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-HIGH-load",
+      "target": "load"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-HIGH-wind",
+      "target": "wind"
+    },
+    {
+      "cached": true,
+      "challenger_id": null,
+      "decision": "ALLOW",
+      "reason_codes": [
+        "DUPLICATE_REQUEST"
+      ],
+      "scenario_id": "A15-02-HIGH-pv",
+      "target": "pv"
+    }
+  ]
+}

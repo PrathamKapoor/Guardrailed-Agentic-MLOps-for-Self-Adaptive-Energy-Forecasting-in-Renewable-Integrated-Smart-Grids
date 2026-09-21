@@ -1,0 +1,245 @@
+{
+  "ablation_specs": [
+    {
+      "ablation_id": "A_rts_only",
+      "description": "[day_ahead] only \u2014 pure baseline. Tests whether any model at all is needed.",
+      "include_constant_bias": false,
+      "use_calendar": false,
+      "use_day_ahead": true,
+      "use_lags": false
+    },
+    {
+      "ablation_id": "B_rts_plus_constant_bias",
+      "description": "[day_ahead] + constant bias (no trainable parameters). This is the deterministic Stage 10B baseline.",
+      "include_constant_bias": true,
+      "use_calendar": false,
+      "use_day_ahead": true,
+      "use_lags": false
+    },
+    {
+      "ablation_id": "C_rts_plus_lag",
+      "description": "[day_ahead, lag_1, lag_24, lag_168] \u2014 does lag structure alone add value?",
+      "include_constant_bias": false,
+      "use_calendar": false,
+      "use_day_ahead": true,
+      "use_lags": true
+    },
+    {
+      "ablation_id": "D_rts_plus_calendar",
+      "description": "[day_ahead, hour, dow, doy] \u2014 does calendar alone add value?",
+      "include_constant_bias": false,
+      "use_calendar": true,
+      "use_day_ahead": true,
+      "use_lags": false
+    },
+    {
+      "ablation_id": "E_lag_only",
+      "description": "[lag_1, lag_24, lag_168] only \u2014 pure lag model with no day_ahead value.",
+      "include_constant_bias": false,
+      "use_calendar": false,
+      "use_day_ahead": false,
+      "use_lags": true
+    },
+    {
+      "ablation_id": "F_calendar_only",
+      "description": "[hour, dow, doy] only \u2014 pure calendar model with no day_ahead value.",
+      "include_constant_bias": false,
+      "use_calendar": true,
+      "use_day_ahead": false,
+      "use_lags": false
+    },
+    {
+      "ablation_id": "G_full",
+      "description": "All 10 features (Stage 10 default).",
+      "include_constant_bias": false,
+      "use_calendar": true,
+      "use_day_ahead": true,
+      "use_lags": true
+    }
+  ],
+  "created_at": "2026-09-19T16:07:02.398878+00:00",
+  "folds": [
+    {
+      "A_baseline_MAE": 162.97412893447583,
+      "B_constant_bias_MAE": 42.27468722108452,
+      "C_rts_plus_lag_MAE": 5.51576076143233,
+      "D_rts_plus_calendar_MAE": 6.773758230999351,
+      "E_lag_only_MAE": 6.022373738789439,
+      "F_calendar_only_MAE": 20.911319641113682,
+      "G_full_MAE": 4.1024382217481055,
+      "fold_id": "F-Aug",
+      "path": "research_validation\\ablation_results\\F-Aug_system_load.json",
+      "target": "system_load"
+    },
+    {
+      "A_baseline_MAE": 201.62820340501793,
+      "B_constant_bias_MAE": 228.33190519373207,
+      "C_rts_plus_lag_MAE": 102.90763055529656,
+      "D_rts_plus_calendar_MAE": 227.26823962607827,
+      "E_lag_only_MAE": 100.156017217887,
+      "F_calendar_only_MAE": 216.54934296601093,
+      "G_full_MAE": 102.00336925352197,
+      "fold_id": "F-Aug",
+      "path": "research_validation\\ablation_results\\F-Aug_wind.json",
+      "target": "wind"
+    },
+    {
+      "A_baseline_MAE": 45.65286738351254,
+      "B_constant_bias_MAE": 58.674342851839235,
+      "C_rts_plus_lag_MAE": 30.759564017424214,
+      "D_rts_plus_calendar_MAE": 57.46238074284345,
+      "E_lag_only_MAE": 29.338738441699764,
+      "F_calendar_only_MAE": 54.898805677508165,
+      "G_full_MAE": 31.917136472330032,
+      "fold_id": "F-Aug",
+      "path": "research_validation\\ablation_results\\F-Aug_pv.json",
+      "target": "pv"
+    },
+    {
+      "A_baseline_MAE": 141.99165387079864,
+      "B_constant_bias_MAE": 28.55996253655091,
+      "C_rts_plus_lag_MAE": 4.347368339694904,
+      "D_rts_plus_calendar_MAE": 5.2272607740548285,
+      "E_lag_only_MAE": 5.1265955021273975,
+      "F_calendar_only_MAE": 26.920067288600794,
+      "G_full_MAE": 3.055270277690355,
+      "fold_id": "F-Sep",
+      "path": "research_validation\\ablation_results\\F-Sep_system_load.json",
+      "target": "system_load"
+    },
+    {
+      "A_baseline_MAE": 231.64319444444445,
+      "B_constant_bias_MAE": 252.6992720903537,
+      "C_rts_plus_lag_MAE": 110.1692490727208,
+      "D_rts_plus_calendar_MAE": 285.37548154003673,
+      "E_lag_only_MAE": 106.80263278814594,
+      "F_calendar_only_MAE": 238.3739012825251,
+      "G_full_MAE": 113.23571284103447,
+      "fold_id": "F-Sep",
+      "path": "research_validation\\ablation_results\\F-Sep_wind.json",
+      "target": "wind"
+    },
+    {
+      "A_baseline_MAE": 44.29530092592592,
+      "B_constant_bias_MAE": 54.81445139363237,
+      "C_rts_plus_lag_MAE": 30.141322853525203,
+      "D_rts_plus_calendar_MAE": 53.25205302841873,
+      "E_lag_only_MAE": 28.454682696918542,
+      "F_calendar_only_MAE": 52.27128650582008,
+      "G_full_MAE": 30.623909011637938,
+      "fold_id": "F-Sep",
+      "path": "research_validation\\ablation_results\\F-Sep_pv.json",
+      "target": "pv"
+    },
+    {
+      "A_baseline_MAE": 111.73055368593191,
+      "B_constant_bias_MAE": 23.71523722178784,
+      "C_rts_plus_lag_MAE": 2.8400015965395204,
+      "D_rts_plus_calendar_MAE": 4.4396896566829085,
+      "E_lag_only_MAE": 3.379020845192681,
+      "F_calendar_only_MAE": 29.932106708457194,
+      "G_full_MAE": 2.087760389543343,
+      "fold_id": "F-Oct",
+      "path": "research_validation\\ablation_results\\F-Oct_system_load.json",
+      "target": "system_load"
+    },
+    {
+      "A_baseline_MAE": 305.1628696236559,
+      "B_constant_bias_MAE": 318.13872273810927,
+      "C_rts_plus_lag_MAE": 112.05079140228376,
+      "D_rts_plus_calendar_MAE": 320.61768256772854,
+      "E_lag_only_MAE": 113.16092159153128,
+      "F_calendar_only_MAE": 303.9196995150553,
+      "G_full_MAE": 116.7626061930897,
+      "fold_id": "F-Oct",
+      "path": "research_validation\\ablation_results\\F-Oct_wind.json",
+      "target": "wind"
+    },
+    {
+      "A_baseline_MAE": 53.15042562724015,
+      "B_constant_bias_MAE": 61.24568296847885,
+      "C_rts_plus_lag_MAE": 37.71848292537538,
+      "D_rts_plus_calendar_MAE": 58.22924193134203,
+      "E_lag_only_MAE": 35.98594855943397,
+      "F_calendar_only_MAE": 62.766102042397094,
+      "G_full_MAE": 38.35003015670337,
+      "fold_id": "F-Oct",
+      "path": "research_validation\\ablation_results\\F-Oct_pv.json",
+      "target": "pv"
+    },
+    {
+      "A_baseline_MAE": 98.29375485401617,
+      "B_constant_bias_MAE": 28.32080905451627,
+      "C_rts_plus_lag_MAE": 2.8209869621997,
+      "D_rts_plus_calendar_MAE": 4.052643484548294,
+      "E_lag_only_MAE": 2.3450649828431462,
+      "F_calendar_only_MAE": 15.059296236838703,
+      "G_full_MAE": 2.4428066598595946,
+      "fold_id": "F-Nov",
+      "path": "research_validation\\ablation_results\\F-Nov_system_load.json",
+      "target": "system_load"
+    },
+    {
+      "A_baseline_MAE": 320.4550115740741,
+      "B_constant_bias_MAE": 320.7141587419045,
+      "C_rts_plus_lag_MAE": 167.51814765837378,
+      "D_rts_plus_calendar_MAE": 360.1941318363193,
+      "E_lag_only_MAE": 160.4863510741348,
+      "F_calendar_only_MAE": 326.3208280911774,
+      "G_full_MAE": 168.15872274586712,
+      "fold_id": "F-Nov",
+      "path": "research_validation\\ablation_results\\F-Nov_wind.json",
+      "target": "wind"
+    },
+    {
+      "A_baseline_MAE": 49.63689814814815,
+      "B_constant_bias_MAE": 58.85053033292855,
+      "C_rts_plus_lag_MAE": 29.224901396762206,
+      "D_rts_plus_calendar_MAE": 60.10991382443026,
+      "E_lag_only_MAE": 28.115805810571963,
+      "F_calendar_only_MAE": 58.91110415053753,
+      "G_full_MAE": 30.40188587237431,
+      "fold_id": "F-Nov",
+      "path": "research_validation\\ablation_results\\F-Nov_pv.json",
+      "target": "pv"
+    },
+    {
+      "A_baseline_MAE": 103.89904095670926,
+      "B_constant_bias_MAE": 20.54674585901501,
+      "C_rts_plus_lag_MAE": 3.316937268196822,
+      "D_rts_plus_calendar_MAE": 4.332772310713943,
+      "E_lag_only_MAE": 2.8727146638919683,
+      "F_calendar_only_MAE": 18.093936676316606,
+      "G_full_MAE": 3.4407951789368667,
+      "fold_id": "F-Dec",
+      "path": "research_validation\\ablation_results\\F-Dec_system_load.json",
+      "target": "system_load"
+    },
+    {
+      "A_baseline_MAE": 341.7994063620072,
+      "B_constant_bias_MAE": 334.9999091042324,
+      "C_rts_plus_lag_MAE": 134.27055779913496,
+      "D_rts_plus_calendar_MAE": 428.4602099130059,
+      "E_lag_only_MAE": 129.50901103275623,
+      "F_calendar_only_MAE": 364.0011875882019,
+      "G_full_MAE": 146.0822656365496,
+      "fold_id": "F-Dec",
+      "path": "research_validation\\ablation_results\\F-Dec_wind.json",
+      "target": "wind"
+    },
+    {
+      "A_baseline_MAE": 52.76826836917563,
+      "B_constant_bias_MAE": 61.66383413354374,
+      "C_rts_plus_lag_MAE": 36.174259138067264,
+      "D_rts_plus_calendar_MAE": 63.87454877149784,
+      "E_lag_only_MAE": 34.56392304513853,
+      "F_calendar_only_MAE": 63.587898412410844,
+      "G_full_MAE": 36.65256832813529,
+      "fold_id": "F-Dec",
+      "path": "research_validation\\ablation_results\\F-Dec_pv.json",
+      "target": "pv"
+    }
+  ],
+  "n_folds": 5,
+  "schema": "stage_11_feature_ablation_v1"
+}

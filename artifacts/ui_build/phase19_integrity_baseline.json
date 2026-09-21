@@ -1,0 +1,84 @@
+{
+  "artifacts/research_tables/final_predictions.csv": {
+    "sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+    "size": 891072
+  },
+  "artifacts/research_tables/final_forecasting_results.csv": {
+    "sha256": "ac6233fd094ac94bc881d4cb32e219b6b349caf030c13aaf20f43ccdd683d0de",
+    "size": 1158
+  },
+  "artifacts/research_tables/final_model_comparison.csv": {
+    "sha256": "9822f24b3c612181428495932fca6e9531b805227de86cb8a4b2ee100ccf3959",
+    "size": 354
+  },
+  "artifacts/audit/phase_19_final_execution_audit.json": {
+    "sha256": "36969ac38510f2cde1b578d866d2f6565925a8f58def7a97d76f284373c459f3",
+    "size": 5810
+  },
+  "artifacts/mlops/lineage/final_evaluation_lineage_report.md": {
+    "sha256": "ca8f341512a7dbf5305a10a453c466830931bbf6b0737c0ab71b8a19db43c1c1",
+    "size": 2767
+  },
+  "artifacts/research_figures/phase_19/final_model_performance_comparison.png": {
+    "sha256": "dcaa09ad76871e8e27d108c9b79ebeb89e6c2107ac123997cdd997eac2778910",
+    "size": 39273
+  },
+  "artifacts/research_figures/phase_19/final_error_distribution.png": {
+    "sha256": "7e06bf24072de3af0999268808b8d1ec9311e0b7322a9303ae14e919bcf20f1c",
+    "size": 44371
+  },
+  "artifacts/research_figures/phase_19/forecast_vs_actual_plots.png": {
+    "sha256": "e31e3461d1b7a5ff140624cb8ad2c50d1eafc54d29d51b69e6a6189c17ce3919",
+    "size": 265155
+  },
+  "artifacts/research_figures/phase_19/system_architecture_final.svg": {
+    "sha256": "a2c0d37c99327c2adf82cfd97e002b5782984a2325282416e18d5e933a6bd814",
+    "size": 3231
+  },
+  "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml": {
+    "sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+    "size": 5244
+  },
+  "artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml": {
+    "sha256": "92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257",
+    "size": 2287
+  },
+  "artifacts/experimental_design/final_test_comparison_plan.yaml": {
+    "sha256": "afb77163ce92fe478e33397bcf14e506f5d8f4194f8b4a4909753ff46234d046",
+    "size": 2936
+  },
+  "artifacts/model_registry/lifecycle_registry.yaml": {
+    "sha256": "e4f7aa90de82533a500d77e8f9a50b268f16e6f9f76b3248035712be0ce3b632",
+    "size": 8932
+  },
+  "artifacts/model_registry/forecasting_reference_registry.yaml": {
+    "sha256": "b0f441554b24528d8d0905dad97f5cf7ce86ff1441a3fc6436b5499008b54b65",
+    "size": 2473
+  },
+  "config/governance/phase_13_policy.yaml": {
+    "sha256": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "size": 2049
+  },
+  "config/retraining/phase_15_policy.yaml": {
+    "sha256": "28a05242ab56efb90e82a004e657610b04f9ad35d3756e304bab2429798bc03e",
+    "size": 3919
+  },
+  "config/governance/phase_16_promotion_policy.yaml": {
+    "sha256": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+    "size": 2787
+  },
+  "reports/phase_19_completion.md": {
+    "sha256": "dafc44674686d0e7610fb4c85b4cc300c6f0637955b2f3c74c497e8e4761b684",
+    "size": 7994
+  },
+  "src/smartgrid_mlops/agents/schemas.py": {
+    "sha256": "79efd452ebf7117ca37e35eb19de1f22b9ce028c03fde1aab7cc493c39671f89",
+    "size": 3010
+  },
+  "src/smartgrid_mlops/agents/firewall.py": {
+    "sha256": "2743ff6a82b7d7716d8f557d3de884c47372748abf904def79fc89ffbadc6451",
+    "size": 1561
+  },
+  "captured_at": "2026-08-28T00:00:00Z",
+  "phase_19_protocol_freeze_sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5"
+}

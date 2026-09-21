@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-09-19T14:32:55.263834+00:00",
+  "missing_evidence_intersection": [
+    "benchmark_gate",
+    "feature_spec_fingerprint",
+    "model_spec_fingerprint",
+    "statistical_evidence"
+  ],
+  "missing_evidence_per_candidate": [
+    {
+      "candidate_id": "residual_constant_bias_system_load",
+      "context_dependent": [
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    },
+    {
+      "candidate_id": "residual_constant_bias_wind",
+      "context_dependent": [
+        "evidence_status",
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    },
+    {
+      "candidate_id": "residual_hgb_system_load",
+      "context_dependent": [
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    },
+    {
+      "candidate_id": "residual_hgb_wind",
+      "context_dependent": [
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    },
+    {
+      "candidate_id": "residual_no_research_pv",
+      "context_dependent": [
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    },
+    {
+      "candidate_id": "residual_ridge_system_load",
+      "context_dependent": [
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    },
+    {
+      "candidate_id": "residual_ridge_wind",
+      "context_dependent": [
+        "protocol_hash"
+      ],
+      "missing": [
+        "model_spec_fingerprint",
+        "feature_spec_fingerprint",
+        "benchmark_gate",
+        "statistical_evidence"
+      ],
+      "negative": []
+    }
+  ],
+  "schema": "stage_12_evidence_gaps_v1"
+}

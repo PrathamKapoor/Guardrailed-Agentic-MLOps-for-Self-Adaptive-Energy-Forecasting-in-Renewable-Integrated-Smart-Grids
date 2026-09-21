@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "run_id": "beaeb1028a554cf9bee718463d16bf18",
+  "tracking_origin": "NATIVE_MLFLOW",
+  "evidence_status": "NON_EVIDENCE_SMOKE",
+  "excluded_from_official_aggregation": true,
+  "metric_logged": true,
+  "query_pass": true,
+  "lineage_link": "phase12-native-smoke-v1",
+  "final_test_data_used": false
+}

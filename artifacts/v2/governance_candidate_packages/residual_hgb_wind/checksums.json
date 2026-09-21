@@ -1,0 +1,16 @@
+{
+  "aggregate_package_sha256": "adc5b696af2bfdc5de28b7f5cdcdf7790ab5030175391f6154c5cde0623f2512",
+  "candidate_id": "residual_hgb_wind",
+  "file_hashes_sha256": {
+    "benchmark_evaluation.json": "0714098755b07c6aecccc96f674d03877445a31afa53551de83f57579527c91e",
+    "candidate_manifest.json": "00343a1ec2d38a994108bb8b33f6acf2d0e1cf4550772bb5ea4d36448b540362",
+    "data_split_manifest.json": "cc02266cf4f6ae73ae9fb6573ae8a7129dab8bb72af7a53b2957c77954929606",
+    "feature_spec.json": "a05fcbdce91fb13d1049660b6de9505adb74d0b263673b0c789e0685051566ea",
+    "model_spec.json": "faf275ad6bab9f23317626f719025d138684dee2b6e01022d13bfc90a458258d",
+    "protocol_compatibility.json": "bd4e44f74aea264d39744f27e35f7a96e446b1f31a03defc8b40097423effe24",
+    "reproducibility_manifest.json": "f3effca3c2560f6ad22dcfee93e9ab707f9820db46bba28aafd04f77f30d3144"
+  },
+  "generated_at": "2026-09-19T14:32:57.528258+00:00",
+  "package_root": "artifacts\\v2\\governance_candidate_packages\\residual_hgb_wind",
+  "schema": "stage_13_checksums_v1"
+}

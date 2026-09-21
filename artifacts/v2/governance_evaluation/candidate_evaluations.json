@@ -1,0 +1,1215 @@
+[
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.229067+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:1ae5fb121102ee0d2303d795f35a212b27c4f31f92850e0572890134d50069bc",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_constant_bias_system_load/evidence.json"
+    ],
+    "explanation": "DENY: The candidate model specification does not match its frozen fingerprint.",
+    "failed_gates": [
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Official evidence is VALID.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_constant_bias_system_load",
+    "target": "system_load",
+    "verified_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  },
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 result is a numerical improvement below the 1% MAE meaningful threshold.",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.233985+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:b4b1fea30daa03fdcf75de3a591b5eaf1fd81af2ad1e676372a353bae1dfc8ad",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_constant_bias_wind/evidence.json"
+    ],
+    "explanation": "DENY: Evidence is invalidated or audit-only and cannot support official lifecycle eligibility.",
+    "failed_gates": [
+      "EVIDENCE_VALIDITY_GATE",
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Evidence is invalidated, audit-only, or not an official candidate.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": false,
+        "reason_code": "EVIDENCE_INVALID"
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "EVIDENCE_INVALID",
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_constant_bias_wind",
+    "target": "wind",
+    "verified_evidence": [
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  },
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.239740+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:630949a59373728b165b9943802816345ae919c8df6655adad9c31a79f1a56e7",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_hgb_system_load/evidence.json"
+    ],
+    "explanation": "DENY: The candidate model specification does not match its frozen fingerprint.",
+    "failed_gates": [
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Official evidence is VALID.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_hgb_system_load",
+    "target": "system_load",
+    "verified_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  },
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.245097+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:1240db1c914a0de4c72d84c28e60283f57c4ccd0e14993a2ccddf0dccc87f3d8",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_hgb_wind/evidence.json"
+    ],
+    "explanation": "DENY: The candidate model specification does not match its frozen fingerprint.",
+    "failed_gates": [
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Official evidence is VALID.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_hgb_wind",
+    "target": "wind",
+    "verified_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  },
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.251070+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:5b054b1f96efd3a422773a3c33ee2e7205215c68408dd81ee695b9eb9c1c662a",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_no_research_pv/evidence.json"
+    ],
+    "explanation": "DENY: The candidate model specification does not match its frozen fingerprint.",
+    "failed_gates": [
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Official evidence is VALID.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_no_research_pv",
+    "target": "pv",
+    "verified_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 concluded NO_RESEARCH_REQUIRED: frozen finaltest remains the reference.",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  },
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.258180+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:2a968ea9b3a659a342616c32a0e4e0dd582ab1f5610bdfcda3e2385ad339e7d7",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_ridge_system_load/evidence.json"
+    ],
+    "explanation": "DENY: The candidate model specification does not match its frozen fingerprint.",
+    "failed_gates": [
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Official evidence is VALID.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_ridge_system_load",
+    "target": "system_load",
+    "verified_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  },
+  {
+    "actor_type": "SYSTEM",
+    "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+    "champion_state_changed": false,
+    "context_dependent_evidence": [
+      {
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      }
+    ],
+    "created_at": "2026-09-19T14:32:55.263745+00:00",
+    "current_state": "EXPERIMENTAL",
+    "decision": "DENY",
+    "decision_content_fingerprint": "governance-decision-v1:sha256:ae4628abca3d1377c96e35c896f2030d317ecc781a69dfdbcb79b0d4375702e4",
+    "evidence_refs": [
+      "artifacts/v2/residual_forecasting/evidence_packages/residual_ridge_wind/evidence.json"
+    ],
+    "explanation": "DENY: The candidate model specification does not match its frozen fingerprint.",
+    "failed_gates": [
+      "MODEL_SPEC_FINGERPRINT_GATE",
+      "FEATURE_SPEC_FINGERPRINT_GATE",
+      "PROTOCOL_COMPATIBILITY_GATE"
+    ],
+    "gate_results": [
+      {
+        "explanation": "Policy identity matches.",
+        "gate": "POLICY_VERSION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No final-test or integrity-audit access requested.",
+        "gate": "FINAL_TEST_POLICY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Official evidence is VALID.",
+        "gate": "EVIDENCE_VALIDITY_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Required lineage is complete.",
+        "gate": "LINEAGE_COMPLETENESS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Actual model fingerprint differs from the frozen specification.",
+        "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "MODEL_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Actual feature fingerprint differs from the frozen specification.",
+        "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+        "passed": false,
+        "reason_code": "FEATURE_SPEC_FINGERPRINT_MISMATCH"
+      },
+      {
+        "explanation": "Protocol hash is not accepted by the frozen policy.",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "passed": false,
+        "reason_code": "PROTOCOL_MISMATCH"
+      },
+      {
+        "explanation": "Reproducibility metadata is complete.",
+        "gate": "REPRODUCIBILITY_METADATA_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "No unresolved critical deviation affects eligibility.",
+        "gate": "DEVIATION_STATUS_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Development benchmark requirement is satisfied or not applicable.",
+        "gate": "BENCHMARK_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Statistical evidence policy is satisfied.",
+        "gate": "STATISTICAL_EVIDENCE_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Requested transition is defined by policy.",
+        "gate": "STATE_TRANSITION_GATE",
+        "passed": true,
+        "reason_code": null
+      },
+      {
+        "explanation": "Approval is not required for this transition.",
+        "gate": "APPROVAL_GATE",
+        "passed": true,
+        "reason_code": null
+      }
+    ],
+    "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+    "lifecycle_mutated": false,
+    "missing_evidence": [
+      {
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "where": "stage_11/fold_results"
+      }
+    ],
+    "negative_evidence": [],
+    "policy_changed": false,
+    "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+    "policy_version": "13.0.0",
+    "proposed_state": "VALIDATED",
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "reason_codes": [
+      "MODEL_SPEC_FINGERPRINT_MISMATCH",
+      "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+      "PROTOCOL_MISMATCH"
+    ],
+    "registration_state_changed": false,
+    "schema": "stage_12_governance_evaluation_v1",
+    "simulation": true,
+    "subject_id": "residual_ridge_wind",
+    "target": "wind",
+    "verified_evidence": [
+      {
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "where": "stage_10/evaluation_window"
+      }
+    ]
+  }
+]

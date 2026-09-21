@@ -1,0 +1,16 @@
+{
+  "deviation_id": "P9-DEV-002",
+  "artifact": "data/processed/features/load/h24/combined_v1.parquet",
+  "current_logical_content_sha256": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb",
+  "phase_07_feature_logical_identity": "PASS",
+  "phase_08_feature_logical_identity": "PASS",
+  "phase_09_feature_logical_identity": "PASS",
+  "did_any_experiment_use_logically_different_load_h24_combined_v1": "NO",
+  "evidence": {
+    "phase_07": "classical_experiment_manifest.yaml records feature_manifest_checksum 0e46baae741f41da7cfdad57c94d66881df368638412837a019e4f4c22b800ee, the pre-revision manifest byte hash; the named combined_v1 logical artifact is exactly reproduced by P9-DEV-002.",
+    "phase_08": "Phase 8 completion report identifies Phase 7 combined_v1 for the MLP; the neural runner reads the named artifact path. P9-DEV-002 proves that path's logical content is reproducible.",
+    "phase_09": "The corrected PyTorch HPO and post-HPO scripts read the named load/H24 combined_v1 artifact; current and two controlled rebuilds are exactly equal logically."
+  },
+  "final_test_integrity_audit_access": true,
+  "final_test_modeling_access": false
+}

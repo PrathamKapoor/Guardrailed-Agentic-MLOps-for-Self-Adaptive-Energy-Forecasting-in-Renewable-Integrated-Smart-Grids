@@ -1,0 +1,155 @@
+{
+  "artifacts_created": {
+    "figures_dir": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\research_figures\\phase_19",
+    "forecasting_results_csv": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\research_tables\\final_forecasting_results.csv",
+    "lineage_report": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\mlops\\lineage\\final_evaluation_lineage_report.md",
+    "metrics_csv": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\experiments\\final_evaluation\\phase_19\\official\\metrics\\final_test_metrics.csv",
+    "model_comparison_csv": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\research_tables\\final_model_comparison.csv",
+    "predictions_csv": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\research_tables\\final_predictions.csv",
+    "predictions_parquet": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\experiments\\final_evaluation\\phase_19\\official\\predictions\\final_test_predictions.parquet",
+    "summary_json": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\experiments\\final_evaluation\\phase_19\\official\\metrics\\summary.json"
+  },
+  "dataset_fingerprint": "data/processed/research_hourly_index.parquet sha256=d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00",
+  "execution_timestamp": "",
+  "feature_fingerprint_source": "phase_10 selected feature freeze (B_lags_only = [lag_1, lag_24, lag_168])",
+  "final_data_access_record": {
+    "FINAL_TEST_ACCESS": "YES",
+    "FINAL_TEST_FEATURE_SELECTION": "NO",
+    "FINAL_TEST_HPO": "NO",
+    "FINAL_TEST_MODEL_SELECTION": "NO",
+    "FINAL_TEST_RETRAINING": "NO",
+    "FINAL_TEST_TRAINING": "NO"
+  },
+  "final_test_window": {
+    "end": "2020-12-31T23:00:00",
+    "n_hours": 1464,
+    "start": "2020-11-01T00:00:00"
+  },
+  "governance_invariants": {
+    "challengers_created": 0,
+    "governance_state_changes": 0,
+    "model_promoted": 0,
+    "rollback_events": 0
+  },
+  "metrics_generated": {
+    "by_target_configuration": [
+      {
+        "MAE": 174.25681766080925,
+        "RMSE": 231.2707672558446,
+        "nMAE": 0.04735488297730689,
+        "nRMSE": 0.06284861772691251,
+        "sMAPE": 4.716616398112372,
+        "samples": 1464,
+        "target": "load_reference"
+      },
+      {
+        "MAE": 281.00082079372083,
+        "RMSE": 343.3594528816875,
+        "nMAE": 0.07636292894499791,
+        "nRMSE": 0.09330909934332678,
+        "sMAPE": 7.777090329737031,
+        "samples": 1464,
+        "target": "load_challenger"
+      },
+      {
+        "MAE": 101.14234287341759,
+        "RMSE": 101.84536371689018,
+        "nMAE": 0.027485775736730486,
+        "nRMSE": 0.02767682404244472,
+        "sMAPE": 2.716774332355368,
+        "samples": 1464,
+        "target": "load_baseline"
+      },
+      {
+        "MAE": 778.8412887248792,
+        "RMSE": 923.3732472043888,
+        "nMAE": 0.6789696191869805,
+        "nRMSE": 0.804968086692272,
+        "sMAPE": 92.39736347788356,
+        "samples": 1464,
+        "target": "wind_reference"
+      },
+      {
+        "MAE": 838.400689744515,
+        "RMSE": 957.930055019927,
+        "nMAE": 0.7308916531298826,
+        "nRMSE": 0.8350936372794108,
+        "sMAPE": 96.13051127521403,
+        "samples": 1464,
+        "target": "wind_challenger"
+      },
+      {
+        "MAE": 331.30216302367944,
+        "RMSE": 491.208264741478,
+        "nMAE": 0.28881892462620923,
+        "nRMSE": 0.4282200921821327,
+        "sMAPE": 50.91575566377123,
+        "samples": 1464,
+        "target": "wind_baseline"
+      },
+      {
+        "MAE": 36.1217634355897,
+        "RMSE": 82.07888348246736,
+        "nMAE": 0.10817435038655554,
+        "nRMSE": 0.24580278083604423,
+        "sMAPE": 117.73465533954827,
+        "samples": 1464,
+        "target": "pv_reference"
+      },
+      {
+        "MAE": 221.6398504361429,
+        "RMSE": 249.2717139933507,
+        "nMAE": 0.6637479613489882,
+        "nRMSE": 0.746497489776658,
+        "sMAPE": 135.46796741480225,
+        "samples": 1464,
+        "target": "pv_challenger"
+      },
+      {
+        "MAE": 39.0949852003643,
+        "RMSE": 100.6924076197019,
+        "nMAE": 0.11707829920769121,
+        "nRMSE": 0.30154496201554803,
+        "sMAPE": 7.862540615997038,
+        "samples": 1464,
+        "target": "pv_baseline"
+      }
+    ],
+    "holm_bonferroni": {
+      "FT-H1-LOAD": {
+        "holm_threshold": 0.025,
+        "p_value": 1.068687920828372e-09,
+        "reject_null_at_alpha": true
+      },
+      "FT-H1-PV": {
+        "holm_threshold": 0.05,
+        "p_value": 0.43750990526568767,
+        "reject_null_at_alpha": false
+      },
+      "FT-H1-WIND": {
+        "holm_threshold": 0.016666666666666666,
+        "p_value": 1.467123298380327e-15,
+        "reject_null_at_alpha": true
+      }
+    },
+    "primary": "MAE",
+    "secondary": [
+      "RMSE",
+      "sMAPE",
+      "nMAE",
+      "nRMSE"
+    ]
+  },
+  "model_fingerprints": {
+    "load": "P10-load-random_forest-B_lags_only",
+    "pv": "P10-pv-random_forest-B_lags_only",
+    "wind": "P10-wind-hist_gradient_boosting-B_lags_only"
+  },
+  "phase": "19",
+  "protocol_versions": {
+    "frozen_plan_sha256": "afb77163ce92fe478e33397bcf14e506f5d8f4194f8b4a4909753ff46234d046",
+    "phase_10_ablation_protocol_freeze_sha256": "92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257",
+    "phase_19_protocol_freeze_sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+    "phase_19_protocol_freeze_sidecar": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5"
+  }
+}

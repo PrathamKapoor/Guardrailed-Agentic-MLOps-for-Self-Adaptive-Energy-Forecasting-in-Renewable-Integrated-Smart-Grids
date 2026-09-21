@@ -1,0 +1,21 @@
+{
+  "evaluation_run_at": "2026-09-19T14:32:55.268986+00:00",
+  "schema": "stage_12_registry_state_proof_v1",
+  "v1_registry_hashes_after": {
+    "agent_firewall": "2743ff6a82b7d7716d8f557d3de884c47372748abf904def79fc89ffbadc6451",
+    "governance_engine": "324927d8fecd44e8d33828f4d4b364fce8b1e1b65b2463e5f8656ce4ec342521",
+    "model_registry_lifecycle": "e4f7aa90de82533a500d77e8f9a50b268f16e6f9f76b3248035712be0ce3b632",
+    "model_registry_research": "fb28bc801f722035856d0133d9d503eb5335f51111a5992c6048bc5fd2ecad51",
+    "phase_13_policy": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "phase_19_protocol_freeze": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5"
+  },
+  "v1_registry_hashes_before": {
+    "agent_firewall": "2743ff6a82b7d7716d8f557d3de884c47372748abf904def79fc89ffbadc6451",
+    "governance_engine": "324927d8fecd44e8d33828f4d4b364fce8b1e1b65b2463e5f8656ce4ec342521",
+    "model_registry_lifecycle": "e4f7aa90de82533a500d77e8f9a50b268f16e6f9f76b3248035712be0ce3b632",
+    "model_registry_research": "fb28bc801f722035856d0133d9d503eb5335f51111a5992c6048bc5fd2ecad51",
+    "phase_13_policy": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "phase_19_protocol_freeze": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5"
+  },
+  "v1_unchanged": true
+}

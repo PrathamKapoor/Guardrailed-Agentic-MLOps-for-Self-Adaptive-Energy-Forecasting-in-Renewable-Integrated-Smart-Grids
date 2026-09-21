@@ -1,0 +1,20 @@
+{
+  "artifact": "data\\processed\\features\\load\\h24\\combined_v1.parquet",
+  "audit_copy": "artifacts\\integrity\\phase_09\\p9_dev_002\\combined_v1_current.parquet",
+  "binary_sha256": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+  "file_size": 567414,
+  "modified_utc": "2026-08-14T04:59:34.202804+00:00",
+  "schema": "forecast_origin: timestamp[us]\ntarget_timestamp: timestamp[us]\nfeature_set_version: string\ntarget: double\nhour_sin: double\nhour_cos: double\ndow_sin: double\ndow_cos: double\ndoy_sin: double\ndoy_cos: double\nlag_1: double\nlag_24: double\nlag_168: double\nrolling_mean_24: double\nrolling_mean_168: double\nramp_1h: double",
+  "row_count": 8592,
+  "column_count": 16,
+  "row_group_count": 1,
+  "created_by": "parquet-cpp-arrow version 25.0.1",
+  "format_version": "2.6",
+  "serialized_size": 3360,
+  "key_value_metadata": {
+    "b'ARROW:schema'": "b'/////4gDAAAQAAAAAAAKAAwABgAFAAgACgAAAAABBAAMAAAACAAIAAAABAAIAAAABAAAABAAAAAYAwAAzAIAAJACAABgAgAALAIAAPgBAADIAQAAmAEAAGgBAAA4AQAACAEAANgAAACoAAAAcAAAADQAAAAEAAAAOP3//wAAAQMQAAAAGAAAAAQAAAAAAAAABwAAAHJhbXBfMWgAHv3//wAAAgBk/f//AAABAxAAAAAkAAAABAAAAAAAAAAQAAAAcm9sbGluZ19tZWFuXzE2OAAAAABW/f//AAACAJz9//8AAAEDEAAAACAAAAAEAAAAAAAAAA8AAAByb2xsaW5nX21lYW5fMjQAiv3//wAAAgDQ/f//AAABAxAAAAAYAAAABAAAAAAAAAAHAAAAbGFnXzE2OAC2/f//AAACAPz9//8AAAEDEAAAABgAAAAEAAAAAAAAAAYAAABsYWdfMjQAAOL9//8AAAIAKP7//wAAAQMQAAAAGAAAAAQAAAAAAAAABQAAAGxhZ18xAAAADv7//wAAAgBU/v//AAABAxAAAAAYAAAABAAAAAAAAAAHAAAAZG95X2NvcwA6/v//AAACAID+//8AAAEDEAAAABgAAAAEAAAAAAAAAAcAAABkb3lfc2luAGb+//8AAAIArP7//wAAAQMQAAAAGAAAAAQAAAAAAAAABwAAAGRvd19jb3MAkv7//wAAAgDY/v//AAABAxAAAAAYAAAABAAAAAAAAAAHAAAAZG93X3NpbgC+/v//AAACAAT///8AAAEDEAAAABwAAAAEAAAAAAAAAAgAAABob3VyX2NvcwAAAADu/v//AAACADT///8AAAEDEAAAABwAAAAEAAAAAAAAAAgAAABob3VyX3NpbgAAAAAe////AAACAGT///8AAAEDEAAAABgAAAAEAAAAAAAAAAYAAAB0YXJnZXQAAEr///8AAAIAkP///wAAAQUQAAAAKAAAAAQAAAAAAAAAEwAAAGZlYXR1cmVfc2V0X3ZlcnNpb24ABAAEAAQAAADI////AAABChAAAAAkAAAABAAAAAAAAAAQAAAAdGFyZ2V0X3RpbWVzdGFtcAAAAAC6////AAACABAAFAAIAAYABwAMAAAAEAAQAAAAAAABChAAAAAoAAAABAAAAAAAAAAPAAAAZm9yZWNhc3Rfb3JpZ2luAAAABgAIAAYABgAAAAAAAgAAAAAA'"
+  },
+  "compression_codecs": [
+    "ZSTD"
+  ]
+}

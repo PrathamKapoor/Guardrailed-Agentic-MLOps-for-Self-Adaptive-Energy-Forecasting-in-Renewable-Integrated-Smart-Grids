@@ -1,0 +1,1397 @@
+{
+  "run_id": "run-20260913T064517-03df44",
+  "dataset_id": "ui-1bc51b03df44",
+  "target": "load",
+  "model": "hist_gradient_boosting",
+  "created_at": "2026-09-13T06:45:17.638600+00:00",
+  "split": "chronological holdout: first 80% train / last 20% test, lags 1/24/168, no future leakage",
+  "metrics": {
+    "mae": 2.746602839825067,
+    "rmse": 3.462697215888374,
+    "benchmark_mae": 3.345709023941068,
+    "benchmark": "seasonal_naive_lag24",
+    "improvement_pct": 17.906703177979466,
+    "n_train": 2169,
+    "n_test": 543
+  },
+  "renewable": {
+    "available": true,
+    "renewable_share": 0.625,
+    "load_matching_ratio": 0.5649,
+    "surplus_hours": 740,
+    "correlation_load_renewable": -0.3786,
+    "note": "Descriptive ratios over 2880 hourly rows: sum of [wind, pv] vs 'load'. Offline research metrics — not a dispatch plan."
+  },
+  "advisory": [
+    {
+      "recommendation_type": "EXPLAIN",
+      "text": "Load-matching ratio is 56% (renewable share 63%); correlation with load is -0.38."
+    },
+    {
+      "recommendation_type": "CREATE_REPORT",
+      "text": "Create a report quantifying how much flexible demand would need to shift into renewable-surplus hours to raise the matching ratio by 5 points."
+    }
+  ],
+  "series": [
+    {
+      "timestamp": "2024-04-07 09:00:00",
+      "actual": 41.99,
+      "prediction": 40.434752585137645
+    },
+    {
+      "timestamp": "2024-04-07 11:00:00",
+      "actual": 51.79,
+      "prediction": 47.03918668622713
+    },
+    {
+      "timestamp": "2024-04-07 13:00:00",
+      "actual": 49.22,
+      "prediction": 52.87425763834462
+    },
+    {
+      "timestamp": "2024-04-07 15:00:00",
+      "actual": 66.43,
+      "prediction": 62.0650087887912
+    },
+    {
+      "timestamp": "2024-04-07 17:00:00",
+      "actual": 75.44,
+      "prediction": 74.58419971766318
+    },
+    {
+      "timestamp": "2024-04-07 19:00:00",
+      "actual": 78.72,
+      "prediction": 79.16316851067499
+    },
+    {
+      "timestamp": "2024-04-07 21:00:00",
+      "actual": 75.72,
+      "prediction": 80.99587356007642
+    },
+    {
+      "timestamp": "2024-04-07 23:00:00",
+      "actual": 73.29,
+      "prediction": 75.46325852088205
+    },
+    {
+      "timestamp": "2024-04-08 01:00:00",
+      "actual": 66.29,
+      "prediction": 66.60644950559934
+    },
+    {
+      "timestamp": "2024-04-08 03:00:00",
+      "actual": 49.29,
+      "prediction": 56.391037330203595
+    },
+    {
+      "timestamp": "2024-04-08 05:00:00",
+      "actual": 45.34,
+      "prediction": 46.30887103963711
+    },
+    {
+      "timestamp": "2024-04-08 07:00:00",
+      "actual": 39.2,
+      "prediction": 39.33441018758765
+    },
+    {
+      "timestamp": "2024-04-08 09:00:00",
+      "actual": 42.73,
+      "prediction": 41.2769199396193
+    },
+    {
+      "timestamp": "2024-04-08 11:00:00",
+      "actual": 44.56,
+      "prediction": 47.76886666797568
+    },
+    {
+      "timestamp": "2024-04-08 13:00:00",
+      "actual": 51.07,
+      "prediction": 55.18506082361717
+    },
+    {
+      "timestamp": "2024-04-08 15:00:00",
+      "actual": 60.97,
+      "prediction": 66.23107305450687
+    },
+    {
+      "timestamp": "2024-04-08 17:00:00",
+      "actual": 73.81,
+      "prediction": 73.34618190807304
+    },
+    {
+      "timestamp": "2024-04-08 19:00:00",
+      "actual": 81.07,
+      "prediction": 79.47231107597159
+    },
+    {
+      "timestamp": "2024-04-08 21:00:00",
+      "actual": 75.62,
+      "prediction": 79.39817660505791
+    },
+    {
+      "timestamp": "2024-04-08 23:00:00",
+      "actual": 72.55,
+      "prediction": 75.80314976811563
+    },
+    {
+      "timestamp": "2024-04-09 01:00:00",
+      "actual": 67.74,
+      "prediction": 65.12959385343156
+    },
+    {
+      "timestamp": "2024-04-09 03:00:00",
+      "actual": 57.46,
+      "prediction": 55.90121152713888
+    },
+    {
+      "timestamp": "2024-04-09 05:00:00",
+      "actual": 42.92,
+      "prediction": 48.901745280358995
+    },
+    {
+      "timestamp": "2024-04-09 07:00:00",
+      "actual": 41.7,
+      "prediction": 42.812702383935076
+    },
+    {
+      "timestamp": "2024-04-09 09:00:00",
+      "actual": 44.73,
+      "prediction": 42.4868947016352
+    },
+    {
+      "timestamp": "2024-04-09 11:00:00",
+      "actual": 47.24,
+      "prediction": 44.76842593176499
+    },
+    {
+      "timestamp": "2024-04-09 13:00:00",
+      "actual": 54.8,
+      "prediction": 56.60109061194318
+    },
+    {
+      "timestamp": "2024-04-09 15:00:00",
+      "actual": 66.96,
+      "prediction": 64.86634758053377
+    },
+    {
+      "timestamp": "2024-04-09 17:00:00",
+      "actual": 80.97,
+      "prediction": 74.46633908521123
+    },
+    {
+      "timestamp": "2024-04-09 19:00:00",
+      "actual": 79.52,
+      "prediction": 79.37995614463173
+    },
+    {
+      "timestamp": "2024-04-09 21:00:00",
+      "actual": 81.41,
+      "prediction": 79.35449046529959
+    },
+    {
+      "timestamp": "2024-04-09 23:00:00",
+      "actual": 77.18,
+      "prediction": 77.66476488998578
+    },
+    {
+      "timestamp": "2024-04-10 01:00:00",
+      "actual": 65.97,
+      "prediction": 68.35432013031385
+    },
+    {
+      "timestamp": "2024-04-10 03:00:00",
+      "actual": 52.09,
+      "prediction": 53.95494749008358
+    },
+    {
+      "timestamp": "2024-04-10 05:00:00",
+      "actual": 44.06,
+      "prediction": 47.625581280133424
+    },
+    {
+      "timestamp": "2024-04-10 07:00:00",
+      "actual": 46.33,
+      "prediction": 42.80047680220856
+    },
+    {
+      "timestamp": "2024-04-10 09:00:00",
+      "actual": 37.01,
+      "prediction": 39.8195063217236
+    },
+    {
+      "timestamp": "2024-04-10 11:00:00",
+      "actual": 44.33,
+      "prediction": 47.2480150497513
+    },
+    {
+      "timestamp": "2024-04-10 13:00:00",
+      "actual": 53.29,
+      "prediction": 55.84805456905267
+    },
+    {
+      "timestamp": "2024-04-10 15:00:00",
+      "actual": 75.07,
+      "prediction": 64.53609444227173
+    },
+    {
+      "timestamp": "2024-04-10 17:00:00",
+      "actual": 74.99,
+      "prediction": 74.77101974674522
+    },
+    {
+      "timestamp": "2024-04-10 19:00:00",
+      "actual": 79.17,
+      "prediction": 76.94824582976803
+    },
+    {
+      "timestamp": "2024-04-10 21:00:00",
+      "actual": 74.16,
+      "prediction": 79.61907769477557
+    },
+    {
+      "timestamp": "2024-04-10 23:00:00",
+      "actual": 71.75,
+      "prediction": 74.40296851114319
+    },
+    {
+      "timestamp": "2024-04-11 01:00:00",
+      "actual": 70.42,
+      "prediction": 65.60549892550233
+    },
+    {
+      "timestamp": "2024-04-11 03:00:00",
+      "actual": 55.44,
+      "prediction": 53.72766964713376
+    },
+    {
+      "timestamp": "2024-04-11 05:00:00",
+      "actual": 50.9,
+      "prediction": 45.690512458297185
+    },
+    {
+      "timestamp": "2024-04-11 07:00:00",
+      "actual": 41.59,
+      "prediction": 40.95048322876185
+    },
+    {
+      "timestamp": "2024-04-11 09:00:00",
+      "actual": 37.33,
+      "prediction": 41.1789752855256
+    },
+    {
+      "timestamp": "2024-04-11 11:00:00",
+      "actual": 45.91,
+      "prediction": 49.48046826229329
+    },
+    {
+      "timestamp": "2024-04-11 13:00:00",
+      "actual": 54.62,
+      "prediction": 54.94585832902937
+    },
+    {
+      "timestamp": "2024-04-11 15:00:00",
+      "actual": 59.14,
+      "prediction": 66.6215574036535
+    },
+    {
+      "timestamp": "2024-04-11 17:00:00",
+      "actual": 77.89,
+      "prediction": 75.17967152713791
+    },
+    {
+      "timestamp": "2024-04-11 19:00:00",
+      "actual": 82.48,
+      "prediction": 79.0630729959926
+    },
+    {
+      "timestamp": "2024-04-11 21:00:00",
+      "actual": 77.32,
+      "prediction": 80.43299496756151
+    },
+    {
+      "timestamp": "2024-04-11 23:00:00",
+      "actual": 68.32,
+      "prediction": 75.95989370425481
+    },
+    {
+      "timestamp": "2024-04-12 01:00:00",
+      "actual": 57.2,
+      "prediction": 66.08719904750204
+    },
+    {
+      "timestamp": "2024-04-12 03:00:00",
+      "actual": 57.44,
+      "prediction": 49.84954873980065
+    },
+    {
+      "timestamp": "2024-04-12 05:00:00",
+      "actual": 47.3,
+      "prediction": 46.93142334756824
+    },
+    {
+      "timestamp": "2024-04-12 07:00:00",
+      "actual": 38.95,
+      "prediction": 42.08798317356669
+    },
+    {
+      "timestamp": "2024-04-12 09:00:00",
+      "actual": 38.76,
+      "prediction": 41.905609088404034
+    },
+    {
+      "timestamp": "2024-04-12 11:00:00",
+      "actual": 48.42,
+      "prediction": 46.29767687278357
+    },
+    {
+      "timestamp": "2024-04-12 13:00:00",
+      "actual": 52.15,
+      "prediction": 54.615676418086494
+    },
+    {
+      "timestamp": "2024-04-12 15:00:00",
+      "actual": 67.25,
+      "prediction": 61.5892342354642
+    },
+    {
+      "timestamp": "2024-04-12 17:00:00",
+      "actual": 77.18,
+      "prediction": 76.7441370028011
+    },
+    {
+      "timestamp": "2024-04-12 19:00:00",
+      "actual": 80.7,
+      "prediction": 79.38038209542995
+    },
+    {
+      "timestamp": "2024-04-12 21:00:00",
+      "actual": 76.19,
+      "prediction": 80.77125683536718
+    },
+    {
+      "timestamp": "2024-04-12 23:00:00",
+      "actual": 74.07,
+      "prediction": 76.19797429402138
+    },
+    {
+      "timestamp": "2024-04-13 01:00:00",
+      "actual": 68.34,
+      "prediction": 63.283684038837265
+    },
+    {
+      "timestamp": "2024-04-13 03:00:00",
+      "actual": 57.04,
+      "prediction": 53.442745518047246
+    },
+    {
+      "timestamp": "2024-04-13 05:00:00",
+      "actual": 41.68,
+      "prediction": 47.06382487322528
+    },
+    {
+      "timestamp": "2024-04-13 07:00:00",
+      "actual": 41.62,
+      "prediction": 42.84014394232273
+    },
+    {
+      "timestamp": "2024-04-13 09:00:00",
+      "actual": 45.33,
+      "prediction": 42.471891920188455
+    },
+    {
+      "timestamp": "2024-04-13 11:00:00",
+      "actual": 45.69,
+      "prediction": 50.1055966124431
+    },
+    {
+      "timestamp": "2024-04-13 13:00:00",
+      "actual": 51.28,
+      "prediction": 55.600954176642844
+    },
+    {
+      "timestamp": "2024-04-13 15:00:00",
+      "actual": 67.85,
+      "prediction": 62.32163651201145
+    },
+    {
+      "timestamp": "2024-04-13 17:00:00",
+      "actual": 76.0,
+      "prediction": 75.85941062292524
+    },
+    {
+      "timestamp": "2024-04-13 19:00:00",
+      "actual": 76.86,
+      "prediction": 82.87071956832845
+    },
+    {
+      "timestamp": "2024-04-13 21:00:00",
+      "actual": 79.47,
+      "prediction": 79.98366101712338
+    },
+    {
+      "timestamp": "2024-04-13 23:00:00",
+      "actual": 70.16,
+      "prediction": 76.25796540712633
+    },
+    {
+      "timestamp": "2024-04-14 01:00:00",
+      "actual": 66.69,
+      "prediction": 66.9429669356959
+    },
+    {
+      "timestamp": "2024-04-14 03:00:00",
+      "actual": 57.46,
+      "prediction": 55.405561472843104
+    },
+    {
+      "timestamp": "2024-04-14 05:00:00",
+      "actual": 51.76,
+      "prediction": 49.0008796564927
+    },
+    {
+      "timestamp": "2024-04-14 07:00:00",
+      "actual": 35.9,
+      "prediction": 43.442602395728315
+    },
+    {
+      "timestamp": "2024-04-14 09:00:00",
+      "actual": 39.0,
+      "prediction": 40.04749593241409
+    },
+    {
+      "timestamp": "2024-04-14 11:00:00",
+      "actual": 45.08,
+      "prediction": 49.16450195106245
+    },
+    {
+      "timestamp": "2024-04-14 13:00:00",
+      "actual": 56.35,
+      "prediction": 54.63165590729084
+    },
+    {
+      "timestamp": "2024-04-14 15:00:00",
+      "actual": 62.98,
+      "prediction": 65.3606869900458
+    },
+    {
+      "timestamp": "2024-04-14 17:00:00",
+      "actual": 75.0,
+      "prediction": 75.91150211394363
+    },
+    {
+      "timestamp": "2024-04-14 19:00:00",
+      "actual": 82.2,
+      "prediction": 81.4076353969905
+    },
+    {
+      "timestamp": "2024-04-14 21:00:00",
+      "actual": 74.47,
+      "prediction": 80.56767717969345
+    },
+    {
+      "timestamp": "2024-04-14 23:00:00",
+      "actual": 73.58,
+      "prediction": 75.13908831391579
+    },
+    {
+      "timestamp": "2024-04-15 01:00:00",
+      "actual": 61.47,
+      "prediction": 66.42604663396186
+    },
+    {
+      "timestamp": "2024-04-15 03:00:00",
+      "actual": 52.67,
+      "prediction": 53.513041513632174
+    },
+    {
+      "timestamp": "2024-04-15 05:00:00",
+      "actual": 45.12,
+      "prediction": 45.19734223047476
+    },
+    {
+      "timestamp": "2024-04-15 07:00:00",
+      "actual": 35.65,
+      "prediction": 42.3047215333552
+    },
+    {
+      "timestamp": "2024-04-15 09:00:00",
+      "actual": 41.65,
+      "prediction": 41.44996680091231
+    },
+    {
+      "timestamp": "2024-04-15 11:00:00",
+      "actual": 49.58,
+      "prediction": 46.85117997164727
+    },
+    {
+      "timestamp": "2024-04-15 13:00:00",
+      "actual": 57.98,
+      "prediction": 54.537117545967334
+    },
+    {
+      "timestamp": "2024-04-15 15:00:00",
+      "actual": 67.57,
+      "prediction": 64.68490098869476
+    },
+    {
+      "timestamp": "2024-04-15 17:00:00",
+      "actual": 76.05,
+      "prediction": 73.8571093237618
+    },
+    {
+      "timestamp": "2024-04-15 19:00:00",
+      "actual": 75.69,
+      "prediction": 79.75332601557704
+    },
+    {
+      "timestamp": "2024-04-15 21:00:00",
+      "actual": 77.52,
+      "prediction": 79.33331399526959
+    },
+    {
+      "timestamp": "2024-04-15 23:00:00",
+      "actual": 66.25,
+      "prediction": 75.50900469170524
+    },
+    {
+      "timestamp": "2024-04-16 01:00:00",
+      "actual": 67.79,
+      "prediction": 69.31331227189911
+    },
+    {
+      "timestamp": "2024-04-16 03:00:00",
+      "actual": 49.98,
+      "prediction": 55.260556372401204
+    },
+    {
+      "timestamp": "2024-04-16 05:00:00",
+      "actual": 48.35,
+      "prediction": 45.53316122923284
+    },
+    {
+      "timestamp": "2024-04-16 07:00:00",
+      "actual": 46.26,
+      "prediction": 42.08553856595492
+    },
+    {
+      "timestamp": "2024-04-16 09:00:00",
+      "actual": 38.67,
+      "prediction": 41.74053833152047
+    },
+    {
+      "timestamp": "2024-04-16 11:00:00",
+      "actual": 44.12,
+      "prediction": 47.9299517115741
+    },
+    {
+      "timestamp": "2024-04-16 13:00:00",
+      "actual": 60.19,
+      "prediction": 54.99954412450377
+    },
+    {
+      "timestamp": "2024-04-16 15:00:00",
+      "actual": 66.46,
+      "prediction": 64.41795715826213
+    },
+    {
+      "timestamp": "2024-04-16 17:00:00",
+      "actual": 71.72,
+      "prediction": 73.37227049609407
+    },
+    {
+      "timestamp": "2024-04-16 19:00:00",
+      "actual": 79.24,
+      "prediction": 78.87707691532383
+    },
+    {
+      "timestamp": "2024-04-16 21:00:00",
+      "actual": 80.23,
+      "prediction": 81.24721939286759
+    },
+    {
+      "timestamp": "2024-04-16 23:00:00",
+      "actual": 69.73,
+      "prediction": 76.26105151932124
+    },
+    {
+      "timestamp": "2024-04-17 01:00:00",
+      "actual": 65.29,
+      "prediction": 66.65810051812885
+    },
+    {
+      "timestamp": "2024-04-17 03:00:00",
+      "actual": 50.54,
+      "prediction": 57.16340636847365
+    },
+    {
+      "timestamp": "2024-04-17 05:00:00",
+      "actual": 43.56,
+      "prediction": 46.619595514669406
+    },
+    {
+      "timestamp": "2024-04-17 07:00:00",
+      "actual": 49.19,
+      "prediction": 41.42852259858612
+    },
+    {
+      "timestamp": "2024-04-17 09:00:00",
+      "actual": 42.88,
+      "prediction": 42.85581044650009
+    },
+    {
+      "timestamp": "2024-04-17 11:00:00",
+      "actual": 49.62,
+      "prediction": 49.400985006386996
+    },
+    {
+      "timestamp": "2024-04-17 13:00:00",
+      "actual": 55.97,
+      "prediction": 53.823224738852225
+    },
+    {
+      "timestamp": "2024-04-17 15:00:00",
+      "actual": 66.69,
+      "prediction": 68.75431275953646
+    },
+    {
+      "timestamp": "2024-04-17 17:00:00",
+      "actual": 72.88,
+      "prediction": 73.02790866220234
+    },
+    {
+      "timestamp": "2024-04-17 19:00:00",
+      "actual": 81.36,
+      "prediction": 78.77780479284577
+    },
+    {
+      "timestamp": "2024-04-17 21:00:00",
+      "actual": 82.73,
+      "prediction": 78.62504202619331
+    },
+    {
+      "timestamp": "2024-04-17 23:00:00",
+      "actual": 75.75,
+      "prediction": 75.33323200128486
+    },
+    {
+      "timestamp": "2024-04-18 01:00:00",
+      "actual": 64.88,
+      "prediction": 68.38189120205698
+    },
+    {
+      "timestamp": "2024-04-18 03:00:00",
+      "actual": 55.6,
+      "prediction": 55.62114959381585
+    },
+    {
+      "timestamp": "2024-04-18 05:00:00",
+      "actual": 42.38,
+      "prediction": 48.31089088614163
+    },
+    {
+      "timestamp": "2024-04-18 07:00:00",
+      "actual": 41.61,
+      "prediction": 42.62795313689215
+    },
+    {
+      "timestamp": "2024-04-18 09:00:00",
+      "actual": 46.93,
+      "prediction": 40.90316055308177
+    },
+    {
+      "timestamp": "2024-04-18 11:00:00",
+      "actual": 44.52,
+      "prediction": 46.508623975135535
+    },
+    {
+      "timestamp": "2024-04-18 13:00:00",
+      "actual": 55.56,
+      "prediction": 55.074127496812864
+    },
+    {
+      "timestamp": "2024-04-18 15:00:00",
+      "actual": 63.7,
+      "prediction": 61.24577520475767
+    },
+    {
+      "timestamp": "2024-04-18 17:00:00",
+      "actual": 73.02,
+      "prediction": 73.98920436395072
+    },
+    {
+      "timestamp": "2024-04-18 19:00:00",
+      "actual": 83.65,
+      "prediction": 81.46074114562663
+    },
+    {
+      "timestamp": "2024-04-18 21:00:00",
+      "actual": 78.45,
+      "prediction": 80.97519337101258
+    },
+    {
+      "timestamp": "2024-04-18 23:00:00",
+      "actual": 75.05,
+      "prediction": 74.55133364559963
+    },
+    {
+      "timestamp": "2024-04-19 01:00:00",
+      "actual": 67.23,
+      "prediction": 62.249204016448665
+    },
+    {
+      "timestamp": "2024-04-19 03:00:00",
+      "actual": 53.85,
+      "prediction": 54.10695903646782
+    },
+    {
+      "timestamp": "2024-04-19 05:00:00",
+      "actual": 43.44,
+      "prediction": 46.329069930584126
+    },
+    {
+      "timestamp": "2024-04-19 07:00:00",
+      "actual": 35.73,
+      "prediction": 40.9954702911864
+    },
+    {
+      "timestamp": "2024-04-19 09:00:00",
+      "actual": 42.45,
+      "prediction": 41.90225407299828
+    },
+    {
+      "timestamp": "2024-04-19 11:00:00",
+      "actual": 41.39,
+      "prediction": 45.97339828710724
+    },
+    {
+      "timestamp": "2024-04-19 13:00:00",
+      "actual": 57.48,
+      "prediction": 54.89635509436027
+    },
+    {
+      "timestamp": "2024-04-19 15:00:00",
+      "actual": 60.95,
+      "prediction": 63.76367445302717
+    },
+    {
+      "timestamp": "2024-04-19 17:00:00",
+      "actual": 72.46,
+      "prediction": 73.79055715487495
+    },
+    {
+      "timestamp": "2024-04-19 19:00:00",
+      "actual": 79.05,
+      "prediction": 78.36719807664899
+    },
+    {
+      "timestamp": "2024-04-19 21:00:00",
+      "actual": 81.78,
+      "prediction": 81.07995282299323
+    },
+    {
+      "timestamp": "2024-04-19 23:00:00",
+      "actual": 72.06,
+      "prediction": 76.98287836767668
+    },
+    {
+      "timestamp": "2024-04-20 01:00:00",
+      "actual": 63.7,
+      "prediction": 67.11853196376263
+    },
+    {
+      "timestamp": "2024-04-20 03:00:00",
+      "actual": 56.06,
+      "prediction": 53.49210782125976
+    },
+    {
+      "timestamp": "2024-04-20 05:00:00",
+      "actual": 44.68,
+      "prediction": 45.36398911815192
+    },
+    {
+      "timestamp": "2024-04-20 07:00:00",
+      "actual": 39.03,
+      "prediction": 40.971171559505855
+    },
+    {
+      "timestamp": "2024-04-20 09:00:00",
+      "actual": 36.6,
+      "prediction": 42.76585107958808
+    },
+    {
+      "timestamp": "2024-04-20 11:00:00",
+      "actual": 47.09,
+      "prediction": 47.74780688597223
+    },
+    {
+      "timestamp": "2024-04-20 13:00:00",
+      "actual": 52.75,
+      "prediction": 52.70946142347827
+    },
+    {
+      "timestamp": "2024-04-20 15:00:00",
+      "actual": 62.38,
+      "prediction": 64.95565642129823
+    },
+    {
+      "timestamp": "2024-04-20 17:00:00",
+      "actual": 74.94,
+      "prediction": 74.5605309089808
+    },
+    {
+      "timestamp": "2024-04-20 19:00:00",
+      "actual": 80.97,
+      "prediction": 81.25802076011281
+    },
+    {
+      "timestamp": "2024-04-20 21:00:00",
+      "actual": 82.5,
+      "prediction": 79.18901794815694
+    },
+    {
+      "timestamp": "2024-04-20 23:00:00",
+      "actual": 75.63,
+      "prediction": 76.0641558089358
+    },
+    {
+      "timestamp": "2024-04-21 01:00:00",
+      "actual": 66.24,
+      "prediction": 65.49358547634515
+    },
+    {
+      "timestamp": "2024-04-21 03:00:00",
+      "actual": 52.42,
+      "prediction": 52.67635187471796
+    },
+    {
+      "timestamp": "2024-04-21 05:00:00",
+      "actual": 42.39,
+      "prediction": 48.10195207040208
+    },
+    {
+      "timestamp": "2024-04-21 07:00:00",
+      "actual": 38.34,
+      "prediction": 44.56104680282909
+    },
+    {
+      "timestamp": "2024-04-21 09:00:00",
+      "actual": 38.29,
+      "prediction": 42.57771170013516
+    },
+    {
+      "timestamp": "2024-04-21 11:00:00",
+      "actual": 45.42,
+      "prediction": 45.06280473279786
+    },
+    {
+      "timestamp": "2024-04-21 13:00:00",
+      "actual": 57.39,
+      "prediction": 54.998624964272764
+    },
+    {
+      "timestamp": "2024-04-21 15:00:00",
+      "actual": 63.96,
+      "prediction": 64.04358590358385
+    },
+    {
+      "timestamp": "2024-04-21 17:00:00",
+      "actual": 76.55,
+      "prediction": 75.79591197927638
+    },
+    {
+      "timestamp": "2024-04-21 19:00:00",
+      "actual": 81.56,
+      "prediction": 80.97324480483933
+    },
+    {
+      "timestamp": "2024-04-21 21:00:00",
+      "actual": 81.1,
+      "prediction": 79.07352808266181
+    },
+    {
+      "timestamp": "2024-04-21 23:00:00",
+      "actual": 74.12,
+      "prediction": 74.5676077541211
+    },
+    {
+      "timestamp": "2024-04-22 01:00:00",
+      "actual": 64.09,
+      "prediction": 66.3154091622455
+    },
+    {
+      "timestamp": "2024-04-22 03:00:00",
+      "actual": 54.14,
+      "prediction": 55.81243077125539
+    },
+    {
+      "timestamp": "2024-04-22 05:00:00",
+      "actual": 47.92,
+      "prediction": 47.55622252196545
+    },
+    {
+      "timestamp": "2024-04-22 07:00:00",
+      "actual": 40.21,
+      "prediction": 44.02043302808147
+    },
+    {
+      "timestamp": "2024-04-22 09:00:00",
+      "actual": 42.97,
+      "prediction": 39.936324936457765
+    },
+    {
+      "timestamp": "2024-04-22 11:00:00",
+      "actual": 47.57,
+      "prediction": 48.46600142348852
+    },
+    {
+      "timestamp": "2024-04-22 13:00:00",
+      "actual": 53.39,
+      "prediction": 55.95063878293065
+    },
+    {
+      "timestamp": "2024-04-22 15:00:00",
+      "actual": 61.82,
+      "prediction": 63.42846336860546
+    },
+    {
+      "timestamp": "2024-04-22 17:00:00",
+      "actual": 69.72,
+      "prediction": 74.14710994692504
+    },
+    {
+      "timestamp": "2024-04-22 19:00:00",
+      "actual": 79.14,
+      "prediction": 81.61389961464951
+    },
+    {
+      "timestamp": "2024-04-22 21:00:00",
+      "actual": 80.73,
+      "prediction": 79.67125414943789
+    },
+    {
+      "timestamp": "2024-04-22 23:00:00",
+      "actual": 76.74,
+      "prediction": 74.32132527331207
+    },
+    {
+      "timestamp": "2024-04-23 01:00:00",
+      "actual": 68.16,
+      "prediction": 66.52266731343913
+    },
+    {
+      "timestamp": "2024-04-23 03:00:00",
+      "actual": 51.99,
+      "prediction": 57.1610691307007
+    },
+    {
+      "timestamp": "2024-04-23 05:00:00",
+      "actual": 42.72,
+      "prediction": 45.89990835438133
+    },
+    {
+      "timestamp": "2024-04-23 07:00:00",
+      "actual": 35.01,
+      "prediction": 44.085256763071655
+    },
+    {
+      "timestamp": "2024-04-23 09:00:00",
+      "actual": 46.11,
+      "prediction": 40.002282195594795
+    },
+    {
+      "timestamp": "2024-04-23 11:00:00",
+      "actual": 46.41,
+      "prediction": 47.927172578607745
+    },
+    {
+      "timestamp": "2024-04-23 13:00:00",
+      "actual": 58.79,
+      "prediction": 55.48105945785242
+    },
+    {
+      "timestamp": "2024-04-23 15:00:00",
+      "actual": 61.47,
+      "prediction": 64.69178916283329
+    },
+    {
+      "timestamp": "2024-04-23 17:00:00",
+      "actual": 76.57,
+      "prediction": 75.55040072246591
+    },
+    {
+      "timestamp": "2024-04-23 19:00:00",
+      "actual": 80.37,
+      "prediction": 78.46751385243797
+    },
+    {
+      "timestamp": "2024-04-23 21:00:00",
+      "actual": 77.29,
+      "prediction": 81.46570417568067
+    },
+    {
+      "timestamp": "2024-04-23 23:00:00",
+      "actual": 74.97,
+      "prediction": 76.5474342885667
+    },
+    {
+      "timestamp": "2024-04-24 01:00:00",
+      "actual": 64.41,
+      "prediction": 68.17911258771066
+    },
+    {
+      "timestamp": "2024-04-24 03:00:00",
+      "actual": 54.54,
+      "prediction": 55.140114766302666
+    },
+    {
+      "timestamp": "2024-04-24 05:00:00",
+      "actual": 45.94,
+      "prediction": 47.87557284957083
+    },
+    {
+      "timestamp": "2024-04-24 07:00:00",
+      "actual": 39.46,
+      "prediction": 47.07101904366948
+    },
+    {
+      "timestamp": "2024-04-24 09:00:00",
+      "actual": 41.75,
+      "prediction": 39.56746597550562
+    },
+    {
+      "timestamp": "2024-04-24 11:00:00",
+      "actual": 47.64,
+      "prediction": 48.65876122036629
+    },
+    {
+      "timestamp": "2024-04-24 13:00:00",
+      "actual": 54.56,
+      "prediction": 53.91148779483715
+    },
+    {
+      "timestamp": "2024-04-24 15:00:00",
+      "actual": 67.16,
+      "prediction": 65.1163873503743
+    },
+    {
+      "timestamp": "2024-04-24 17:00:00",
+      "actual": 73.86,
+      "prediction": 73.2833085948244
+    },
+    {
+      "timestamp": "2024-04-24 19:00:00",
+      "actual": 82.05,
+      "prediction": 77.66604058264846
+    },
+    {
+      "timestamp": "2024-04-24 21:00:00",
+      "actual": 81.71,
+      "prediction": 81.14120731620285
+    },
+    {
+      "timestamp": "2024-04-24 23:00:00",
+      "actual": 76.83,
+      "prediction": 76.22746136127977
+    },
+    {
+      "timestamp": "2024-04-25 01:00:00",
+      "actual": 66.62,
+      "prediction": 65.8628757607866
+    },
+    {
+      "timestamp": "2024-04-25 03:00:00",
+      "actual": 57.37,
+      "prediction": 56.1853676491647
+    },
+    {
+      "timestamp": "2024-04-25 05:00:00",
+      "actual": 44.36,
+      "prediction": 44.746199513427804
+    },
+    {
+      "timestamp": "2024-04-25 07:00:00",
+      "actual": 41.66,
+      "prediction": 43.07800543051988
+    },
+    {
+      "timestamp": "2024-04-25 09:00:00",
+      "actual": 35.65,
+      "prediction": 42.93934103698806
+    },
+    {
+      "timestamp": "2024-04-25 11:00:00",
+      "actual": 47.53,
+      "prediction": 47.50671630753591
+    },
+    {
+      "timestamp": "2024-04-25 13:00:00",
+      "actual": 55.25,
+      "prediction": 54.396387925401996
+    },
+    {
+      "timestamp": "2024-04-25 15:00:00",
+      "actual": 66.37,
+      "prediction": 65.18853238347296
+    },
+    {
+      "timestamp": "2024-04-25 17:00:00",
+      "actual": 70.74,
+      "prediction": 74.6324137491567
+    },
+    {
+      "timestamp": "2024-04-25 19:00:00",
+      "actual": 78.55,
+      "prediction": 80.64676009683483
+    },
+    {
+      "timestamp": "2024-04-25 21:00:00",
+      "actual": 76.14,
+      "prediction": 82.7651501942159
+    },
+    {
+      "timestamp": "2024-04-25 23:00:00",
+      "actual": 71.69,
+      "prediction": 76.32939126562
+    },
+    {
+      "timestamp": "2024-04-26 01:00:00",
+      "actual": 65.5,
+      "prediction": 66.41004919305477
+    },
+    {
+      "timestamp": "2024-04-26 03:00:00",
+      "actual": 58.6,
+      "prediction": 54.52296236653546
+    },
+    {
+      "timestamp": "2024-04-26 05:00:00",
+      "actual": 44.82,
+      "prediction": 48.580765502284805
+    },
+    {
+      "timestamp": "2024-04-26 07:00:00",
+      "actual": 40.1,
+      "prediction": 42.8749009945299
+    },
+    {
+      "timestamp": "2024-04-26 09:00:00",
+      "actual": 41.95,
+      "prediction": 40.60671977969225
+    },
+    {
+      "timestamp": "2024-04-26 11:00:00",
+      "actual": 45.12,
+      "prediction": 45.99964931615077
+    },
+    {
+      "timestamp": "2024-04-26 13:00:00",
+      "actual": 52.71,
+      "prediction": 52.59798194614598
+    },
+    {
+      "timestamp": "2024-04-26 15:00:00",
+      "actual": 64.68,
+      "prediction": 65.54791823542422
+    },
+    {
+      "timestamp": "2024-04-26 17:00:00",
+      "actual": 75.62,
+      "prediction": 74.16530131217388
+    },
+    {
+      "timestamp": "2024-04-26 19:00:00",
+      "actual": 80.69,
+      "prediction": 82.29528162908295
+    },
+    {
+      "timestamp": "2024-04-26 21:00:00",
+      "actual": 77.57,
+      "prediction": 80.67459133166601
+    },
+    {
+      "timestamp": "2024-04-26 23:00:00",
+      "actual": 75.82,
+      "prediction": 77.12294553555834
+    },
+    {
+      "timestamp": "2024-04-27 01:00:00",
+      "actual": 69.14,
+      "prediction": 67.20817876340467
+    },
+    {
+      "timestamp": "2024-04-27 03:00:00",
+      "actual": 50.84,
+      "prediction": 54.98658538275301
+    },
+    {
+      "timestamp": "2024-04-27 05:00:00",
+      "actual": 46.84,
+      "prediction": 47.68507216034933
+    },
+    {
+      "timestamp": "2024-04-27 07:00:00",
+      "actual": 38.85,
+      "prediction": 43.555790895594185
+    },
+    {
+      "timestamp": "2024-04-27 09:00:00",
+      "actual": 40.77,
+      "prediction": 41.53134642057518
+    },
+    {
+      "timestamp": "2024-04-27 11:00:00",
+      "actual": 44.53,
+      "prediction": 47.23983528447858
+    },
+    {
+      "timestamp": "2024-04-27 13:00:00",
+      "actual": 51.76,
+      "prediction": 53.422136676358626
+    },
+    {
+      "timestamp": "2024-04-27 15:00:00",
+      "actual": 66.36,
+      "prediction": 63.67246950616871
+    },
+    {
+      "timestamp": "2024-04-27 17:00:00",
+      "actual": 69.45,
+      "prediction": 75.04238074249167
+    },
+    {
+      "timestamp": "2024-04-27 19:00:00",
+      "actual": 78.41,
+      "prediction": 80.40901505717456
+    },
+    {
+      "timestamp": "2024-04-27 21:00:00",
+      "actual": 78.38,
+      "prediction": 80.96967126373869
+    },
+    {
+      "timestamp": "2024-04-27 23:00:00",
+      "actual": 71.86,
+      "prediction": 75.81663526650753
+    },
+    {
+      "timestamp": "2024-04-28 01:00:00",
+      "actual": 67.71,
+      "prediction": 67.36749929576041
+    },
+    {
+      "timestamp": "2024-04-28 03:00:00",
+      "actual": 54.47,
+      "prediction": 56.242997276441116
+    },
+    {
+      "timestamp": "2024-04-28 05:00:00",
+      "actual": 48.59,
+      "prediction": 45.946875668207994
+    },
+    {
+      "timestamp": "2024-04-28 07:00:00",
+      "actual": 41.14,
+      "prediction": 42.00988812223397
+    },
+    {
+      "timestamp": "2024-04-28 09:00:00",
+      "actual": 37.94,
+      "prediction": 42.352262467550865
+    },
+    {
+      "timestamp": "2024-04-28 11:00:00",
+      "actual": 41.63,
+      "prediction": 47.04952935126538
+    },
+    {
+      "timestamp": "2024-04-28 13:00:00",
+      "actual": 52.35,
+      "prediction": 53.81803741564458
+    },
+    {
+      "timestamp": "2024-04-28 15:00:00",
+      "actual": 60.57,
+      "prediction": 64.68786635731463
+    },
+    {
+      "timestamp": "2024-04-28 17:00:00",
+      "actual": 74.73,
+      "prediction": 73.17164848112428
+    },
+    {
+      "timestamp": "2024-04-28 19:00:00",
+      "actual": 77.65,
+      "prediction": 82.03720410241579
+    },
+    {
+      "timestamp": "2024-04-28 21:00:00",
+      "actual": 79.43,
+      "prediction": 82.69016587116646
+    },
+    {
+      "timestamp": "2024-04-28 23:00:00",
+      "actual": 72.16,
+      "prediction": 76.64034595483656
+    },
+    {
+      "timestamp": "2024-04-29 01:00:00",
+      "actual": 68.86,
+      "prediction": 64.62419031285597
+    },
+    {
+      "timestamp": "2024-04-29 03:00:00",
+      "actual": 53.42,
+      "prediction": 56.118522339001636
+    },
+    {
+      "timestamp": "2024-04-29 05:00:00",
+      "actual": 45.42,
+      "prediction": 47.700105546378744
+    },
+    {
+      "timestamp": "2024-04-29 07:00:00",
+      "actual": 41.19,
+      "prediction": 42.69598485616844
+    },
+    {
+      "timestamp": "2024-04-29 09:00:00",
+      "actual": 39.38,
+      "prediction": 38.92932005522641
+    },
+    {
+      "timestamp": "2024-04-29 11:00:00",
+      "actual": 41.31,
+      "prediction": 46.71869631563499
+    },
+    {
+      "timestamp": "2024-04-29 13:00:00",
+      "actual": 54.14,
+      "prediction": 54.4762177422287
+    },
+    {
+      "timestamp": "2024-04-29 15:00:00",
+      "actual": 65.56,
+      "prediction": 65.69349387695702
+    },
+    {
+      "timestamp": "2024-04-29 17:00:00",
+      "actual": 77.54,
+      "prediction": 74.25583521528188
+    },
+    {
+      "timestamp": "2024-04-29 19:00:00",
+      "actual": 81.35,
+      "prediction": 80.08240793732966
+    },
+    {
+      "timestamp": "2024-04-29 21:00:00",
+      "actual": 78.37,
+      "prediction": 81.2159355140041
+    },
+    {
+      "timestamp": "2024-04-29 23:00:00",
+      "actual": 70.62,
+      "prediction": 75.63491073411372
+    }
+  ]
+}

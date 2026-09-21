@@ -1,0 +1,15 @@
+{
+  "candidate_id": "residual_no_research_pv",
+  "chronological_split_identity": "n/a (no_research pathway references frozen Phase 11 finalist; no new training was performed)",
+  "created_at": "2026-09-19T14:32:57.530649+00:00",
+  "estimator_identity": "no_research",
+  "evidence_source_paths": {
+    "stage_10_evidence_json": "artifacts/v2/residual_forecasting/evidence_packages/residual_no_research_pv/evidence.json",
+    "stage_11_per_fold": "artifacts/v2/research_validation/fold_results/"
+  },
+  "feature_set_identity": "n/a",
+  "research_stage_origin": "stage_10_residual_correction_research",
+  "schema": "stage_13_candidate_manifest_v1",
+  "target": "pv",
+  "training_data_identity": "n/a (no_research pathway)"
+}

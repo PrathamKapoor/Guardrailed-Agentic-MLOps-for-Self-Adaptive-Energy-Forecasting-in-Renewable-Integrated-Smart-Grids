@@ -1,0 +1,18 @@
+{
+  "challenger_state": "REGISTERED_CHALLENGER",
+  "decision": "ALLOW",
+  "evidence_status": "NON_EVIDENCE_SMOKE",
+  "excluded_from_research_evidence": true,
+  "final_test_reads": 0,
+  "mlflow_run_id": "f6c2b91542a746fdaca6a972847c2f02",
+  "verified_steps": [
+    "request_creation",
+    "policy_evaluation",
+    "training_dataset",
+    "model_refit",
+    "evaluation",
+    "lineage",
+    "mlflow",
+    "challenger_registration"
+  ]
+}

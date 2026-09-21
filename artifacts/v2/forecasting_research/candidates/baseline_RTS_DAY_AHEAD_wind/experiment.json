@@ -1,0 +1,34 @@
+{
+  "candidate_id": "baseline_RTS_DAY_AHEAD_wind",
+  "classification": "IMPROVED",
+  "comparison": {
+    "frozen_metrics": {
+      "MAE": 778.8412887248792,
+      "RMSE": 923.3732472043888,
+      "nMAE": 0.6789696191869805,
+      "nRMSE": 0.804968086692272,
+      "sMAPE_pct": 92.39736347788356
+    },
+    "frozen_model": "frozen_finalist",
+    "kind": "DIRECT",
+    "notes": "Re-derivation of the existing frozen baseline metrics compared against the frozen final-test finalist for the same target."
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-05T07:33:20.966670+00:00",
+  "description": "Re-evaluation of the existing frozen external baseline 'RTS_DAY_AHEAD' on the Phase 19 test window (2020-11-01..2020-12-31). The baseline is itself a frozen artefact; this candidate simply re-derives the same metrics on the same window using the same data.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 331.30216302800545,
+    "RMSE": 491.20826474320177,
+    "n": 1464,
+    "nMAE": 0.2888189246300379,
+    "nRMSE": 0.5398090485112502,
+    "sMAPE_pct": 25.45787784016209
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "wind"
+}

@@ -1,0 +1,44 @@
+{
+  "phase": "06",
+  "protocol_version": "rts_gmlc_exp_protocol_v1",
+  "protocol_checksum": "666eb745de5ae01ba2033e825a4c6b0ba0cea1f9574c32426de8a5996581c0f9",
+  "dataset_version": "rts_gmlc_processed_v1",
+  "processed_dataset_manifest_checksum": "0c174c37e154e82dabeb721e5198fe34bbc9ecc7be26f945029a47bc6783f037",
+  "feature_version": "v1",
+  "feature_manifest_checksum": "0e46baae741f41da7cfdad57c94d66881df368638412837a019e4f4c22b800ee",
+  "evaluation_period": "rolling-origin folds May-October 2020; aggregate validation September-October 2020",
+  "final_test_accessed": false,
+  "baseline_implementations": [
+    "H1_PERSISTENCE",
+    "H1_DAILY_SEASONAL_PERSISTENCE",
+    "H1_WEEKLY_SEASONAL_PERSISTENCE",
+    "H24_DAILY_PERSISTENCE",
+    "H24_WEEKLY_SEASONAL_PERSISTENCE",
+    "RTS_DAY_AHEAD",
+    "H1_PERSISTENCE",
+    "H1_DAILY_SEASONAL_PERSISTENCE",
+    "H1_WEEKLY_SEASONAL_PERSISTENCE",
+    "H24_DAILY_PERSISTENCE",
+    "H24_WEEKLY_SEASONAL_PERSISTENCE",
+    "RTS_DAY_AHEAD",
+    "H1_PERSISTENCE",
+    "H1_DAILY_SEASONAL_PERSISTENCE",
+    "H1_WEEKLY_SEASONAL_PERSISTENCE",
+    "H24_DAILY_PERSISTENCE",
+    "H24_WEEKLY_SEASONAL_PERSISTENCE",
+    "RTS_DAY_AHEAD"
+  ],
+  "metric_definitions_version": "config/experiments/metrics.yaml",
+  "code_commit": null,
+  "execution_environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.2"
+  },
+  "artifact_checksums": {
+    "artifacts\\experiments\\baselines\\phase_06\\predictions\\baseline_predictions.parquet": "6b17e7ee77013584da2f8d45f5da245f27cd72892c8d5c179d2d5a9e80562278",
+    "artifacts\\experiments\\baselines\\phase_06\\metrics\\baseline_validation_metrics.csv": "1f5152d52eb4adf36ac89615d0c3f7b1bce751e616ba3f254457c06313e48061",
+    "artifacts\\experiments\\baselines\\phase_06\\metrics\\baseline_fold_metrics.csv": "e50ea8e083364924e375a39292b3f4802635be946c8f445e56ad95d1613816d5",
+    "artifacts\\experiments\\baselines\\phase_06\\metrics\\baseline_fold_stability.csv": "9fb0092f1b5c187ab484c7b19595e7918a4cfc21750f897e792987c8799c7c36",
+    "artifacts\\research_figures\\phase_06\\figure_manifest.yaml": "ef85b305ae018bcced941f1f50fe2828d3ecf0f9435ae454498a79ca157c130d"
+  }
+}

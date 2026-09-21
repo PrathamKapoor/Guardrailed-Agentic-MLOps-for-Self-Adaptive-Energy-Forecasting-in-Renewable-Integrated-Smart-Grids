@@ -1,0 +1,17 @@
+{
+  "feature_specification": "B_lags_only_extended_with_calendar",
+  "framework": "sklearn",
+  "horizon": 24,
+  "hyperparameters": {
+    "alpha": 1.0,
+    "fit_intercept": true,
+    "scaling": "StandardScaler inside training-fold pipeline",
+    "solver": "auto"
+  },
+  "implementation_id": "RESIDUAL_RIDGE_V1",
+  "model_family": "ridge",
+  "model_spec_fingerprint": "model-spec-v1:sha256:dfd12df5869778edcaccdad4446bfaf5cc749c1eb3e5789cc067f937797cfa3f",
+  "scaling_policy": "StandardScaler fit on training rows only",
+  "target": "wind",
+  "training_policy": "fit on training split only; deterministic closed-form"
+}

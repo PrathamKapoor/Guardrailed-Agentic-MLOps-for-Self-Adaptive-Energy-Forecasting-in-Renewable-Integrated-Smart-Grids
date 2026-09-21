@@ -1,0 +1,16 @@
+{
+  "aggregate_package_sha256": "a365ffcc22e901ec5ddd34fd75907f370da227e7e27e4d57ab1ab7829ec8307a",
+  "candidate_id": "residual_ridge_wind",
+  "file_hashes_sha256": {
+    "benchmark_evaluation.json": "0024656635cb51909282e4e86d4a24725a9f017a579022b92620ffa77a25dc7d",
+    "candidate_manifest.json": "5f9d858195f69f3d71ca00c0fd05f6ee9078134050856b016d9f5f3c1a659369",
+    "data_split_manifest.json": "c7cbe92879f7f361411da294a91f9f75adedfd2e319ca156b50b98dc8ad87cfd",
+    "feature_spec.json": "a05fcbdce91fb13d1049660b6de9505adb74d0b263673b0c789e0685051566ea",
+    "model_spec.json": "4dd0e5bd7f025e3021e8d3d81d66d1facce5f01863bff45a97bffae7506cf728",
+    "protocol_compatibility.json": "30c229ffc04e2ff83b387182ae9a4fe759bcfdbf3809e53b78ff84d683cc4bd6",
+    "reproducibility_manifest.json": "e4fafc0571abd2062e8a18e4c9095a25f4cc5cd47cbfa46c611a5b9a0f6c300a"
+  },
+  "generated_at": "2026-09-19T14:32:57.446565+00:00",
+  "package_root": "artifacts\\v2\\governance_candidate_packages\\residual_ridge_wind",
+  "schema": "stage_13_checksums_v1"
+}

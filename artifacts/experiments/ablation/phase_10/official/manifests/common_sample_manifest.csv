@@ -1,0 +1,13 @@
+target,fold,original_sample_count_by_feature_set,common_comparison_sample_count,timestamps_removed_by_intersection,first_comparison_timestamp,last_comparison_timestamp
+load,F01,"{""A_calendar_only"": 3456, ""D_calendar_lags_rolling"": 3456, ""B_lags_only"": 3456, ""C_calendar_lags"": 3456, ""E_full"": 3456}",3456,0,2020-01-09 00:00:00,2020-05-31 23:00:00
+load,F02,"{""A_calendar_only"": 4176, ""D_calendar_lags_rolling"": 4176, ""B_lags_only"": 4176, ""C_calendar_lags"": 4176, ""E_full"": 4176}",4176,0,2020-01-09 00:00:00,2020-06-30 23:00:00
+load,F03,"{""A_calendar_only"": 4920, ""D_calendar_lags_rolling"": 4920, ""B_lags_only"": 4920, ""C_calendar_lags"": 4920, ""E_full"": 4920}",4920,0,2020-01-09 00:00:00,2020-07-31 23:00:00
+load,F04,"{""A_calendar_only"": 5664, ""D_calendar_lags_rolling"": 5664, ""B_lags_only"": 5664, ""C_calendar_lags"": 5664, ""E_full"": 5664}",5664,0,2020-01-09 00:00:00,2020-08-31 23:00:00
+wind,F01,"{""A_calendar_only"": 3456, ""D_calendar_lags_rolling"": 3456, ""B_lags_only"": 3456, ""C_calendar_lags"": 3456, ""E_full"": 3456}",3456,0,2020-01-09 00:00:00,2020-05-31 23:00:00
+wind,F02,"{""A_calendar_only"": 4176, ""D_calendar_lags_rolling"": 4176, ""B_lags_only"": 4176, ""C_calendar_lags"": 4176, ""E_full"": 4176}",4176,0,2020-01-09 00:00:00,2020-06-30 23:00:00
+wind,F03,"{""A_calendar_only"": 4920, ""D_calendar_lags_rolling"": 4920, ""B_lags_only"": 4920, ""C_calendar_lags"": 4920, ""E_full"": 4920}",4920,0,2020-01-09 00:00:00,2020-07-31 23:00:00
+wind,F04,"{""A_calendar_only"": 5664, ""D_calendar_lags_rolling"": 5664, ""B_lags_only"": 5664, ""C_calendar_lags"": 5664, ""E_full"": 5664}",5664,0,2020-01-09 00:00:00,2020-08-31 23:00:00
+pv,F01,"{""A_calendar_only"": 3456, ""D_calendar_lags_rolling"": 3456, ""B_lags_only"": 3456, ""C_calendar_lags"": 3456, ""E_full"": 3456}",3456,0,2020-01-09 00:00:00,2020-05-31 23:00:00
+pv,F02,"{""A_calendar_only"": 4176, ""D_calendar_lags_rolling"": 4176, ""B_lags_only"": 4176, ""C_calendar_lags"": 4176, ""E_full"": 4176}",4176,0,2020-01-09 00:00:00,2020-06-30 23:00:00
+pv,F03,"{""A_calendar_only"": 4920, ""D_calendar_lags_rolling"": 4920, ""B_lags_only"": 4920, ""C_calendar_lags"": 4920, ""E_full"": 4920}",4920,0,2020-01-09 00:00:00,2020-07-31 23:00:00
+pv,F04,"{""A_calendar_only"": 5664, ""D_calendar_lags_rolling"": 5664, ""B_lags_only"": 5664, ""C_calendar_lags"": 5664, ""E_full"": 5664}",5664,0,2020-01-09 00:00:00,2020-08-31 23:00:00

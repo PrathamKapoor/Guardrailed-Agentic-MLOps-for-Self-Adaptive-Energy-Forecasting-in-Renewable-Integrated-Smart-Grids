@@ -1,0 +1,24 @@
+{
+  "phase": "07",
+  "final_test_accessed": false,
+  "protocol_checksum": "666eb745de5ae01ba2033e825a4c6b0ba0cea1f9574c32426de8a5996581c0f9",
+  "phase_07_model_protocol_checksum": "7bcce9f646d8c3758a5341a0ada91ac6c9bfe699aba8906788055b4050c330b7",
+  "feature_manifest_checksum": "0e46baae741f41da7cfdad57c94d66881df368638412837a019e4f4c22b800ee",
+  "config_checksum": "4322277dffa68fb117ce3b79e53586ea9dc2336505d9ac24af30af1000b14001",
+  "dataset_version": "rts_gmlc_processed_v1",
+  "feature_set": "combined_v1",
+  "code_commit": "unknown",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.2"
+  },
+  "artifact_checksums": {
+    "artifacts\\experiments\\classical\\phase_07\\predictions\\classical_predictions.parquet": "e80ffba622ce5667a8bac7158503207ff5a735675779f39ad1168f055613f6fe",
+    "artifacts\\experiments\\classical\\phase_07\\metrics\\aggregate_metrics.csv": "ae1c4ac28045feac8ab575a21f46016b4c1c8c4fb0004aa8d61ef88e400489fe",
+    "artifacts\\experiments\\classical\\phase_07\\metrics\\fold_metrics.csv": "5ce799efa04643e88a2b9c82856f8b30308f2c3ead58ceaef2fae9fabee83a78",
+    "artifacts\\experiments\\classical\\phase_07\\metrics\\seed_stability.csv": "89fcdef2c9b522d7de0f537cd129912adebe323cbc2f2b4d78b0118391820e25",
+    "artifacts\\experiments\\classical\\phase_07\\diagnostics\\physical_validity.csv": "c21b254f28209aeaa3bdb5452516b7d8eda9738b3b5a4ee5edb6ca8793c27d84",
+    "artifacts\\research_figures\\phase_07\\figure_manifest.yaml": "edf677f9984927ed4a31b51ee35a822674824bf8db430203bd30ecc2736f3e0d",
+    "artifacts\\experiments\\classical\\phase_07\\diagnostics\\error_slices.csv": "6e691f3065658aca034d8a81378e6062ec02b2eda48852aca8880891bab1167a"
+  }
+}

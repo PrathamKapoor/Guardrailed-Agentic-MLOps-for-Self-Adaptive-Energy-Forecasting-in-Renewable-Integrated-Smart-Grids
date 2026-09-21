@@ -1,0 +1,14 @@
+{
+  "feature_specification": "n/a",
+  "framework": "declarative",
+  "horizon": 24,
+  "hyperparameters": {
+    "no_model_trained": true
+  },
+  "implementation_id": "NO_RESEARCH_V1",
+  "model_family": "no_research",
+  "model_spec_fingerprint": "model-spec-v1:sha256:9278b77bf94057015602f2fdebf1dbdfad4d9c944bf006c082b0b3014cf34ad4",
+  "scaling_policy": "n/a",
+  "target": "pv",
+  "training_policy": "frozen Phase 19 random_forest remains the reference"
+}

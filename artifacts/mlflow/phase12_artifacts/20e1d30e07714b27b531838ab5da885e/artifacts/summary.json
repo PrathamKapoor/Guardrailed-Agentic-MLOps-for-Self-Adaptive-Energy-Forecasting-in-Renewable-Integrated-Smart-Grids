@@ -1,0 +1,207 @@
+{
+  "dataset": "opsd_time_series",
+  "generated_at": "2026-08-26T21:31:15.474092",
+  "holm_bonferroni_primary_family": {
+    "EXT-H1-LOAD": {
+      "holm_threshold": 0.016666666666666666,
+      "p_value": 0.0,
+      "reject_null_at_alpha": true
+    },
+    "EXT-H1-PV": {
+      "holm_threshold": 0.025,
+      "p_value": 0.0,
+      "reject_null_at_alpha": true
+    },
+    "EXT-H1-WIND": {
+      "holm_threshold": 0.05,
+      "p_value": 1.111702588200343e-91,
+      "reject_null_at_alpha": true
+    }
+  },
+  "manifest": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\manifests\\opsd_time_series_manifest.yaml",
+  "status": "EXTERNAL_VALIDATION_VALID",
+  "targets": {
+    "load": {
+      "baseline_comparator": "RTS_DAY_AHEAD",
+      "challenger_model": "P10-load-mlp-E_full",
+      "coverage": {
+        "conclusive": true,
+        "min_samples": 720,
+        "missing_fraction": 0.0019521523475627975,
+        "missing_hours": 98,
+        "samples": 50103,
+        "span_hours": 50201
+      },
+      "eval_samples": 50103,
+      "metrics": {
+        "baseline": {
+          "MAE": 4459.731468699358,
+          "RMSE": 6876.58918256625,
+          "nMAE": 0.08035723868327603,
+          "nRMSE": 0.12390515486159226,
+          "sMAPE": 8.318861490764574,
+          "samples": 49983
+        },
+        "challenger": {
+          "MAE": 30282.9254815778,
+          "RMSE": 31471.12343101276,
+          "nMAE": 0.5456499540454853,
+          "nRMSE": 0.5670593834911488,
+          "sMAPE": 73.72809281273409,
+          "samples": 49983
+        },
+        "reference": {
+          "MAE": 48228.33433525349,
+          "RMSE": 49258.643281099125,
+          "nMAE": 0.8689975620000853,
+          "nRMSE": 0.8875620837565887,
+          "sMAPE": 152.42269624655245,
+          "samples": 49983
+        }
+      },
+      "reference_model": "P10-load-random_forest-B_lags_only",
+      "samples": 49983,
+      "tests_raw": {
+        "EXT-H1-LOAD": {
+          "comparison": "reference_vs_baseline",
+          "dm_statistic": 182.0739467035316,
+          "holm_decision": {
+            "holm_threshold": 0.016666666666666666,
+            "p_value": 0.0,
+            "reject_null_at_alpha": true
+          },
+          "p_value": 0.0
+        },
+        "EXT-H2-LOAD": {
+          "comparison": "reference_vs_challenger",
+          "dm_statistic": 312.6576906474497,
+          "p_value": 0.0
+        }
+      },
+      "training_samples": 7128
+    },
+    "pv": {
+      "baseline_comparator": "H24_DAILY_PERSISTENCE",
+      "challenger_model": "P10-pv-mlp-E_full",
+      "coverage": {
+        "conclusive": true,
+        "min_samples": 720,
+        "missing_fraction": 0.0019521523475627975,
+        "missing_hours": 98,
+        "samples": 50103,
+        "span_hours": 50201
+      },
+      "eval_samples": 50103,
+      "metrics": {
+        "baseline": {
+          "MAE": 1060.8902226757098,
+          "RMSE": 2267.199128590639,
+          "nMAE": 0.23132838708478154,
+          "nRMSE": 0.4943654926841687,
+          "sMAPE": 17.796138682396577,
+          "samples": 49983
+        },
+        "challenger": {
+          "MAE": 3792.9067917036305,
+          "RMSE": 5766.549502679222,
+          "nMAE": 0.827047880858751,
+          "nRMSE": 1.257403044148044,
+          "sMAPE": 156.2967784090766,
+          "samples": 49983
+        },
+        "reference": {
+          "MAE": 4038.8919628691033,
+          "RMSE": 7666.812684480795,
+          "nMAE": 0.8806852428366612,
+          "nRMSE": 1.671757712978962,
+          "sMAPE": 154.06998171191387,
+          "samples": 49983
+        }
+      },
+      "reference_model": "P10-pv-random_forest-B_lags_only",
+      "samples": 49983,
+      "tests_raw": {
+        "EXT-H1-PV": {
+          "comparison": "reference_vs_baseline",
+          "dm_statistic": 40.56453234111452,
+          "holm_decision": {
+            "holm_threshold": 0.025,
+            "p_value": 0.0,
+            "reject_null_at_alpha": true
+          },
+          "p_value": 0.0
+        },
+        "EXT-H2-PV": {
+          "comparison": "reference_vs_challenger",
+          "dm_statistic": 20740375.26721954,
+          "p_value": 0.0
+        }
+      },
+      "training_samples": 7128
+    },
+    "wind": {
+      "baseline_comparator": "RTS_DAY_AHEAD",
+      "challenger_model": "P10-wind-mlp-E_full",
+      "coverage": {
+        "conclusive": true,
+        "min_samples": 720,
+        "missing_fraction": 0.0019521523475627975,
+        "missing_hours": 98,
+        "samples": 50103,
+        "span_hours": 50201
+      },
+      "eval_samples": 50103,
+      "metrics": {
+        "baseline": {
+          "MAE": 5944.004461516915,
+          "RMSE": 8033.170763607349,
+          "nMAE": 0.5151340224665499,
+          "nRMSE": 0.6961905219636524,
+          "sMAPE": 59.892399276879864,
+          "samples": 49983
+        },
+        "challenger": {
+          "MAE": 9153.638147850395,
+          "RMSE": 12397.572717034787,
+          "nMAE": 0.793295238897259,
+          "nRMSE": 1.0744291233115708,
+          "sMAPE": 109.58640792501461,
+          "samples": 49983
+        },
+        "reference": {
+          "MAE": 10140.744719996777,
+          "RMSE": 13570.168414023161,
+          "nMAE": 0.8788423111454459,
+          "nRMSE": 1.1760515130704163,
+          "sMAPE": 130.98206808093448,
+          "samples": 49983
+        }
+      },
+      "reference_model": "P10-wind-hist_gradient_boosting-B_lags_only",
+      "samples": 49983,
+      "tests_raw": {
+        "EXT-H1-WIND": {
+          "comparison": "reference_vs_baseline",
+          "dm_statistic": 20.30715026461501,
+          "holm_decision": {
+            "holm_threshold": 0.05,
+            "p_value": 1.111702588200343e-91,
+            "reject_null_at_alpha": true
+          },
+          "p_value": 1.111702588200343e-91
+        },
+        "EXT-H2-WIND": {
+          "comparison": "reference_vs_challenger",
+          "dm_statistic": 30.219066240870372,
+          "p_value": 1.3306664078352058e-200
+        }
+      },
+      "training_samples": 7128
+    }
+  },
+  "warnings": [
+    "load: 120 persistence baseline missing",
+    "wind: 120 persistence baseline missing",
+    "pv: 120 persistence baseline missing"
+  ]
+}

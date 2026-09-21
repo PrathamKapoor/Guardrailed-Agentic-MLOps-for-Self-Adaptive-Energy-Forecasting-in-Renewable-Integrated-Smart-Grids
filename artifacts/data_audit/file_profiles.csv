@@ -1,0 +1,9 @@
+relative_path,category,resolution,rows,columns,missing_cells,duplicate_rows,negative_values,zero_values,min_period,max_period,min_year,max_year,audit_status
+RTS_Data/timeseries_data_files/Load/DAY_AHEAD_regional_Load.csv,load,60-minute,8784,7,0,0,0,0,1,24,2020,2020,PASS
+RTS_Data/timeseries_data_files/Load/REAL_TIME_regional_Load.csv,load,5-minute,105408,7,0,0,0,0,1,288,2020,2020,PASS
+RTS_Data/timeseries_data_files/WIND/DAY_AHEAD_wind.csv,wind,60-minute,8784,8,0,0,0,3549,1,24,2020,2020,PASS
+RTS_Data/timeseries_data_files/WIND/REAL_TIME_wind.csv,wind,5-minute,105408,8,0,0,0,81,1,288,2020,2020,PASS
+RTS_Data/timeseries_data_files/PV/DAY_AHEAD_pv.csv,pv,60-minute,8784,29,0,0,0,116678,1,24,2020,2020,PASS
+RTS_Data/timeseries_data_files/PV/REAL_TIME_pv.csv,pv,5-minute,105408,29,0,0,0,1405132,1,288,2020,2020,PASS
+RTS_Data/timeseries_data_files/RTPV/DAY_AHEAD_rtpv.csv,rtpv,60-minute,8784,35,0,0,0,149355,1,24,2020,2020,PASS
+RTS_Data/timeseries_data_files/RTPV/REAL_TIME_rtpv.csv,rtpv,5-minute,105408,35,0,0,0,1806450,1,288,2020,2020,PASS

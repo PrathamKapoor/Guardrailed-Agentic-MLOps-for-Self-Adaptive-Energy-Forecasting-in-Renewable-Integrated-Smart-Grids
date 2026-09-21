@@ -1,0 +1,148 @@
+{
+  "models_per_target": {
+    "load": [
+      "RTS_DAY_AHEAD",
+      "mlp",
+      "random_forest"
+    ],
+    "pv": [
+      "H24_DAILY_PERSISTENCE",
+      "mlp",
+      "random_forest"
+    ],
+    "wind": [
+      "RTS_DAY_AHEAD",
+      "hist_gradient_boosting",
+      "mlp"
+    ]
+  },
+  "n_total_rows": 13176,
+  "per_target_files": [
+    "forecasting_research\\baseline_analysis\\load\\analysis.json",
+    "forecasting_research\\baseline_analysis\\pv\\analysis.json",
+    "forecasting_research\\baseline_analysis\\wind\\analysis.json"
+  ],
+  "per_target_per_model": {
+    "load": {
+      "RTS_DAY_AHEAD": {
+        "MAE": 101.14234288114756,
+        "RMSE": 101.84536372764755,
+        "abs_err_max": 136.0821159999996,
+        "abs_err_median": 100.91703100000018,
+        "abs_err_p95": 122.14592245000028,
+        "n": 1464,
+        "nMAE": 0.02748577573893275,
+        "nRMSE": 0.22646049982041122,
+        "sMAPE_pct": 1.3583871662445728,
+        "signed_error": -101.14234288114756
+      },
+      "mlp": {
+        "MAE": 281.0008207663934,
+        "RMSE": 343.35945286034655,
+        "abs_err_max": 851.8658150000001,
+        "abs_err_median": 242.82718999999997,
+        "abs_err_p95": 633.1004144499999,
+        "n": 1464,
+        "nMAE": 0.07636292893785392,
+        "nRMSE": 0.7634844676951017,
+        "sMAPE_pct": 3.88854516452365,
+        "signed_error": -176.23549520355192
+      },
+      "random_forest": {
+        "MAE": 174.25681765368853,
+        "RMSE": 231.27076723581075,
+        "abs_err_max": 859.2998710000002,
+        "abs_err_median": 131.2342369999999,
+        "abs_err_p95": 480.19513274999986,
+        "n": 1464,
+        "nMAE": 0.04735488297554688,
+        "nRMSE": 0.5142472040467956,
+        "sMAPE_pct": 2.3583081990086048,
+        "signed_error": -10.651650141393448
+      }
+    },
+    "pv": {
+      "H24_DAILY_PERSISTENCE": {
+        "MAE": 39.09498520491803,
+        "RMSE": 100.69240763850823,
+        "abs_err_max": 666.008334,
+        "abs_err_median": 0.0,
+        "abs_err_p95": 228.02583399999926,
+        "n": 1464,
+        "nMAE": 0.11707829922108884,
+        "nRMSE": 0.22572554554652974,
+        "sMAPE_pct": 3.931270560407199,
+        "signed_error": -1.112073087431694
+      },
+      "mlp": {
+        "MAE": 221.63985044467213,
+        "RMSE": 249.27171400139017,
+        "abs_err_max": 565.3509359999999,
+        "abs_err_median": 183.622589,
+        "abs_err_p95": 455.5717414999999,
+        "n": 1464,
+        "nMAE": 0.663747961373173,
+        "nRMSE": 0.5588007571959567,
+        "sMAPE_pct": 67.73398370657443,
+        "signed_error": 5.7820068244535525
+      },
+      "random_forest": {
+        "MAE": 36.12176336202186,
+        "RMSE": 82.07888349051662,
+        "abs_err_max": 593.336376,
+        "abs_err_median": 0.059823,
+        "abs_err_p95": 169.59605964999992,
+        "n": 1464,
+        "nMAE": 0.10817435016601962,
+        "nRMSE": 0.18399898451391725,
+        "sMAPE_pct": 58.86732780787111,
+        "signed_error": -6.567941353825137
+      }
+    },
+    "wind": {
+      "RTS_DAY_AHEAD": {
+        "MAE": 331.30216302800545,
+        "RMSE": 491.20826474320177,
+        "abs_err_max": 2242.333333,
+        "abs_err_median": 207.50000000000006,
+        "abs_err_p95": 1112.9924999999994,
+        "n": 1464,
+        "nMAE": 0.2888189246300379,
+        "nRMSE": 0.5398090485112502,
+        "sMAPE_pct": 25.457877840162077,
+        "signed_error": -62.39212204030055
+      },
+      "hist_gradient_boosting": {
+        "MAE": 778.8412887247268,
+        "RMSE": 923.3732472119916,
+        "abs_err_max": 2115.35056,
+        "abs_err_median": 737.454555,
+        "abs_err_p95": 1687.8129645500003,
+        "n": 1464,
+        "nMAE": 0.6789696191869825,
+        "nRMSE": 1.0147329957056612,
+        "sMAPE_pct": 46.19868173885535,
+        "signed_error": 270.1051542520492
+      },
+      "mlp": {
+        "MAE": 838.4006897472677,
+        "RMSE": 957.930055025187,
+        "abs_err_max": 1844.5725220000002,
+        "abs_err_median": 772.279814,
+        "abs_err_p95": 1611.4070859999997,
+        "n": 1464,
+        "nMAE": 0.7308916531324274,
+        "nRMSE": 1.052708898971416,
+        "sMAPE_pct": 48.06525563795347,
+        "signed_error": 321.7658099193989
+      }
+    }
+  },
+  "source_path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\research_tables\\final_predictions.csv",
+  "source_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "targets": [
+    "load",
+    "pv",
+    "wind"
+  ]
+}

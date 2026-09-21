@@ -1,0 +1,23 @@
+{
+  "candidate_id": "residual_hgb_wind",
+  "external_evidence_hashes": {
+    "frozen_phase_19_protocol_freeze_sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+    "phase_13_policy_sha256": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+    "source_dataset_sha256": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00",
+    "stage_10_evidence_json": "artifacts/v2/residual_forecasting/evidence_packages/residual_hgb_wind/evidence.json"
+  },
+  "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+  "model_spec_fingerprint": "model-spec-v1:sha256:3086b138680f337a71e38c2b9777c66dd46d5e23dbd4c8e4198b4cf5876b13b0",
+  "package_files": [
+    "candidate_manifest.json",
+    "model_spec.json",
+    "feature_spec.json",
+    "data_split_manifest.json",
+    "benchmark_evaluation.json",
+    "protocol_compatibility.json",
+    "reproducibility_manifest.json",
+    "checksums.json"
+  ],
+  "package_root": "artifacts\\v2\\governance_candidate_packages\\residual_hgb_wind",
+  "schema": "stage_13_reproducibility_manifest_v1"
+}

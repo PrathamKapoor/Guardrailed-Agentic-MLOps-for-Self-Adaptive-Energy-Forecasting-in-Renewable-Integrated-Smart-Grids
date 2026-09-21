@@ -1,0 +1,223 @@
+{
+  "schema_version": "phase12-lineage-v1",
+  "nodes": [
+    {
+      "id": "MLOPS-REF-LOAD-H24-V1",
+      "type": "registry_entry",
+      "research_role": "REFERENCE",
+      "registry_state": "REGISTERED_REFERENCE"
+    },
+    {
+      "id": "MLOPS-REF-PV-H24-V1",
+      "type": "registry_entry",
+      "research_role": "REFERENCE",
+      "registry_state": "REGISTERED_REFERENCE"
+    },
+    {
+      "id": "MLOPS-REF-WIND-H24-V1",
+      "type": "registry_entry",
+      "research_role": "REFERENCE",
+      "registry_state": "REGISTERED_REFERENCE"
+    },
+    {
+      "id": "dataset:rts-gmlc-v2.0",
+      "type": "dataset",
+      "version": "RTS-GMLC",
+      "manifest_path": "data/manifests/rts_gmlc_manifest.yaml"
+    },
+    {
+      "id": "deviation:P9-DEV-001",
+      "type": "deviation",
+      "scientific_evidence": "INVALIDATED",
+      "path": "reports/phase_09_protocol_deviation.md"
+    },
+    {
+      "id": "deviation:P9-DEV-002",
+      "type": "deviation",
+      "scientific_integrity": "PASS",
+      "historical_binary_sha256": "1e4ca9fcb391587136b2def464da0685c6f6a9644b43cf9ff9b062e095ee61a1",
+      "current_binary_sha256": "dc831266e3aab8f55534de91dcf9d744cedad2c0aa0997d2a7796944aeedc83d",
+      "logical_content_sha256": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb"
+    },
+    {
+      "id": "evaluation:phase11:load",
+      "type": "evaluation",
+      "development_MAE": 285.1046521054128,
+      "benchmark_MAE": 126.61306197357128,
+      "final_test": "NOT_EVALUATED"
+    },
+    {
+      "id": "evaluation:phase11:pv",
+      "type": "evaluation",
+      "development_MAE": 44.17532550549145,
+      "benchmark_MAE": 33.765095628415295,
+      "final_test": "NOT_EVALUATED"
+    },
+    {
+      "id": "evaluation:phase11:wind",
+      "type": "evaluation",
+      "development_MAE": 528.4055877683035,
+      "benchmark_MAE": 269.0056523224044,
+      "final_test": "NOT_EVALUATED"
+    },
+    {
+      "id": "evidence:phase11-selection",
+      "type": "evidence",
+      "path": "artifacts/research_tables/forecasting_candidate_synthesis.csv",
+      "status": "VALID"
+    },
+    {
+      "id": "feature:load:h24:B_lags_only",
+      "type": "feature_dataset",
+      "feature_set_id": "B_lags_only",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:4734bf56bf82be6beb40bc61a76a009c749f213b829a5301f981c04bacf2eb2d",
+      "path": "data/processed/features/load/h24/combined_v1.parquet"
+    },
+    {
+      "id": "feature:pv:h24:B_lags_only",
+      "type": "feature_dataset",
+      "feature_set_id": "B_lags_only",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:3dafd7827084b2f1375cbf45f3ed9938caa6db2a3a3a49a1791335309f5664b9",
+      "path": "data/processed/features/pv/h24/combined_v1.parquet"
+    },
+    {
+      "id": "feature:wind:h24:B_lags_only",
+      "type": "feature_dataset",
+      "feature_set_id": "B_lags_only",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:6385b4c66293fcc9bbd00b784a1b806be2fb6d931094a27229fa553d8ae97330",
+      "path": "data/processed/features/wind/h24/combined_v1.parquet"
+    },
+    {
+      "id": "model-spec:model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122",
+      "type": "model_spec",
+      "model_spec_fingerprint": "model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122",
+      "config_path": "artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml"
+    },
+    {
+      "id": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "type": "model_spec",
+      "model_spec_fingerprint": "model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "config_path": "artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml"
+    },
+    {
+      "id": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "type": "model_spec",
+      "model_spec_fingerprint": "model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "config_path": "artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml"
+    },
+    {
+      "id": "processed:rts_gmlc_processed_v1",
+      "type": "processed_dataset",
+      "manifest_path": "data/manifests/processed_dataset_manifest.yaml",
+      "manifest_hash": "0c174c37e154e82dabeb721e5198fe34bbc9ecc7be26f945029a47bc6783f037"
+    },
+    {
+      "id": "protocol:phase11-finalist-selection",
+      "type": "protocol",
+      "path": "artifacts/experimental_design/phase_11_finalist_selection_protocol_freeze.yaml",
+      "sha256": "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "evaluation:phase11:load",
+      "target": "evidence:phase11-selection",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "evaluation:phase11:pv",
+      "target": "evidence:phase11-selection",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "evaluation:phase11:wind",
+      "target": "evidence:phase11-selection",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "evidence:phase11-selection",
+      "target": "MLOPS-REF-LOAD-H24-V1",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "evidence:phase11-selection",
+      "target": "MLOPS-REF-PV-H24-V1",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "evidence:phase11-selection",
+      "target": "MLOPS-REF-WIND-H24-V1",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "feature:load:h24:B_lags_only",
+      "target": "deviation:P9-DEV-002",
+      "relationship": "INVALIDATED_BY"
+    },
+    {
+      "source": "feature:load:h24:B_lags_only",
+      "target": "processed:rts_gmlc_processed_v1",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "feature:pv:h24:B_lags_only",
+      "target": "processed:rts_gmlc_processed_v1",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "feature:wind:h24:B_lags_only",
+      "target": "processed:rts_gmlc_processed_v1",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122",
+      "target": "evaluation:phase11:load",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "USES"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122",
+      "target": "protocol:phase11-finalist-selection",
+      "relationship": "GOVERNED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "target": "evaluation:phase11:wind",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "USES"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "target": "protocol:phase11-finalist-selection",
+      "relationship": "GOVERNED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "target": "evaluation:phase11:pv",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "USES"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "target": "protocol:phase11-finalist-selection",
+      "relationship": "GOVERNED_BY"
+    },
+    {
+      "source": "processed:rts_gmlc_processed_v1",
+      "target": "dataset:rts-gmlc-v2.0",
+      "relationship": "DERIVED_FROM"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "comparison_to_frozen_H24_baseline": {
+    "pv": {
+      "delta_MAE": 0.5739834210348818,
+      "delta_RMSE": 2.522209106023908,
+      "frozen_H24_PERSISTENCE": {
+        "MAE": 39.0949852003643,
+        "RMSE": 100.6924076197019,
+        "nMAE": 0.11707829920769121,
+        "nRMSE": 0.30154496201554803,
+        "sMAPE_pct": 7.862540615997038
+      },
+      "ours": {
+        "MAE": 39.66896862139918,
+        "RMSE": 103.2146167257258,
+        "n": 1296,
+        "nMAE": 0.1205001100344268,
+        "nRMSE": 0.23317153788483064,
+        "sMAPE_pct": 4.085422918720549
+      }
+    }
+  },
+  "development_end_exclusive": "2020-11-01T00:00:00",
+  "per_target": {
+    "load": {
+      "h24_persistence_metrics": {
+        "MAE": 148.8150035297325,
+        "RMSE": 215.23712299377146,
+        "n": 1296,
+        "nMAE": 0.040309467860422485,
+        "nRMSE": 0.48262919283928,
+        "sMAPE_pct": 2.017507152453202
+      },
+      "n_development": 7320,
+      "n_test_with_lags": 1296,
+      "test_window_first": "2020-11-01T00:00:00",
+      "test_window_last": "2020-12-31T23:00:00"
+    },
+    "pv": {
+      "h24_persistence_metrics": {
+        "MAE": 39.66896862139918,
+        "RMSE": 103.2146167257258,
+        "n": 1296,
+        "nMAE": 0.1205001100344268,
+        "nRMSE": 0.23317153788483064,
+        "sMAPE_pct": 4.085422918720549
+      },
+      "n_development": 7320,
+      "n_test_with_lags": 1296,
+      "test_window_first": "2020-11-01T00:00:00",
+      "test_window_last": "2020-12-31T23:00:00"
+    },
+    "wind": {
+      "h24_persistence_metrics": {
+        "MAE": 770.36595936214,
+        "RMSE": 1021.7035085761601,
+        "n": 1296,
+        "nMAE": 0.6589847885398783,
+        "nRMSE": 1.1246912781394953,
+        "sMAPE_pct": 44.35122334703905
+      },
+      "n_development": 7320,
+      "n_test_with_lags": 1296,
+      "test_window_first": "2020-11-01T00:00:00",
+      "test_window_last": "2020-12-31T23:00:00"
+    }
+  },
+  "reproduction_notes": "Only the H24 daily-persistence baseline is fully reproducible from existing research artefacts because it is model-free. The frozen random_forest / hist_gradient_boosting / mlp final models would require a re-training pass; the existing `scripts/run_classical_experiments.py` is a development-time experiment runner (not a frozen inference path), so the Phase 19 RF/HGB results cannot be reproduced byte-for-byte without rerunning the training pipeline on F01..F06. That training pipeline is provided by the existing `models.factory` module but is intentionally isolated from the Stage 9 research layer to avoid mutating any frozen artefact. The frozen RF/HGB/MLP numbers are therefore treated as a comparison reference, not a re-derived baseline.",
+  "reproduction_status": "PARTIAL",
+  "source_research_index": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\processed\\research_hourly_index.parquet",
+  "source_research_index_sha256": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00",
+  "targets": [
+    "load",
+    "wind",
+    "pv"
+  ],
+  "test_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  }
+}

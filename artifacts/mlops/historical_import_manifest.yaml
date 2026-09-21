@@ -1,0 +1,74 @@
+{
+  "schema_version": "phase12-historical-import-v1",
+  "tracking_origin": "HISTORICAL_ARTIFACT_IMPORT",
+  "mlflow_version": "3.15.1",
+  "python_version": "3.13.2",
+  "tracking_backend": "repository-local SQLite: artifacts/mlflow/phase12_tracking.db",
+  "artifact_backend": "repository-local: artifacts/mlflow/phase12_artifacts",
+  "import_granularity": "research-relevant rows from official phase metrics/tables; no epoch or checkpoint import",
+  "source_phases": [
+    {
+      "source_phase": "06",
+      "source_artifacts": [
+        "artifacts/experiments/baselines/phase_06/metrics/baseline_fold_metrics.csv"
+      ],
+      "records_discovered": 108,
+      "mlflow_experiment": "smartgrid/phase06/"
+    },
+    {
+      "source_phase": "07",
+      "source_artifacts": [
+        "artifacts/experiments/classical/phase_07/metrics/fold_metrics.csv"
+      ],
+      "records_discovered": 180,
+      "mlflow_experiment": "smartgrid/phase07/"
+    },
+    {
+      "source_phase": "08",
+      "source_artifacts": [
+        "artifacts/experiments/neural/phase_08/metrics/run_metadata.csv"
+      ],
+      "records_discovered": 324,
+      "mlflow_experiment": "smartgrid/phase08/"
+    },
+    {
+      "source_phase": "09",
+      "source_artifacts": [
+        "artifacts/experiments/hpo/phase_09/invalid_neural_sklearn/INVALID_EVIDENCE.yaml",
+        "artifacts/experiments/hpo/phase_09/post_hpo_validation/metrics.csv",
+        "artifacts/research_tables/hpo_trial_history.csv"
+      ],
+      "records_discovered": 61,
+      "mlflow_experiment": "smartgrid/phase09/"
+    },
+    {
+      "source_phase": "10",
+      "source_artifacts": [
+        "artifacts/experiments/ablation/phase_10/confirmation/metrics/run_metrics.csv",
+        "artifacts/experiments/ablation/phase_10/official/metrics/run_metrics.csv"
+      ],
+      "records_discovered": 276,
+      "mlflow_experiment": "smartgrid/phase10/"
+    },
+    {
+      "source_phase": "11",
+      "source_artifacts": [
+        "artifacts/research_tables/forecasting_candidate_synthesis.csv"
+      ],
+      "records_discovered": 3,
+      "mlflow_experiment": "smartgrid/phase11/"
+    }
+  ],
+  "discovered": 952,
+  "imported": 0,
+  "invalid_skipped": 1,
+  "audit_imported": 0,
+  "duplicates": 952,
+  "missing_metadata": 534,
+  "valid_records_present": 951,
+  "audit_records_present": 1,
+  "audit_records_imported_separately": 0,
+  "invalid_p9_dev_001_officially_imported": false,
+  "final_test_metrics_imported": false,
+  "phase_12_new_final_test_reads": 0
+}

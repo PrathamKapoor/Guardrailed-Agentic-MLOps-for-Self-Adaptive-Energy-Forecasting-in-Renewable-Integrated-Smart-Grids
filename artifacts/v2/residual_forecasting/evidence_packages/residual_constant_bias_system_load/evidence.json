@@ -1,0 +1,101 @@
+{
+  "baseline_metrics_test": {
+    "MAE": 101.14234287341759,
+    "RMSE": 101.84536371689018,
+    "n": 1464,
+    "nMAE": 0.027485775736730486,
+    "nRMSE": 0.22646049978794897,
+    "sMAPE_pct": 1.358387166177684
+  },
+  "candidate_id": "residual_constant_bias_system_load",
+  "candidate_metrics_test": {
+    "MAE": 25.52830479201531,
+    "RMSE": 28.061236717771205,
+    "n": 1464,
+    "nMAE": 0.0069374036681193775,
+    "nRMSE": 0.062396180443121424,
+    "sMAPE_pct": 0.37212506747820057
+  },
+  "classification": "MEANINGFUL_IMPROVEMENT",
+  "description": "Constant-bias residual correction: prediction = day_ahead + bias, where bias = mean(actual - day_ahead) on the training split. Deterministic; no ML fit on the test window.",
+  "evidence_package": {
+    "absolute_diff_MAE": -75.61403808140228,
+    "candidate_id": "residual_constant_bias_system_load",
+    "comparison_status": "RESEARCH_CLASSIFICATION_NOT_GOVERNANCE_DECISION",
+    "comparison_validity": "DIRECT",
+    "created_at": "2026-09-05T10:58:08.234164+00:00",
+    "evaluation_window": {
+      "end": "2020-12-31T23:00:00",
+      "start": "2020-11-01T00:00:00"
+    },
+    "relative_diff_MAE_pct": -74.76002229455503,
+    "research_classification": "MEANINGFUL_IMPROVEMENT",
+    "schema": "stage_10_residual_evidence_v1",
+    "source": {
+      "path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\processed\\research_hourly_index.parquet",
+      "sha256": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00"
+    },
+    "split_counts": {
+      "n_test": 1464,
+      "n_train": 5856,
+      "n_validation": 1464
+    },
+    "target": "system_load",
+    "training_window": {
+      "end": "2020-08-31T23:00:00",
+      "start": "2020-01-01T00:00:00"
+    },
+    "validation_window": {
+      "end": "2020-10-31T23:00:00",
+      "start": "2020-09-01T00:00:00"
+    }
+  },
+  "feature_set": [
+    "bias_constant"
+  ],
+  "n_test": 1464,
+  "n_train": 5856,
+  "n_validation": 1464,
+  "notes": "Deterministic baseline; the bias was fitted on TRAIN ONLY. The training residual std is the residual variance that no constant correction can remove.",
+  "target": "system_load",
+  "test": {
+    "corrected_metrics": {
+      "MAE": 25.52830479201531,
+      "RMSE": 28.061236717771205,
+      "n": 1464,
+      "nMAE": 0.0069374036681193775,
+      "nRMSE": 0.062396180443121424,
+      "sMAPE_pct": 0.37212506747820057
+    },
+    "n": 1464,
+    "rts_day_ahead_metrics": {
+      "MAE": 101.14234287341759,
+      "RMSE": 101.84536371689018,
+      "n": 1464,
+      "nMAE": 0.027485775736730486,
+      "nRMSE": 0.22646049978794897,
+      "sMAPE_pct": 1.358387166177684
+    }
+  },
+  "training_residual_mean": -126.53384573223049,
+  "training_residual_std": 37.49969036097917,
+  "validation": {
+    "corrected_metrics": {
+      "MAE": 25.59782727200978,
+      "RMSE": 31.103676556980655,
+      "n": 1464,
+      "nMAE": 0.006011704026315198,
+      "nRMSE": 0.03195345353118055,
+      "sMAPE_pct": 0.3087705831919087
+    },
+    "n": 1464,
+    "rts_day_ahead_metrics": {
+      "MAE": 126.61306197357129,
+      "RMSE": 130.37752828793685,
+      "n": 1464,
+      "nMAE": 0.029735346143339014,
+      "nRMSE": 0.13393954518613918,
+      "sMAPE_pct": 1.4608469482281632
+    }
+  }
+}

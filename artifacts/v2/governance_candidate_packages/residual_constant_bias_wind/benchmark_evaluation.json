@@ -1,0 +1,12 @@
+{
+  "benchmark_gate_value_for_governance": "BENCHMARK_GATE_FAIL",
+  "candidate_MAE_research": 329.17957374413055,
+  "candidate_id": "residual_constant_bias_wind",
+  "canonical_benchmark_MAE": 269.0056523224044,
+  "canonical_benchmark_name": "RTS_DAY_AHEAD",
+  "classification": "BENCHMARK_FAIL",
+  "comparison_window_alignment": "The Stage 10 candidate MAE is on the locked Phase 19 test window (2020-11-01..2020-12-31). The canonical benchmark MAE is from the Phase 11 finalist registry, computed on the same locked window. The two windows ARE the same.",
+  "explanation": "Candidate MAE 329.1796 > 1.01 \u00d7 benchmark MAE 269.0057.",
+  "research_window": 1464,
+  "target": "wind"
+}

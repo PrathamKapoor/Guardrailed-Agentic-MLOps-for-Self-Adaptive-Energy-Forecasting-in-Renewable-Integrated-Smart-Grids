@@ -1,0 +1,12 @@
+{
+  "benchmark_gate_value_for_governance": "BENCHMARK_EVIDENCE_UNAVAILABLE",
+  "candidate_MAE_research": null,
+  "candidate_id": "residual_no_research_pv",
+  "canonical_benchmark_MAE": 33.765095628415295,
+  "canonical_benchmark_name": "H24_DAILY_PERSISTENCE",
+  "classification": "BENCHMARK_EVIDENCE_UNAVAILABLE",
+  "comparison_window_alignment": "The Stage 10 candidate MAE is on the locked Phase 19 test window (2020-11-01..2020-12-31). The canonical benchmark MAE is from the Phase 11 finalist registry, computed on the same locked window. The two windows ARE the same.",
+  "explanation": "The candidate is the explicit NO_RESEARCH pathway: the frozen Phase 19 random_forest is the reference; no new candidate is proposed. The benchmark gate is N/A in this pathway.",
+  "research_window": "n/a",
+  "target": "pv"
+}

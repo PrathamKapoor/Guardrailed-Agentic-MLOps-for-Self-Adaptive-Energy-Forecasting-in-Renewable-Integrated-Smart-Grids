@@ -1,0 +1,16 @@
+{
+  "aggregate_package_sha256": "5da9d66773fc242af82eb04ed9805c4db884d5e721550e1bd5a4856d05a9ac99",
+  "candidate_id": "residual_ridge_system_load",
+  "file_hashes_sha256": {
+    "benchmark_evaluation.json": "47ae69aa1537c4adf7f6f85289f6ad3ba91e002fd424eb0b216dd05bce76a1ac",
+    "candidate_manifest.json": "4e00917d226dcd1d2ff6d8bf47a525b4501839ce3d1625545b3505350d5e4ed5",
+    "data_split_manifest.json": "4ea064eabb2057c9e70767ef0beb784e5ceb3e6379656661a22456014d7cda65",
+    "feature_spec.json": "a05fcbdce91fb13d1049660b6de9505adb74d0b263673b0c789e0685051566ea",
+    "model_spec.json": "59b3a0a2fb669acc555e167a1f1fc28cdabb77e7774200c12b7f850f6922d809",
+    "protocol_compatibility.json": "564e6a637467880e3bfaa38b3164a51dce1494c338888ebd87554a5b5b0b59db",
+    "reproducibility_manifest.json": "63adb50fbca365a163c6e5751cf08b751aca03419f40fc8c0fb7af9b6bfc7e05"
+  },
+  "generated_at": "2026-09-19T14:32:57.405238+00:00",
+  "package_root": "artifacts\\v2\\governance_candidate_packages\\residual_ridge_system_load",
+  "schema": "stage_13_checksums_v1"
+}

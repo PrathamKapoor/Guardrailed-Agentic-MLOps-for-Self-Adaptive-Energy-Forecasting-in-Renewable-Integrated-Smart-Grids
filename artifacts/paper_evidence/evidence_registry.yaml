@@ -1,0 +1,1139 @@
+[
+  {
+    "id": "E-DATA-001",
+    "description": "Canonical dataset observation count and alignment",
+    "source_artifact": "data/processed/research_hourly_index.metadata.json",
+    "generated_by": "scripts/build_canonical_dataset.py",
+    "relevant_paper_section": "Dataset / Methodology"
+  },
+  {
+    "id": "E-DATA-002",
+    "description": "Dataset characteristics table",
+    "source_artifact": "artifacts/research_tables/dataset_characteristics.csv",
+    "generated_by": "scripts/build_canonical_dataset.py",
+    "relevant_paper_section": "Dataset / Methodology"
+  },
+  {
+    "id": "E-EXP-001",
+    "description": "Target-timestamp temporal holdout",
+    "source_artifact": "artifacts/research_tables/temporal_split_protocol.csv",
+    "generated_by": "scripts/build_experimental_splits.py",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-EXP-002",
+    "description": "Six-fold expanding rolling-origin protocol",
+    "source_artifact": "artifacts/experimental_design/rolling_origin_folds.yaml",
+    "generated_by": "scripts/build_experimental_splits.py",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-EXP-003",
+    "description": "Predefined metric definitions",
+    "source_artifact": "config/experiments/metrics.yaml",
+    "generated_by": "Phase 5 protocol",
+    "relevant_paper_section": "Evaluation Metrics"
+  },
+  {
+    "id": "E-EXP-004",
+    "description": "Fixed stochastic seed policy",
+    "source_artifact": "config/experiments/seed_policy.yaml",
+    "generated_by": "Phase 5 protocol",
+    "relevant_paper_section": "Reproducibility"
+  },
+  {
+    "id": "E-EXP-005",
+    "description": "Statistical analysis plan",
+    "source_artifact": "docs/research_methodology/statistical_analysis_plan.md",
+    "generated_by": "Phase 5 protocol",
+    "relevant_paper_section": "Statistical Analysis"
+  },
+  {
+    "id": "E-EXP-006",
+    "description": "Evaluation protocol frozen before model results",
+    "source_artifact": "artifacts/experimental_design/protocol_freeze.yaml",
+    "generated_by": "Phase 5 protocol",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-BL-001",
+    "description": "Baseline definitions and H24 equivalence handling",
+    "source_artifact": "config/baselines/phase_06_baselines.yaml",
+    "generated_by": "Phase 6",
+    "relevant_paper_section": "Baselines"
+  },
+  {
+    "id": "E-BL-002",
+    "description": "Rolling-origin predictions and retained errors",
+    "source_artifact": "artifacts/experiments/baselines/phase_06/predictions/baseline_predictions.parquet",
+    "generated_by": "scripts/run_baseline_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-BL-003",
+    "description": "Aggregate validation baseline results",
+    "source_artifact": "artifacts/research_tables/baseline_validation_results.csv",
+    "generated_by": "scripts/run_baseline_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-BL-004",
+    "description": "RTS DAY_AHEAD external H24 benchmark",
+    "source_artifact": "artifacts/research_tables/baseline_validation_results.csv",
+    "generated_by": "scripts/run_baseline_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-BL-005",
+    "description": "Fold stability analysis",
+    "source_artifact": "artifacts/experiments/baselines/phase_06/metrics/baseline_fold_stability.csv",
+    "generated_by": "scripts/run_baseline_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-BL-006",
+    "description": "Final test not accessed",
+    "source_artifact": "artifacts/experiments/baselines/phase_06/baseline_experiment_manifest.yaml",
+    "generated_by": "scripts/run_baseline_experiments.py",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-ML-001",
+    "description": "Phase 7 fixed untuned model protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_07_model_protocol_freeze.yaml",
+    "generated_by": "Phase 7",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-ML-002",
+    "description": "Classical validation results and relative baseline comparisons",
+    "source_artifact": "artifacts/research_tables/classical_h24_validation_results.csv",
+    "generated_by": "scripts/run_classical_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-ML-003",
+    "description": "Classical rolling-origin fold results",
+    "source_artifact": "artifacts/research_tables/classical_fold_results.csv",
+    "generated_by": "scripts/run_classical_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-ML-004",
+    "description": "Stochastic seed stability",
+    "source_artifact": "artifacts/research_tables/classical_seed_stability.csv",
+    "generated_by": "scripts/run_classical_experiments.py",
+    "relevant_paper_section": "Reproducibility"
+  },
+  {
+    "id": "E-ML-005",
+    "description": "Measured classical runtime results",
+    "source_artifact": "reports/tables/classical_runtime_comparison.md",
+    "generated_by": "scripts/run_classical_experiments.py",
+    "relevant_paper_section": "Computational Cost"
+  },
+  {
+    "id": "E-ML-006",
+    "description": "Physical validity diagnostics",
+    "source_artifact": "artifacts/experiments/classical/phase_07/diagnostics/physical_validity.csv",
+    "generated_by": "scripts/run_classical_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-ML-007",
+    "description": "Phase 7 final-test lock confirmation",
+    "source_artifact": "artifacts/experiments/classical/phase_07/classical_experiment_manifest.yaml",
+    "generated_by": "scripts/run_classical_experiments.py",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-NN-001",
+    "description": "Phase 8 neural protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_08_neural_protocol_freeze.yaml",
+    "generated_by": "Phase 8",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-NN-002",
+    "description": "Neural prediction sequences and validation results",
+    "source_artifact": "artifacts/experiments/neural/phase_08/predictions/neural_predictions.parquet",
+    "generated_by": "scripts/run_neural_experiments.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-NN-003",
+    "description": "Neural seed stability and training histories",
+    "source_artifact": "artifacts/research_tables/neural_seed_stability.csv",
+    "generated_by": "scripts/run_neural_experiments.py",
+    "relevant_paper_section": "Reproducibility"
+  },
+  {
+    "id": "E-NN-004",
+    "description": "Neural final-test lock confirmation",
+    "source_artifact": "reports/phase_08_completion.md",
+    "generated_by": "Phase 8",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-HPO-001",
+    "description": "Valid classical HPO trials",
+    "source_artifact": "artifacts/research_tables/hpo_trial_history.csv",
+    "status": "VALID",
+    "generated_by": "scripts/regenerate_phase09_reports.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-HPO-002",
+    "description": "Corrected PyTorch HPO trials",
+    "source_artifact": "artifacts/research_tables/hpo_trial_history.csv",
+    "status": "VALID",
+    "framework": "PyTorch",
+    "implementation_id": "PYTORCH_MLP_V1",
+    "generated_by": "scripts/regenerate_phase09_reports.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-HPO-003",
+    "description": "Invalid sklearn neural HPO audit history",
+    "source_artifact": "artifacts/experiments/hpo/phase_09/invalid_neural_sklearn",
+    "status": "INVALIDATED",
+    "deviation_id": "P9-DEV-001",
+    "reason": "model implementation did not conform to frozen Phase 8 PyTorch implementation",
+    "generated_by": "Phase 9 audit",
+    "relevant_paper_section": "Audit only"
+  },
+  {
+    "id": "E-HPO-004",
+    "description": "Frozen valid selected configurations and checksums",
+    "source_artifact": "artifacts/experiments/hpo/phase_09/best_configs/checksums.sha256",
+    "status": "VALID",
+    "generated_by": "scripts/finalize_phase09_pytorch.py",
+    "relevant_paper_section": "Reproducibility"
+  },
+  {
+    "id": "E-HPO-005",
+    "description": "Selected-config freeze",
+    "source_artifact": "artifacts/experimental_design/phase_09_selected_config_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 9",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-HPO-006",
+    "description": "30-run F05/F06 PyTorch structural validation and seed stability",
+    "source_artifact": "artifacts/research_tables/hpo_post_hpo_seed_stability.csv",
+    "status": "VALID",
+    "framework": "PyTorch",
+    "implementation_id": "PYTORCH_MLP_V1",
+    "generated_by": "scripts/regenerate_phase09_reports.py",
+    "relevant_paper_section": "Results / Reproducibility"
+  },
+  {
+    "id": "E-HPO-007",
+    "description": "Search versus post-HPO and matched untuned-versus-tuned comparison",
+    "source_artifact": "artifacts/research_tables/hpo_validation_results.csv",
+    "status": "VALID",
+    "generated_by": "scripts/regenerate_phase09_reports.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-HPO-008",
+    "description": "Official regenerated Phase 9 tables and figures",
+    "source_artifact": "artifacts/research_figures/phase_09/figure_manifest.yaml",
+    "status": "VALID",
+    "generated_by": "scripts/regenerate_phase09_reports.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-HPO-009",
+    "description": "Evidence-filtering and exclusion regression test",
+    "source_artifact": "tests/test_phase09_evidence_filter.py",
+    "status": "VALID",
+    "generated_by": "Phase 9 closure",
+    "relevant_paper_section": "Governance"
+  },
+  {
+    "id": "E-HPO-010",
+    "description": "Implementation consistency and final-test modeling non-access; integrity-audit access disclosed",
+    "source_artifact": "reports/phase_09_completion.md",
+    "status": "VALID",
+    "framework": "PyTorch",
+    "implementation_id": "PYTORCH_MLP_V1",
+    "generated_by": "Phase 9 closure",
+    "relevant_paper_section": "Experimental Design"
+  },
+  {
+    "id": "E-HPO-011",
+    "description": "Post-HPO physical validity diagnostics",
+    "source_artifact": "artifacts/research_tables/hpo_post_hpo_physical_validity.csv",
+    "status": "VALID",
+    "framework": "PyTorch",
+    "implementation_id": "PYTORCH_MLP_V1",
+    "generated_by": "scripts/regenerate_phase09_reports.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-HPO-012",
+    "description": "P9-DEV-002 dual feature-integrity and controlled final-test integrity-audit evidence",
+    "source_artifact": "artifacts/integrity/phase_09/p9_dev_002/semantic_comparison.json",
+    "status": "VALID",
+    "integrity_access_reason": "P9-DEV-002",
+    "final_test_modeling_access": false,
+    "final_test_integrity_audit_access": true,
+    "generated_by": "scripts/rebuild_phase09_feature_integrity.py",
+    "relevant_paper_section": "Reproducibility / Governance"
+  },
+  {
+    "id": "E-ABL-001",
+    "description": "Phase 10 ablation protocol freeze and common-sample policy",
+    "source_artifact": "artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 10",
+    "relevant_paper_section": "Methodology"
+  },
+  {
+    "id": "E-ABL-002",
+    "description": "Classical and MLP feature ablation results",
+    "source_artifact": "artifacts/research_tables/feature_ablation_classical_h24.csv",
+    "status": "VALID",
+    "generated_by": "scripts/run_feature_ablation.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-ABL-003",
+    "description": "Selected-feature freeze and post-ablation confirmation",
+    "source_artifact": "artifacts/experimental_design/phase_10_selected_feature_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 10",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-FIN-001",
+    "description": "Phase 11 finalist-selection protocol",
+    "source_artifact": "artifacts/experimental_design/phase_11_finalist_selection_protocol_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 11",
+    "relevant_paper_section": "Methodology"
+  },
+  {
+    "id": "E-FIN-002",
+    "description": "Development candidate synthesis and paired comparisons",
+    "source_artifact": "artifacts/research_tables/development_paired_comparisons.csv",
+    "status": "VALID",
+    "generated_by": "scripts/select_phase11_finalists.py",
+    "relevant_paper_section": "Results"
+  },
+  {
+    "id": "E-FIN-003",
+    "description": "Frozen forecasting reference registry and final-test plan",
+    "source_artifact": "artifacts/model_registry/forecasting_reference_registry.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 11",
+    "relevant_paper_section": "Governance"
+  },
+  {
+    "id": "E-MLOPS-001",
+    "description": "MLflow local tracking configuration",
+    "source_artifact": "artifacts/experimental_design/phase_12_mlops_tracking_protocol_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-002",
+    "description": "Historical import manifest and idempotency",
+    "source_artifact": "artifacts/mlops/historical_import_manifest.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-003",
+    "description": "Tracking coverage",
+    "source_artifact": "artifacts/research_tables/mlops_tracking_coverage.csv",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-004",
+    "description": "Typed lineage index",
+    "source_artifact": "artifacts/mlops/lineage/lineage_index.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-005",
+    "description": "Research registry and benchmark gates",
+    "source_artifact": "artifacts/model_registry/mlops_research_registry.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-006",
+    "description": "Reference model cards",
+    "source_artifact": "reports/model_cards/load_reference.md",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-007",
+    "description": "Fingerprint and invalid-evidence regression tests",
+    "source_artifact": "tests/test_phase12_mlops.py",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-008",
+    "description": "Portable path tests",
+    "source_artifact": "tests/test_phase12_mlops.py",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-009",
+    "description": "Append-oriented audit events",
+    "source_artifact": "artifacts/mlops/audit/events.jsonl",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-010",
+    "description": "Reference reproducibility manifest",
+    "source_artifact": "artifacts/mlops/reproducibility_manifest.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-011",
+    "description": "Phase 12 lineage and registry figures",
+    "source_artifact": "artifacts/research_figures/phase_12/figure_manifest.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-MLOPS-012",
+    "description": "Final-test non-access",
+    "source_artifact": "reports/phase_12_completion.md",
+    "status": "VALID",
+    "generated_by": "Phase 12",
+    "relevant_paper_section": "MLOps / Reproducibility"
+  },
+  {
+    "id": "E-GOV-001",
+    "description": "Phase 13 governance protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_13_governance_protocol_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-002",
+    "description": "Declarative governance policy and checksum",
+    "source_artifact": "config/governance/phase_13_policy.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-003",
+    "description": "Governance policy fingerprint",
+    "source_artifact": "artifacts/governance/phase_13/policy_snapshot.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-004",
+    "description": "Lifecycle registry and state machine",
+    "source_artifact": "artifacts/model_registry/lifecycle_registry.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-005",
+    "description": "Frozen governance scenario set",
+    "source_artifact": "artifacts/experimental_design/phase_13_governance_scenarios.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-006",
+    "description": "Official governance decisions and scenario results",
+    "source_artifact": "artifacts/governance/phase_13/decisions.jsonl",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-007",
+    "description": "Governance safety metrics",
+    "source_artifact": "artifacts/governance/phase_13/simulation_manifest.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-008",
+    "description": "Current reference benchmark blocks",
+    "source_artifact": "reports/tables/reference_governance_status.md",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-009",
+    "description": "Invalid evidence and tampering rejection",
+    "source_artifact": "artifacts/governance/phase_13/gate_results.csv",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-010",
+    "description": "Lineage and protocol rejection",
+    "source_artifact": "artifacts/governance/phase_13/gate_results.csv",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-011",
+    "description": "Approval requirement and simulation distinction",
+    "source_artifact": "artifacts/governance/phase_13/decisions.jsonl",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-012",
+    "description": "Final-test policy rejection",
+    "source_artifact": "artifacts/governance/phase_13/decisions.jsonl",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-013",
+    "description": "Phase 13 governance figures",
+    "source_artifact": "artifacts/research_figures/phase_13/figure_manifest.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-014",
+    "description": "Governance methodology",
+    "source_artifact": "docs/research_methodology/model_lifecycle_governance.md",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-015",
+    "description": "Full governance regression tests",
+    "source_artifact": "tests/test_phase13_governance.py",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-GOV-016",
+    "description": "Phase 13 completion and full-suite results",
+    "source_artifact": "reports/phase_13_completion.md",
+    "status": "VALID",
+    "generated_by": "Phase 13",
+    "relevant_paper_section": "Deterministic Governance"
+  },
+  {
+    "id": "E-DRIFT-001",
+    "description": "Phase 14 drift protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_14_drift_protocol_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 14"
+  },
+  {
+    "id": "E-DRIFT-002",
+    "description": "Frozen calibration thresholds",
+    "source_artifact": "artifacts/experimental_design/phase_14_drift_threshold_freeze.yaml",
+    "status": "VALID",
+    "generated_by": "Phase 14"
+  },
+  {
+    "id": "E-DRIFT-003",
+    "description": "Controlled drift scenario results",
+    "source_artifact": "artifacts/research_tables/drift_detection_scenario_results.csv",
+    "status": "VALID",
+    "generated_by": "Phase 14"
+  },
+  {
+    "id": "E-DRIFT-004",
+    "description": "Natural development monitoring",
+    "source_artifact": "artifacts/research_tables/natural_development_drift_monitoring.csv",
+    "status": "VALID",
+    "generated_by": "Phase 14"
+  },
+  {
+    "id": "E-DRIFT-005",
+    "description": "Monitoring methodology and completion",
+    "source_artifact": "reports/phase_14_completion.md",
+    "status": "VALID",
+    "generated_by": "Phase 14"
+  },
+  {
+    "id": "E-RET-001",
+    "description": "Phase 15 governed retraining protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_15_retraining_protocol_freeze.yaml",
+    "generated_by": "Phase 15 protocol",
+    "relevant_paper_section": "Governed Retraining / Methodology"
+  },
+  {
+    "id": "E-RET-002",
+    "description": "Deterministic retraining policy and checksum",
+    "source_artifact": "config/retraining/phase_15_policy.yaml",
+    "generated_by": "Phase 15 policy",
+    "relevant_paper_section": "Governed Retraining / Methodology"
+  },
+  {
+    "id": "E-RET-003",
+    "description": "Retraining policy fingerprint",
+    "source_artifact": "artifacts/retraining/phase_15/decisions/retraining_decisions.jsonl",
+    "generated_by": "Phase 15 runner",
+    "relevant_paper_section": "Governed Retraining / Methodology"
+  },
+  {
+    "id": "E-RET-004",
+    "description": "Frozen adaptation scenario matrix (18 cases)",
+    "source_artifact": "artifacts/experimental_design/phase_15_adaptation_scenarios.yaml",
+    "generated_by": "Phase 15 protocol",
+    "relevant_paper_section": "Adaptation Experiments / Methodology"
+  },
+  {
+    "id": "E-RET-005",
+    "description": "Request-policy simulation outcomes (15/15 correct, 100% unsafe prevention)",
+    "source_artifact": "artifacts/retraining/phase_15/scenario_results/request_policy.json",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "Governed Retraining / Results"
+  },
+  {
+    "id": "E-RET-006",
+    "description": "Official retraining jobs (18 completed, 0 failed)",
+    "source_artifact": "artifacts/retraining/phase_15/jobs/",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "Adaptation Experiments / Results"
+  },
+  {
+    "id": "E-RET-007",
+    "description": "Training dataset fingerprints",
+    "source_artifact": "artifacts/retraining/phase_15/jobs/",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "MLOps / Provenance"
+  },
+  {
+    "id": "E-RET-008",
+    "description": "Challenger model spec/instance fingerprints",
+    "source_artifact": "artifacts/model_registry/phase_15_challengers.yaml",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "MLOps / Provenance"
+  },
+  {
+    "id": "E-RET-009",
+    "description": "Challenger lineage graph",
+    "source_artifact": "artifacts/retraining/phase_15/manifests/challenger_lineage.yaml",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "MLOps / Provenance"
+  },
+  {
+    "id": "E-RET-010",
+    "description": "Post-drift adaptation evaluation (matched timestamps)",
+    "source_artifact": "artifacts/retraining/phase_15/evaluations/",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "Adaptation Experiments / Results"
+  },
+  {
+    "id": "E-RET-011",
+    "description": "Clean counterfactual stability results",
+    "source_artifact": "reports/tables/retraining_clean_stability.md",
+    "generated_by": "scripts/finalize_phase15_artifacts.py",
+    "relevant_paper_section": "Adaptation Experiments / Results"
+  },
+  {
+    "id": "E-RET-012",
+    "description": "Retraining safety metrics (0 promotions, 0 replacements, 0 bypasses)",
+    "source_artifact": "reports/tables/retraining_safety_metrics.md",
+    "generated_by": "scripts/finalize_phase15_artifacts.py",
+    "relevant_paper_section": "Governance / Results"
+  },
+  {
+    "id": "E-RET-013",
+    "description": "Native MLflow retraining runs (18 VALID + 1 smoke)",
+    "source_artifact": "artifacts/mlflow/phase12_tracking.db",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "MLOps / Results"
+  },
+  {
+    "id": "E-RET-014",
+    "description": "Retraining audit events (append-only)",
+    "source_artifact": "artifacts/mlops/audit/events.jsonl",
+    "generated_by": "scripts/run_governed_retraining.py",
+    "relevant_paper_section": "MLOps / Auditability"
+  },
+  {
+    "id": "E-RET-015",
+    "description": "Request-policy results table",
+    "source_artifact": "reports/tables/retraining_request_policy_results.md",
+    "generated_by": "scripts/finalize_phase15_artifacts.py",
+    "relevant_paper_section": "Governed Retraining / Results"
+  },
+  {
+    "id": "E-RET-016",
+    "description": "Adaptation and job summary tables",
+    "source_artifact": "reports/tables/retraining_adaptation_results.md",
+    "generated_by": "scripts/finalize_phase15_artifacts.py",
+    "relevant_paper_section": "Adaptation Experiments / Results"
+  },
+  {
+    "id": "E-RET-017",
+    "description": "Phase 15 figures and manifest",
+    "source_artifact": "artifacts/research_figures/phase_15/figure_manifest.yaml",
+    "generated_by": "scripts/finalize_phase15_artifacts.py",
+    "relevant_paper_section": "Adaptation Experiments / Results"
+  },
+  {
+    "id": "E-RET-018",
+    "description": "Phase 15 regression tests",
+    "source_artifact": "tests/test_phase15_retraining.py",
+    "generated_by": "Phase 15 tests",
+    "relevant_paper_section": "Governed Retraining / Verification"
+  },
+  {
+    "id": "E-RET-019",
+    "description": "Final-test non-access in Phase 15",
+    "source_artifact": "reports/phase_15_completion.md",
+    "generated_by": "Phase 15 protocol",
+    "relevant_paper_section": "Final-Test Isolation"
+  },
+  {
+    "id": "E-RET-020",
+    "description": "Phase 12 LOAD fingerprint metadata deviation (P15-DEV-001)",
+    "source_artifact": "reports/phase_15_p12_fingerprint_deviation.md",
+    "generated_by": "Phase 15 discovery",
+    "relevant_paper_section": "Limitations / Provenance"
+  },
+  {
+    "id": "E-CC-001",
+    "description": "Phase 16 champion-challenger protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_16_champion_challenger_protocol_freeze.yaml",
+    "generated_by": "Phase 16 protocol",
+    "relevant_paper_section": "Champion-Challenger / Methodology"
+  },
+  {
+    "id": "E-CC-002",
+    "description": "Frozen promotion policy 16.0.0 and checksum",
+    "source_artifact": "config/governance/phase_16_promotion_policy.yaml",
+    "generated_by": "Phase 16 policy",
+    "relevant_paper_section": "Champion-Challenger / Methodology"
+  },
+  {
+    "id": "E-CC-003",
+    "description": "Promotion policy fingerprint",
+    "source_artifact": "artifacts/model_registry/phase_16_champion_registry.yaml",
+    "generated_by": "Phase 16 runner",
+    "relevant_paper_section": "Champion-Challenger / Methodology"
+  },
+  {
+    "id": "E-CC-004",
+    "description": "Real Phase 15 challenger promotion evaluations (18 REJECT)",
+    "source_artifact": "artifacts/champion_challenger/phase_16/evaluations/real_phase15_challengers.json",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "Champion-Challenger / Results"
+  },
+  {
+    "id": "E-CC-005",
+    "description": "Frozen scenario outcomes CC01-CC06 (100% governance accuracy)",
+    "source_artifact": "artifacts/champion_challenger/phase_16/scenario_results/cc_scenarios.json",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "Champion-Challenger / Results"
+  },
+  {
+    "id": "E-CC-006",
+    "description": "Verified rollback and blocked rollback records",
+    "source_artifact": "artifacts/model_registry/phase_16_champion_registry.yaml",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "Rollback / Results"
+  },
+  {
+    "id": "E-CC-007",
+    "description": "Preserved reference model artifacts",
+    "source_artifact": "artifacts/champion_challenger/phase_16/models/",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "Rollback / Provenance"
+  },
+  {
+    "id": "E-CC-008",
+    "description": "Safety metrics (0 automatic promotions, 14/14 unsafe blocked)",
+    "source_artifact": "artifacts/champion_challenger/phase_16/manifests/simulation_summary.json",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "Governance / Results"
+  },
+  {
+    "id": "E-CC-009",
+    "description": "Native MLflow champion-challenger runs (24)",
+    "source_artifact": "artifacts/mlflow/phase12_tracking.db",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "MLOps / Results"
+  },
+  {
+    "id": "E-CC-010",
+    "description": "Phase 16 audit events (append-only)",
+    "source_artifact": "artifacts/mlops/audit/events.jsonl",
+    "generated_by": "scripts/run_champion_challenger_simulation.py",
+    "relevant_paper_section": "MLOps / Auditability"
+  },
+  {
+    "id": "E-CC-011",
+    "description": "Evaluation and scenario tables",
+    "source_artifact": "reports/tables/champion_challenger_evaluation_results.md",
+    "generated_by": "scripts/finalize_phase16_artifacts.py",
+    "relevant_paper_section": "Champion-Challenger / Results"
+  },
+  {
+    "id": "E-CC-012",
+    "description": "Phase 16 figures and manifest",
+    "source_artifact": "artifacts/research_figures/phase_16/figure_manifest.yaml",
+    "generated_by": "scripts/finalize_phase16_artifacts.py",
+    "relevant_paper_section": "Champion-Challenger / Results"
+  },
+  {
+    "id": "E-CC-013",
+    "description": "Phase 16 regression tests",
+    "source_artifact": "tests/test_phase16_champion_challenger.py",
+    "generated_by": "Phase 16 tests",
+    "relevant_paper_section": "Champion-Challenger / Verification"
+  },
+  {
+    "id": "E-CC-014",
+    "description": "Final-test non-access in Phase 16",
+    "source_artifact": "reports/phase_16_completion.md",
+    "generated_by": "Phase 16 protocol",
+    "relevant_paper_section": "Final-Test Isolation"
+  },
+  {
+    "id": "E-AI-001",
+    "description": "Phase 17 agent protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_17_agent_protocol_freeze.yaml",
+    "generated_by": "Phase 17 protocol",
+    "relevant_paper_section": "Agentic AI / Methodology"
+  },
+  {
+    "id": "E-AI-002",
+    "description": "Bounded agent framework (5 agents + orchestrator + firewall)",
+    "source_artifact": "src/smartgrid_mlops/agents/",
+    "generated_by": "Phase 17 implementation",
+    "relevant_paper_section": "Agentic AI / Methodology"
+  },
+  {
+    "id": "E-AI-003",
+    "description": "Official agent scenario results A01-A08 (8/8 correct)",
+    "source_artifact": "artifacts/agents/phase_17/scenario_results/agent_scenarios.json",
+    "generated_by": "scripts/run_agent_scenarios.py",
+    "relevant_paper_section": "Agentic AI / Results"
+  },
+  {
+    "id": "E-AI-004",
+    "description": "Firewall safety evidence (3/3 unsafe blocked, 0 bypasses)",
+    "source_artifact": "artifacts/agents/phase_17/scenario_results/agent_scenarios.json",
+    "generated_by": "scripts/run_agent_scenarios.py",
+    "relevant_paper_section": "Agentic AI / Safety"
+  },
+  {
+    "id": "E-AI-005",
+    "description": "Bounded agent memory (structured, no chain-of-thought)",
+    "source_artifact": "artifacts/agents/phase_17/memory/agent_memory.jsonl",
+    "generated_by": "scripts/run_agent_scenarios.py",
+    "relevant_paper_section": "Agentic AI / Auditability"
+  },
+  {
+    "id": "E-AI-006",
+    "description": "Agent audit events",
+    "source_artifact": "artifacts/mlops/audit/events.jsonl",
+    "generated_by": "scripts/run_agent_scenarios.py",
+    "relevant_paper_section": "Agentic AI / Auditability"
+  },
+  {
+    "id": "E-AI-007",
+    "description": "Agent regression tests",
+    "source_artifact": "tests/test_phase17_agents.py",
+    "generated_by": "Phase 17 tests",
+    "relevant_paper_section": "Agentic AI / Verification"
+  },
+  {
+    "id": "E-AI-008",
+    "description": "Final-test non-access in Phase 17",
+    "source_artifact": "reports/phase_17_completion.md",
+    "generated_by": "Phase 17 protocol",
+    "relevant_paper_section": "Final-Test Isolation"
+  },
+  {
+    "id": "E-ABL-001",
+    "description": "Phase 18 ablation protocol freeze",
+    "source_artifact": "artifacts/experimental_design/phase_18_agentic_comparison_protocol_freeze.yaml",
+    "generated_by": "Phase 18 protocol",
+    "relevant_paper_section": "Agentic Ablation / Methodology"
+  },
+  {
+    "id": "E-ABL-002",
+    "description": "Deterministic vs agentic comparison results",
+    "source_artifact": "artifacts/agentic_evaluation/phase_18/comparison_results.json",
+    "generated_by": "scripts/run_agentic_comparison.py",
+    "relevant_paper_section": "Agentic Ablation / Results"
+  },
+  {
+    "id": "E-ABL-003",
+    "description": "Efficiency comparison table",
+    "source_artifact": "artifacts/research_tables/agentic_vs_deterministic_efficiency.csv",
+    "generated_by": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+    "relevant_paper_section": "Agentic Ablation / Results"
+  },
+  {
+    "id": "E-ABL-004",
+    "description": "Quality and safety comparison tables",
+    "source_artifact": "artifacts/research_tables/agentic_vs_deterministic_quality.csv",
+    "generated_by": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+    "relevant_paper_section": "Agentic Ablation / Results"
+  },
+  {
+    "id": "E-ABL-005",
+    "description": "Lifecycle decision consistency table",
+    "source_artifact": "artifacts/research_tables/agentic_vs_deterministic_outcomes.csv",
+    "generated_by": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+    "relevant_paper_section": "Agentic Ablation / Results"
+  },
+  {
+    "id": "E-ABL-006",
+    "description": "Phase 18 figures and manifest",
+    "source_artifact": "artifacts/research_figures/phase_18/figure_manifest.yaml",
+    "generated_by": "src/smartgrid_mlops/agentic_evaluation/reporting.py",
+    "relevant_paper_section": "Agentic Ablation / Results"
+  },
+  {
+    "id": "E-ABL-007",
+    "description": "Ablation audit events",
+    "source_artifact": "artifacts/mlops/audit/events.jsonl",
+    "generated_by": "scripts/run_agentic_comparison.py",
+    "relevant_paper_section": "Agentic Ablation / Auditability"
+  },
+  {
+    "id": "E-ABL-008",
+    "description": "Phase 18 regression tests",
+    "source_artifact": "tests/test_phase18_agentic_ablation.py",
+    "generated_by": "Phase 18 tests",
+    "relevant_paper_section": "Agentic Ablation / Verification"
+  },
+  {
+    "id": "E-ABL-009",
+    "description": "Final-test non-access in Phase 18",
+    "source_artifact": "reports/phase_18_completion.md",
+    "generated_by": "Phase 18 protocol",
+    "relevant_paper_section": "Final-Test Isolation"
+  },
+  {
+    "id": "E-FE-001",
+    "description": "Phase 19 final-evaluation protocol freeze (frozen pre-execution)",
+    "source_artifact": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml",
+    "generated_by": "Phase 19 protocol",
+    "relevant_paper_section": "Final Evaluation / Methodology"
+  },
+  {
+    "id": "E-FE-002",
+    "description": "Frozen comparison plan (load/wind/pv reference + challenger + baseline)",
+    "source_artifact": "artifacts/experimental_design/final_test_comparison_plan.yaml",
+    "generated_by": "Phase 19 engine",
+    "relevant_paper_section": "Final Evaluation / Methodology"
+  },
+  {
+    "id": "E-FE-003",
+    "description": "Phase 19 official predictions (Nov-Dec 2020)",
+    "source_artifact": "artifacts/experiments/final_evaluation/phase_19/official/predictions/final_test_predictions.parquet",
+    "generated_by": "scripts/run_phase19_final_evaluation.py",
+    "relevant_paper_section": "Final Evaluation / Results"
+  },
+  {
+    "id": "E-FE-004",
+    "description": "Phase 19 official metrics (5 metrics x 3 targets x 3 configurations)",
+    "source_artifact": "artifacts/experiments/final_evaluation/phase_19/official/metrics/final_test_metrics.csv",
+    "generated_by": "scripts/run_phase19_final_evaluation.py",
+    "relevant_paper_section": "Final Evaluation / Results"
+  },
+  {
+    "id": "E-FE-005",
+    "description": "final_predictions.csv (spec-named per-row predictions)",
+    "source_artifact": "artifacts/research_tables/final_predictions.csv",
+    "generated_by": "scripts/finalize_phase19_artifacts.py",
+    "relevant_paper_section": "Final Evaluation / Results"
+  },
+  {
+    "id": "E-FE-006",
+    "description": "final_forecasting_results.csv (per-target MAE/RMSE/sMAPE/nMAE/nRMSE)",
+    "source_artifact": "artifacts/research_tables/final_forecasting_results.csv",
+    "generated_by": "scripts/finalize_phase19_artifacts.py",
+    "relevant_paper_section": "Final Evaluation / Results"
+  },
+  {
+    "id": "E-FE-007",
+    "description": "final_model_comparison.csv (frozen model vs external benchmark)",
+    "source_artifact": "artifacts/research_tables/final_model_comparison.csv",
+    "generated_by": "scripts/finalize_phase19_artifacts.py",
+    "relevant_paper_section": "Final Evaluation / Results"
+  },
+  {
+    "id": "E-FE-008",
+    "description": "Phase 19 final execution audit JSON (governance invariants, fingerprints, access log)",
+    "source_artifact": "artifacts/audit/phase_19_final_execution_audit.json",
+    "generated_by": "scripts/finalize_phase19_artifacts.py",
+    "relevant_paper_section": "Final Evaluation / Auditability"
+  },
+  {
+    "id": "E-FE-009",
+    "description": "Phase 19 final evaluation lineage report",
+    "source_artifact": "artifacts/mlops/lineage/final_evaluation_lineage_report.md",
+    "generated_by": "scripts/finalize_phase19_artifacts.py",
+    "relevant_paper_section": "Final Evaluation / Provenance"
+  },
+  {
+    "id": "E-FE-010",
+    "description": "Phase 19 figures (4): performance, error distribution, forecast vs actual, architecture",
+    "source_artifact": "artifacts/research_figures/phase_19/",
+    "generated_by": "scripts/finalize_phase19_artifacts.py",
+    "relevant_paper_section": "Final Evaluation / Results"
+  },
+  {
+    "id": "E-FE-011",
+    "description": "Phase 19 MLflow runs (evidence_status=FINAL_EVALUATION_VALID)",
+    "source_artifact": "artifacts/mlflow/mlflow.db",
+    "generated_by": "scripts/run_phase19_final_evaluation.py",
+    "relevant_paper_section": "Final Evaluation / Auditability"
+  },
+  {
+    "id": "E-FE-012",
+    "description": "Phase 19 test suite (access, fold, plan integrity, no-training guards)",
+    "source_artifact": "tests/test_phase19_final_evaluation.py",
+    "generated_by": "Phase 19 tests",
+    "relevant_paper_section": "Final Evaluation / Verification"
+  },
+  {
+    "id": "E-FE-013",
+    "description": "Final-test non-access for training/HPO/feature selection/model selection/retraining",
+    "source_artifact": "artifacts/audit/phase_19_final_execution_audit.json",
+    "generated_by": "Phase 19 audit",
+    "relevant_paper_section": "Final-Test Isolation"
+  },
+  {
+    "id": "E-UI-001",
+    "description": "Phase 20 dashboard index.html (read-only evidence interface)",
+    "source_artifact": "dashboard/index.html",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-002",
+    "description": "Phase 20 interactive charts page (date-range + canvas)",
+    "source_artifact": "dashboard/charts.html",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-003",
+    "description": "Phase 20 dashboard styles.css (restrained research theme, accessible)",
+    "source_artifact": "dashboard/styles.css",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-004",
+    "description": "Phase 20 dashboard app.js (data-driven read-only client)",
+    "source_artifact": "dashboard/app.js",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-005",
+    "description": "Phase 20 results snapshot (per-target metrics + governance)",
+    "source_artifact": "dashboard/data/results.json",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-006",
+    "description": "Phase 20 predictions snapshot (long-format for charts and error analysis)",
+    "source_artifact": "dashboard/data/predictions.json",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-007",
+    "description": "Phase 20 protocol snapshot (frozen models + protocol SHA-256)",
+    "source_artifact": "dashboard/data/protocol.json",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-008",
+    "description": "Phase 20 lineage snapshot (lineage + completion report)",
+    "source_artifact": "dashboard/data/lineage.json",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-009",
+    "description": "Phase 20 embedded figures (base64 PNG/SVG)",
+    "source_artifact": "dashboard/data/figures.js",
+    "generated_by": "scripts/build_dashboard.py",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-010",
+    "description": "Phase 20 integrity baseline (20 Phase 19 artefacts, recorded pre-UI)",
+    "source_artifact": "artifacts/ui_build/phase19_integrity_baseline.json",
+    "generated_by": "Phase 20 baseline",
+    "relevant_paper_section": "Final Evaluation / Auditability"
+  },
+  {
+    "id": "E-UI-011",
+    "description": "Phase 20 read-only dashboard builder script",
+    "source_artifact": "scripts/build_dashboard.py",
+    "generated_by": "Phase 20 builder",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-012",
+    "description": "Phase 20 UI architecture documentation",
+    "source_artifact": "docs/phase_20_ui_architecture.md",
+    "generated_by": "Phase 20 docs",
+    "relevant_paper_section": "Final Evaluation / UI"
+  },
+  {
+    "id": "E-UI-013",
+    "description": "Phase 20 dashboard test suite (18 tests)",
+    "source_artifact": "tests/test_phase20_dashboard.py",
+    "generated_by": "Phase 20 tests",
+    "relevant_paper_section": "Final Evaluation / Verification"
+  },
+  {
+    "id": "E-UI-014",
+    "description": "Phase 20 completion report",
+    "source_artifact": "reports/phase_20_completion.md",
+    "generated_by": "Phase 20 report",
+    "relevant_paper_section": "Final Evaluation / Report"
+  }
+]

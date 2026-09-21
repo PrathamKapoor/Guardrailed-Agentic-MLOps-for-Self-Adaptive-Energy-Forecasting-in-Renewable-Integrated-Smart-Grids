@@ -1,0 +1,135 @@
+{
+  "schema_version": "phase12-reproducibility-v1",
+  "code_version": "UNKNOWN (repository has no committed HEAD)",
+  "library_versions": {
+    "mlflow": "3.15.1",
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "references": [
+    {
+      "target": "load",
+      "registry_id": "MLOPS-REF-LOAD-H24-V1",
+      "status": "COMPLETE",
+      "dataset_lineage": [
+        "data/manifests/rts_gmlc_manifest.yaml",
+        "data/manifests/processed_dataset_manifest.yaml"
+      ],
+      "processed_dataset_hash": "0c174c37e154e82dabeb721e5198fe34bbc9ecc7be26f945029a47bc6783f037",
+      "feature_logical_fingerprint": "e96842a2c7ac3eeb64d54c29985f5ca3d56268e1f12c137440b783c965b4d5fb",
+      "feature_config": "config/ablation/phase_10.yaml",
+      "protocol_hashes": {
+        "phase10": "92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257",
+        "phase11": "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b"
+      },
+      "model_spec_fingerprint": "model-spec-v1:sha256:60adb40d4904062690a9fdcec46a0b2e6e4e93a63a9383cc53f52bdb6e896122",
+      "hyperparameters": {
+        "bootstrap": false,
+        "max_depth": 8,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 11,
+        "n_estimators": 209,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "training_policy": {
+        "scaling": "none for tree estimator",
+        "seed_policy": [
+          42
+        ],
+        "folds": [
+          "F05",
+          "F06"
+        ]
+      },
+      "development_evidence": {
+        "MAE": 285.1046521054128,
+        "benchmark": "RTS_DAY_AHEAD",
+        "benchmark_MAE": 126.61306197357128
+      }
+    },
+    {
+      "target": "wind",
+      "registry_id": "MLOPS-REF-WIND-H24-V1",
+      "status": "COMPLETE",
+      "dataset_lineage": [
+        "data/manifests/rts_gmlc_manifest.yaml",
+        "data/manifests/processed_dataset_manifest.yaml"
+      ],
+      "processed_dataset_hash": "0c174c37e154e82dabeb721e5198fe34bbc9ecc7be26f945029a47bc6783f037",
+      "feature_logical_fingerprint": "adf4a51a0df4284717a31ce2f00e57de8cc1b97c012d02701decea00843465d0",
+      "feature_config": "config/ablation/phase_10.yaml",
+      "protocol_hashes": {
+        "phase10": "92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257",
+        "phase11": "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b"
+      },
+      "model_spec_fingerprint": "model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "hyperparameters": {
+        "l2_regularization": 0.023585940584142682,
+        "learning_rate": 0.015957084694148364,
+        "max_iter": 111,
+        "max_leaf_nodes": 57,
+        "min_samples_leaf": 28,
+        "random_state": 42
+      },
+      "training_policy": {
+        "scaling": "none for tree estimator",
+        "seed_policy": [
+          42
+        ],
+        "folds": [
+          "F05",
+          "F06"
+        ]
+      },
+      "development_evidence": {
+        "MAE": 528.4055877683035,
+        "benchmark": "RTS_DAY_AHEAD",
+        "benchmark_MAE": 269.0056523224044
+      }
+    },
+    {
+      "target": "pv",
+      "registry_id": "MLOPS-REF-PV-H24-V1",
+      "status": "COMPLETE",
+      "dataset_lineage": [
+        "data/manifests/rts_gmlc_manifest.yaml",
+        "data/manifests/processed_dataset_manifest.yaml"
+      ],
+      "processed_dataset_hash": "0c174c37e154e82dabeb721e5198fe34bbc9ecc7be26f945029a47bc6783f037",
+      "feature_logical_fingerprint": "f1739e031530e2ac0fd9812dd02faac35932ba088a629803446d09782f114240",
+      "feature_config": "config/ablation/phase_10.yaml",
+      "protocol_hashes": {
+        "phase10": "92504862b2ddec71b242b7ed396547504743b7cd8b66aa038f880316ab35d257",
+        "phase11": "30ef021aa059fc1649dc0e0d79b2d41fba4825003c5f033cb1053edaad1fa69b"
+      },
+      "model_spec_fingerprint": "model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "hyperparameters": {
+        "bootstrap": false,
+        "max_depth": 8,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 11,
+        "n_estimators": 209,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "training_policy": {
+        "scaling": "none for tree estimator",
+        "seed_policy": [
+          42
+        ],
+        "folds": [
+          "F05",
+          "F06"
+        ]
+      },
+      "development_evidence": {
+        "MAE": 44.17532550549145,
+        "benchmark": "H24_DAILY_PERSISTENCE",
+        "benchmark_MAE": 33.765095628415295
+      }
+    }
+  ]
+}

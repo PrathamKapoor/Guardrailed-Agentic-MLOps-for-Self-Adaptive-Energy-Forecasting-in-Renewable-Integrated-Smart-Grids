@@ -1,0 +1,15 @@
+{
+  "feature_specification": "B_lags_only_extended_with_calendar",
+  "framework": "deterministic_arithmetic",
+  "horizon": 24,
+  "hyperparameters": {
+    "estimation": "mean(actual - day_ahead) over training rows",
+    "no_learnable_parameters": true
+  },
+  "implementation_id": "RESIDUAL_CONSTANT_BIAS_V1",
+  "model_family": "constant_baseline_residual",
+  "model_spec_fingerprint": "model-spec-v1:sha256:fa0dc20849fa43501a7489ffc0134c08270ee983fefb807f42ca57ffb3889b67",
+  "scaling_policy": "none (single bias scalar)",
+  "target": "wind",
+  "training_policy": "fit on training split only; no model class"
+}

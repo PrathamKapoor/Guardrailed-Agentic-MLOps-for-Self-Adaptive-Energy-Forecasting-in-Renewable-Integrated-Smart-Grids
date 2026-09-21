@@ -1,0 +1,78 @@
+{
+  "candidates": [
+    {
+      "benchmark_classification": "BENCHMARK_PASS",
+      "benchmark_gate_value": "BENCHMARK_GATE_PASS",
+      "candidate_id": "residual_constant_bias_system_load",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+      "model_spec_fingerprint": "model-spec-v1:sha256:fa0dc20849fa43501a7489ffc0134c08270ee983fefb807f42ca57ffb3889b67",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_constant_bias_system_load",
+      "protocol_compatibility_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "target": "system_load"
+    },
+    {
+      "benchmark_classification": "BENCHMARK_FAIL",
+      "benchmark_gate_value": "BENCHMARK_GATE_FAIL",
+      "candidate_id": "residual_constant_bias_wind",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+      "model_spec_fingerprint": "model-spec-v1:sha256:fa0dc20849fa43501a7489ffc0134c08270ee983fefb807f42ca57ffb3889b67",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_constant_bias_wind",
+      "protocol_compatibility_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "target": "wind"
+    },
+    {
+      "benchmark_classification": "BENCHMARK_PASS",
+      "benchmark_gate_value": "BENCHMARK_GATE_PASS",
+      "candidate_id": "residual_ridge_system_load",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+      "model_spec_fingerprint": "model-spec-v1:sha256:dfd12df5869778edcaccdad4446bfaf5cc749c1eb3e5789cc067f937797cfa3f",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_ridge_system_load",
+      "protocol_compatibility_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "target": "system_load"
+    },
+    {
+      "benchmark_classification": "BENCHMARK_PASS",
+      "benchmark_gate_value": "BENCHMARK_GATE_PASS",
+      "candidate_id": "residual_ridge_wind",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+      "model_spec_fingerprint": "model-spec-v1:sha256:dfd12df5869778edcaccdad4446bfaf5cc749c1eb3e5789cc067f937797cfa3f",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_ridge_wind",
+      "protocol_compatibility_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "target": "wind"
+    },
+    {
+      "benchmark_classification": "BENCHMARK_PASS",
+      "benchmark_gate_value": "BENCHMARK_GATE_PASS",
+      "candidate_id": "residual_hgb_system_load",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+      "model_spec_fingerprint": "model-spec-v1:sha256:3086b138680f337a71e38c2b9777c66dd46d5e23dbd4c8e4198b4cf5876b13b0",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_hgb_system_load",
+      "protocol_compatibility_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "target": "system_load"
+    },
+    {
+      "benchmark_classification": "BENCHMARK_PASS",
+      "benchmark_gate_value": "BENCHMARK_GATE_PASS",
+      "candidate_id": "residual_hgb_wind",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+      "model_spec_fingerprint": "model-spec-v1:sha256:3086b138680f337a71e38c2b9777c66dd46d5e23dbd4c8e4198b4cf5876b13b0",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_hgb_wind",
+      "protocol_compatibility_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "target": "wind"
+    },
+    {
+      "benchmark_classification": "BENCHMARK_EVIDENCE_UNAVAILABLE",
+      "benchmark_gate_value": "BENCHMARK_EVIDENCE_UNAVAILABLE",
+      "candidate_id": "residual_no_research_pv",
+      "feature_spec_fingerprint": "feature-spec-v1:sha256:c56f4793eb75ed462369aa48c95a57a8658374e6beb341052a944320e4a7e882",
+      "model_spec_fingerprint": "model-spec-v1:sha256:9278b77bf94057015602f2fdebf1dbdfad4d9c944bf006c082b0b3014cf34ad4",
+      "package_dir": "artifacts\\v2\\governance_candidate_packages\\residual_no_research_pv",
+      "protocol_compatibility_classification": "FORMALLY_COMPATIBLE_WITH_EVIDENCE",
+      "target": "pv"
+    }
+  ],
+  "created_at": "2026-09-19T14:32:57.568632+00:00",
+  "n_candidates": 7,
+  "notes": "Stage 13 is a packaging stage. The summary records per-candidate benchmark classification and protocol-compatibility classification. It does NOT promote, deploy, or otherwise mutate any lifecycle state. The Phase 13 policy, the governance engine, the agent firewall, the registry, and the protected v1 artefacts are unchanged.",
+  "schema": "stage_13_packages_manifest_v1"
+}

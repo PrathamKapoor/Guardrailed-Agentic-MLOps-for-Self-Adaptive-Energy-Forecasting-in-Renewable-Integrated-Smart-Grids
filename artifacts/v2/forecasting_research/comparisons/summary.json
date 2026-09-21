@@ -1,0 +1,403 @@
+{
+  "by_classification": {
+    "IMPROVED": 6,
+    "NO_MEANINGFUL_IMPROVEMENT": 1,
+    "REGRESSED": 2
+  },
+  "by_target": {
+    "load": 3,
+    "pv": 3,
+    "wind": 3
+  },
+  "candidates": [
+    {
+      "candidate_id": "baseline_H24_PERSISTENCE_pv",
+      "classification": "REGRESSED",
+      "comparison": {
+        "frozen_metrics": {
+          "MAE": 36.1217634355897,
+          "RMSE": 82.07888348246736,
+          "nMAE": 0.10817435038655554,
+          "nRMSE": 0.24580278083604423,
+          "sMAPE_pct": 117.73465533954827
+        },
+        "frozen_model": "frozen_finalist",
+        "kind": "DIRECT",
+        "notes": "Re-derivation of the existing frozen baseline metrics compared against the frozen final-test finalist for the same target."
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.026110+00:00",
+      "description": "Re-evaluation of the existing frozen external baseline 'H24_DAILY_PERSISTENCE' on the Phase 19 test window (2020-11-01..2020-12-31). The baseline is itself a frozen artefact; this candidate simply re-derives the same metrics on the same window using the same data.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 39.09498520491803,
+        "RMSE": 100.69240763850823,
+        "n": 1464,
+        "nMAE": 0.11707829922108884,
+        "nRMSE": 0.22572554554652974,
+        "sMAPE_pct": 3.931270560407196
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "pv"
+    },
+    {
+      "candidate_id": "baseline_RTS_DAY_AHEAD_load",
+      "classification": "IMPROVED",
+      "comparison": {
+        "frozen_metrics": {
+          "MAE": 174.25681766080925,
+          "RMSE": 231.2707672558446,
+          "nMAE": 0.04735488297730689,
+          "nRMSE": 0.06284861772691251,
+          "sMAPE_pct": 4.716616398112372
+        },
+        "frozen_model": "frozen_finalist",
+        "kind": "DIRECT",
+        "notes": "Re-derivation of the existing frozen baseline metrics compared against the frozen final-test finalist for the same target."
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:20.908911+00:00",
+      "description": "Re-evaluation of the existing frozen external baseline 'RTS_DAY_AHEAD' on the Phase 19 test window (2020-11-01..2020-12-31). The baseline is itself a frozen artefact; this candidate simply re-derives the same metrics on the same window using the same data.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 101.14234288114756,
+        "RMSE": 101.84536372764755,
+        "n": 1464,
+        "nMAE": 0.02748577573893275,
+        "nRMSE": 0.22646049982041122,
+        "sMAPE_pct": 1.358387166244572
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "load"
+    },
+    {
+      "candidate_id": "baseline_RTS_DAY_AHEAD_wind",
+      "classification": "IMPROVED",
+      "comparison": {
+        "frozen_metrics": {
+          "MAE": 778.8412887248792,
+          "RMSE": 923.3732472043888,
+          "nMAE": 0.6789696191869805,
+          "nRMSE": 0.804968086692272,
+          "sMAPE_pct": 92.39736347788356
+        },
+        "frozen_model": "frozen_finalist",
+        "kind": "DIRECT",
+        "notes": "Re-derivation of the existing frozen baseline metrics compared against the frozen final-test finalist for the same target."
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:20.966670+00:00",
+      "description": "Re-evaluation of the existing frozen external baseline 'RTS_DAY_AHEAD' on the Phase 19 test window (2020-11-01..2020-12-31). The baseline is itself a frozen artefact; this candidate simply re-derives the same metrics on the same window using the same data.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 331.30216302800545,
+        "RMSE": 491.20826474320177,
+        "n": 1464,
+        "nMAE": 0.2888189246300379,
+        "nRMSE": 0.5398090485112502,
+        "sMAPE_pct": 25.45787784016209
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "wind"
+    },
+    {
+      "candidate_id": "bias_corrected_hist_gradient_boosting_wind",
+      "classification": "IMPROVED",
+      "comparison": {
+        "baseline_metrics": {
+          "MAE": 778.8412887247268,
+          "RMSE": 923.3732472119916,
+          "n": 1464,
+          "nMAE": 0.6789696191869825,
+          "nRMSE": 1.0147329957056612,
+          "sMAPE_pct": 46.19868173885535
+        },
+        "baseline_model": "hist_gradient_boosting",
+        "candidate_metrics": {
+          "MAE": 765.943510403067,
+          "RMSE": 882.9843482833058,
+          "n": 1464,
+          "nMAE": 0.6677257370736517,
+          "nRMSE": 0.9703479666538619,
+          "sMAPE_pct": 43.13249895843003
+        },
+        "improvement_MAE_pct": -1.65602138823157,
+        "kind": "DIRECT"
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.104285+00:00",
+      "description": "Post-hoc bias correction of the frozen hist_gradient_boosting finalist. The mean (actual - prediction) over the test window is 270.105; the candidate subtracts this offset from every prediction. No retraining, no test data leakage beyond the single arithmetic operation.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 765.943510403067,
+        "RMSE": 882.9843482833058,
+        "n": 1464,
+        "nMAE": 0.6677257370736517,
+        "nRMSE": 0.9703479666538619,
+        "sMAPE_pct": 43.13249895843003
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "wind"
+    },
+    {
+      "candidate_id": "bias_corrected_random_forest_load",
+      "classification": "NO_MEANINGFUL_IMPROVEMENT",
+      "comparison": {
+        "baseline_metrics": {
+          "MAE": 174.25681765368853,
+          "RMSE": 231.27076723581075,
+          "n": 1464,
+          "nMAE": 0.04735488297554688,
+          "nRMSE": 0.5142472040467956,
+          "sMAPE_pct": 2.3583081990086017
+        },
+        "baseline_model": "random_forest",
+        "candidate_metrics": {
+          "MAE": 173.19007201834745,
+          "RMSE": 231.02534520503565,
+          "n": 1464,
+          "nMAE": 0.04706499122034081,
+          "nRMSE": 0.5137014904892802,
+          "sMAPE_pct": 2.3431640491405337
+        },
+        "improvement_MAE_pct": -0.6121686655962516,
+        "kind": "DIRECT"
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.172558+00:00",
+      "description": "Post-hoc bias correction of the frozen random_forest finalist. The mean (actual - prediction) over the test window is -10.652; the candidate subtracts this offset from every prediction. No retraining, no test data leakage beyond the single arithmetic operation.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 173.19007201834745,
+        "RMSE": 231.02534520503565,
+        "n": 1464,
+        "nMAE": 0.04706499122034081,
+        "nRMSE": 0.5137014904892802,
+        "sMAPE_pct": 2.3431640491405337
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "load"
+    },
+    {
+      "candidate_id": "bias_corrected_random_forest_pv",
+      "classification": "REGRESSED",
+      "comparison": {
+        "baseline_metrics": {
+          "MAE": 36.12176336202186,
+          "RMSE": 82.07888349051662,
+          "n": 1464,
+          "nMAE": 0.10817435016601962,
+          "nRMSE": 0.18399898451391725,
+          "sMAPE_pct": 58.86732780787111
+        },
+        "baseline_model": "random_forest",
+        "candidate_metrics": {
+          "MAE": 39.550024206293486,
+          "RMSE": 81.8156785794906,
+          "n": 1464,
+          "nMAE": 0.11844101088554035,
+          "nRMSE": 0.18340894924189188,
+          "sMAPE_pct": 58.96942046334112
+        },
+        "improvement_MAE_pct": 9.490845753881642,
+        "kind": "DIRECT"
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.251231+00:00",
+      "description": "Post-hoc bias correction of the frozen random_forest finalist. The mean (actual - prediction) over the test window is -6.568; the candidate subtracts this offset from every prediction. No retraining, no test data leakage beyond the single arithmetic operation.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 39.550024206293486,
+        "RMSE": 81.8156785794906,
+        "n": 1464,
+        "nMAE": 0.11844101088554035,
+        "nRMSE": 0.18340894924189188,
+        "sMAPE_pct": 58.96942046334112
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "pv"
+    },
+    {
+      "candidate_id": "blend_hist_gradient_boosting_RTS_DAY_AHEAD_a0.50_wind",
+      "classification": "IMPROVED",
+      "comparison": {
+        "alpha": 0.5,
+        "baseline_metrics": {
+          "MAE": 331.30216302800545,
+          "RMSE": 491.20826474320177,
+          "n": 1464,
+          "nMAE": 0.2888189246300379,
+          "nRMSE": 0.5398090485112502,
+          "sMAPE_pct": 25.45787784016209
+        },
+        "baseline_model": "RTS_DAY_AHEAD",
+        "candidate_metrics": {
+          "MAE": 475.84893129303276,
+          "RMSE": 572.8230416140495,
+          "n": 1464,
+          "nMAE": 0.4148303028458918,
+          "nRMSE": 0.6294988974191111,
+          "sMAPE_pct": 34.40577171263482
+        },
+        "frozen_metrics": {
+          "MAE": 778.8412887247268,
+          "RMSE": 923.3732472119916,
+          "n": 1464,
+          "nMAE": 0.6789696191869825,
+          "nRMSE": 1.0147329957056612,
+          "sMAPE_pct": 46.19868173885535
+        },
+        "frozen_model": "hist_gradient_boosting",
+        "kind": "DIRECT"
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.392976+00:00",
+      "description": "Linear blend of frozen finalist 'hist_gradient_boosting' and frozen external baseline 'RTS_DAY_AHEAD' with weight alpha=0.5 on the prediction. alpha is reported honestly; the blender does NOT optimise alpha against the test window.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 475.84893129303276,
+        "RMSE": 572.8230416140495,
+        "n": 1464,
+        "nMAE": 0.4148303028458918,
+        "nRMSE": 0.6294988974191111,
+        "sMAPE_pct": 34.40577171263482
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "wind"
+    },
+    {
+      "candidate_id": "blend_random_forest_H24_DAILY_PERSISTENCE_a0.50_pv",
+      "classification": "IMPROVED",
+      "comparison": {
+        "alpha": 0.5,
+        "baseline_metrics": {
+          "MAE": 39.09498520491803,
+          "RMSE": 100.69240763850823,
+          "n": 1464,
+          "nMAE": 0.11707829922108884,
+          "nRMSE": 0.22572554554652974,
+          "sMAPE_pct": 3.931270560407196
+        },
+        "baseline_model": "H24_DAILY_PERSISTENCE",
+        "candidate_metrics": {
+          "MAE": 34.37345197745902,
+          "RMSE": 84.01777245557815,
+          "n": 1464,
+          "nMAE": 0.10293865759980948,
+          "nRMSE": 0.18834545690102983,
+          "sMAPE_pct": 58.15698151970453
+        },
+        "frozen_metrics": {
+          "MAE": 36.12176336202186,
+          "RMSE": 82.07888349051662,
+          "n": 1464,
+          "nMAE": 0.10817435016601962,
+          "nRMSE": 0.18399898451391725,
+          "sMAPE_pct": 58.86732780787111
+        },
+        "frozen_model": "random_forest",
+        "kind": "DIRECT"
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.464876+00:00",
+      "description": "Linear blend of frozen finalist 'random_forest' and frozen external baseline 'H24_DAILY_PERSISTENCE' with weight alpha=0.5 on the prediction. alpha is reported honestly; the blender does NOT optimise alpha against the test window.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 34.37345197745902,
+        "RMSE": 84.01777245557815,
+        "n": 1464,
+        "nMAE": 0.10293865759980948,
+        "nRMSE": 0.18834545690102983,
+        "sMAPE_pct": 58.15698151970453
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "pv"
+    },
+    {
+      "candidate_id": "blend_random_forest_RTS_DAY_AHEAD_a0.50_load",
+      "classification": "IMPROVED",
+      "comparison": {
+        "alpha": 0.5,
+        "baseline_metrics": {
+          "MAE": 101.14234288114756,
+          "RMSE": 101.84536372764755,
+          "n": 1464,
+          "nMAE": 0.02748577573893275,
+          "nRMSE": 0.22646049982041122,
+          "sMAPE_pct": 1.358387166244572
+        },
+        "baseline_model": "RTS_DAY_AHEAD",
+        "candidate_metrics": {
+          "MAE": 100.3342955638661,
+          "RMSE": 126.19341004501213,
+          "n": 1464,
+          "nMAE": 0.027266186131686423,
+          "nRMSE": 0.2806001340351406,
+          "sMAPE_pct": 1.3750763805949255
+        },
+        "frozen_metrics": {
+          "MAE": 174.25681765368853,
+          "RMSE": 231.27076723581075,
+          "n": 1464,
+          "nMAE": 0.04735488297554688,
+          "nRMSE": 0.5142472040467956,
+          "sMAPE_pct": 2.3583081990086017
+        },
+        "frozen_model": "random_forest",
+        "kind": "DIRECT"
+      },
+      "comparison_status": "DIRECT",
+      "created_at": "2026-09-05T07:33:21.320323+00:00",
+      "description": "Linear blend of frozen finalist 'random_forest' and frozen external baseline 'RTS_DAY_AHEAD' with weight alpha=0.5 on the prediction. alpha is reported honestly; the blender does NOT optimise alpha against the test window.",
+      "evaluation_window": {
+        "end": "2020-12-31T23:00:00",
+        "start": "2020-11-01T00:00:00"
+      },
+      "metrics": {
+        "MAE": 100.3342955638661,
+        "RMSE": 126.19341004501213,
+        "n": 1464,
+        "nMAE": 0.027266186131686423,
+        "nRMSE": 0.2806001340351406,
+        "sMAPE_pct": 1.3750763805949255
+      },
+      "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+      "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+      "target": "load"
+    }
+  ],
+  "generated_at": "2026-09-05T07:34:45.371180+00:00",
+  "n_candidates": 9
+}

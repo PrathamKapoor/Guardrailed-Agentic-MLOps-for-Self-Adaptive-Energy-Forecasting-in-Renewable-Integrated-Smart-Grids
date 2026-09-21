@@ -1,0 +1,2 @@
+run_id,evidence_status,target,model,framework,implementation_id,feature_set,feature_count,fold,seed,training_seconds,prediction_seconds,epochs,MAE,RMSE,sMAPE,nMAE,nRMSE
+P10-load-random_forest-A_calendar_only-F01-S42,NON_EVIDENCE_SMOKE,load,random_forest,sklearn,SKLEARN_RANDOM_FOREST_REGRESSOR,A_calendar_only,6,F01,42,0.439314999999624,0.09403110000039305,N/A,499.01145922679825,689.1585068298259,11.655146803501214,0.12007941925450363,0.1658353766116926

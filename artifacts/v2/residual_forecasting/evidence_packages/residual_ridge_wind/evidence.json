@@ -1,0 +1,110 @@
+{
+  "baseline_metrics_test": {
+    "MAE": 331.30216302367944,
+    "RMSE": 491.208264741478,
+    "n": 1464,
+    "nMAE": 0.28881892462620923,
+    "nRMSE": 0.539809048510457,
+    "sMAPE_pct": 25.45787783188562
+  },
+  "candidate_id": "residual_ridge_wind",
+  "candidate_metrics_test": {
+    "MAE": 158.95719918419658,
+    "RMSE": 217.23592418442277,
+    "n": 1464,
+    "nMAE": 0.1385739438311257,
+    "nRMSE": 0.23872952870204628,
+    "sMAPE_pct": 19.100773275122563
+  },
+  "classification": "MEANINGFUL_IMPROVEMENT",
+  "description": "Ridge regression on the training residual. Feature set: 6 calendar (hour/dow/doy sin/cos) + day_ahead value + 3 lagged residuals (lag-1, lag-24, lag-168). alpha=1.0, fit_intercept=True, StandardScaler inside the pipeline. Reuses the existing `src/smartgrid_mlops/models/factory.py:ridge` factory; no HPO.",
+  "evidence_package": {
+    "absolute_diff_MAE": -172.34496383948286,
+    "candidate_id": "residual_ridge_wind",
+    "comparison_status": "RESEARCH_CLASSIFICATION_NOT_GOVERNANCE_DECISION",
+    "comparison_validity": "DIRECT",
+    "created_at": "2026-09-05T10:58:10.021458+00:00",
+    "evaluation_window": {
+      "end": "2020-12-31T23:00:00",
+      "start": "2020-11-01T00:00:00"
+    },
+    "relative_diff_MAE_pct": -52.020476493890165,
+    "research_classification": "MEANINGFUL_IMPROVEMENT",
+    "schema": "stage_10_residual_evidence_v1",
+    "source": {
+      "path": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\data\\processed\\research_hourly_index.parquet",
+      "sha256": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00"
+    },
+    "split_counts": {
+      "n_test": 1464,
+      "n_train": 5856,
+      "n_validation": 1464
+    },
+    "target": "wind",
+    "training_window": {
+      "end": "2020-08-31T23:00:00",
+      "start": "2020-01-01T00:00:00"
+    },
+    "validation_window": {
+      "end": "2020-10-31T23:00:00",
+      "start": "2020-09-01T00:00:00"
+    }
+  },
+  "feature_set": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "day_ahead",
+    "lag_1_residual",
+    "lag_24_residual",
+    "lag_168_residual"
+  ],
+  "n_test": 1464,
+  "n_train": 5688,
+  "n_validation": 1464,
+  "notes": "Lagged residuals use only past observations (lag >= 1). Day_ahead is the only feature that uses the same-hour value; it is published in advance so this is not leakage.",
+  "target": "wind",
+  "test": {
+    "corrected_metrics": {
+      "MAE": 158.95719918419658,
+      "RMSE": 217.23592418442277,
+      "n": 1464,
+      "nMAE": 0.1385739438311257,
+      "nRMSE": 0.23872952870204628,
+      "sMAPE_pct": 19.100773275122563
+    },
+    "n": 1464,
+    "rts_day_ahead_metrics": {
+      "MAE": 331.30216302367944,
+      "RMSE": 491.208264741478,
+      "n": 1464,
+      "nMAE": 0.28881892462620923,
+      "nRMSE": 0.539809048510457,
+      "sMAPE_pct": 25.45787783188562
+    }
+  },
+  "training_residual_mean": -58.44668288934427,
+  "training_residual_std": 464.7424681200785,
+  "validation": {
+    "corrected_metrics": {
+      "MAE": 115.83294201475813,
+      "RMSE": 172.00775226961252,
+      "n": 1464,
+      "nMAE": 0.18265261283088954,
+      "nRMSE": 0.26218109872989875,
+      "sMAPE_pct": 21.809034884984158
+    },
+    "n": 1464,
+    "rts_day_ahead_metrics": {
+      "MAE": 269.0056523224044,
+      "RMSE": 413.279469784192,
+      "n": 1464,
+      "nMAE": 0.4241849029156562,
+      "nRMSE": 0.6299371048154302,
+      "sMAPE_pct": 35.66315936160406
+    }
+  }
+}

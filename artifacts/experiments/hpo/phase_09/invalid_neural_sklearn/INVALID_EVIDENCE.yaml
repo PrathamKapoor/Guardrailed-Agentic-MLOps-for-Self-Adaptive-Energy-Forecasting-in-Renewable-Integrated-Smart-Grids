@@ -1,0 +1,10 @@
+evidence_status: INVALIDATED
+deviation_id: P9-DEV-001
+reason: model implementation did not conform to frozen Phase 8 PyTorch implementation
+expected_framework: pytorch
+expected_implementation_id: PYTORCH_MLP_V1
+actual_framework: sklearn
+actual_implementation: MLPRegressor
+permitted_use: AUDIT HISTORY ONLY
+detected_during: Phase 9 audit
+final_test_accessed: false

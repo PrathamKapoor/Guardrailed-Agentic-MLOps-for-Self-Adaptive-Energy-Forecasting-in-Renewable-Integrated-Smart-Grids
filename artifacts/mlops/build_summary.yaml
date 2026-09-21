@@ -1,0 +1,10 @@
+{
+  "lineage_nodes": 18,
+  "lineage_edges": 20,
+  "references": 3,
+  "challengers": 3,
+  "baselines": 9,
+  "invalidated_audit_records": 1,
+  "dataset_fingerprint": "dataset-v1:sha256:4acae40e5245752f96d443e35779f7fa3a12f1200e459aed104807f1fe124f68",
+  "final_test_new_reads": 0
+}

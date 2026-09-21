@@ -1,0 +1,17 @@
+{
+  "FT-H1-LOAD": {
+    "holm_threshold": 0.025,
+    "p_value": 9.48674386717997e-05,
+    "reject_null_at_alpha": true
+  },
+  "FT-H1-PV": {
+    "holm_threshold": 0.05,
+    "p_value": 0.9959023001742673,
+    "reject_null_at_alpha": false
+  },
+  "FT-H1-WIND": {
+    "holm_threshold": 0.016666666666666666,
+    "p_value": 3.793990018231667e-17,
+    "reject_null_at_alpha": true
+  }
+}

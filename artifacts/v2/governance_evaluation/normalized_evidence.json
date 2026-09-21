@@ -1,0 +1,590 @@
+[
+  {
+    "candidate_id": "residual_constant_bias_system_load",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "VERIFIED",
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "value": "VALID",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "system_load"
+  },
+  {
+    "candidate_id": "residual_constant_bias_wind",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "evidence_status",
+        "note": "Stage 10 result is a numerical improvement below the 1% MAE meaningful threshold.",
+        "value": "NUMERICAL_IMPROVEMENT_NOT_MEANINGFUL",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "wind"
+  },
+  {
+    "candidate_id": "residual_hgb_system_load",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "VERIFIED",
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "value": "VALID",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "system_load"
+  },
+  {
+    "candidate_id": "residual_hgb_wind",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "VERIFIED",
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "value": "VALID",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "wind"
+  },
+  {
+    "candidate_id": "residual_no_research_pv",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "VERIFIED",
+        "name": "evidence_status",
+        "note": "Stage 10 concluded NO_RESEARCH_REQUIRED: frozen finaltest remains the reference.",
+        "value": "VALID",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "pv"
+  },
+  {
+    "candidate_id": "residual_ridge_system_load",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "VERIFIED",
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "value": "VALID",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "system_load"
+  },
+  {
+    "candidate_id": "residual_ridge_wind",
+    "chronology_folds": [
+      "F-Aug",
+      "F-Dec",
+      "F-Nov",
+      "F-Oct",
+      "F-Sep"
+    ],
+    "evidence_classification": [
+      {
+        "kind": "VERIFIED",
+        "name": "evidence_status",
+        "note": "Stage 10 classification: MEANINGFUL_IMPROVEMENT",
+        "value": "VALID",
+        "where": "stage_10/evidence_package.classification"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "lineage_status",
+        "note": "Source artefact SHA-256 is recorded.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.source.sha256"
+      },
+      {
+        "kind": "MISSING",
+        "name": "model_spec_fingerprint",
+        "note": "Stage 10 candidate is a NEW residual model (constant_bias / Ridge / HGB), not a frozen Phase 19 finalist. No exact-match model_spec_fingerprint is available in the research outputs.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "feature_spec_fingerprint",
+        "note": "Stage 10 feature spec is described in the candidate description but no exact-match feature_spec_fingerprint (per Phase 10's selected feature freeze) is included in the research output.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "CONTEXT_DEPENDENT",
+        "name": "protocol_hash",
+        "note": "Phase 19 protocol freeze SHA-256 is recorded. The Phase 13 policy's accepted_protocol_hashes list does NOT include the Phase 19 protocol hash; therefore protocol compatibility is NOT directly verifiable under the existing frozen policy.",
+        "value": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+        "where": "artifacts/experimental_design/phase_19_final_evaluation_protocol_freeze.yaml"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "reproducibility_metadata",
+        "note": "Stage 10 reproducibility metadata: n_train=5856, n_validation=1464, n_test=1464.",
+        "value": "COMPLETE",
+        "where": "stage_10/evidence_package.split_counts"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "deviation_status",
+        "note": "No distribution shift detected on this target.",
+        "value": "NONE",
+        "where": "stage_11/distribution_analysis"
+      },
+      {
+        "kind": "MISSING",
+        "name": "benchmark_gate",
+        "note": "Phase 13 benchmark_gate requires the candidate to strictly outperform the predefined strongest development benchmark (Phase 11 finalist registry). Stage 10 compared to RTS_DAY_AHEAD (an external baseline), not to the frozen Phase 11 finalist registry. The required comparison is MISSING.",
+        "value": null,
+        "where": "stage_10/evidence_package"
+      },
+      {
+        "kind": "MISSING",
+        "name": "statistical_evidence",
+        "note": "Stage 11 did not produce per-fold metrics for F-Nov/F-Dec.",
+        "value": null,
+        "where": "stage_11/fold_results"
+      },
+      {
+        "kind": "VERIFIED",
+        "name": "final_test_access",
+        "note": "Stage 10 evaluation uses the locked Phase 19 test window (2020-11-01..2020-12-31), which is the pre-authorized access recorded in the Phase 19 protocol freeze. No NEW final-test access is requested by Stage 10 or Stage 12.",
+        "value": "ALREADY_AUTHORIZED_VIA_PHASE_19",
+        "where": "stage_10/evaluation_window"
+      }
+    ],
+    "proposed_transition": "EXPERIMENTAL -> VALIDATED",
+    "target": "wind"
+  }
+]

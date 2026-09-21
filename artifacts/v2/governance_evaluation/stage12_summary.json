@@ -1,0 +1,92 @@
+{
+  "audit_path": "v2\\governance_evaluation\\stage12_audit.jsonl",
+  "candidate_decisions": [
+    {
+      "candidate_id": "residual_constant_bias_system_load",
+      "decision": "DENY",
+      "reason_codes": [
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "system_load"
+    },
+    {
+      "candidate_id": "residual_constant_bias_wind",
+      "decision": "DENY",
+      "reason_codes": [
+        "EVIDENCE_INVALID",
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "wind"
+    },
+    {
+      "candidate_id": "residual_hgb_system_load",
+      "decision": "DENY",
+      "reason_codes": [
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "system_load"
+    },
+    {
+      "candidate_id": "residual_hgb_wind",
+      "decision": "DENY",
+      "reason_codes": [
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "wind"
+    },
+    {
+      "candidate_id": "residual_no_research_pv",
+      "decision": "DENY",
+      "reason_codes": [
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "pv"
+    },
+    {
+      "candidate_id": "residual_ridge_system_load",
+      "decision": "DENY",
+      "reason_codes": [
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "system_load"
+    },
+    {
+      "candidate_id": "residual_ridge_wind",
+      "decision": "DENY",
+      "reason_codes": [
+        "MODEL_SPEC_FINGERPRINT_MISMATCH",
+        "FEATURE_SPEC_FINGERPRINT_MISMATCH",
+        "PROTOCOL_MISMATCH"
+      ],
+      "target": "wind"
+    }
+  ],
+  "champion_state_changed": false,
+  "created_at": "2026-09-19T14:32:55.263941+00:00",
+  "decision_counts": {
+    "DENY": 7
+  },
+  "evaluation_purpose": "Translate Stage 10 and Stage 11 research evidence into Phase 13 governance requests and record the resulting deterministic decision. Stage 12 does NOT promote, deploy, or otherwise mutate any lifecycle state.",
+  "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+  "lifecycle_mutated": false,
+  "n_candidates_evaluated": 7,
+  "policy_changed": false,
+  "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+  "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+  "policy_version": "13.0.0",
+  "registration_state_changed": false,
+  "schema": "stage_12_summary_v1",
+  "stage": "12"
+}

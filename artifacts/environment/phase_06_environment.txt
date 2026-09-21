@@ -1,0 +1,8 @@
+Phase 6 execution environment
+Platform: Microsoft Windows 10.0.26200
+Python: 3.13.2
+Project: smartgrid-mlops 0.0.0
+Direct project dependency: pyarrow 25.0.1
+Test tooling: pytest 9.1.1
+Git commit: unavailable (local migration repository has no commit)
+Environment policy: fresh project-local .venv; migrated environment not reused.

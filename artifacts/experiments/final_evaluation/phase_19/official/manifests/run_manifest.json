@@ -1,0 +1,9 @@
+{
+  "artifact_dir": "C:\\Projects\\guardrailed-agentic-mlops-smart-grid_trial\\artifacts\\experiments\\final_evaluation\\phase_19\\official",
+  "status": "FINAL_EVALUATION_VALID",
+  "targets": [
+    "load",
+    "pv",
+    "wind"
+  ]
+}

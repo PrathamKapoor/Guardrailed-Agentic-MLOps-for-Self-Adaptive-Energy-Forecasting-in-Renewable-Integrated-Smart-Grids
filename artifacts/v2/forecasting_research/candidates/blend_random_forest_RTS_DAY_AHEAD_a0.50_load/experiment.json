@@ -1,0 +1,52 @@
+{
+  "candidate_id": "blend_random_forest_RTS_DAY_AHEAD_a0.50_load",
+  "classification": "IMPROVED",
+  "comparison": {
+    "alpha": 0.5,
+    "baseline_metrics": {
+      "MAE": 101.14234288114756,
+      "RMSE": 101.84536372764755,
+      "n": 1464,
+      "nMAE": 0.02748577573893275,
+      "nRMSE": 0.22646049982041122,
+      "sMAPE_pct": 1.358387166244572
+    },
+    "baseline_model": "RTS_DAY_AHEAD",
+    "candidate_metrics": {
+      "MAE": 100.3342955638661,
+      "RMSE": 126.19341004501213,
+      "n": 1464,
+      "nMAE": 0.027266186131686423,
+      "nRMSE": 0.2806001340351406,
+      "sMAPE_pct": 1.3750763805949255
+    },
+    "frozen_metrics": {
+      "MAE": 174.25681765368853,
+      "RMSE": 231.27076723581075,
+      "n": 1464,
+      "nMAE": 0.04735488297554688,
+      "nRMSE": 0.5142472040467956,
+      "sMAPE_pct": 2.3583081990086017
+    },
+    "frozen_model": "random_forest",
+    "kind": "DIRECT"
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-19T14:24:00.952054+00:00",
+  "description": "Linear blend of frozen finalist 'random_forest' and frozen external baseline 'RTS_DAY_AHEAD' with weight alpha=0.5 on the prediction. alpha is reported honestly; the blender does NOT optimise alpha against the test window.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 100.3342955638661,
+    "RMSE": 126.19341004501213,
+    "n": 1464,
+    "nMAE": 0.027266186131686423,
+    "nRMSE": 0.2806001340351406,
+    "sMAPE_pct": 1.3750763805949255
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "load"
+}

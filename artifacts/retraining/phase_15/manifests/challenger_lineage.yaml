@@ -1,0 +1,1776 @@
+{
+  "schema_version": "phase12-lineage-v1",
+  "nodes": [
+    {
+      "id": "challenger:MLOPS-CHAL15-LOAD-A15-01-HIGH-load",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-LOAD-A15-01-LOW-load",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-LOAD-A15-01-MEDIUM-load",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-LOAD-A15-02-HIGH-load",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-LOAD-A15-02-LOW-load",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-LOAD-A15-02-MEDIUM-load",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-PV-A15-01-HIGH-pv",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-PV-A15-01-LOW-pv",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-PV-A15-01-MEDIUM-pv",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-PV-A15-02-HIGH-pv",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-PV-A15-02-LOW-pv",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-PV-A15-02-MEDIUM-pv",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-WIND-A15-01-HIGH-wind",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-WIND-A15-01-LOW-wind",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-WIND-A15-01-MEDIUM-wind",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-WIND-A15-02-HIGH-wind",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-WIND-A15-02-LOW-wind",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "challenger:MLOPS-CHAL15-WIND-A15-02-MEDIUM-wind",
+      "type": "registry_entry",
+      "registry_state": "REGISTERED_CHALLENGER",
+      "promotion_eligible": false
+    },
+    {
+      "id": "dataset:rts-gmlc-v2.0",
+      "type": "dataset",
+      "manifest_path": "data/manifests/rts_gmlc_manifest.yaml"
+    },
+    {
+      "id": "decision:A15-01-HIGH-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-HIGH-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-HIGH-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-LOW-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-LOW-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-LOW-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-MEDIUM-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-MEDIUM-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-01-MEDIUM-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-HIGH-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-HIGH-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-HIGH-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-LOW-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-LOW-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-LOW-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-MEDIUM-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-MEDIUM-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "decision:A15-02-MEDIUM-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_DECISION",
+      "decision": "ALLOW"
+    },
+    {
+      "id": "drift-evidence:A15-01-HIGH-load",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-HIGH-load"
+    },
+    {
+      "id": "drift-evidence:A15-01-HIGH-pv",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-HIGH-pv"
+    },
+    {
+      "id": "drift-evidence:A15-01-HIGH-wind",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-HIGH-wind"
+    },
+    {
+      "id": "drift-evidence:A15-01-LOW-load",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-LOW-load"
+    },
+    {
+      "id": "drift-evidence:A15-01-LOW-pv",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-LOW-pv"
+    },
+    {
+      "id": "drift-evidence:A15-01-LOW-wind",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-LOW-wind"
+    },
+    {
+      "id": "drift-evidence:A15-01-MEDIUM-load",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-MEDIUM-load"
+    },
+    {
+      "id": "drift-evidence:A15-01-MEDIUM-pv",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-MEDIUM-pv"
+    },
+    {
+      "id": "drift-evidence:A15-01-MEDIUM-wind",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-01-MEDIUM-wind"
+    },
+    {
+      "id": "drift-evidence:A15-02-HIGH-load",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-HIGH-load"
+    },
+    {
+      "id": "drift-evidence:A15-02-HIGH-pv",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-HIGH-pv"
+    },
+    {
+      "id": "drift-evidence:A15-02-HIGH-wind",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-HIGH-wind"
+    },
+    {
+      "id": "drift-evidence:A15-02-LOW-load",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-LOW-load"
+    },
+    {
+      "id": "drift-evidence:A15-02-LOW-pv",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-LOW-pv"
+    },
+    {
+      "id": "drift-evidence:A15-02-LOW-wind",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-LOW-wind"
+    },
+    {
+      "id": "drift-evidence:A15-02-MEDIUM-load",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-MEDIUM-load"
+    },
+    {
+      "id": "drift-evidence:A15-02-MEDIUM-pv",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-MEDIUM-pv"
+    },
+    {
+      "id": "drift-evidence:A15-02-MEDIUM-wind",
+      "type": "evidence",
+      "evidence_type": "DRIFT_ALERT_RAISED",
+      "scenario": "A15-02-MEDIUM-wind"
+    },
+    {
+      "id": "evaluation:phase15:A15-01-HIGH-load",
+      "type": "evaluation",
+      "adaptation_gain_percent": 30.51035953817359
+    },
+    {
+      "id": "evaluation:phase15:A15-01-HIGH-pv",
+      "type": "evaluation",
+      "adaptation_gain_percent": 87.97134795444836
+    },
+    {
+      "id": "evaluation:phase15:A15-01-HIGH-wind",
+      "type": "evaluation",
+      "adaptation_gain_percent": 20.92723535675179
+    },
+    {
+      "id": "evaluation:phase15:A15-01-LOW-load",
+      "type": "evaluation",
+      "adaptation_gain_percent": 0.8241734917539673
+    },
+    {
+      "id": "evaluation:phase15:A15-01-LOW-pv",
+      "type": "evaluation",
+      "adaptation_gain_percent": 61.54543683822013
+    },
+    {
+      "id": "evaluation:phase15:A15-01-LOW-wind",
+      "type": "evaluation",
+      "adaptation_gain_percent": -4.985451100277202
+    },
+    {
+      "id": "evaluation:phase15:A15-01-MEDIUM-load",
+      "type": "evaluation",
+      "adaptation_gain_percent": 7.105928926040669
+    },
+    {
+      "id": "evaluation:phase15:A15-01-MEDIUM-pv",
+      "type": "evaluation",
+      "adaptation_gain_percent": 69.77912915571444
+    },
+    {
+      "id": "evaluation:phase15:A15-01-MEDIUM-wind",
+      "type": "evaluation",
+      "adaptation_gain_percent": -1.0801727223807225
+    },
+    {
+      "id": "evaluation:phase15:A15-02-HIGH-load",
+      "type": "evaluation",
+      "adaptation_gain_percent": 29.014861402650208
+    },
+    {
+      "id": "evaluation:phase15:A15-02-HIGH-pv",
+      "type": "evaluation",
+      "adaptation_gain_percent": 74.12028167417482
+    },
+    {
+      "id": "evaluation:phase15:A15-02-HIGH-wind",
+      "type": "evaluation",
+      "adaptation_gain_percent": -1.0180266569552117
+    },
+    {
+      "id": "evaluation:phase15:A15-02-LOW-load",
+      "type": "evaluation",
+      "adaptation_gain_percent": -0.465311911142758
+    },
+    {
+      "id": "evaluation:phase15:A15-02-LOW-pv",
+      "type": "evaluation",
+      "adaptation_gain_percent": 22.251828116720528
+    },
+    {
+      "id": "evaluation:phase15:A15-02-LOW-wind",
+      "type": "evaluation",
+      "adaptation_gain_percent": 0.7450981930040957
+    },
+    {
+      "id": "evaluation:phase15:A15-02-MEDIUM-load",
+      "type": "evaluation",
+      "adaptation_gain_percent": 1.3115024706548368
+    },
+    {
+      "id": "evaluation:phase15:A15-02-MEDIUM-pv",
+      "type": "evaluation",
+      "adaptation_gain_percent": 44.65115947215416
+    },
+    {
+      "id": "evaluation:phase15:A15-02-MEDIUM-wind",
+      "type": "evaluation",
+      "adaptation_gain_percent": 0.2885568747185008
+    },
+    {
+      "id": "feature:load:h24:B_lags_only",
+      "type": "feature_dataset",
+      "feature_set_id": "B_lags_only"
+    },
+    {
+      "id": "feature:pv:h24:B_lags_only",
+      "type": "feature_dataset",
+      "feature_set_id": "B_lags_only"
+    },
+    {
+      "id": "feature:wind:h24:B_lags_only",
+      "type": "feature_dataset",
+      "feature_set_id": "B_lags_only"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-HIGH-load",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-HIGH-pv",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-HIGH-wind",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-LOW-load",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-LOW-pv",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-LOW-wind",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-MEDIUM-load",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-MEDIUM-pv",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-01-MEDIUM-wind",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-HIGH-load",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-HIGH-pv",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-HIGH-wind",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-LOW-load",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-LOW-pv",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-LOW-wind",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-MEDIUM-load",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-MEDIUM-pv",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "job:RET-JOB-A15-02-MEDIUM-wind",
+      "type": "experiment_run",
+      "run_type": "GOVERNED_RETRAINING"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:08ad83752d3f5345119f38a09dc0ecde3d1b31ccdab5bae05eed37c9899fb96c",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:08ad83752d3f5345119f38a09dc0ecde3d1b31ccdab5bae05eed37c9899fb96c"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:0a9ac73a3d1d3b67962d87ce55bd66b6c794341a15ea65f168831689707853d5",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:0a9ac73a3d1d3b67962d87ce55bd66b6c794341a15ea65f168831689707853d5"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:0b32883715ec04b269cd883d3fe80b2aeb002d174c6e2ddc2f7b381e3997f300",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:0b32883715ec04b269cd883d3fe80b2aeb002d174c6e2ddc2f7b381e3997f300"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:16429667402e025792f6ba3efc922c0037ce763002264cfc6ae9b7d47244b9c0",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:16429667402e025792f6ba3efc922c0037ce763002264cfc6ae9b7d47244b9c0"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:17340a7de05a72522082c7595c9eaca01f06e445a58603cd963d6d464f34a0d1",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:17340a7de05a72522082c7595c9eaca01f06e445a58603cd963d6d464f34a0d1"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:2322b889ffc5e2d5889765b022461d3bdfbc138fe953d6751afa2aaf4ca0879a",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:2322b889ffc5e2d5889765b022461d3bdfbc138fe953d6751afa2aaf4ca0879a"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:273312ffb7f7546cae872c97fb7e3daa95655a7b9bdef3dd0b2a23ad16e41a4c",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:273312ffb7f7546cae872c97fb7e3daa95655a7b9bdef3dd0b2a23ad16e41a4c"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:2a99fdc44d3ae6886e7e293dc55b312d74ec1215e6026ba567757c5128c93fe9",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:2a99fdc44d3ae6886e7e293dc55b312d74ec1215e6026ba567757c5128c93fe9"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:301267512aa6a93aea04576e868c696aa4c5d817ff479da78736fd92bb2b667e",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:301267512aa6a93aea04576e868c696aa4c5d817ff479da78736fd92bb2b667e"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:31c8c466df6ee847f8c08eefbdf9b57ffae7bd7d58927af6f1aa680c1ed0d0f2",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:31c8c466df6ee847f8c08eefbdf9b57ffae7bd7d58927af6f1aa680c1ed0d0f2"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:3faae4b1cb470000f6786f84fbda99a97a3c0a1dbf2fdb572bc6731c81c4714d",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:3faae4b1cb470000f6786f84fbda99a97a3c0a1dbf2fdb572bc6731c81c4714d"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:88f5ff75b97a6bd13ebbfc4dbfec91d06e6162f11718166c6de41f662f413013",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:88f5ff75b97a6bd13ebbfc4dbfec91d06e6162f11718166c6de41f662f413013"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:b87a6e3263f730c8bf4489df8e353abb34f2a1bac88a6a1747b98bf25bbb71e3",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:b87a6e3263f730c8bf4489df8e353abb34f2a1bac88a6a1747b98bf25bbb71e3"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:bf89ff8db26794f6b4b99243cc85e23720b660c14bfc41c8b43962d91ba4ef41",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:bf89ff8db26794f6b4b99243cc85e23720b660c14bfc41c8b43962d91ba4ef41"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:c1bebfd7e2182014af7cf8eeebca65ad94214fd1289af49ad676b404b676c4fe",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:c1bebfd7e2182014af7cf8eeebca65ad94214fd1289af49ad676b404b676c4fe"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:ce2861e27dcc59b61b235854445ac46765683eace361211d2e6cac576cc934b1",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:ce2861e27dcc59b61b235854445ac46765683eace361211d2e6cac576cc934b1"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:d2d388b2bfe6e4b7028cdfac61b1027dce692c4fa904eaa4f7a1b6808443d5bc",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:d2d388b2bfe6e4b7028cdfac61b1027dce692c4fa904eaa4f7a1b6808443d5bc"
+    },
+    {
+      "id": "model-instance:model-instance-v1:sha256:e0a6eb98e6200187a76c8c939f96a8753a667da42501e91d693db6322bf1941c",
+      "type": "model_spec",
+      "model_instance_fingerprint": "model-instance-v1:sha256:e0a6eb98e6200187a76c8c939f96a8753a667da42501e91d693db6322bf1941c"
+    },
+    {
+      "id": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "type": "model_spec",
+      "model_spec_fingerprint": "model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94"
+    },
+    {
+      "id": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "type": "model_spec",
+      "model_spec_fingerprint": "model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca"
+    },
+    {
+      "id": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "type": "model_spec",
+      "model_spec_fingerprint": "model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a"
+    },
+    {
+      "id": "processed:rts_gmlc_processed_v1",
+      "type": "processed_dataset"
+    },
+    {
+      "id": "protocol:phase15-retraining",
+      "type": "protocol",
+      "path": "artifacts/experimental_design/phase_15_retraining_protocol_freeze.yaml",
+      "sha256": "5b0cc29d67f6c3475ba9935b41972c3f1c32fafef8abcc9147f8af8d1b5a1dad"
+    },
+    {
+      "id": "request:A15-01-HIGH-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-HIGH-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-HIGH-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-LOW-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-LOW-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-LOW-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-MEDIUM-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-MEDIUM-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-01-MEDIUM-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-HIGH-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-HIGH-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-HIGH-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-LOW-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-LOW-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-LOW-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-MEDIUM-load",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-MEDIUM-pv",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "request:A15-02-MEDIUM-wind",
+      "type": "evidence",
+      "evidence_type": "RETRAINING_REQUEST"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:0199c70d0d532b8abfbd625dc8805782ae912207b0591d6562b0fdb8b1257b99",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:0199c70d0d532b8abfbd625dc8805782ae912207b0591d6562b0fdb8b1257b99"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:026bfbf76ec478ac9a298fd1e560dd2aaea9100c46ee518b43eebabd354c8fa7",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:026bfbf76ec478ac9a298fd1e560dd2aaea9100c46ee518b43eebabd354c8fa7"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:06c82d7b4b75b769b503bcfc71378446f05e1c3d2dcf62d7c634e973c1ac9763",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:06c82d7b4b75b769b503bcfc71378446f05e1c3d2dcf62d7c634e973c1ac9763"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:0d63b8753c45f60997a1517e650438da7a4fb9bf1bd99e443a8a896580ec0980",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:0d63b8753c45f60997a1517e650438da7a4fb9bf1bd99e443a8a896580ec0980"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:15c1d46bd9971d462eb5ddad63298e85927206896e8f24e20e8c093e27bd22e9",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:15c1d46bd9971d462eb5ddad63298e85927206896e8f24e20e8c093e27bd22e9"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:41ecb862a5c30019f51f79a5e41b75c430df21049982bc20d9bee1b5751ff0b7",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:41ecb862a5c30019f51f79a5e41b75c430df21049982bc20d9bee1b5751ff0b7"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:55344c81e3749051552014829c29980d86a4d6077d18fe0a37b109f433b4557c",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:55344c81e3749051552014829c29980d86a4d6077d18fe0a37b109f433b4557c"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:6e786a12f5ffc541d1f8ced1d510111be943fcd0741395d8ecc32b12dc4fc14e",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:6e786a12f5ffc541d1f8ced1d510111be943fcd0741395d8ecc32b12dc4fc14e"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:6f95b0599e9cd46ac5f875155ae83b744669ed17ea6884371da34568d3905336",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:6f95b0599e9cd46ac5f875155ae83b744669ed17ea6884371da34568d3905336"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:81feddcd30f1bfe747e2694c323eae0a694f094b93df0fcf8aa07f7aba6c362b",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:81feddcd30f1bfe747e2694c323eae0a694f094b93df0fcf8aa07f7aba6c362b"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:a5b3593abe89028465563b9bbac00b46712f39ba1b7ccb94bdfd21c2c3aed02b",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:a5b3593abe89028465563b9bbac00b46712f39ba1b7ccb94bdfd21c2c3aed02b"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:b4382b17743ad0d92d2653b2657035188b6a1996375e1ab303b316e6b244129a",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:b4382b17743ad0d92d2653b2657035188b6a1996375e1ab303b316e6b244129a"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:b946c4c6831302f3a79867a30f904f68418edfb44e1a3312b7538cc75614b0ea",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:b946c4c6831302f3a79867a30f904f68418edfb44e1a3312b7538cc75614b0ea"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:c03a30aa94dc2e4e6fbcc0b1e642c6224df0edf793eef2d3a321b73b242dd805",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:c03a30aa94dc2e4e6fbcc0b1e642c6224df0edf793eef2d3a321b73b242dd805"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:e10c9fd8b1fd656be613cd29847aab5c9b449f9107edc6b4b5f1c7e8b8e6e6fd",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:e10c9fd8b1fd656be613cd29847aab5c9b449f9107edc6b4b5f1c7e8b8e6e6fd"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:e4e92f897da7412970b669d65d5aa71c22f74678b6964f2920e194c9f7060168",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:e4e92f897da7412970b669d65d5aa71c22f74678b6964f2920e194c9f7060168"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:ecb9d4c410073303694093bfbff1a18c9d45027d0d5efa23b17c38d7b5690d52",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:ecb9d4c410073303694093bfbff1a18c9d45027d0d5efa23b17c38d7b5690d52"
+    },
+    {
+      "id": "training-dataset:retraining-dataset-v1:sha256:f78706028f8737687cd70fc3f655cc85f68c71cfa1971e495885c4b871af6c1f",
+      "type": "feature_dataset",
+      "dataset_fingerprint": "retraining-dataset-v1:sha256:f78706028f8737687cd70fc3f655cc85f68c71cfa1971e495885c4b871af6c1f"
+    }
+  ],
+  "edges": [
+    {
+      "source": "challenger:MLOPS-CHAL15-LOAD-A15-01-HIGH-load",
+      "target": "evaluation:phase15:A15-01-HIGH-load",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-LOAD-A15-01-LOW-load",
+      "target": "evaluation:phase15:A15-01-LOW-load",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-LOAD-A15-01-MEDIUM-load",
+      "target": "evaluation:phase15:A15-01-MEDIUM-load",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-LOAD-A15-02-HIGH-load",
+      "target": "evaluation:phase15:A15-02-HIGH-load",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-LOAD-A15-02-LOW-load",
+      "target": "evaluation:phase15:A15-02-LOW-load",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-LOAD-A15-02-MEDIUM-load",
+      "target": "evaluation:phase15:A15-02-MEDIUM-load",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-PV-A15-01-HIGH-pv",
+      "target": "evaluation:phase15:A15-01-HIGH-pv",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-PV-A15-01-LOW-pv",
+      "target": "evaluation:phase15:A15-01-LOW-pv",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-PV-A15-01-MEDIUM-pv",
+      "target": "evaluation:phase15:A15-01-MEDIUM-pv",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-PV-A15-02-HIGH-pv",
+      "target": "evaluation:phase15:A15-02-HIGH-pv",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-PV-A15-02-LOW-pv",
+      "target": "evaluation:phase15:A15-02-LOW-pv",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-PV-A15-02-MEDIUM-pv",
+      "target": "evaluation:phase15:A15-02-MEDIUM-pv",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-WIND-A15-01-HIGH-wind",
+      "target": "evaluation:phase15:A15-01-HIGH-wind",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-WIND-A15-01-LOW-wind",
+      "target": "evaluation:phase15:A15-01-LOW-wind",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-WIND-A15-01-MEDIUM-wind",
+      "target": "evaluation:phase15:A15-01-MEDIUM-wind",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-WIND-A15-02-HIGH-wind",
+      "target": "evaluation:phase15:A15-02-HIGH-wind",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-WIND-A15-02-LOW-wind",
+      "target": "evaluation:phase15:A15-02-LOW-wind",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "challenger:MLOPS-CHAL15-WIND-A15-02-MEDIUM-wind",
+      "target": "evaluation:phase15:A15-02-MEDIUM-wind",
+      "relationship": "REGISTERED_AS"
+    },
+    {
+      "source": "decision:A15-01-HIGH-load",
+      "target": "request:A15-01-HIGH-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-HIGH-pv",
+      "target": "request:A15-01-HIGH-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-HIGH-wind",
+      "target": "request:A15-01-HIGH-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-LOW-load",
+      "target": "request:A15-01-LOW-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-LOW-pv",
+      "target": "request:A15-01-LOW-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-LOW-wind",
+      "target": "request:A15-01-LOW-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-MEDIUM-load",
+      "target": "request:A15-01-MEDIUM-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-MEDIUM-pv",
+      "target": "request:A15-01-MEDIUM-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-01-MEDIUM-wind",
+      "target": "request:A15-01-MEDIUM-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-HIGH-load",
+      "target": "request:A15-02-HIGH-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-HIGH-pv",
+      "target": "request:A15-02-HIGH-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-HIGH-wind",
+      "target": "request:A15-02-HIGH-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-LOW-load",
+      "target": "request:A15-02-LOW-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-LOW-pv",
+      "target": "request:A15-02-LOW-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-LOW-wind",
+      "target": "request:A15-02-LOW-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-MEDIUM-load",
+      "target": "request:A15-02-MEDIUM-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-MEDIUM-pv",
+      "target": "request:A15-02-MEDIUM-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "decision:A15-02-MEDIUM-wind",
+      "target": "request:A15-02-MEDIUM-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-HIGH-load",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-HIGH-pv",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-HIGH-wind",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-LOW-load",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-LOW-pv",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-LOW-wind",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-MEDIUM-load",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-MEDIUM-pv",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-01-MEDIUM-wind",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-HIGH-load",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-HIGH-pv",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-HIGH-wind",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-LOW-load",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-LOW-pv",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-LOW-wind",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-MEDIUM-load",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-MEDIUM-pv",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "drift-evidence:A15-02-MEDIUM-wind",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-HIGH-load",
+      "target": "model-instance:model-instance-v1:sha256:273312ffb7f7546cae872c97fb7e3daa95655a7b9bdef3dd0b2a23ad16e41a4c",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-HIGH-pv",
+      "target": "model-instance:model-instance-v1:sha256:16429667402e025792f6ba3efc922c0037ce763002264cfc6ae9b7d47244b9c0",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-HIGH-wind",
+      "target": "model-instance:model-instance-v1:sha256:2a99fdc44d3ae6886e7e293dc55b312d74ec1215e6026ba567757c5128c93fe9",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-LOW-load",
+      "target": "model-instance:model-instance-v1:sha256:3faae4b1cb470000f6786f84fbda99a97a3c0a1dbf2fdb572bc6731c81c4714d",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-LOW-pv",
+      "target": "model-instance:model-instance-v1:sha256:2322b889ffc5e2d5889765b022461d3bdfbc138fe953d6751afa2aaf4ca0879a",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-LOW-wind",
+      "target": "model-instance:model-instance-v1:sha256:0a9ac73a3d1d3b67962d87ce55bd66b6c794341a15ea65f168831689707853d5",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-MEDIUM-load",
+      "target": "model-instance:model-instance-v1:sha256:b87a6e3263f730c8bf4489df8e353abb34f2a1bac88a6a1747b98bf25bbb71e3",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-MEDIUM-pv",
+      "target": "model-instance:model-instance-v1:sha256:ce2861e27dcc59b61b235854445ac46765683eace361211d2e6cac576cc934b1",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-01-MEDIUM-wind",
+      "target": "model-instance:model-instance-v1:sha256:17340a7de05a72522082c7595c9eaca01f06e445a58603cd963d6d464f34a0d1",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-HIGH-load",
+      "target": "model-instance:model-instance-v1:sha256:31c8c466df6ee847f8c08eefbdf9b57ffae7bd7d58927af6f1aa680c1ed0d0f2",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-HIGH-pv",
+      "target": "model-instance:model-instance-v1:sha256:0b32883715ec04b269cd883d3fe80b2aeb002d174c6e2ddc2f7b381e3997f300",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-HIGH-wind",
+      "target": "model-instance:model-instance-v1:sha256:c1bebfd7e2182014af7cf8eeebca65ad94214fd1289af49ad676b404b676c4fe",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-LOW-load",
+      "target": "model-instance:model-instance-v1:sha256:bf89ff8db26794f6b4b99243cc85e23720b660c14bfc41c8b43962d91ba4ef41",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-LOW-pv",
+      "target": "model-instance:model-instance-v1:sha256:08ad83752d3f5345119f38a09dc0ecde3d1b31ccdab5bae05eed37c9899fb96c",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-LOW-wind",
+      "target": "model-instance:model-instance-v1:sha256:301267512aa6a93aea04576e868c696aa4c5d817ff479da78736fd92bb2b667e",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-MEDIUM-load",
+      "target": "model-instance:model-instance-v1:sha256:88f5ff75b97a6bd13ebbfc4dbfec91d06e6162f11718166c6de41f662f413013",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-MEDIUM-pv",
+      "target": "model-instance:model-instance-v1:sha256:e0a6eb98e6200187a76c8c939f96a8753a667da42501e91d693db6322bf1941c",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "evaluation:phase15:A15-02-MEDIUM-wind",
+      "target": "model-instance:model-instance-v1:sha256:d2d388b2bfe6e4b7028cdfac61b1027dce692c4fa904eaa4f7a1b6808443d5bc",
+      "relationship": "EVALUATED_BY"
+    },
+    {
+      "source": "feature:load:h24:B_lags_only",
+      "target": "processed:rts_gmlc_processed_v1",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "feature:pv:h24:B_lags_only",
+      "target": "processed:rts_gmlc_processed_v1",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "feature:wind:h24:B_lags_only",
+      "target": "processed:rts_gmlc_processed_v1",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-HIGH-load",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-HIGH-load",
+      "target": "training-dataset:retraining-dataset-v1:sha256:55344c81e3749051552014829c29980d86a4d6077d18fe0a37b109f433b4557c",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-HIGH-pv",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-HIGH-pv",
+      "target": "training-dataset:retraining-dataset-v1:sha256:0d63b8753c45f60997a1517e650438da7a4fb9bf1bd99e443a8a896580ec0980",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-HIGH-wind",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-HIGH-wind",
+      "target": "training-dataset:retraining-dataset-v1:sha256:b946c4c6831302f3a79867a30f904f68418edfb44e1a3312b7538cc75614b0ea",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-LOW-load",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-LOW-load",
+      "target": "training-dataset:retraining-dataset-v1:sha256:15c1d46bd9971d462eb5ddad63298e85927206896e8f24e20e8c093e27bd22e9",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-LOW-pv",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-LOW-pv",
+      "target": "training-dataset:retraining-dataset-v1:sha256:06c82d7b4b75b769b503bcfc71378446f05e1c3d2dcf62d7c634e973c1ac9763",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-LOW-wind",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-LOW-wind",
+      "target": "training-dataset:retraining-dataset-v1:sha256:e4e92f897da7412970b669d65d5aa71c22f74678b6964f2920e194c9f7060168",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-MEDIUM-load",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-MEDIUM-load",
+      "target": "training-dataset:retraining-dataset-v1:sha256:0199c70d0d532b8abfbd625dc8805782ae912207b0591d6562b0fdb8b1257b99",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-MEDIUM-pv",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-MEDIUM-pv",
+      "target": "training-dataset:retraining-dataset-v1:sha256:41ecb862a5c30019f51f79a5e41b75c430df21049982bc20d9bee1b5751ff0b7",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-MEDIUM-wind",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-01-MEDIUM-wind",
+      "target": "training-dataset:retraining-dataset-v1:sha256:6e786a12f5ffc541d1f8ced1d510111be943fcd0741395d8ecc32b12dc4fc14e",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-HIGH-load",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-HIGH-load",
+      "target": "training-dataset:retraining-dataset-v1:sha256:81feddcd30f1bfe747e2694c323eae0a694f094b93df0fcf8aa07f7aba6c362b",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-HIGH-pv",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-HIGH-pv",
+      "target": "training-dataset:retraining-dataset-v1:sha256:a5b3593abe89028465563b9bbac00b46712f39ba1b7ccb94bdfd21c2c3aed02b",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-HIGH-wind",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-HIGH-wind",
+      "target": "training-dataset:retraining-dataset-v1:sha256:c03a30aa94dc2e4e6fbcc0b1e642c6224df0edf793eef2d3a321b73b242dd805",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-LOW-load",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-LOW-load",
+      "target": "training-dataset:retraining-dataset-v1:sha256:f78706028f8737687cd70fc3f655cc85f68c71cfa1971e495885c4b871af6c1f",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-LOW-pv",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-LOW-pv",
+      "target": "training-dataset:retraining-dataset-v1:sha256:b4382b17743ad0d92d2653b2657035188b6a1996375e1ab303b316e6b244129a",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-LOW-wind",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-LOW-wind",
+      "target": "training-dataset:retraining-dataset-v1:sha256:ecb9d4c410073303694093bfbff1a18c9d45027d0d5efa23b17c38d7b5690d52",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-MEDIUM-load",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-MEDIUM-load",
+      "target": "training-dataset:retraining-dataset-v1:sha256:026bfbf76ec478ac9a298fd1e560dd2aaea9100c46ee518b43eebabd354c8fa7",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-MEDIUM-pv",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-MEDIUM-pv",
+      "target": "training-dataset:retraining-dataset-v1:sha256:6f95b0599e9cd46ac5f875155ae83b744669ed17ea6884371da34568d3905336",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-MEDIUM-wind",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "USES"
+    },
+    {
+      "source": "job:RET-JOB-A15-02-MEDIUM-wind",
+      "target": "training-dataset:retraining-dataset-v1:sha256:e10c9fd8b1fd656be613cd29847aab5c9b449f9107edc6b4b5f1c7e8b8e6e6fd",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:08ad83752d3f5345119f38a09dc0ecde3d1b31ccdab5bae05eed37c9899fb96c",
+      "target": "job:RET-JOB-A15-02-LOW-pv",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:08ad83752d3f5345119f38a09dc0ecde3d1b31ccdab5bae05eed37c9899fb96c",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:0a9ac73a3d1d3b67962d87ce55bd66b6c794341a15ea65f168831689707853d5",
+      "target": "job:RET-JOB-A15-01-LOW-wind",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:0a9ac73a3d1d3b67962d87ce55bd66b6c794341a15ea65f168831689707853d5",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:0b32883715ec04b269cd883d3fe80b2aeb002d174c6e2ddc2f7b381e3997f300",
+      "target": "job:RET-JOB-A15-02-HIGH-pv",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:0b32883715ec04b269cd883d3fe80b2aeb002d174c6e2ddc2f7b381e3997f300",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:16429667402e025792f6ba3efc922c0037ce763002264cfc6ae9b7d47244b9c0",
+      "target": "job:RET-JOB-A15-01-HIGH-pv",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:16429667402e025792f6ba3efc922c0037ce763002264cfc6ae9b7d47244b9c0",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:17340a7de05a72522082c7595c9eaca01f06e445a58603cd963d6d464f34a0d1",
+      "target": "job:RET-JOB-A15-01-MEDIUM-wind",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:17340a7de05a72522082c7595c9eaca01f06e445a58603cd963d6d464f34a0d1",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:2322b889ffc5e2d5889765b022461d3bdfbc138fe953d6751afa2aaf4ca0879a",
+      "target": "job:RET-JOB-A15-01-LOW-pv",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:2322b889ffc5e2d5889765b022461d3bdfbc138fe953d6751afa2aaf4ca0879a",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:273312ffb7f7546cae872c97fb7e3daa95655a7b9bdef3dd0b2a23ad16e41a4c",
+      "target": "job:RET-JOB-A15-01-HIGH-load",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:273312ffb7f7546cae872c97fb7e3daa95655a7b9bdef3dd0b2a23ad16e41a4c",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:2a99fdc44d3ae6886e7e293dc55b312d74ec1215e6026ba567757c5128c93fe9",
+      "target": "job:RET-JOB-A15-01-HIGH-wind",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:2a99fdc44d3ae6886e7e293dc55b312d74ec1215e6026ba567757c5128c93fe9",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:301267512aa6a93aea04576e868c696aa4c5d817ff479da78736fd92bb2b667e",
+      "target": "job:RET-JOB-A15-02-LOW-wind",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:301267512aa6a93aea04576e868c696aa4c5d817ff479da78736fd92bb2b667e",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:31c8c466df6ee847f8c08eefbdf9b57ffae7bd7d58927af6f1aa680c1ed0d0f2",
+      "target": "job:RET-JOB-A15-02-HIGH-load",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:31c8c466df6ee847f8c08eefbdf9b57ffae7bd7d58927af6f1aa680c1ed0d0f2",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:3faae4b1cb470000f6786f84fbda99a97a3c0a1dbf2fdb572bc6731c81c4714d",
+      "target": "job:RET-JOB-A15-01-LOW-load",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:3faae4b1cb470000f6786f84fbda99a97a3c0a1dbf2fdb572bc6731c81c4714d",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:88f5ff75b97a6bd13ebbfc4dbfec91d06e6162f11718166c6de41f662f413013",
+      "target": "job:RET-JOB-A15-02-MEDIUM-load",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:88f5ff75b97a6bd13ebbfc4dbfec91d06e6162f11718166c6de41f662f413013",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:b87a6e3263f730c8bf4489df8e353abb34f2a1bac88a6a1747b98bf25bbb71e3",
+      "target": "job:RET-JOB-A15-01-MEDIUM-load",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:b87a6e3263f730c8bf4489df8e353abb34f2a1bac88a6a1747b98bf25bbb71e3",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:bf89ff8db26794f6b4b99243cc85e23720b660c14bfc41c8b43962d91ba4ef41",
+      "target": "job:RET-JOB-A15-02-LOW-load",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:bf89ff8db26794f6b4b99243cc85e23720b660c14bfc41c8b43962d91ba4ef41",
+      "target": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:c1bebfd7e2182014af7cf8eeebca65ad94214fd1289af49ad676b404b676c4fe",
+      "target": "job:RET-JOB-A15-02-HIGH-wind",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:c1bebfd7e2182014af7cf8eeebca65ad94214fd1289af49ad676b404b676c4fe",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:ce2861e27dcc59b61b235854445ac46765683eace361211d2e6cac576cc934b1",
+      "target": "job:RET-JOB-A15-01-MEDIUM-pv",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:ce2861e27dcc59b61b235854445ac46765683eace361211d2e6cac576cc934b1",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:d2d388b2bfe6e4b7028cdfac61b1027dce692c4fa904eaa4f7a1b6808443d5bc",
+      "target": "job:RET-JOB-A15-02-MEDIUM-wind",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:d2d388b2bfe6e4b7028cdfac61b1027dce692c4fa904eaa4f7a1b6808443d5bc",
+      "target": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:e0a6eb98e6200187a76c8c939f96a8753a667da42501e91d693db6322bf1941c",
+      "target": "job:RET-JOB-A15-02-MEDIUM-pv",
+      "relationship": "PRODUCED"
+    },
+    {
+      "source": "model-instance:model-instance-v1:sha256:e0a6eb98e6200187a76c8c939f96a8753a667da42501e91d693db6322bf1941c",
+      "target": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "relationship": "COMPARED_WITH"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "target": "feature:load:h24:B_lags_only",
+      "relationship": "USES"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:90b81da25f399af0b8461dc49598f1d937b84d9b79a6e2a61366d8ce17413d94",
+      "target": "protocol:phase15-retraining",
+      "relationship": "GOVERNED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "target": "feature:wind:h24:B_lags_only",
+      "relationship": "USES"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+      "target": "protocol:phase15-retraining",
+      "relationship": "GOVERNED_BY"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "target": "feature:pv:h24:B_lags_only",
+      "relationship": "USES"
+    },
+    {
+      "source": "model-spec:model-spec-v1:sha256:fa10f71d878392faf48e842f652188f7f275136f141874bef283f21275d2de4a",
+      "target": "protocol:phase15-retraining",
+      "relationship": "GOVERNED_BY"
+    },
+    {
+      "source": "processed:rts_gmlc_processed_v1",
+      "target": "dataset:rts-gmlc-v2.0",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-HIGH-load",
+      "target": "drift-evidence:A15-01-HIGH-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-HIGH-pv",
+      "target": "drift-evidence:A15-01-HIGH-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-HIGH-wind",
+      "target": "drift-evidence:A15-01-HIGH-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-LOW-load",
+      "target": "drift-evidence:A15-01-LOW-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-LOW-pv",
+      "target": "drift-evidence:A15-01-LOW-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-LOW-wind",
+      "target": "drift-evidence:A15-01-LOW-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-MEDIUM-load",
+      "target": "drift-evidence:A15-01-MEDIUM-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-MEDIUM-pv",
+      "target": "drift-evidence:A15-01-MEDIUM-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-01-MEDIUM-wind",
+      "target": "drift-evidence:A15-01-MEDIUM-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-HIGH-load",
+      "target": "drift-evidence:A15-02-HIGH-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-HIGH-pv",
+      "target": "drift-evidence:A15-02-HIGH-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-HIGH-wind",
+      "target": "drift-evidence:A15-02-HIGH-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-LOW-load",
+      "target": "drift-evidence:A15-02-LOW-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-LOW-pv",
+      "target": "drift-evidence:A15-02-LOW-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-LOW-wind",
+      "target": "drift-evidence:A15-02-LOW-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-MEDIUM-load",
+      "target": "drift-evidence:A15-02-MEDIUM-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-MEDIUM-pv",
+      "target": "drift-evidence:A15-02-MEDIUM-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "request:A15-02-MEDIUM-wind",
+      "target": "drift-evidence:A15-02-MEDIUM-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:0199c70d0d532b8abfbd625dc8805782ae912207b0591d6562b0fdb8b1257b99",
+      "target": "decision:A15-01-MEDIUM-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:026bfbf76ec478ac9a298fd1e560dd2aaea9100c46ee518b43eebabd354c8fa7",
+      "target": "decision:A15-02-MEDIUM-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:06c82d7b4b75b769b503bcfc71378446f05e1c3d2dcf62d7c634e973c1ac9763",
+      "target": "decision:A15-01-LOW-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:0d63b8753c45f60997a1517e650438da7a4fb9bf1bd99e443a8a896580ec0980",
+      "target": "decision:A15-01-HIGH-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:15c1d46bd9971d462eb5ddad63298e85927206896e8f24e20e8c093e27bd22e9",
+      "target": "decision:A15-01-LOW-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:41ecb862a5c30019f51f79a5e41b75c430df21049982bc20d9bee1b5751ff0b7",
+      "target": "decision:A15-01-MEDIUM-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:55344c81e3749051552014829c29980d86a4d6077d18fe0a37b109f433b4557c",
+      "target": "decision:A15-01-HIGH-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:6e786a12f5ffc541d1f8ced1d510111be943fcd0741395d8ecc32b12dc4fc14e",
+      "target": "decision:A15-01-MEDIUM-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:6f95b0599e9cd46ac5f875155ae83b744669ed17ea6884371da34568d3905336",
+      "target": "decision:A15-02-MEDIUM-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:81feddcd30f1bfe747e2694c323eae0a694f094b93df0fcf8aa07f7aba6c362b",
+      "target": "decision:A15-02-HIGH-load",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:a5b3593abe89028465563b9bbac00b46712f39ba1b7ccb94bdfd21c2c3aed02b",
+      "target": "decision:A15-02-HIGH-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:b4382b17743ad0d92d2653b2657035188b6a1996375e1ab303b316e6b244129a",
+      "target": "decision:A15-02-LOW-pv",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:b946c4c6831302f3a79867a30f904f68418edfb44e1a3312b7538cc75614b0ea",
+      "target": "decision:A15-01-HIGH-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:c03a30aa94dc2e4e6fbcc0b1e642c6224df0edf793eef2d3a321b73b242dd805",
+      "target": "decision:A15-02-HIGH-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:e10c9fd8b1fd656be613cd29847aab5c9b449f9107edc6b4b5f1c7e8b8e6e6fd",
+      "target": "decision:A15-02-MEDIUM-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:e4e92f897da7412970b669d65d5aa71c22f74678b6964f2920e194c9f7060168",
+      "target": "decision:A15-01-LOW-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:ecb9d4c410073303694093bfbff1a18c9d45027d0d5efa23b17c38d7b5690d52",
+      "target": "decision:A15-02-LOW-wind",
+      "relationship": "DERIVED_FROM"
+    },
+    {
+      "source": "training-dataset:retraining-dataset-v1:sha256:f78706028f8737687cd70fc3f655cc85f68c71cfa1971e495885c4b871af6c1f",
+      "target": "decision:A15-02-LOW-load",
+      "relationship": "DERIVED_FROM"
+    }
+  ]
+}

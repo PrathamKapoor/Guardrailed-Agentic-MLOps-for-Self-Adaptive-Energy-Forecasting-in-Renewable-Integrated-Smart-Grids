@@ -1,0 +1,76 @@
+{
+  "adaptation_gain_percent": 61.54543683822013,
+  "admission_checks": {
+    "checks": {
+      "evaluation_complete": true,
+      "evidence_valid": true,
+      "feature_fingerprint_valid": true,
+      "final_test_policy_respected": true,
+      "lineage_complete": true,
+      "model_specification_valid": true,
+      "no_unresolved_deviation": true,
+      "outputs_finite": true,
+      "training_completed": true,
+      "training_dataset_fingerprint_present": true
+    },
+    "decision": "REGISTERED_CHALLENGER",
+    "failed": []
+  },
+  "clean_counterfactual": {
+    "challenger": {
+      "MAE": 27.707752838552487,
+      "RMSE": 44.20344693675379,
+      "nMAE": 0.06029048482403687,
+      "nRMSE": 0.09618417134868962,
+      "rows": 336,
+      "sMAPE": 94.47471197126086
+    },
+    "evaluation_rows": 336,
+    "reference": {
+      "MAE": 28.218013865883048,
+      "RMSE": 45.85847870861441,
+      "nMAE": 0.061400783623936875,
+      "nRMSE": 0.0997854257884154,
+      "rows": 336,
+      "sMAPE": 94.61748508081925
+    },
+    "window_end": "2020-08-29T00:00:00",
+    "window_start": "2020-08-15T01:00:00"
+  },
+  "clean_stability_change_percent": 1.808281155986996,
+  "family": "A15-01",
+  "perturbation": {
+    "family": "A15-01",
+    "onset": "2020-08-01T00:00:00",
+    "ramp_hours": 0,
+    "severity": "LOW",
+    "shift_magnitude": 237.30493307771567,
+    "sigma_pre_onset": 474.60986615543135,
+    "target_domain_constraint": "clipped at zero"
+  },
+  "post_drift": {
+    "challenger": {
+      "MAE": 49.886489295362914,
+      "RMSE": 75.33022419290816,
+      "nMAE": 0.0715859072355879,
+      "nRMSE": 0.10809705227364673,
+      "rows": 336,
+      "sMAPE": 6.351221209073659
+    },
+    "evaluation_rows": 336,
+    "reference": {
+      "MAE": 129.7283994242464,
+      "RMSE": 137.82202882251127,
+      "nMAE": 0.18615711985707167,
+      "nRMSE": 0.19777128255898127,
+      "rows": 336,
+      "sMAPE": 27.556180696688937
+    },
+    "window_end": "2020-08-29T00:00:00",
+    "window_start": "2020-08-15T01:00:00"
+  },
+  "reference_inference_only": true,
+  "scenario_id": "A15-01-LOW-pv",
+  "severity": "LOW",
+  "target": "pv"
+}

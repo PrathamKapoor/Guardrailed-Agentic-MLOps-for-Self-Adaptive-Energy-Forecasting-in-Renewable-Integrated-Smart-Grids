@@ -1,0 +1,130 @@
+{
+  "feature_availability_audit": {
+    "all_features_available_at_correction_time": true,
+    "any_feature_uses_future_actual": false,
+    "constant_bias_fitting": "The constant bias is `mean(actual[t] - day_ahead[t] for t in train)`. It is computed ONCE, on the training rows. Validation and test rows are not in `train`. Therefore the bias estimate cannot use their residuals.",
+    "feature_count": 10,
+    "features": [
+      {
+        "available_at_correction_time": true,
+        "feature_index": 1,
+        "name": "hour_sin",
+        "source_column": "<derived from timestamp>",
+        "temporal_offset_hours": 0,
+        "why_safe": "Calendar feature. Known at the timestamp t. No dependency on a future row."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 2,
+        "name": "hour_cos",
+        "source_column": "<derived from timestamp>",
+        "temporal_offset_hours": 0,
+        "why_safe": "Calendar feature. Known at the timestamp t."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 3,
+        "name": "dow_sin",
+        "source_column": "<derived from timestamp>",
+        "temporal_offset_hours": 0,
+        "why_safe": "Calendar feature. Known at the timestamp t."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 4,
+        "name": "dow_cos",
+        "source_column": "<derived from timestamp>",
+        "temporal_offset_hours": 0,
+        "why_safe": "Calendar feature. Known at the timestamp t."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 5,
+        "name": "doy_sin",
+        "source_column": "<derived from timestamp>",
+        "temporal_offset_hours": 0,
+        "why_safe": "Calendar feature. Known at the timestamp t."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 6,
+        "name": "doy_cos",
+        "source_column": "<derived from timestamp>",
+        "temporal_offset_hours": 0,
+        "why_safe": "Calendar feature. Known at the timestamp t."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 7,
+        "name": "day_ahead",
+        "source_column": "day_ahead_<target>",
+        "temporal_offset_hours": 0,
+        "why_safe": "RTS_DAY_AHEAD is published in advance. The value for hour t is the official day-ahead forecast for t, produced before t is reached. No future information."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 8,
+        "name": "lag_1_residual",
+        "source_column": "<derived>",
+        "temporal_offset_hours": 1,
+        "why_safe": "actual[t-1h] and day_ahead[t-1h] are both from a strictly past hour (t - 1 hour). No future information; only past values."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 9,
+        "name": "lag_24_residual",
+        "source_column": "<derived>",
+        "temporal_offset_hours": 24,
+        "why_safe": "actual[t-24h] and day_ahead[t-24h] are both from a strictly past hour (t - 24 hours). No future information; only past values."
+      },
+      {
+        "available_at_correction_time": true,
+        "feature_index": 10,
+        "name": "lag_168_residual",
+        "source_column": "<derived>",
+        "temporal_offset_hours": 168,
+        "why_safe": "actual[t-168h] and day_ahead[t-168h] are both from a strictly past hour (t - 168 hours = 7 days). No future information; only past values."
+      }
+    ],
+    "scale_fitting": "Stage 10 Ridge uses StandardScaler fit on training X_train only. HistGradientBoostingRegressor does not require feature scaling. Both are fit once, on the training rows, before any validation or test row is processed.",
+    "schema": "stage_11_leakage_audit_v1",
+    "scope": "Stage 10 residual candidates (constant_bias, ridge, hgb). Each feature used in the Stage 10 feature matrix is documented here. The audit is REVIEWED in the Stage 11 completion report."
+  },
+  "n_folds": 5,
+  "per_fold": [
+    {
+      "fold_id": "F-Aug",
+      "n_checked": 15143,
+      "n_violations": 0,
+      "violations": []
+    },
+    {
+      "fold_id": "F-Sep",
+      "n_checked": 17375,
+      "n_violations": 0,
+      "violations": []
+    },
+    {
+      "fold_id": "F-Oct",
+      "n_checked": 19535,
+      "n_violations": 0,
+      "violations": []
+    },
+    {
+      "fold_id": "F-Nov",
+      "n_checked": 21767,
+      "n_violations": 0,
+      "violations": []
+    },
+    {
+      "fold_id": "F-Dec",
+      "n_checked": 23927,
+      "n_violations": 0,
+      "violations": []
+    }
+  ],
+  "schema": "stage_11_leakage_planted_check_v1",
+  "scope": "For every (train row, lag_k) pair, the planted-future-leak detector checks that the lag reference timestamp is strictly less than the row's timestamp. A violation here would mean a future row accidentally leaked into a feature.",
+  "total_checked": 97747,
+  "total_violations": 0
+}

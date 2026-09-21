@@ -1,0 +1,52 @@
+{
+  "candidate_id": "blend_random_forest_H24_DAILY_PERSISTENCE_a0.50_pv",
+  "classification": "IMPROVED",
+  "comparison": {
+    "alpha": 0.5,
+    "baseline_metrics": {
+      "MAE": 39.09498520491803,
+      "RMSE": 100.69240763850823,
+      "n": 1464,
+      "nMAE": 0.11707829922108884,
+      "nRMSE": 0.22572554554652974,
+      "sMAPE_pct": 3.931270560407196
+    },
+    "baseline_model": "H24_DAILY_PERSISTENCE",
+    "candidate_metrics": {
+      "MAE": 34.37345197745902,
+      "RMSE": 84.01777245557815,
+      "n": 1464,
+      "nMAE": 0.10293865759980948,
+      "nRMSE": 0.18834545690102983,
+      "sMAPE_pct": 58.15698151970453
+    },
+    "frozen_metrics": {
+      "MAE": 36.12176336202186,
+      "RMSE": 82.07888349051662,
+      "n": 1464,
+      "nMAE": 0.10817435016601962,
+      "nRMSE": 0.18399898451391725,
+      "sMAPE_pct": 58.86732780787111
+    },
+    "frozen_model": "random_forest",
+    "kind": "DIRECT"
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-05T07:33:21.464876+00:00",
+  "description": "Linear blend of frozen finalist 'random_forest' and frozen external baseline 'H24_DAILY_PERSISTENCE' with weight alpha=0.5 on the prediction. alpha is reported honestly; the blender does NOT optimise alpha against the test window.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 34.37345197745902,
+    "RMSE": 84.01777245557815,
+    "n": 1464,
+    "nMAE": 0.10293865759980948,
+    "nRMSE": 0.18834545690102983,
+    "sMAPE_pct": 58.15698151970453
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "pv"
+}

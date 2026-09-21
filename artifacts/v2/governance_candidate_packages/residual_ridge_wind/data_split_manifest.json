@@ -1,0 +1,15 @@
+{
+  "candidate_id": "residual_ridge_wind",
+  "chronology_guarantee": "Training rows strictly precede validation rows which strictly precede locked test rows. The locked test window is the frozen Phase 19 final evaluation window.",
+  "frozen_phase_19_protocol_freeze_sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5",
+  "locked_test_interval": "2020-11-01T00:00:00 .. 2020-12-31T23:00:00",
+  "n_test": 1464,
+  "n_train": 1464,
+  "n_validation": "n/a (single locked test window)",
+  "schema": "stage_13_data_split_manifest_v1",
+  "source_dataset_path": "data/processed/research_hourly_index.parquet",
+  "source_dataset_sha256": "d788c78db0f8abcf3238984a5ce46f40042aa7f106db672eb1fe8bbcfc3d5b00",
+  "split_policy": "chronologically_forward_chained_no_random_shuffle",
+  "training_interval": "2020-01-01T00:00:00 .. 2020-08-31T23:00:00",
+  "validation_interval": "2020-09-01T00:00:00 .. 2020-10-31T23:00:00"
+}

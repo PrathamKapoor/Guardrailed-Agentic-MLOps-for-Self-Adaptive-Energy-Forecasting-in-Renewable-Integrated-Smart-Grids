@@ -1,0 +1,23 @@
+{
+  "dataset_id": "ui-1bc51b03df44",
+  "name": "research_ui_smoke",
+  "source": "user-uploaded via research console",
+  "license": "UNSPECIFIED — user-provided research data; not for redistribution",
+  "uploaded_at": "2026-09-13T06:38:51.590963+00:00",
+  "rows": 2880,
+  "columns": [
+    "timestamp",
+    "load",
+    "wind",
+    "pv"
+  ],
+  "timestamp_column": "timestamp",
+  "numeric_columns": [
+    "load",
+    "wind",
+    "pv"
+  ],
+  "start": "2024-01-01 00:00:00",
+  "end": "2024-04-29 23:00:00",
+  "sha256": "1bc51b03df44f42c931dc0047440596faec86e43c17e81c3a6f45e26edf28ef0"
+}

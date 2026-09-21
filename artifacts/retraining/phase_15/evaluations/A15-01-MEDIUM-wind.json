@@ -1,0 +1,76 @@
+{
+  "adaptation_gain_percent": -1.0801727223807225,
+  "admission_checks": {
+    "checks": {
+      "evaluation_complete": true,
+      "evidence_valid": true,
+      "feature_fingerprint_valid": true,
+      "final_test_policy_respected": true,
+      "lineage_complete": true,
+      "model_specification_valid": true,
+      "no_unresolved_deviation": true,
+      "outputs_finite": true,
+      "training_completed": true,
+      "training_dataset_fingerprint_present": true
+    },
+    "decision": "REGISTERED_CHALLENGER",
+    "failed": []
+  },
+  "clean_counterfactual": {
+    "challenger": {
+      "MAE": 437.2105251918297,
+      "RMSE": 498.55867306619496,
+      "nMAE": 1.1881241276592671,
+      "nRMSE": 1.354838354506302,
+      "rows": 336,
+      "sMAPE": 106.23043734899287
+    },
+    "evaluation_rows": 336,
+    "reference": {
+      "MAE": 425.74740685379817,
+      "RMSE": 488.41297743213755,
+      "nMAE": 1.1569729849239614,
+      "nRMSE": 1.32726732160534,
+      "rows": 336,
+      "sMAPE": 105.26545305501733
+    },
+    "window_end": "2020-08-29T00:00:00",
+    "window_start": "2020-08-15T01:00:00"
+  },
+  "clean_stability_change_percent": -2.692469326529086,
+  "family": "A15-01",
+  "perturbation": {
+    "family": "A15-01",
+    "onset": "2020-08-01T00:00:00",
+    "ramp_hours": 0,
+    "severity": "MEDIUM",
+    "shift_magnitude": 763.1675362231488,
+    "sigma_pre_onset": 763.1675362231488,
+    "target_domain_constraint": "clipped at zero"
+  },
+  "post_drift": {
+    "challenger": {
+      "MAE": 360.3212612264514,
+      "RMSE": 473.7568311511962,
+      "nMAE": 0.3185437920930166,
+      "nRMSE": 0.41882706840890255,
+      "rows": 336,
+      "sMAPE": 29.322829728779556
+    },
+    "evaluation_rows": 336,
+    "reference": {
+      "MAE": 356.4707612996299,
+      "RMSE": 480.88069537802255,
+      "nMAE": 0.3151397385992852,
+      "nRMSE": 0.42512495579263615,
+      "rows": 336,
+      "sMAPE": 30.20869873573783
+    },
+    "window_end": "2020-08-29T00:00:00",
+    "window_start": "2020-08-15T01:00:00"
+  },
+  "reference_inference_only": true,
+  "scenario_id": "A15-01-MEDIUM-wind",
+  "severity": "MEDIUM",
+  "target": "wind"
+}

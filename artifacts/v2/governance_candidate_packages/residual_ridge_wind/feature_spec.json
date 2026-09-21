@@ -1,0 +1,25 @@
+{
+  "feature_names": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "day_ahead",
+    "lag_1_residual",
+    "lag_24_residual",
+    "lag_168_residual"
+  ],
+  "feature_set_id": "residual_correction_v1",
+  "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+  "forecast_horizon_availability_contract": "all features are available at the correction time; calendar from the timestamp, day_ahead from the published RTS_DAY_AHEAD, and lagged residuals from rows with timestamps strictly before the target hour (no future leakage).",
+  "logical_feature_identity": "residual correction: predicted_residual is added to day_ahead to produce the corrected forecast; correction is `corrected = day_ahead + predicted_residual`; the model is fit on the training residual `actual - day_ahead`.",
+  "transformations": {
+    "calendar": "sin/cos of hour, dow, doy derived from timestamp",
+    "day_ahead": "RTS_DAY_AHEAD value at the target hour, published in advance",
+    "lag_168_residual": "actual[t-168h] - day_ahead[t-168h]",
+    "lag_1_residual": "actual[t-1h] - day_ahead[t-1h]",
+    "lag_24_residual": "actual[t-24h] - day_ahead[t-24h]"
+  }
+}

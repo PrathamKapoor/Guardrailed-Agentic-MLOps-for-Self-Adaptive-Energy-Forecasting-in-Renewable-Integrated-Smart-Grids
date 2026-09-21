@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560">
+  <rect width="880" height="560" fill="#ffffff"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#1c140e">Guardrailed Agentic MLOps - Classical Pipeline Architecture</text>
+  <text x="440" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#6b6156">Offline evaluation on RTS-GMLC. No quantum, GNN, or LLM component. Agents advisory; governance decides.</text>
+  <g font-family="Segoe UI, sans-serif" font-size="12">
+    <rect x="40" y="80" width="800" height="70" rx="10" fill="#f6f1e7" stroke="#b3542e" stroke-width="1.5"/>
+    <text x="60" y="105" fill="#1c140e" font-weight="bold">1. Data and Feature Layer</text>
+    <text x="60" y="124" fill="#4a4034">Checksummed manifests (SHA-256 per source file) - census-sampled hourly series (8,784 h/target, 2020) - lag + calendar features, train-only scaling</text>
+    <rect x="40" y="165" width="800" height="60" rx="10" fill="#f6f1e7" stroke="#b3542e" stroke-width="1.5"/>
+    <text x="60" y="188" fill="#1c140e" font-weight="bold">2. Forecasting Layer</text>
+    <text x="60" y="206" fill="#4a4034">Frozen finalists: Random forest / MLP / Hist gradient boosting (B_lags_only) - published day-ahead + persistence as external benchmarks</text>
+    <rect x="40" y="240" width="800" height="60" rx="10" fill="#f6f1e7" stroke="#b3542e" stroke-width="1.5"/>
+    <text x="60" y="263" fill="#1c140e" font-weight="bold">3. Monitoring Layer (observational only)</text>
+    <text x="60" y="281" fill="#4a4034">Historical replay, weekly windows - PSI, normalized Wasserstein, rolling MAE - frozen P99 thresholds - severity NONE/WATCH/WARNING/CRITICAL</text>
+    <rect x="40" y="315" width="800" height="60" rx="10" fill="#f6f1e7" stroke="#b3542e" stroke-width="1.5"/>
+    <text x="60" y="338" fill="#1c140e" font-weight="bold">4. Bounded Agentic Layer (advisory only)</text>
+    <text x="60" y="356" fill="#4a4034">Deterministic rule-based agents - 5 advisory types allowed - 7 lifecycle actions blocked and audited - memory: structured summaries + evidence refs</text>
+    <rect x="40" y="390" width="800" height="74" rx="10" fill="#f6f1e7" stroke="#1c140e" stroke-width="2"/>
+    <text x="60" y="414" fill="#1c140e" font-weight="bold">5. Governance and Audit Layer (authoritative)</text>
+    <text x="60" y="432" fill="#4a4034">Phase 13 policy: 13-state lifecycle, 12 ordered gates, 16 reason codes - ALLOW / DENY / REQUIRE_APPROVAL with SHA-256 fingerprints</text>
+    <text x="60" y="450" fill="#4a4034">Mandatory verified rollback before promotion takes effect - append-only JSONL audit ledger</text>
+    <text x="440" y="500" text-anchor="middle" fill="#4a4034" font-style="italic">Locked final-test window: 2020-11-01 to 2020-12-31 (1,464 h), sealed by the Phase 19 protocol freeze</text>
+    <text x="440" y="522" text-anchor="middle" fill="#8a7f6d" font-size="10">Honest results: PV beats persistence (-7.6%); load (+72.3%) and wind (+135.1%) lose to day-ahead; 7/7 candidates DENIED by governance.</text>
+  </g>
+</svg>

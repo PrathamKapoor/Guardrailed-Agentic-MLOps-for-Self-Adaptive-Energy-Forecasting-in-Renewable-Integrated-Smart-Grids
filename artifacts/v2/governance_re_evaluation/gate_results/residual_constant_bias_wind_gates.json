@@ -1,0 +1,161 @@
+{
+  "actor_type": "SYSTEM",
+  "benchmark_gate_value": "BENCHMARK_GATE_FAIL",
+  "current_state": "EXPERIMENTAL",
+  "decision": "DENY",
+  "decision_content_fingerprint": "governance-decision-v1:sha256:84c5c3fb5b430c8c991dff5b3d72f445e42e73ab54e7b8a5b5e3c164be9dc2d6",
+  "evidence_refs": [
+    "artifacts/v2/residual_forecasting/evidence_packages/residual_constant_bias_wind/evidence.json",
+    "artifacts/v2/research_validation/fold_results/"
+  ],
+  "evidence_validation": {
+    "aggregate_package_sha256": "ca72638f9878f875afffa21ec7e818653a5b2403faccf6d512cce8c1c4904630",
+    "benchmark": {
+      "benchmark_gate_value_for_governance": "BENCHMARK_GATE_FAIL",
+      "candidate_MAE_research": 329.17957374413055,
+      "candidate_id": "residual_constant_bias_wind",
+      "canonical_benchmark_MAE": 269.0056523224044,
+      "canonical_benchmark_name": "RTS_DAY_AHEAD",
+      "classification": "BENCHMARK_FAIL"
+    },
+    "evidence_gaps": [
+      {
+        "found": "BENCHMARK_GATE_FAIL",
+        "gate": "BENCHMARK_GATE",
+        "note": "Canonical Phase 13 benchmark comparison is unavailable or fails; the candidate cannot satisfy the benchmark gate.",
+        "required": "BENCHMARK_GATE_PASS for any elevation"
+      },
+      {
+        "found": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+        "gate": "PROTOCOL_COMPATIBILITY_GATE",
+        "note": "The candidate protocol is not in the frozen Phase 13 policy's accepted_protocol_hashes.",
+        "required": "protocol_hash in policy.accepted_protocol_hashes"
+      }
+    ],
+    "package_root": "artifacts\\v2\\governance_candidate_packages\\residual_constant_bias_wind",
+    "protocol": {
+      "candidate_protocol": "residual_correction_v1",
+      "classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+      "phase_19_protocol_freeze_sha256": "79053d6faab827806f4f8d4f6b7915888e0e6ed34c736d230a3824492e5b99a5"
+    },
+    "recorded_checksums": {
+      "benchmark_evaluation.json": "e1b1478585aabc77fad498ad33e352c0703fb210b133f238022f3072ed719ce2",
+      "candidate_manifest.json": "b6372843edd985f077a9717cb8eac1503bf7a4453c07781ad65d359086ac00c4",
+      "data_split_manifest.json": "1ca8cdbb275cc3c034bd6044223f4fd37f3b20bc957bf7076e5db04e9b5c974e",
+      "feature_spec.json": "a05fcbdce91fb13d1049660b6de9505adb74d0b263673b0c789e0685051566ea",
+      "model_spec.json": "e9b21f17c8198fd103197f32c9c3e4f56b2bbc85b33b1cb54372f5b2731e4ca7",
+      "protocol_compatibility.json": "9e3ff1f6bf5748582576c26736cb63bb8bcfbb9dfdb719713afe4a08edce47de",
+      "reproducibility_manifest.json": "312d76dbab7da6bbe61268a42b5fb0806c065b206d14acb1f62e620eb6d20cce"
+    },
+    "verified": {
+      "data_split_manifest_sha256_matches": true,
+      "feature_spec_fingerprint_recorded": true,
+      "lineage_status": "COMPLETE",
+      "model_spec_fingerprint_recorded": true,
+      "reproducibility_metadata": "COMPLETE"
+    }
+  },
+  "explanation": "DENY: Evidence is invalidated or audit-only and cannot support official lifecycle eligibility.",
+  "failed_gates": [
+    "EVIDENCE_VALIDITY_GATE",
+    "PROTOCOL_COMPATIBILITY_GATE"
+  ],
+  "feature_spec_fingerprint": "feature-spec-v1:sha256:94d6960460da14e95f140a9155b33d0d101fa10c9aefcba9144bcbd473fca2ab",
+  "governance_policy_fingerprint": "governance-policy-v1:sha256:070c2e555bbca4eb911451e0a42c1775cbbd3104cf66df176f9e9212999f0755",
+  "model_spec_fingerprint": "model-spec-v1:sha256:fa0dc20849fa43501a7489ffc0134c08270ee983fefb807f42ca57ffb3889b67",
+  "ordered_gate_results": [
+    {
+      "explanation": "Policy identity matches.",
+      "gate": "POLICY_VERSION_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "No final-test or integrity-audit access requested.",
+      "gate": "FINAL_TEST_POLICY_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Evidence is invalidated, audit-only, or not an official candidate.",
+      "gate": "EVIDENCE_VALIDITY_GATE",
+      "passed": false,
+      "reason_code": "EVIDENCE_INVALID"
+    },
+    {
+      "explanation": "Required lineage is complete.",
+      "gate": "LINEAGE_COMPLETENESS_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Model fingerprint matches the freeze.",
+      "gate": "MODEL_SPEC_FINGERPRINT_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Feature fingerprint matches the freeze.",
+      "gate": "FEATURE_SPEC_FINGERPRINT_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Protocol hash is not accepted by the frozen policy.",
+      "gate": "PROTOCOL_COMPATIBILITY_GATE",
+      "passed": false,
+      "reason_code": "PROTOCOL_MISMATCH"
+    },
+    {
+      "explanation": "Reproducibility metadata is complete.",
+      "gate": "REPRODUCIBILITY_METADATA_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "No unresolved critical deviation affects eligibility.",
+      "gate": "DEVIATION_STATUS_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Development benchmark requirement is satisfied or not applicable.",
+      "gate": "BENCHMARK_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Statistical evidence policy is satisfied.",
+      "gate": "STATISTICAL_EVIDENCE_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Requested transition is defined by policy.",
+      "gate": "STATE_TRANSITION_GATE",
+      "passed": true,
+      "reason_code": null
+    },
+    {
+      "explanation": "Approval is not required for this transition.",
+      "gate": "APPROVAL_GATE",
+      "passed": true,
+      "reason_code": null
+    }
+  ],
+  "policy_checksum": "ee13cb365f43aefa154bff3092f22de938eb3d61cd94ec0f5c6fc521ef72c862",
+  "policy_id": "SMARTGRID_DETERMINISTIC_GOVERNANCE",
+  "policy_version": "13.0.0",
+  "proposed_state": "VALIDATED",
+  "protocol_classification": "REQUIRES_NEW_PROTOCOL_APPROVAL",
+  "reason_codes": [
+    "EVIDENCE_INVALID",
+    "PROTOCOL_MISMATCH"
+  ],
+  "requested_transition": "EXPERIMENTAL -> VALIDATED",
+  "research_classification": "artifacts/v2/residual_forecasting/evidence_packages/residual_constant_bias_wind/evidence.json",
+  "simulation": true,
+  "subject_id": "residual_constant_bias_wind",
+  "target": "wind",
+  "timestamp": "2026-09-19T14:32:59.572070+00:00"
+}

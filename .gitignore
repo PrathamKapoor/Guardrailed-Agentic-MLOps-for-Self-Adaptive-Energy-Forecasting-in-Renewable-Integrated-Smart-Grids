@@ -9,26 +9,23 @@ venv/
 .env
 !.env.example
 
-# Data, models, and generated artifacts
+# Raw and large external archives are ignored
 data/raw/*
 !data/raw/.gitkeep
 data/interim/*
 !data/interim/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
 data/external/*
 !data/external/.gitkeep
 models/*
 !models/.gitkeep
 
-# Generated experiment runs and temp files are ignored, but research tables and protocols are preserved
-artifacts/*
-!artifacts/.gitkeep
-!artifacts/research_tables/
-!artifacts/research_figures/
-!artifacts/experimental_design/
-!artifacts/model_registry/
-!artifacts/governance/
+# Processed canonical hourly parquets and features are tracked for reproducibility and CI testing
+
+# Ephemeral test directories and local tracking databases are ignored
+artifacts/test_tmp/
+artifacts/mlflow/*.db
+artifacts/mlflow/*.sqlite
+artifacts/mlflow/*.sqlite3
 
 # Notebooks
 .ipynb_checkpoints/

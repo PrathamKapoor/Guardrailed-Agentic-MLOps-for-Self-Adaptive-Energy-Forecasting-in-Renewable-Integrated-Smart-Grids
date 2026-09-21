@@ -1,0 +1,2605 @@
+{
+  "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+  "results": [
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-LOW-load",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-LOW-load",
+        "decision": "REJECT",
+        "decision_id": "be2ed13f-3456-445a-9afe-34734f6b945d",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 0.824% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 291.14082984600566,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 293.5602758216475,
+          "relative_mae_improvement_percent": 0.8241734917539673
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "simulation": true,
+        "target": "load",
+        "timestamp": "2026-08-21T20:03:57.029086+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 291.14082984600566,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-LOW-load",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 293.5602758216475,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "relative_mae_improvement_percent": 0.8241734917539673,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "load"
+      },
+      "mlflow_run_id": "566c90cd63bb474fa463f293fe690d76",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "relative_mae_improvement_percent": 0.8241734917539673,
+      "target": "load",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": false,
+      "challenger_id": "MLOPS-CHAL15-WIND-A15-01-LOW-wind",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-01-LOW-wind",
+        "decision": "REJECT",
+        "decision_id": "f1922a39-3d4b-4be8-8dc0-d2640b94afc0",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE does not strictly improve the reference (-4.985% <= 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": false,
+            "reason_code": "CHALLENGER_NOT_BETTER"
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 405.8624685237338,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 386.58925048202434,
+          "relative_mae_improvement_percent": -4.985451100277202
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "CHALLENGER_NOT_BETTER",
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "simulation": true,
+        "target": "wind",
+        "timestamp": "2026-08-21T20:03:59.304927+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 405.8624685237338,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": false,
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-01-LOW-wind",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 386.58925048202434,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "relative_mae_improvement_percent": -4.985451100277202,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "wind"
+      },
+      "mlflow_run_id": "60d801052418461fa30708ac14ae180f",
+      "reason_codes": [
+        "CHALLENGER_NOT_BETTER",
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-WIND-H24-V1",
+      "relative_mae_improvement_percent": -4.985451100277202,
+      "target": "wind",
+      "unsafe_attempt": false
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-PV-A15-01-LOW-pv",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-PV-A15-01-LOW-pv",
+        "decision": "REJECT",
+        "decision_id": "fa196ffd-dd4a-4c5b-b75d-6ff57f3e6e4f",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 61.545% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 49.886489295362914,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 129.7283994242464,
+          "relative_mae_improvement_percent": 61.54543683822013
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "simulation": true,
+        "target": "pv",
+        "timestamp": "2026-08-21T20:03:59.448225+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 49.886489295362914,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-PV-A15-01-LOW-pv",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 129.7283994242464,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "relative_mae_improvement_percent": 61.54543683822013,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "pv"
+      },
+      "mlflow_run_id": "6990a8d0255e46ca985aa4b72c62407a",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-PV-H24-V1",
+      "relative_mae_improvement_percent": 61.54543683822013,
+      "target": "pv",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-MEDIUM-load",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-MEDIUM-load",
+        "decision": "REJECT",
+        "decision_id": "2af0dbf0-069f-4a19-a998-acb30ac4770d",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 7.106% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 307.06757747438775,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 330.55670176184896,
+          "relative_mae_improvement_percent": 7.105928926040669
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "simulation": true,
+        "target": "load",
+        "timestamp": "2026-08-21T20:03:59.597047+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 307.06757747438775,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-MEDIUM-load",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 330.55670176184896,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "relative_mae_improvement_percent": 7.105928926040669,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "load"
+      },
+      "mlflow_run_id": "13427f140d614c8094317cabe201fca4",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "relative_mae_improvement_percent": 7.105928926040669,
+      "target": "load",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": false,
+      "challenger_id": "MLOPS-CHAL15-WIND-A15-01-MEDIUM-wind",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-01-MEDIUM-wind",
+        "decision": "REJECT",
+        "decision_id": "e09e2bfa-f794-4aa5-9749-c3517cb7a057",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE does not strictly improve the reference (-1.080% <= 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": false,
+            "reason_code": "CHALLENGER_NOT_BETTER"
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 360.3212612264514,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 356.4707612996299,
+          "relative_mae_improvement_percent": -1.0801727223807225
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "CHALLENGER_NOT_BETTER",
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "simulation": true,
+        "target": "wind",
+        "timestamp": "2026-08-21T20:03:59.759090+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 360.3212612264514,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": false,
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-01-MEDIUM-wind",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 356.4707612996299,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "relative_mae_improvement_percent": -1.0801727223807225,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "wind"
+      },
+      "mlflow_run_id": "014ca5b8d79a49289e67a080f66ca250",
+      "reason_codes": [
+        "CHALLENGER_NOT_BETTER",
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-WIND-H24-V1",
+      "relative_mae_improvement_percent": -1.0801727223807225,
+      "target": "wind",
+      "unsafe_attempt": false
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-PV-A15-01-MEDIUM-pv",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-PV-A15-01-MEDIUM-pv",
+        "decision": "REJECT",
+        "decision_id": "f87cc6d4-e446-4bcf-8bbd-73967ebd99d7",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 69.779% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 43.769972859786215,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 144.83359227241675,
+          "relative_mae_improvement_percent": 69.77912915571444
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "simulation": true,
+        "target": "pv",
+        "timestamp": "2026-08-21T20:03:59.912866+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 43.769972859786215,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-PV-A15-01-MEDIUM-pv",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 144.83359227241675,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "relative_mae_improvement_percent": 69.77912915571444,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "pv"
+      },
+      "mlflow_run_id": "8d392db7b4a84d6abcd24ea895389b14",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-PV-H24-V1",
+      "relative_mae_improvement_percent": 69.77912915571444,
+      "target": "pv",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-HIGH-load",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-HIGH-load",
+        "decision": "REJECT",
+        "decision_id": "d63fa0e6-5cb1-4599-916e-d5956191b41d",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 30.510% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 423.7856414096568,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 609.8544165622214,
+          "relative_mae_improvement_percent": 30.51035953817359
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "simulation": true,
+        "target": "load",
+        "timestamp": "2026-08-21T20:04:00.066478+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 423.7856414096568,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-01-HIGH-load",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 609.8544165622214,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "relative_mae_improvement_percent": 30.51035953817359,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "load"
+      },
+      "mlflow_run_id": "3320b94def524266896e648364069206",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "relative_mae_improvement_percent": 30.51035953817359,
+      "target": "load",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-WIND-A15-01-HIGH-wind",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-01-HIGH-wind",
+        "decision": "REJECT",
+        "decision_id": "080bb93a-b915-46f2-a168-2c1633c6ec97",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 20.927% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 437.7820936859227,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 553.6446027416137,
+          "relative_mae_improvement_percent": 20.92723535675179
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "simulation": true,
+        "target": "wind",
+        "timestamp": "2026-08-21T20:04:00.225036+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 437.7820936859227,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-01-HIGH-wind",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 553.6446027416137,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "relative_mae_improvement_percent": 20.92723535675179,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "wind"
+      },
+      "mlflow_run_id": "cdff41a24b4942d1bdc56cd50ea106b3",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-WIND-H24-V1",
+      "relative_mae_improvement_percent": 20.92723535675179,
+      "target": "wind",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-PV-A15-01-HIGH-pv",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-PV-A15-01-HIGH-pv",
+        "decision": "REJECT",
+        "decision_id": "52ef2866-f8bb-45a5-9c4b-7c7bad1667ad",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 87.971% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 39.706429661160506,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 330.09874681547944,
+          "relative_mae_improvement_percent": 87.97134795444836
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "simulation": true,
+        "target": "pv",
+        "timestamp": "2026-08-21T20:04:00.355654+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 39.706429661160506,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-PV-A15-01-HIGH-pv",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 330.09874681547944,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "relative_mae_improvement_percent": 87.97134795444836,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "pv"
+      },
+      "mlflow_run_id": "82526baf0bbb4b4e8c1a121e85905274",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-PV-H24-V1",
+      "relative_mae_improvement_percent": 87.97134795444836,
+      "target": "pv",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": false,
+      "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-LOW-load",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-LOW-load",
+        "decision": "REJECT",
+        "decision_id": "d60c738f-e058-4721-a6fb-bc07b37b7d7b",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE does not strictly improve the reference (-0.465% <= 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": false,
+            "reason_code": "CHALLENGER_NOT_BETTER"
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 292.38091489990575,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 291.0267328473574,
+          "relative_mae_improvement_percent": -0.465311911142758
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "CHALLENGER_NOT_BETTER",
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "simulation": true,
+        "target": "load",
+        "timestamp": "2026-08-21T20:04:00.505517+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 292.38091489990575,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": false,
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-LOW-load",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 291.0267328473574,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "relative_mae_improvement_percent": -0.465311911142758,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "load"
+      },
+      "mlflow_run_id": "d8eb7d207f724b4bbc15a45e0f387781",
+      "reason_codes": [
+        "CHALLENGER_NOT_BETTER",
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "relative_mae_improvement_percent": -0.465311911142758,
+      "target": "load",
+      "unsafe_attempt": false
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-WIND-A15-02-LOW-wind",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-02-LOW-wind",
+        "decision": "REJECT",
+        "decision_id": "2c3a4695-b9b5-4124-bb24-2520ea30d6ca",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 0.745% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 369.17401650557815,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 371.9453747719664,
+          "relative_mae_improvement_percent": 0.7450981930040957
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "simulation": true,
+        "target": "wind",
+        "timestamp": "2026-08-21T20:04:00.674773+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 369.17401650557815,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-02-LOW-wind",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 371.9453747719664,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "relative_mae_improvement_percent": 0.7450981930040957,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "wind"
+      },
+      "mlflow_run_id": "244b6032b22f461c8917b7871baa6e3b",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-WIND-H24-V1",
+      "relative_mae_improvement_percent": 0.7450981930040957,
+      "target": "wind",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-PV-A15-02-LOW-pv",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-PV-A15-02-LOW-pv",
+        "decision": "REJECT",
+        "decision_id": "9fa93849-26ec-457a-b2fa-06d15e1b5007",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 22.252% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 91.51124117988945,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 117.70211306996643,
+          "relative_mae_improvement_percent": 22.251828116720528
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "simulation": true,
+        "target": "pv",
+        "timestamp": "2026-08-21T20:04:00.832173+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 91.51124117988945,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-PV-A15-02-LOW-pv",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 117.70211306996643,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "relative_mae_improvement_percent": 22.251828116720528,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "pv"
+      },
+      "mlflow_run_id": "021d750b044b4f06a224b14bb8dc8734",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-PV-H24-V1",
+      "relative_mae_improvement_percent": 22.251828116720528,
+      "target": "pv",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-MEDIUM-load",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-MEDIUM-load",
+        "decision": "REJECT",
+        "decision_id": "0ce7647b-0437-4e8e-a1bf-64c0fbbdf65b",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 1.312% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 323.2563572237643,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 327.55221258449455,
+          "relative_mae_improvement_percent": 1.3115024706548368
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "simulation": true,
+        "target": "load",
+        "timestamp": "2026-08-21T20:04:00.978967+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 323.2563572237643,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-MEDIUM-load",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 327.55221258449455,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "relative_mae_improvement_percent": 1.3115024706548368,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "load"
+      },
+      "mlflow_run_id": "b81f0a1366994b948b3bece7726d9f37",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "relative_mae_improvement_percent": 1.3115024706548368,
+      "target": "load",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-WIND-A15-02-MEDIUM-wind",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-02-MEDIUM-wind",
+        "decision": "REJECT",
+        "decision_id": "e862f1b8-26e0-4d6b-a0a1-24e85d5699d6",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 0.289% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 336.4321483902457,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 337.4057558945754,
+          "relative_mae_improvement_percent": 0.2885568747185008
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "simulation": true,
+        "target": "wind",
+        "timestamp": "2026-08-21T20:04:01.131438+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 336.4321483902457,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-02-MEDIUM-wind",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 337.4057558945754,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "relative_mae_improvement_percent": 0.2885568747185008,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "wind"
+      },
+      "mlflow_run_id": "e49c0cc2ace4414f9f569b4cbabe151e",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-WIND-H24-V1",
+      "relative_mae_improvement_percent": 0.2885568747185008,
+      "target": "wind",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-PV-A15-02-MEDIUM-pv",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-PV-A15-02-MEDIUM-pv",
+        "decision": "REJECT",
+        "decision_id": "951e0619-ca3b-425d-aa28-004e31ebbaf1",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 44.651% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 81.66792113669494,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 147.551277240592,
+          "relative_mae_improvement_percent": 44.65115947215416
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "simulation": true,
+        "target": "pv",
+        "timestamp": "2026-08-21T20:04:01.275467+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 81.66792113669494,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-PV-A15-02-MEDIUM-pv",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 147.551277240592,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "relative_mae_improvement_percent": 44.65115947215416,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "pv"
+      },
+      "mlflow_run_id": "807a1a91ee494a7bac8bf7f52f3c4f65",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-PV-H24-V1",
+      "relative_mae_improvement_percent": 44.65115947215416,
+      "target": "pv",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-HIGH-load",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-HIGH-load",
+        "decision": "REJECT",
+        "decision_id": "c14e3bd7-9cee-4f95-974b-c5596ed27e88",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 29.015% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 435.8341331082158,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 613.979407126899,
+          "relative_mae_improvement_percent": 29.014861402650208
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "simulation": true,
+        "target": "load",
+        "timestamp": "2026-08-21T20:04:01.412036+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 435.8341331082158,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-LOAD-A15-02-HIGH-load",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 613.979407126899,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-LOAD-H24-V1",
+        "relative_mae_improvement_percent": 29.014861402650208,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "load"
+      },
+      "mlflow_run_id": "2bd3dc1dd8e04b9aac5d8376ee37069b",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-LOAD-H24-V1",
+      "relative_mae_improvement_percent": 29.014861402650208,
+      "target": "load",
+      "unsafe_attempt": true
+    },
+    {
+      "blocked": false,
+      "challenger_id": "MLOPS-CHAL15-WIND-A15-02-HIGH-wind",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-02-HIGH-wind",
+        "decision": "REJECT",
+        "decision_id": "dcee4172-78c2-4158-8415-7e522a7e7793",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE does not strictly improve the reference (-1.018% <= 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": false,
+            "reason_code": "CHALLENGER_NOT_BETTER"
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 513.119161136713,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 507.9481139333701,
+          "relative_mae_improvement_percent": -1.0180266569552117
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "CHALLENGER_NOT_BETTER",
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "simulation": true,
+        "target": "wind",
+        "timestamp": "2026-08-21T20:04:01.544197+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 513.119161136713,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": false,
+        "challenger_id": "MLOPS-CHAL15-WIND-A15-02-HIGH-wind",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 507.9481139333701,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-WIND-H24-V1",
+        "relative_mae_improvement_percent": -1.0180266569552117,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "wind"
+      },
+      "mlflow_run_id": "728629783bb945e18235d9ba167033c5",
+      "reason_codes": [
+        "CHALLENGER_NOT_BETTER",
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-WIND-H24-V1",
+      "relative_mae_improvement_percent": -1.0180266569552117,
+      "target": "wind",
+      "unsafe_attempt": false
+    },
+    {
+      "blocked": true,
+      "challenger_id": "MLOPS-CHAL15-PV-A15-02-HIGH-pv",
+      "decision": "REJECT",
+      "decision_record": {
+        "challenger_id": "MLOPS-CHAL15-PV-A15-02-HIGH-pv",
+        "decision": "REJECT",
+        "decision_id": "b932f496-531b-4295-9383-8029aa3cfbe9",
+        "gate_results": [
+          {
+            "explanation": "Promotion policy identity matches.",
+            "gate": "POLICY_VERSION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "No final-test access requested.",
+            "gate": "FINAL_TEST_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger is REGISTERED_CHALLENGER in the Phase 15 registry.",
+            "gate": "REGISTRATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger lineage is complete.",
+            "gate": "LINEAGE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Model specification fingerprint matches the frozen reference specification.",
+            "gate": "MODEL_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Feature fingerprint matches the frozen specification.",
+            "gate": "FEATURE_FINGERPRINT_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Protocol hash is accepted by the frozen promotion policy.",
+            "gate": "PROTOCOL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Required challenger metadata is complete.",
+            "gate": "METADATA_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Matched evaluation complete (336 rows >= 336).",
+            "gate": "EVALUATION_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger MAE strictly improves the reference by 74.120% (> 0.0%).",
+            "gate": "PERFORMANCE_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Challenger does not satisfy the frozen development benchmark requirement (synthetic-scenario superiority over the reference is not benchmark evidence).",
+            "gate": "BENCHMARK_GATE",
+            "passed": false,
+            "reason_code": "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+          },
+          {
+            "explanation": "Statistical evidence policy is satisfied.",
+            "gate": "STATISTICAL_GATE",
+            "passed": true,
+            "reason_code": null
+          },
+          {
+            "explanation": "Explicit approval is required before promotion; none is recorded.",
+            "gate": "APPROVAL_GATE",
+            "passed": false,
+            "reason_code": "APPROVAL_REQUIRED"
+          }
+        ],
+        "metrics": {
+          "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+          "challenger_mae": 88.51105130937638,
+          "matched_evaluation_rows": 336,
+          "reference_mae": 342.0093302215421,
+          "relative_mae_improvement_percent": 74.12028167417482
+        },
+        "policy_checksum": "7b9cf08be7122b22302c8709a3a8cba16b2b0c827a498ccfdec88d8de1d56035",
+        "policy_id": "SMARTGRID_CHAMPION_CHALLENGER_GOVERNANCE",
+        "policy_version": "16.0.0",
+        "promotion_policy_fingerprint": "promotion-policy-v1:sha256:fe79bb8beac66958b265a0d075bf7eaf342ccffbb5159e8c1c85552d326af219",
+        "reason_codes": [
+          "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+        ],
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "simulation": true,
+        "target": "pv",
+        "timestamp": "2026-08-21T20:04:01.688231+00:00"
+      },
+      "evaluation": {
+        "benchmark_gate": "SYNTHETIC_SCENARIO_NOT_APPLICABLE",
+        "challenger": {
+          "MAE": 88.51105130937638,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "challenger_better": true,
+        "challenger_id": "MLOPS-CHAL15-PV-A15-02-HIGH-pv",
+        "evaluation_completed": true,
+        "evidence_status": "VALID",
+        "matched_rows": 336,
+        "protocol_match": true,
+        "reference": {
+          "MAE": 342.0093302215421,
+          "RMSE": 0.0,
+          "nMAE": 0.0,
+          "nRMSE": 0.0,
+          "sMAPE": 0.0
+        },
+        "reference_id": "MLOPS-REF-PV-H24-V1",
+        "relative_mae_improvement_percent": 74.12028167417482,
+        "simulation": true,
+        "statistical_evidence": "NOT_REQUIRED",
+        "target": "pv"
+      },
+      "mlflow_run_id": "5547ed4d1048402193df9046e0c7b86f",
+      "reason_codes": [
+        "BENCHMARK_REQUIREMENT_NOT_SATISFIED"
+      ],
+      "reference_id": "MLOPS-REF-PV-H24-V1",
+      "relative_mae_improvement_percent": 74.12028167417482,
+      "target": "pv",
+      "unsafe_attempt": true
+    }
+  ]
+}

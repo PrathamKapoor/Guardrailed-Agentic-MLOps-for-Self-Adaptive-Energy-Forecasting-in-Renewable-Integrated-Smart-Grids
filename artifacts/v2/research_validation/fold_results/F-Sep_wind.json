@@ -1,0 +1,133 @@
+{
+  "candidates": {
+    "constant_bias": {
+      "baseline_metrics_test": {
+        "MAE": 231.64319444444445,
+        "RMSE": 363.1067764184779,
+        "n": 720,
+        "nMAE": 0.4127418159188724,
+        "nRMSE": 0.5706100335845403,
+        "sMAPE_pct": 34.244585333219334
+      },
+      "baseline_metrics_validation_MAE": 231.64319444444445,
+      "candidate_id": "residual_constant_bias_wind",
+      "candidate_metrics_test": {
+        "MAE": 252.6992720903537,
+        "RMSE": 375.27781362756855,
+        "n": 720,
+        "nMAE": 0.4502595325284388,
+        "nRMSE": 0.5897364074273516,
+        "sMAPE_pct": 50.957632430188745
+      },
+      "candidate_metrics_validation_MAE": 252.6992720903537,
+      "classification": "REGRESSED",
+      "description": "Constant-bias residual correction: prediction = day_ahead + bias, where bias = mean(actual - day_ahead) on the training split. Deterministic; no ML fit on the test window.",
+      "feature_set": [
+        "bias_constant"
+      ],
+      "n_test": 720,
+      "n_train": 5856,
+      "n_validation": 720,
+      "notes": "Deterministic baseline; the bias was fitted on TRAIN ONLY. The training residual std is the residual variance that no constant correction can remove.",
+      "relative_diff_MAE_pct_test": 9.08987535610902,
+      "relative_diff_MAE_pct_validation": 9.08987535610902,
+      "target": "wind",
+      "training_residual_mean": -58.44668288934427,
+      "training_residual_std": 464.7424681200785
+    },
+    "hgb_residual": {
+      "baseline_metrics_test": {
+        "MAE": 231.64319444444445,
+        "RMSE": 363.1067764184779,
+        "n": 720,
+        "nMAE": 0.4127418159188724,
+        "nRMSE": 0.5706100335845403,
+        "sMAPE_pct": 34.244585333219334
+      },
+      "baseline_metrics_validation_MAE": 231.64319444444445,
+      "candidate_id": "residual_hgb_wind",
+      "candidate_metrics_test": {
+        "MAE": 108.12182649516896,
+        "RMSE": 171.56953835672712,
+        "n": 720,
+        "nMAE": 0.19265145740676679,
+        "nRMSE": 0.2696157339982769,
+        "sMAPE_pct": 20.45620059422939
+      },
+      "candidate_metrics_validation_MAE": 108.12182649516896,
+      "classification": "MEANINGFUL_IMPROVEMENT",
+      "description": "HistGradientBoostingRegressor on the training residual. Same hyperparameters as the frozen Phase 19 model family (learning_rate=0.08, max_iter=200, max_leaf_nodes=31, l2_regularization=0.1, random_state=42). Feature set: 6 calendar + day_ahead + 3 lagged residuals.",
+      "feature_set": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "day_ahead",
+        "lag_1_residual",
+        "lag_24_residual",
+        "lag_168_residual"
+      ],
+      "n_test": 720,
+      "n_train": 5688,
+      "n_validation": 720,
+      "notes": "Non-linear residual model. Same feature firewall as the Ridge candidate.",
+      "relative_diff_MAE_pct_test": -53.32397882248162,
+      "relative_diff_MAE_pct_validation": -53.32397882248162,
+      "target": "wind",
+      "training_residual_mean": -58.44668288934427,
+      "training_residual_std": 464.7424681200785
+    },
+    "ridge_residual": {
+      "baseline_metrics_test": {
+        "MAE": 231.64319444444445,
+        "RMSE": 363.1067764184779,
+        "n": 720,
+        "nMAE": 0.4127418159188724,
+        "nRMSE": 0.5706100335845403,
+        "sMAPE_pct": 34.244585333219334
+      },
+      "baseline_metrics_validation_MAE": 231.64319444444445,
+      "candidate_id": "residual_ridge_wind",
+      "candidate_metrics_test": {
+        "MAE": 113.23571284103447,
+        "RMSE": 172.94161970845903,
+        "n": 720,
+        "nMAE": 0.20176337948096126,
+        "nRMSE": 0.2717719134943328,
+        "sMAPE_pct": 24.424549888553322
+      },
+      "candidate_metrics_validation_MAE": 113.23571284103447,
+      "classification": "MEANINGFUL_IMPROVEMENT",
+      "description": "Ridge regression on the training residual. Feature set: 6 calendar (hour/dow/doy sin/cos) + day_ahead value + 3 lagged residuals (lag-1, lag-24, lag-168). alpha=1.0, fit_intercept=True, StandardScaler inside the pipeline. Reuses the existing `src/smartgrid_mlops/models/factory.py:ridge` factory; no HPO.",
+      "feature_set": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "doy_sin",
+        "doy_cos",
+        "day_ahead",
+        "lag_1_residual",
+        "lag_24_residual",
+        "lag_168_residual"
+      ],
+      "n_test": 720,
+      "n_train": 5688,
+      "n_validation": 720,
+      "notes": "Lagged residuals use only past observations (lag >= 1). Day_ahead is the only feature that uses the same-hour value; it is published in advance so this is not leakage.",
+      "relative_diff_MAE_pct_test": -51.11632218999118,
+      "relative_diff_MAE_pct_validation": -51.11632218999118,
+      "target": "wind",
+      "training_residual_mean": -58.44668288934427,
+      "training_residual_std": 464.7424681200785
+    }
+  },
+  "end": "2020-09-30T23:00:00",
+  "fold_id": "F-Sep",
+  "n_train": 5856,
+  "n_validation": 720,
+  "start": "2020-09-01T00:00:00",
+  "target": "wind"
+}

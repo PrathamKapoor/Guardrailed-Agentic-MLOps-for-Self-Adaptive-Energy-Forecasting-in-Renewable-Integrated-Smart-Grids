@@ -1,0 +1,96 @@
+{
+  "adaptation": {
+    "by_severity": {
+      "HIGH": {
+        "cases": 6,
+        "mean_adaptation_gain_percent": 40.25434321154059
+      },
+      "LOW": {
+        "cases": 6,
+        "mean_adaptation_gain_percent": 13.319295604713126
+      },
+      "MEDIUM": {
+        "cases": 6,
+        "mean_adaptation_gain_percent": 20.342684029483646
+      }
+    },
+    "by_target": {
+      "load": {
+        "degraded_cases": 1,
+        "improved_cases": 5,
+        "mean_adaptation_gain_percent": 11.383585653021752,
+        "mean_challenger_post_drift_mae": 345.5775756603227,
+        "mean_reference_post_drift_mae": 411.0882911174115,
+        "no_material_change_cases": 0,
+        "scenarios": 6
+      },
+      "pv": {
+        "degraded_cases": 0,
+        "improved_cases": 6,
+        "mean_adaptation_gain_percent": 60.05319720190541,
+        "mean_challenger_post_drift_mae": 65.8421842403784,
+        "mean_reference_post_drift_mae": 201.98724317404051,
+        "no_material_change_cases": 0,
+        "scenarios": 6
+      },
+      "wind": {
+        "degraded_cases": 3,
+        "improved_cases": 3,
+        "mean_adaptation_gain_percent": 2.4795399908102085,
+        "mean_challenger_post_drift_mae": 403.7818582447741,
+        "mean_reference_post_drift_mae": 419.0006431871966,
+        "no_material_change_cases": 0,
+        "scenarios": 6
+      }
+    },
+    "total_scenarios": 18
+  },
+  "jobs": {
+    "completed_jobs": 18,
+    "failed_jobs": 0,
+    "mean_runtime_seconds": 0.8169576333295683,
+    "median_runtime_seconds": 0.556717600004049,
+    "planned_jobs": 18,
+    "started_jobs": 18,
+    "total_new_data_rows": 6066,
+    "total_training_rows": 94626
+  },
+  "request_policy": {
+    "correct_decisions": 15,
+    "data_quality_blocked_requests": 1,
+    "decision_correctness_percent": 100.0,
+    "expected_allow": 4,
+    "expected_defer": 4,
+    "expected_deny": 7,
+    "false_allows": 0,
+    "false_defers": 0,
+    "false_denies": 0,
+    "final_test_violations_blocked": 1,
+    "total_request_scenarios": 15,
+    "unnecessary_retraining_attempts": 6,
+    "unnecessary_retraining_prevented": 6,
+    "unsafe_retraining_attempts": 5,
+    "unsafe_retraining_attempts_blocked": 5,
+    "unsafe_retraining_prevention_rate_percent": 100.0
+  },
+  "safety": {
+    "actual_retraining_jobs": 18,
+    "allow": 4,
+    "automatic_promotions": 0,
+    "challenger_terminal_state": "REGISTERED_CHALLENGER",
+    "challengers_registered": 18,
+    "data_quality_blocked_requests": 1,
+    "defer": 4,
+    "deny": 7,
+    "drift_alerts_considered": 15,
+    "final_test_violations_blocked": 1,
+    "governance_bypasses": 0,
+    "reference_replacements": 0,
+    "retraining_requests_generated": 15,
+    "unnecessary_retraining_attempts": 6,
+    "unnecessary_retraining_prevented": 6,
+    "unsafe_retraining_attempts": 5,
+    "unsafe_retraining_attempts_blocked": 5,
+    "unsafe_retraining_prevention_rate_percent": 100.0
+  }
+}

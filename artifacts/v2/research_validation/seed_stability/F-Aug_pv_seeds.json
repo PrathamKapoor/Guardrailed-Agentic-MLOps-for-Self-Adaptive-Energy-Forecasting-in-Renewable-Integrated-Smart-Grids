@@ -1,0 +1,31 @@
+{
+  "fold_id": "F-Aug",
+  "hgb_MAE_best": 19.414783863358263,
+  "hgb_MAE_mean": 19.414783863358263,
+  "hgb_MAE_range": 0.0,
+  "hgb_MAE_stdev": 0.0,
+  "hgb_MAE_worst": 19.414783863358263,
+  "hgb_per_seed": [
+    {
+      "MAE": 19.414783863358263,
+      "seed_attempted": 42,
+      "seed_hard_coded_in_implementation": 42
+    },
+    {
+      "MAE": 19.414783863358263,
+      "seed_attempted": 123,
+      "seed_hard_coded_in_implementation": 42
+    },
+    {
+      "MAE": 19.414783863358263,
+      "seed_attempted": 2020,
+      "seed_hard_coded_in_implementation": 42
+    }
+  ],
+  "n_train": 5112,
+  "n_validation": 744,
+  "notes": "HistGradientBoostingRegressor in this codebase does not expose a random_state argument. Seed variation therefore does not apply to the HGB candidate at this code path; the hard-coded seed is 42. This is honest: we report what is actually reproducible, not what we wish were true.",
+  "ridge_MAE": 31.917136472330032,
+  "ridge_classification": "MEANINGFUL_IMPROVEMENT",
+  "target": "pv"
+}

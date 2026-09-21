@@ -1,0 +1,52 @@
+{
+  "candidate_id": "blend_hist_gradient_boosting_RTS_DAY_AHEAD_a0.50_wind",
+  "classification": "IMPROVED",
+  "comparison": {
+    "alpha": 0.5,
+    "baseline_metrics": {
+      "MAE": 331.30216302800545,
+      "RMSE": 491.20826474320177,
+      "n": 1464,
+      "nMAE": 0.2888189246300379,
+      "nRMSE": 0.5398090485112502,
+      "sMAPE_pct": 25.45787784016209
+    },
+    "baseline_model": "RTS_DAY_AHEAD",
+    "candidate_metrics": {
+      "MAE": 475.84893129303276,
+      "RMSE": 572.8230416140495,
+      "n": 1464,
+      "nMAE": 0.4148303028458918,
+      "nRMSE": 0.6294988974191111,
+      "sMAPE_pct": 34.40577171263482
+    },
+    "frozen_metrics": {
+      "MAE": 778.8412887247268,
+      "RMSE": 923.3732472119916,
+      "n": 1464,
+      "nMAE": 0.6789696191869825,
+      "nRMSE": 1.0147329957056612,
+      "sMAPE_pct": 46.19868173885535
+    },
+    "frozen_model": "hist_gradient_boosting",
+    "kind": "DIRECT"
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-05T07:33:21.392976+00:00",
+  "description": "Linear blend of frozen finalist 'hist_gradient_boosting' and frozen external baseline 'RTS_DAY_AHEAD' with weight alpha=0.5 on the prediction. alpha is reported honestly; the blender does NOT optimise alpha against the test window.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 475.84893129303276,
+    "RMSE": 572.8230416140495,
+    "n": 1464,
+    "nMAE": 0.4148303028458918,
+    "nRMSE": 0.6294988974191111,
+    "sMAPE_pct": 34.40577171263482
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "wind"
+}

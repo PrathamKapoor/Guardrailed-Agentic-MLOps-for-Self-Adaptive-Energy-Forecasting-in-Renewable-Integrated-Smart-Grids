@@ -1,0 +1,167 @@
+{
+  "configuration_frozen": true,
+  "generated_at": "2026-08-26T07:53:27.576691",
+  "plan_sha256_verified": true,
+  "status": "NON_EVIDENCE_SMOKE",
+  "targets": {
+    "load": {
+      "baseline_comparator": "RTS_DAY_AHEAD",
+      "folds": [
+        {
+          "eval_samples": 720,
+          "fold_id": "F11",
+          "mlp_epochs_by_seed": [
+            12
+          ],
+          "mlp_seeds_used": [
+            42
+          ],
+          "training_samples": 7128
+        }
+      ],
+      "metrics": {
+        "baseline": {
+          "MAE": 98.29375485401617,
+          "RMSE": 98.99359929107484,
+          "nMAE": 0.027416348051665703,
+          "nRMSE": 0.02761155047013999,
+          "sMAPE": 2.713201056291894,
+          "samples": 720
+        },
+        "challenger": {
+          "MAE": 422.7243067196716,
+          "RMSE": 509.4917881281045,
+          "nMAE": 0.11790735576373261,
+          "nRMSE": 0.1421087658471407,
+          "sMAPE": 11.85027827519276,
+          "samples": 720
+        },
+        "reference": {
+          "MAE": 173.856824261465,
+          "RMSE": 239.71106537938016,
+          "nMAE": 0.048492594592492035,
+          "nRMSE": 0.06686082966346417,
+          "sMAPE": 4.780821975318388,
+          "samples": 720
+        }
+      },
+      "primary_test": {
+        "comparison": "reference_vs_baseline_comparator",
+        "dm_statistic": 3.903357438891798,
+        "holm_decision": {
+          "holm_threshold": 0.025,
+          "p_value": 9.48674386717997e-05,
+          "reject_null_at_alpha": true
+        },
+        "p_value": 9.48674386717997e-05
+      },
+      "reference_model": "P10-load-random_forest-B_lags_only"
+    },
+    "pv": {
+      "baseline_comparator": "H24_DAILY_PERSISTENCE",
+      "folds": [
+        {
+          "eval_samples": 720,
+          "fold_id": "F11",
+          "mlp_epochs_by_seed": [
+            12
+          ],
+          "mlp_seeds_used": [
+            42
+          ],
+          "training_samples": 7128
+        }
+      ],
+      "metrics": {
+        "baseline": {
+          "MAE": 35.127361111111114,
+          "RMSE": 89.71467860981988,
+          "nMAE": 0.10046269048991965,
+          "nRMSE": 0.25657999076765436,
+          "sMAPE": 6.434281814782792,
+          "samples": 720
+        },
+        "challenger": {
+          "MAE": 262.47442632745816,
+          "RMSE": 277.05362012584226,
+          "nMAE": 0.7506651857578315,
+          "nRMSE": 0.7923610316121996,
+          "sMAPE": 131.77601214914102,
+          "samples": 720
+        },
+        "reference": {
+          "MAE": 35.104179215190726,
+          "RMSE": 75.15353553671295,
+          "nMAE": 0.10039639129860116,
+          "nRMSE": 0.2149357691847736,
+          "sMAPE": 116.50984370364489,
+          "samples": 720
+        }
+      },
+      "primary_test": {
+        "comparison": "reference_vs_baseline_comparator",
+        "dm_statistic": -0.005135727698378008,
+        "holm_decision": {
+          "holm_threshold": 0.05,
+          "p_value": 0.9959023001742673,
+          "reject_null_at_alpha": false
+        },
+        "p_value": 0.9959023001742673
+      },
+      "reference_model": "P10-pv-random_forest-B_lags_only"
+    },
+    "wind": {
+      "baseline_comparator": "RTS_DAY_AHEAD",
+      "folds": [
+        {
+          "eval_samples": 720,
+          "fold_id": "F11",
+          "mlp_epochs_by_seed": [
+            9
+          ],
+          "mlp_seeds_used": [
+            42
+          ],
+          "training_samples": 7128
+        }
+      ],
+      "metrics": {
+        "baseline": {
+          "MAE": 320.4550115740741,
+          "RMSE": 466.7947997728808,
+          "nMAE": 0.22227209803181316,
+          "nRMSE": 0.32377543102294404,
+          "sMAPE": 37.6690594788535,
+          "samples": 720
+        },
+        "challenger": {
+          "MAE": 948.942765016909,
+          "RMSE": 1088.5951410951357,
+          "nMAE": 0.6582000333100194,
+          "nRMSE": 0.755064883304291,
+          "sMAPE": 88.24867723538651,
+          "samples": 720
+        },
+        "reference": {
+          "MAE": 842.0639718181621,
+          "RMSE": 983.1419536442476,
+          "nMAE": 0.5840674008300233,
+          "nRMSE": 0.6819210709990404,
+          "sMAPE": 78.2626266720802,
+          "samples": 720
+        }
+      },
+      "primary_test": {
+        "comparison": "reference_vs_baseline_comparator",
+        "dm_statistic": 8.419096439168499,
+        "holm_decision": {
+          "holm_threshold": 0.016666666666666666,
+          "p_value": 3.793990018231667e-17,
+          "reject_null_at_alpha": true
+        },
+        "p_value": 3.793990018231667e-17
+      },
+      "reference_model": "P10-wind-hist_gradient_boosting-B_lags_only"
+    }
+  }
+}

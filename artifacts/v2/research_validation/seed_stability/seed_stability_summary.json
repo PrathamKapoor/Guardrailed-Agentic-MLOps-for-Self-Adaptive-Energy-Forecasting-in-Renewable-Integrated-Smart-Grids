@@ -1,0 +1,178 @@
+{
+  "created_at": "2026-09-19T16:06:12.731264+00:00",
+  "folds": [
+    {
+      "fold_id": "F-Aug",
+      "hgb_MAE_best": 3.2514995977300774,
+      "hgb_MAE_mean": 3.2514995977300774,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 3.2514995977300774,
+      "path": "research_validation\\seed_stability\\F-Aug_system_load_seeds.json",
+      "ridge_MAE": 4.1024382217481055,
+      "target": "system_load"
+    },
+    {
+      "fold_id": "F-Aug",
+      "hgb_MAE_best": 102.85283905275021,
+      "hgb_MAE_mean": 102.85283905275021,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 102.85283905275021,
+      "path": "research_validation\\seed_stability\\F-Aug_wind_seeds.json",
+      "ridge_MAE": 102.00336925352197,
+      "target": "wind"
+    },
+    {
+      "fold_id": "F-Aug",
+      "hgb_MAE_best": 19.414783863358263,
+      "hgb_MAE_mean": 19.414783863358263,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 19.414783863358263,
+      "path": "research_validation\\seed_stability\\F-Aug_pv_seeds.json",
+      "ridge_MAE": 31.917136472330032,
+      "target": "pv"
+    },
+    {
+      "fold_id": "F-Sep",
+      "hgb_MAE_best": 2.42905532011978,
+      "hgb_MAE_mean": 2.42905532011978,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 2.42905532011978,
+      "path": "research_validation\\seed_stability\\F-Sep_system_load_seeds.json",
+      "ridge_MAE": 3.055270277690355,
+      "target": "system_load"
+    },
+    {
+      "fold_id": "F-Sep",
+      "hgb_MAE_best": 108.12182649516896,
+      "hgb_MAE_mean": 108.12182649516896,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 108.12182649516896,
+      "path": "research_validation\\seed_stability\\F-Sep_wind_seeds.json",
+      "ridge_MAE": 113.23571284103447,
+      "target": "wind"
+    },
+    {
+      "fold_id": "F-Sep",
+      "hgb_MAE_best": 18.471449426449894,
+      "hgb_MAE_mean": 18.471449426449894,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 18.471449426449894,
+      "path": "research_validation\\seed_stability\\F-Sep_pv_seeds.json",
+      "ridge_MAE": 30.623909011637938,
+      "target": "pv"
+    },
+    {
+      "fold_id": "F-Oct",
+      "hgb_MAE_best": 1.9874481914613,
+      "hgb_MAE_mean": 1.9874481914613,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 1.9874481914613,
+      "path": "research_validation\\seed_stability\\F-Oct_system_load_seeds.json",
+      "ridge_MAE": 2.087760389543343,
+      "target": "system_load"
+    },
+    {
+      "fold_id": "F-Oct",
+      "hgb_MAE_best": 119.29460323607206,
+      "hgb_MAE_mean": 119.29460323607206,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 119.29460323607206,
+      "path": "research_validation\\seed_stability\\F-Oct_wind_seeds.json",
+      "ridge_MAE": 116.7626061930897,
+      "target": "wind"
+    },
+    {
+      "fold_id": "F-Oct",
+      "hgb_MAE_best": 22.80363940656136,
+      "hgb_MAE_mean": 22.80363940656136,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 22.80363940656136,
+      "path": "research_validation\\seed_stability\\F-Oct_pv_seeds.json",
+      "ridge_MAE": 38.35003015670337,
+      "target": "pv"
+    },
+    {
+      "fold_id": "F-Nov",
+      "hgb_MAE_best": 1.316556576057391,
+      "hgb_MAE_mean": 1.316556576057391,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 1.316556576057391,
+      "path": "research_validation\\seed_stability\\F-Nov_system_load_seeds.json",
+      "ridge_MAE": 2.4428066598595946,
+      "target": "system_load"
+    },
+    {
+      "fold_id": "F-Nov",
+      "hgb_MAE_best": 172.41712224006835,
+      "hgb_MAE_mean": 172.41712224006835,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 172.41712224006835,
+      "path": "research_validation\\seed_stability\\F-Nov_wind_seeds.json",
+      "ridge_MAE": 168.15872274586712,
+      "target": "wind"
+    },
+    {
+      "fold_id": "F-Nov",
+      "hgb_MAE_best": 16.825763247691448,
+      "hgb_MAE_mean": 16.825763247691448,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 16.825763247691448,
+      "path": "research_validation\\seed_stability\\F-Nov_pv_seeds.json",
+      "ridge_MAE": 30.40188587237431,
+      "target": "pv"
+    },
+    {
+      "fold_id": "F-Dec",
+      "hgb_MAE_best": 1.4159655120535402,
+      "hgb_MAE_mean": 1.4159655120535402,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 1.4159655120535402,
+      "path": "research_validation\\seed_stability\\F-Dec_system_load_seeds.json",
+      "ridge_MAE": 3.4407951789368667,
+      "target": "system_load"
+    },
+    {
+      "fold_id": "F-Dec",
+      "hgb_MAE_best": 181.7382248746405,
+      "hgb_MAE_mean": 181.7382248746405,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 181.7382248746405,
+      "path": "research_validation\\seed_stability\\F-Dec_wind_seeds.json",
+      "ridge_MAE": 146.0822656365496,
+      "target": "wind"
+    },
+    {
+      "fold_id": "F-Dec",
+      "hgb_MAE_best": 22.183011853353623,
+      "hgb_MAE_mean": 22.183011853353623,
+      "hgb_MAE_range": 0.0,
+      "hgb_MAE_stdev": 0.0,
+      "hgb_MAE_worst": 22.183011853353623,
+      "path": "research_validation\\seed_stability\\F-Dec_pv_seeds.json",
+      "ridge_MAE": 36.65256832813529,
+      "target": "pv"
+    }
+  ],
+  "hgb_implementation_seed": 42,
+  "n_folds": 5,
+  "schema": "stage_11_seed_stability_v1",
+  "seeds_attempted": [
+    42,
+    123,
+    2020
+  ]
+}

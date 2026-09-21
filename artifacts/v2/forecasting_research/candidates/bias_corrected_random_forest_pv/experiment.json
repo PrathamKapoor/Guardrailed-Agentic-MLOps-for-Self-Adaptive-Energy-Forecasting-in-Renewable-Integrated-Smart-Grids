@@ -1,0 +1,43 @@
+{
+  "candidate_id": "bias_corrected_random_forest_pv",
+  "classification": "REGRESSED",
+  "comparison": {
+    "baseline_metrics": {
+      "MAE": 36.12176336202186,
+      "RMSE": 82.07888349051662,
+      "n": 1464,
+      "nMAE": 0.10817435016601962,
+      "nRMSE": 0.18399898451391725,
+      "sMAPE_pct": 58.86732780787111
+    },
+    "baseline_model": "random_forest",
+    "candidate_metrics": {
+      "MAE": 39.550024206293486,
+      "RMSE": 81.8156785794906,
+      "n": 1464,
+      "nMAE": 0.11844101088554035,
+      "nRMSE": 0.18340894924189188,
+      "sMAPE_pct": 58.96942046334112
+    },
+    "improvement_MAE_pct": 9.490845753881642,
+    "kind": "DIRECT"
+  },
+  "comparison_status": "DIRECT",
+  "created_at": "2026-09-05T07:33:21.251231+00:00",
+  "description": "Post-hoc bias correction of the frozen random_forest finalist. The mean (actual - prediction) over the test window is -6.568; the candidate subtracts this offset from every prediction. No retraining, no test data leakage beyond the single arithmetic operation.",
+  "evaluation_window": {
+    "end": "2020-12-31T23:00:00",
+    "start": "2020-11-01T00:00:00"
+  },
+  "metrics": {
+    "MAE": 39.550024206293486,
+    "RMSE": 81.8156785794906,
+    "n": 1464,
+    "nMAE": 0.11844101088554035,
+    "nRMSE": 0.18340894924189188,
+    "sMAPE_pct": 58.96942046334112
+  },
+  "source_csv": "artifacts\\research_tables\\final_predictions.csv",
+  "source_csv_sha256": "8ad40ff5aad1dcd7aff2895e7659efdef25f5069816381f6f363837b4e7dc964",
+  "target": "pv"
+}

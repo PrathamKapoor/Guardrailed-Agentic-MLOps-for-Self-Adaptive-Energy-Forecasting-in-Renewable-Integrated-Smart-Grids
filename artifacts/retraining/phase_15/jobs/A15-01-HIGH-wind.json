@@ -1,0 +1,40 @@
+{
+  "challenger_registry_id": null,
+  "failure_reason": null,
+  "feature_fingerprint": "feature-spec-v1:sha256:6385b4c66293fcc9bbd00b784a1b806be2fb6d931094a27229fa553d8ae97330",
+  "historical_row_count": 4920,
+  "job_id": "RET-JOB-A15-01-HIGH-wind",
+  "lineage_refs": [
+    "artifacts/retraining/phase_15/manifests/challenger_lineage.yaml"
+  ],
+  "mlflow_run_id": "13435a25025e40ac8342f1f087971286",
+  "model_instance_fingerprint": "model-instance-v1:sha256:2a99fdc44d3ae6886e7e293dc55b312d74ec1215e6026ba567757c5128c93fe9",
+  "model_spec_fingerprint": "model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+  "new_data_row_count": 337,
+  "parent_reference_fingerprint": "model-spec-v1:sha256:b926cca84e5aa1e32684f7cc93fa69d516382f49a76432bbedc168f925a566ca",
+  "parent_reference_id": "MLOPS-REF-WIND-H24-V1",
+  "policy_refs": {
+    "policy_checksum": "28a05242ab56efb90e82a004e657610b04f9ad35d3756e304bab2429798bc03e",
+    "policy_id": "SMARTGRID_DETERMINISTIC_RETRAINING",
+    "policy_version": "15.0.0",
+    "protocol_freeze_sha256": "5b0cc29d67f6c3475ba9935b41972c3f1c32fafef8abcc9147f8af8d1b5a1dad",
+    "retraining_policy_fingerprint": "retraining-policy-v1:sha256:f934b780eaedeec97a6aa226586d9b77b5861765aac4fbfd86cacad50b8aea22"
+  },
+  "request_id": "8a32cc3b-f971-4b9b-a8a5-93ed43d27574",
+  "runtime_seconds": 1.4031246000085957,
+  "seed": 42,
+  "simulation_scenario_id": "A15-01-HIGH-wind",
+  "status": "COMPLETED",
+  "target": "wind",
+  "timestamp": "2026-08-21T18:51:16.358195+00:00",
+  "training_cutoff": "2020-08-15T00:00:00",
+  "training_dataset_fingerprint": "retraining-dataset-v1:sha256:b946c4c6831302f3a79867a30f904f68418edfb44e1a3312b7538cc75614b0ea",
+  "training_policy": {
+    "hyperparameter_policy": "FROZEN_REFERENCE_EXACT_NO_HPO",
+    "seed_policy": [
+      42
+    ],
+    "strategy": "EXPANDING_WINDOW_REFIT"
+  },
+  "training_row_count": 5257
+}
