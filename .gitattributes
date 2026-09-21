@@ -1,11 +1,6 @@
 # Set default behavior to automatic text detection
 * text=auto
 
-# Binary files
-*.png binary
-*.parquet binary
-*.ico binary
-
 # Protocol freezes and config files that must maintain LF line endings
 artifacts/experimental_design/phase_07_model_protocol_freeze.yaml text eol=lf
 artifacts/experimental_design/phase_08_neural_protocol_freeze.yaml text eol=lf
@@ -14,6 +9,8 @@ artifacts/experimental_design/phase_10_ablation_protocol_freeze.yaml text eol=lf
 artifacts/experimental_design/phase_10_selected_feature_freeze.yaml text eol=lf
 artifacts/experimental_design/phase_11_finalist_selection_protocol_freeze.yaml text eol=lf
 artifacts/experimental_design/phase_13_governance_scenarios.yaml text eol=lf
+artifacts/experimental_design/phase_14_drift_protocol_freeze.yaml text eol=lf
+artifacts/experimental_design/phase_14_drift_scenarios.yaml text eol=lf
 artifacts/experimental_design/phase_15_adaptation_scenarios.yaml text eol=lf
 artifacts/experimental_design/phase_15_retraining_protocol_freeze.yaml text eol=lf
 artifacts/experimental_design/phase_16_champion_challenger_protocol_freeze.yaml text eol=lf
@@ -31,13 +28,33 @@ src/smartgrid_mlops/agents/firewall.py text eol=lf
 artifacts/research_tables/* text eol=crlf
 artifacts/audit/* text eol=crlf
 artifacts/mlops/** text eol=crlf
-artifacts/research_figures/phase_19/system_architecture_final.svg text eol=crlf
+artifacts/v2/** text eol=crlf
+artifacts/experiments/** text eol=crlf
+artifacts/governance/** text eol=crlf
+artifacts/retraining/** text eol=crlf
+artifacts/monitoring/** text eol=crlf
+artifacts/mlflow/** text eol=crlf
+artifacts/paper_evidence/** text eol=crlf
+artifacts/model_registry/* text eol=crlf
+artifacts/final_release/final_results_tables/* text eol=crlf
+artifacts/research_figures/** text eol=crlf
+reports/phase_19_completion.md text eol=crlf
 artifacts/experimental_design/final_test_comparison_plan.yaml text eol=crlf
 artifacts/experimental_design/phase_09_selected_config_freeze.yaml text eol=crlf
 artifacts/experimental_design/phase_11_forecasting_finalist_freeze.yaml text eol=crlf
 artifacts/experimental_design/phase_12_mlops_tracking_protocol_freeze.yaml text eol=crlf
+artifacts/experimental_design/phase_12_mlops_tracking_protocol_freeze.sha256 text eol=crlf
 artifacts/experimental_design/phase_13_governance_protocol_freeze.yaml text eol=crlf
-artifacts/model_registry/* text eol=crlf
-reports/phase_19_completion.md text eol=crlf
-artifacts/experiments/baselines/phase_06/metrics/* text eol=crlf
-artifacts/research_figures/phase_06/figure_manifest.yaml text eol=crlf
+artifacts/experimental_design/phase_13_governance_protocol_freeze.sha256 text eol=crlf
+artifacts/experimental_design/phase_13_governance_scenarios.sha256 text eol=crlf
+artifacts/experimental_design/phase_14_drift_threshold_freeze.yaml text eol=crlf
+artifacts/experimental_design/rolling_origin_folds.yaml text eol=crlf
+artifacts/experimental_design/split_manifest_*.yaml text eol=crlf
+data/manifests/processed_dataset_manifest.yaml text eol=crlf
+
+# Binary files (highest precedence to prevent text conversion)
+*.png binary
+*.parquet binary
+*.ico binary
+*.joblib binary
+*.db binary
