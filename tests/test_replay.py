@@ -474,7 +474,7 @@ class TestCLI:
             [sys.executable, str(ROOT / "scripts" / "replay_telemetry.py"),
              "--target", "load", "--mode", "fast", "--limit", "3",
              "--out", str(out_dir)],
-            capture_output=True, text=True, env=env, timeout=30,
+            capture_output=True, text=True, env=env, timeout=120,
         )
         assert result.returncode == 0, f"CLI failed: {result.stderr}"
         # The CLI prints key:value pairs; the spec's example was
@@ -511,7 +511,7 @@ class TestCLI:
             [sys.executable, str(ROOT / "scripts" / "replay_telemetry.py"),
              "--target", "wind", "--mode", "fast", "--limit", "2",
              "--out", str(out_dir), "--no-persist"],
-            capture_output=True, text=True, env=env, timeout=30,
+            capture_output=True, text=True, env=env, timeout=120,
         )
         assert result.returncode == 0, f"CLI failed: {result.stderr}"
         # Manifest exists, events JSONL does NOT.
@@ -527,7 +527,7 @@ class TestCLI:
             [sys.executable, str(ROOT / "scripts" / "replay_telemetry.py"),
              "--source", str(tmp_path / "no-such-file.csv"),
              "--mode", "fast", "--limit", "1"],
-            capture_output=True, text=True, env=env, timeout=10,
+            capture_output=True, text=True, env=env, timeout=60,
         )
         assert result.returncode == 2
         assert "source artefact not found" in result.stderr

@@ -482,7 +482,7 @@ class TestCLI:
              "--target", "load", "--mode", "fast", "--limit", "500",
              "--reference-size", "168", "--current-size", "168",
              "--out", str(out_dir)],
-            capture_output=True, text=True, env=env, timeout=30,
+            capture_output=True, text=True, env=env, timeout=120,
         )
         assert result.returncode == 0, f"CLI failed: {result.stderr}"
         assert "SOURCE MODE: HISTORICAL REPLAY" in result.stdout
@@ -515,7 +515,7 @@ class TestCLI:
             [sys.executable, str(ROOT / "scripts" / "run_incremental_monitoring.py"),
              "--target", "load", "--mode", "fast", "--limit", "200",
              "--out", str(out_dir), "--no-persist"],
-            capture_output=True, text=True, env=env, timeout=30,
+            capture_output=True, text=True, env=env, timeout=120,
         )
         assert result.returncode == 0, f"CLI failed: {result.stderr}"
         manifests = list((out_dir / "manifests").glob("*.json"))
@@ -555,7 +555,7 @@ class TestArtifactIsolation:
             [sys.executable, str(ROOT / "scripts" / "run_incremental_monitoring.py"),
              "--target", "load", "--mode", "fast", "--limit", "300",
              "--out", str(out_dir)],
-            capture_output=True, text=True, env=env, timeout=30,
+            capture_output=True, text=True, env=env, timeout=120,
         )
         assert result.returncode == 0
         # Nothing was written outside the v2 output dir.

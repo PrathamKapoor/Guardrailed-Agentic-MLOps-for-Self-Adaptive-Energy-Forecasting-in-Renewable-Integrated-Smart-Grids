@@ -94,14 +94,14 @@ def test_pre_freeze_boundary_intact():
     # Tests. NOTE: pyproject addopts already supply a single '-q'; adding
     # another '-q' here escalated to '-qq', which suppresses the final
     # 'N passed' summary line the assertion below depends on.
-    result = subprocess.run([sys.executable, "-m", "pytest", "--tb=no"],
+    result = subprocess.run([sys.executable, "-m", "pytest", "tests", "--tb=short", "--basetemp=artifacts/test_tmp_nested"],
                             capture_output=True, text=True, cwd=str(ROOT), env=env)
     assert "passed" in result.stdout, f"pytest output: {result.stdout[-500:]}"
     # The nested run must also be failure-free: 'X failed, Y passed' still
     # contains the word 'passed', so the count is parsed explicitly.
     summary = result.stdout.strip().splitlines()[-1] if result.stdout.strip() else ""
     m = re.search(r"(\d+) failed", summary)
-    assert m is None or m.group(1) == "0", f"nested pytest summary: {summary}"
+    assert m is None or m.group(1) == "0", f"nested pytest summary: {summary}\n\nSTDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}"
     # Freeze checksums
     fail = []
     for sha_file in (ROOT / "artifacts/experimental_design").glob("*.sha256"):

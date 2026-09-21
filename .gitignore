@@ -24,6 +24,8 @@ models/*
 # Ephemeral test directories and local tracking databases are ignored
 artifacts/test_tmp/*
 !artifacts/test_tmp/.gitkeep
+artifacts/test_tmp_nested/*
+!artifacts/test_tmp_nested/.gitkeep
 artifacts/mlflow/*.db
 artifacts/mlflow/*.sqlite
 artifacts/mlflow/*.sqlite3
