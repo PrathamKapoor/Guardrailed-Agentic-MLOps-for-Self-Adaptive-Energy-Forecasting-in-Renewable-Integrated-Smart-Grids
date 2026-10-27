@@ -58,3 +58,4 @@ data/manifests/processed_dataset_manifest.yaml text eol=crlf
 *.ico binary
 *.joblib binary
 *.db binary
+*.docx binary
